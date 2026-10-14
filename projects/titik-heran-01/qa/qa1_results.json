@@ -1,0 +1,337 @@
+[
+ {
+  "lens": "script",
+  "confirmed": [
+   {
+    "id": "script-01",
+    "time": "6.37-7.40",
+    "severity": "major",
+    "problem": "The year counter under IRLANDIA shows the wrong year for about 1 s. It starts at \"SEKITAR 1800\" and runs up through 1820, 1841, 1857, 1871, 1881, 1888, 1894 and 1897 to 1899. The subtitle directly below already reads \"sekitar tahun 1900.\", so the screen shows two different years at once. Any freeze-frame or screenshot shows a year that is not in the Verified facts (the fact is \"made there around 1900\"). The counter only reaches 1900 at about 7.40 s, after the VO has said \"1900\" (7.25 s).",
+    "evidence": "/tmp/qa_script/ctile.png is a frame-by-frame title crop: 6.40 \"SEKITAR 1800\", 6.50 \"1820\", 6.60 \"1841\", 6.70 \"1857\", 6.80 \"1871\", 6.90 \"1881\", 7.00 \"1888\", 7.10 \"1894\", 7.20 \"1897\", 7.30 \"1899\", 7.40 \"1900\". The caption \"sekitar tahun 1900.\" is visible in every one of these frames. Contact sheet /tmp/qa_script/sheet_1.png shows the same thing (\"SEKITAR 1862\" over \"sekitar tahun 1900.\"). Source: build.mjs line 441 `<span id=\"yr\">1800</span>`, line 467 `YR = { v: 1800 }`, line 186 YR tween runs from c.sekitar+0.05 for 1.13 s.",
+    "fix": "Drop the count-up. Delete the YR tween on build.mjs line 186, change line 441 to `sekitar <span id=\"yr\">1900</span>` and line 467 to `YR = { v: 1900 }`. Keep enter(\"#t3y\", c.sekitar) or move it to c.y1900. If a count is wanted, start it at 1890 and make sure it lands on c.y1900 (duration c.y1900 - c.sekitar - 0.05), so no 18xx year ever appears.",
+    "verified": {
+     "id": "script-01",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced in /tmp/qa_skep/yrtile.png. The title counter reads SEKITAR 1800 (fading in at 6.40), then 1841 (6.60), 1871 (6.80), 1888 (7.00), 1897 (7.20) and 1899 (7.30), and reaches 1900 at 7.40. The caption 'sekitar tahun 1900.' sits under it the whole time, so two different years are on screen together for about 0.9 s. I'm downgrading this from major. The count-up is a deliberate animation, it lands on 1900 almost exactly as the VO says it ('1900' starts at 7.25 in video time, the counter shows 1900 by about 7.35-7.40), and the year it settles on is correct, so this is not a wrong fact. The real problem is the brief mismatch between the counter and the caption. The fix is still valid: drop the tween on build.mjs line 186 and set lines 441 and 467 to 1900, or start the count at 1890."
+    }
+   },
+   {
+    "id": "script-02",
+    "time": "21.45-22.70",
+    "severity": "major",
+    "problem": "The museum note \"Cetakan gips lentera itu kini dipajang di National Museum of Ireland\" can't be read. It is 11 words in 34 px muted grey (#B9B2A6) over a busy beige sepia bookshelf. It is visible for only about 1.2 s and at full opacity for about 0.8 s, while the VO, a subtitle and the 128 px \"1943, DONEGAL\" title compete for attention. This note is the only place the plaster-cast fact the storyboard asks for appears on screen. The line break also splits the proper name: \"\u2026dipajang di National / Museum of Ireland\".",
+    "evidence": "/tmp/qa_script/ntile.png (frame by frame from 21.40): the note first appears at about 21.47, is fully opaque from about 21.53 to 22.60, and is gone by about 22.70. In the full-res crop /tmp/qa_script/tv3.png (22.10 s) the note is low-contrast on the shelving and wraps after \"National\". Source: build.mjs line 217 `enter(\"#t7n\", c.museum)`, line 218 `exit(\"#t7, #t7n\", fx(c.tak - 0.25))`, CSS line 413 `.note{\u2026font:600 34px\u2026color:MUTED}` and line 417 `#t7n{top:460px}`.",
+    "fix": "Give the note about 4 s on screen. Enter it with the title (enter(\"#t7n\", fx(c.seorang + 0.35)), about 19.36 s) and exit it separately at fx(c.tapi - 0.3) (about 23.94 s): split line 218 into exit(\"#t7\", fx(c.tak - 0.25)) and exit(\"#t7n\", fx(c.tapi - 0.3)). #t8 (top 270, two lines) would then collide with the note, so move #t7n to about top:600px (line 417). Make it readable: color INK plus a dark pill (background:rgba(5,6,8,0.65); padding:12px 20px; border-radius:14px). Keep the name together with `di<br>National Museum of Ireland` or a white-space:nowrap span (line 446).",
+    "verified": {
+     "id": "script-02",
+     "real": true,
+     "severity": "major",
+     "note": "Reproduced in /tmp/qa_skep/mutile.png and /tmp/qa_skep/mu_crop.png. The note is absent at 21.40, faintly visible at 21.50, fully visible through 22.60 and gone by 22.70, so it is on screen for about 1.2 s. That is far too short for 11 words while the viewer is also reading the subtitle ('lentera ke museum,' and then 'karena sudah tak ada') and the 128 px '1943, DONEGAL' title. At full resolution the 34 px muted grey text sits on light beige file boxes, so contrast is low, and the line breaks as 'di National / Museum of Ireland'. This is the only on-screen appearance of the plaster-cast fact the storyboard asks for. Cause: build.mjs line 217 enters it at c.museum (21.45) and line 218 exits it at c.tak-0.25 (22.48). The fix is sound: hold the note longer and exit it separately, move it clear of #t8, give it INK colour on a dark pill, and keep 'National Museum of Ireland' on one line."
+    }
+   },
+   {
+    "id": "script-03",
+    "time": "1.50-2.22, 4.81-6.32, 9.47-10.33, 15.52-17.55, 28.15-28.99, 32.11-32.80, 38.01-38.92",
+    "severity": "major",
+    "problem": "9 of the 37 subtitle chunks are a single word, which breaks the brief's \"2-4 words per chunk\" rule: \"mumi.\" (1.50), \"Halloween.\" (4.81), \"Irlandia,\" (5.44), \"Halloween,\" (9.47), \"arwah.\" (15.52), \"Masalahnya,\" (16.35), \"Amerika,\" (28.15), \"diukir.\" (32.11) and \"reaksinya.\" (38.01). Several of these split a phrase. The hook \"Ini bukan kepala | mumi.\" is split in the first 2 s, as are \"Tiap malam | Halloween,\" and \"sudah membawanya ke | Amerika,\", which leaves the preposition \"ke\" hanging. The comment on build.mjs line 335 (\"a lone trailing word joins its neighbour (min 2 words\u2026)\") describes a merge that the code never does: line 336 only defines `hot`.",
+    "evidence": "index.html captions cap-1, cap-4, cap-5, cap-8, cap-14, cap-15, cap-26, cap-30 and cap-36 each hold one word. Visible in the render: /tmp/qa_script/sheet_0.png (\"mumi.\"), /tmp/qa_script/sheet_1.png (\"Halloween.\", \"Irlandia,\", \"Halloween,\"), /tmp/qa_script/sheet_3.png (\"arwah.\", \"Masalahnya,\"), /tmp/qa_script/sheet_5.png (\"Amerika,\"), /tmp/qa_script/sheet_6.png (\"diukir.\") and /tmp/qa_script/sheet_7.png (\"reaksinya.\"). The cause is the 20-character limit on build.mjs line 331 together with the missing merge.",
+    "fix": "After line 334, add the merge the comment promises. For each 1-word chunk, append it to the previous chunk if that chunk has 3 words or fewer and the merge does not cross a sentence end, otherwise prepend it to the next chunk. Raise the 20-character limit on line 331 to about 28, since two caption lines still fit at top:1230. Resulting chunks: \"Ini bukan kepala mumi.\" / \"Ini lentera lobak,\" / \"nenek moyang labu Halloween.\" / \"Irlandia, sekitar tahun 1900.\" / \"Tiap malam Halloween,\" / \u2026 / \"untuk mengusir arwah.\" / \"Masalahnya, tradisi ini memudar.\" / \u2026 / \"sudah membawanya ke Amerika,\" / \u2026 / \"jauh lebih gampang diukir.\" / \u2026 / \"lalu lihat reaksinya.\"",
+    "verified": {
+     "id": "script-03",
+     "real": true,
+     "severity": "minor",
+     "note": "Confirmed in index.html. cap-1 'mumi.', cap-4 'Halloween.', cap-5 'Irlandia,', cap-8 'Halloween,', cap-14 'arwah.', cap-15 'Masalahnya,', cap-26 'Amerika,', cap-30 'diukir.' and cap-36 'reaksinya.' are each one word, so 9 of 37 chunks break the brief's '2-4 words per chunk' rule. The comment on build.mjs line 335 promises a merge, but line 336 only defines `hot`, so no merge happens. The worst splits are 'Ini bukan kepala | mumi.' in the hook and 'sudah membawanya ke | Amerika,'. I rate this minor rather than major: one-word captions are readable and common on Reels, and the issue is mainly that the deliverable visibly breaks the client's written spec. Raise it if the client enforces the 2-4 word rule strictly. A 28-character limit will wrap some chunks to two lines at 66 px (the box is 860 px wide). That fits at top:1230, but it is worth checking that two lines stay clear of the bottom UI zone."
+    }
+   },
+   {
+    "id": "script-04",
+    "time": "18.96-22.16, 30.11-31.15, 35.36-37.29",
+    "severity": "minor",
+    "problem": "Some subtitle chunks end on a function word, which reads unnaturally in Indonesian. \"Seorang guru sampai | menyerahkan satu | lentera ke museum,\" splits \"satu lentera\" and leaves \"sampai\" hanging. \"dengan labu yang | jauh lebih gampang\" and \"Kirim ke teman yang | paling penakut,\" both end on a dangling \"yang\".",
+    "evidence": "index.html cap-17 \"Seorang guru sampai\", cap-18 \"menyerahkan satu\", cap-28 \"dengan labu yang\", cap-33 \"Kirim ke teman yang\". Visible in /tmp/qa_script/sheet_3.png, /tmp/qa_script/sheet_4.png, /tmp/qa_script/sheet_6.png and /tmp/qa_script/sheet_7.png. Source: the break test on build.mjs line 331 does not check the word's role.",
+    "fix": "In the break condition on build.mjs line 331, never end a chunk on a word in a short no-break list (yang, ke, di, dengan, satu, sampai, dan, lalu): carry it into the next chunk instead. Target chunks: \"Seorang guru\" / \"sampai menyerahkan\" / \"satu lentera\" / \"ke museum,\"; \"dengan labu\" / \"yang jauh lebih\" / \"gampang diukir.\"; \"Kirim ke teman\" / \"yang paling penakut,\". Each stays 2-4 words, and timings still come from each chunk's first word.",
+    "verified": {
+     "id": "script-04",
+     "real": true,
+     "severity": "minor",
+     "note": "Confirmed in index.html: cap-17 'Seorang guru sampai', cap-18 'menyerahkan satu' (which splits 'satu | lentera'), cap-28 'dengan labu yang' and cap-33 'Kirim ke teman yang'. I saw cap-28 in the render at 30.20 s ('dengan labu yang'). Splitting the noun phrase 'satu lentera' and leaving 'yang' at the end of a chunk will read awkwardly to a native speaker. This is polish only. It does not break comprehension. The fix should be applied together with script-03, because the same chunker on build.mjs line 331 causes both."
+    }
+   },
+   {
+    "id": "script-07",
+    "time": "28.20-29.23, 30.56-32.65",
+    "severity": "minor",
+    "problem": "The arrow in \"\u2192 AMERIKA\" and \"\u2192 LABU\" renders from a fallback font, because Anton apparently has no U+2192 glyph. It comes out as a thin, small hairline arrow sitting low beside the heavy condensed capitals. Because the arrow is part of the centred line, it also pushes \"AMERIKA\" and \"LABU\" right of the centre line of \"IRLANDIA\" and \"LOBAK\" above them.",
+    "evidence": "/tmp/qa_script/tv4.png: at 28.60 s the thin arrow sits at about x 265-330 and AMERIKA at about x 380-750. At 31.00 s the arrow sits at about x 290-380 and LABU at about x 455-725, while LOBAK is centred at about x 500. The arrow stroke is about 4 px against roughly 30 px letter stems. Source: build.mjs lines 450 and 452 (`&#8594; Amerika`, `&#8594; Labu`).",
+    "fix": "On lines 450 and 452, replace &#8594; with an inline SVG arrow drawn at cap height in currentColor, with stroke width about 14 and height:0.62em, set as an absolutely positioned prefix so the word itself stays centred. Or drop the arrow and put the word on its own centred line, since the map's ship and the match cut already show the direction.",
+    "verified": {
+     "id": "script-07",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced in /tmp/qa_skep/ar.png. At 28.60 and 31.00 the arrow is a thin hairline glyph from a fallback font, sitting low next to the heavy Anton capitals, so it clearly does not match. Because the arrow is part of the centred line, it pushes the word off centre: 'AMERIKA' is centred at about x 565 against about x 497 for 'IRLANDIA', and 'LABU' is centred at about x 590 against about x 497 for 'LOBAK'. Both offsets are visible at a glance. The fix is valid: use an SVG arrow drawn at Anton weight and positioned outside the centring flow (build.mjs lines 450 and 452), or drop the arrow."
+    }
+   }
+  ],
+  "rejected": [
+   {
+    "id": "script-05",
+    "problem": "The museum note is narrower than the verified fact it rests on. The Verified facts say the plaster cast is displayed at the Country Life museum in County Mayo. The note just says \"National Museum of Ireland\", which most viewers will read as the main Dublin museum. That is technically true, because Country Life is a branch of the NMI, but it is imprecise.",
+    "why": "Not a defect. The note text 'Cetakan gips lentera itu kini dipajang di National Museum of Ireland' is the client's storyboard wording, word for word (qa/naskah.md, beat 4, small text). It is also factually correct, because Country Life in County Mayo is a branch of the National Museum of Ireland. Changing client-approved copy for extra precision is an editorial suggestion, not a problem a viewer would notice. It would also make a text that is already too brief to read (see script-02) even longer."
+   },
+   {
+    "id": "script-06",
+    "problem": "The accent colour is used inconsistently on the key words. In the kicker \"nenek moyang labu Halloween\", \"labu\" is white while the subtitle right under it shows \"labu\" in orange at the same moment. \"LOBAK\" is orange in the hook title but white in the \"LOBAK \u2192 LABU\" title and the split-screen chip. The subtitles also colour the trailing punctuation (\"lobak,\" and \"1900.\" have an orange comma or period).",
+    "why": "The brief's accent rule covers the subtitles, and they comply: 'lobak', '1900' and 'labu' are all orange in the captions (checked at 2.60, 4.00, 6.80 and 30.20). The white 'LOBAK' over orange '\u2192 LABU' (31.00) and the white LOBAK / orange LABU chips are a consistent, deliberate code: turnip in white, pumpkin in orange. The white 'labu' in the 46 px kicker at 4.00 and the orange comma or period after 'lobak,' and '1900.' are real but tiny. In /tmp/qa_skep/actile.png they are not noticeable to a viewer. At most this is optional polish on build.mjs line 439."
+   }
+  ]
+ },
+ {
+  "lens": "visual",
+  "confirmed": [
+   {
+    "id": "visual-loop-vignette",
+    "time": "38.92-39.93 (end card) vs 0.00",
+    "severity": "major",
+    "problem": "The loop seam jumps in brightness. The end-card turnip is rendered without the vignette that darkens the opening frame, so the last frame is clearly brighter than the first. The moon, cottage and window frame suddenly appear at the top and edges, and then drop back to dark when the video loops. The storyboard requires the last frame to equal the first.",
+    "evidence": "/tmp/qa_visual/cmp_loop.png shows frame 0 on the left and the last frame on the right. Mean luma in the top 400 px is 17.6 on the first frame and 39.8 on the last. The right 150 px measure 14.9 vs 28.7, the left 150 px 13.1 vs 19.9, and the whole frame 26.2 vs 33.9. The cause is the end card: shot('turnip', c.endcut, TOTAL, {z:30}) at build.mjs:285 sits above #vig (z-index:26, build.mjs:405). The hook shot (z:2) sits below #vig.",
+    "fix": "Raise #vig above the end card. Change its z-index from 26 to 32 at build.mjs:405, which keeps it above the shots (30) and #flick (31) and below the titles (.ct 40) and captions (45). Do not lower the end card's z instead: #split (z 25) would then cover it, and #splitBar is never hidden. Re-render, then check that frame 0 and the last frame differ by less than about 1 luma.",
+    "verified": {
+     "id": "visual-loop-vignette",
+     "real": true,
+     "severity": "major",
+     "note": "Reproduced exactly. Frame 0 has whole-frame luma 26.2, top 400 px 17.6, right 150 px 14.9 and left 150 px 13.1. Frames 39.0 and 39.9 measure 33.9 / 39.8 / 28.7 / 19.9. Side by side (/tmp/sk/loop.png), the end card shows the moon, cottage and window frame clearly brighter. The cause is in the code: the end-card shot uses z:30 (build.mjs:285) and sits above #vig (z-index:26, build.mjs:405), while the hook shot (z:2) sits under it. On loop, the top of the frame visibly darkens, which breaks the storyboard rule 'Last frame = first frame'. The fix of putting #vig at z 32 also puts the vignette over #flick (z31) on frame 0, but because both ends change the same way they still match."
+    }
+   },
+   {
+    "id": "visual-museum-note",
+    "time": "21.45-22.70",
+    "severity": "major",
+    "problem": "The required small text 'Cetakan gips lentera itu kini dipajang di National Museum of Ireland' (12 words, 34 px, muted grey over a busy bookshelf) is fully visible for only about 0.7 s. Nobody can read it at normal speed.",
+    "evidence": "enter('#t7n', c.museum=21.45, d 0.32) reaches full opacity at 21.77. exit('#t7, #t7n', c.tak-0.25=22.48) at build.mjs:217-218 removes it by 22.70. Frame /tmp/qa_visual/full_21.9.png (crop /tmp/qa_visual/crop_note.png) shows the note sitting over the shelf labels.",
+    "fix": "Give #t7n its own exit at fx(c.tapi - 0.3), about 23.94, which keeps it up for about 2.5 s. Stop exiting it together with #t7. Move it to top:640px so it clears #t8 ('TAK ADA LAGI / YANG MEMBUAT', top 270, two lines ending around 520). Raise it to 38-40 px in colour INK so it holds on the candleOut plate.",
+    "verified": {
+     "id": "visual-museum-note",
+     "real": true,
+     "severity": "major",
+     "note": "Reproduced. I measured the text pixels in the note band (y 455-565): it fades in 21.45-21.55, is fully visible from about 21.55 to 22.55 (about 1.0 s, a bit longer than the reviewer's 0.7 s), and is gone by 22.70. The text is legible at full resolution (/tmp/sk/note_crop.png), but 12 words in about 1 s is not enough time to read it. This is a required storyboard element. The fix is sound: give #t7n its own exit near c.tapi-0.3 and move it below #t8 (top 270, two lines at 128 px ending around 520)."
+    }
+   },
+   {
+    "id": "visual-matchcut-offset",
+    "time": "30.50-31.20",
+    "severity": "major",
+    "problem": "The turnip-to-pumpkin match cut on 'labu' doesn't line up. The pumpkin face sits about 140 px higher than the turnip face, so the faces jump instead of morphing in place. A 0.85-opacity cream flash also covers the cut, and the clean pumpkin shot is only on screen for 0.64 s before the next cut. The storyboard's key 'same position' moment does not read.",
+    "evidence": "/tmp/qa_visual/mc_cmp.png shows the turnip at 30.50, the pumpkin at 30.90 and a 50% blend of the two. Turnip eyes are at y\u2248940 and mouth at y\u22481160; pumpkin eyes are at y\u2248800 and mouth at y\u22481020, with the face widths about equal. The flash takes frame luma from 42.5 to 195.6 at 30.567 and back to about 34 by 30.77 (signalstats). The pumpkin shot runs from c.labu2 to c.jauh (30.56-31.20, build.mjs:260).",
+    "fix": "build.mjs:151 and :260: add a dy option to shot() and pass it into the Ken Burns fromTo as y. Give the pumpkin shot dy:140 (the source canvas is black above the face, so no gap shows) and keep kb [1.08,1.12]. Lower the #flash peak at build.mjs:262 from 0.85 to about 0.3, or drop it and let the 'pop' SFX carry the cut. Optionally cue pumpkinCarve at fx(c.jauh + 0.4) so the aligned pumpkin face holds for about 1 s.",
+    "verified": {
+     "id": "visual-matchcut-offset",
+     "real": true,
+     "severity": "minor",
+     "note": "The offset reproduces. In the glow mask, turnip eye rows are about 900-1010 and mouth rows about 1100-1240 (30.45). Pumpkin eye rows are about 780-900 and mouth rows about 980-1050 (30.95), so the faces are about 120-150 px apart vertically with similar eye spans. The flash reproduces too: YAVG goes from 42.5 to 195.6 on the cut frame and is back to about 34 within 0.2 s. The pumpkin shot holds 0.64 s. I downgraded it from major: the flash is an intended transition (build.mjs:258 comment), so viewers see turnip, flash, pumpkin rather than a jarring jump. The 'same position' match the storyboard asks for does not land, but that is polish."
+    }
+   },
+   {
+    "id": "visual-split-crop-safezone",
+    "time": "32.75-38.92",
+    "severity": "major",
+    "problem": "In the split screen (the 6 s CTA image) both faces are cropped badly. The turnip's right eye is cut off by the centre seam, and the pumpkin's mouth is cut at the seam while its right eye reaches into the right 120 px where Instagram's buttons sit. The LOBAK and LABU chips sit right on top of the turnip's left eye and the pumpkin's mouth. 'Both stare at camera' does not read.",
+    "evidence": "/tmp/qa_visual/full_33.6.png and /tmp/qa_visual/f_38.88.png. Pumpkin glow pixels span x 545-1073 at 38.88, with 9,190 px beyond x=960. At 33.6 the glow already reaches x 1017. The turnip right eye ends at the x=540 panel edge. The chips are at top:1010 (build.mjs:398) over both faces. The cause is the panels at build.mjs:319-320: #pz-turnip pushes 1.0\u21921.1 into a 540 px centre crop, and #pz-pumpkin stays at scale \u22651.0.",
+    "fix": "build.mjs:319: change #pz-turnip to scale 0.92\u21920.97 (it is a still, so a smaller push is fine) so both eyes stay inside the 540 px panel. build.mjs:320: change #pz-pumpkin to scale 0.78\u21920.74 with x:-30 so the whole face fits roughly x 590-940; its black background hides the scaled edges. build.mjs:398: move .chip from top:1010px to top:1400px, below the captions and above the bottom 320 px zone.",
+    "verified": {
+     "id": "visual-split-crop-safezone",
+     "real": true,
+     "severity": "minor",
+     "note": "Mostly reproduces (/tmp/sk/s38c.png at 38.88). The turnip panel is pushed in so far that its left eye touches the left edge and its right eye is cut at the x=540 seam. The LOBAK chip sits on the turnip's left eye and the LABU chip on the left of the pumpkin's mouth. The pumpkin's mouth is cut at the seam and its right eye reaches about x 1045. The Instagram-UI claim is weak: that eye sits at about y 770-880, above the usual right-rail buttons. Both faces still read clearly as turnip vs pumpkin, so I rate it minor, not major. Caveat on the fix: scaling #pz-turnip below 1.0 (0.92) opens about 75 px gaps at the top and bottom of the cover-fitted 540x1920 panel. Better to keep scale \u22651.0 with no push (1.0\u21921.0) and adjust object-position. The chip move to around top:1400 is fine."
+    }
+   },
+   {
+    "id": "visual-pumpkincarve-jump",
+    "time": "31.20-32.75",
+    "severity": "major",
+    "problem": "The pumpkinCarve shot is a flat, daylight-bright orange photo cut in between two near-black night shots, so the frame flashes about 4x brighter for 1.5 s and then drops back. It is also visibly soft: it was built from Pixabay's 1280x855 preview image, so the 9:16 crop is about 480x855 px scaled up 2.25x.",
+    "evidence": "Frame luma (signalstats) goes from 24.5 to 96.8 at 31.200 and from 97.1 to 23.8 at 32.800. Frames are /tmp/qa_visual/full_31.6.png and contact sheet /tmp/qa_visual/sheet_04.png at 31.0-32.5. raw/pixabay/pumpkinCarve/3791214.jpg is 1280x855, while 3791214.json lists the original as 5662x3780. The 1:1 crop in /tmp/qa_visual/crops_1to1.png (second tile) shows the soft pumpkin texture.",
+    "fix": "Re-source pumpkinCarve from the full-size original (5662x3780) or from one of the Pixabay videos already downloaded (raw/pixabay/pumpkinCarve/306169.mp4, 30864.mp4). Also grade the shot at build.mjs:261 to the night palette with a new class, e.g. .g-night video{filter:brightness(0.5) saturate(0.9) contrast(1.1)}, passed as grade:'g-night'. Target a frame YAVG of about 35-45, close to its neighbours.",
+    "verified": {
+     "id": "visual-pumpkincarve-jump",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced. YAVG goes from 24.5 to 96.8 at 31.20 and from 87.5 to 23.8 at about 32.80. The shot is a bright daylight orange photo between dark shots (/tmp/sk/pc_strip.png). The source is raw/pixabay/pumpkinCarve/3791214.jpg at 1280x855 (its JSON lists 5662x3780 as the original), so the 9:16 crop is about 481 px wide, upscaled about 2.25-2.4x. The 1:1 crop shows soft, smeared texture. On a phone this reads as a brightness pop plus mild softness rather than a broken shot, and a brighter 'much easier to carve' beat is defensible, so I rate it minor. A side effect worth fixing: the orange '\u2192 LABU' title sits on the orange pumpkin here and has low contrast."
+    }
+   },
+   {
+    "id": "visual-museum-shot",
+    "time": "21.45-22.73",
+    "severity": "major",
+    "problem": "At 'lentera ke museum' the screen shows a bearded man pulling binders off library archive shelves. That is not a museum: the slot needs a gallery or display cases. Arriving right after 'Seorang guru', it also makes the man read as the teacher, but the teacher (Rois N\u00ed Bhraon\u00e1in) was a woman.",
+    "evidence": "/tmp/qa_visual/museum_strip.png and /tmp/qa_visual/quad1.png (second tile). This is Pixabay #329307, placed at build.mjs:208. The SLOTS.museum need at build.mjs:33 is 'old museum gallery / display cases'.",
+    "fix": "Swap the museum slot to a people-free museum interior that is already downloaded, e.g. raw/pixabay/museum/170467.mp4 (museum grand hall, 4096x2160). Re-cut assets/footage/museum.mp4 and the manifest entry, and keep grade 'g-sepia' at build.mjs:208.",
+    "verified": {
+     "id": "visual-museum-shot",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced (/tmp/sk/note_strip.png, 21.45-22.7): a bearded man pulls binders from archive shelves under sepia. That is an archive, not a museum gallery, and does not match SLOTS.museum. The gender point is speculative: the VO never names the teacher or her gender, and the man reads just as easily as museum staff, so no viewer would catch a factual contradiction. It is a storyboard/content mismatch the client may notice, so minor. The suggested replacement raw/pixabay/museum/170467.mp4 is NOT people-free: its contact sheet shows tourist crowds on the stairs in most frames, so trim to a crowd-free window (e.g. 6-14 s) or crop to the upper hall."
+    }
+   },
+   {
+    "id": "visual-handover-shot",
+    "time": "19.01-21.45",
+    "severity": "major",
+    "problem": "Beat 4 should show the teacher handing a lantern (or wooden box) to the museum. Instead, during 'Seorang guru sampai menyerahkan satu lentera', the screen shows the cropped fingers of a hand hovering by a tealight next to a book. No handing-over happens, and no lantern or box appears.",
+    "evidence": "/tmp/qa_visual/handover_strip.png (19.0-21.4, 3 fps) shows the same near-static hand and tealight throughout. This is Pixabay #111279 with 'focus 0.17', placed at build.mjs:207. The SLOTS.handover need at build.mjs:32 is 'hands placing or handing over an old wooden box'.",
+    "fix": "Replace the handover slot with a clip or still that actually shows hands holding out or setting down an object or box. Since AI turnip stills are already approved, a sepia AI still of hands holding out a carved turnip lantern would match the line exactly. Keep grade 'g-sepia' and the c.seorang\u2192c.museum timing at build.mjs:207.",
+    "verified": {
+     "id": "visual-handover-shot",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced (/tmp/sk/h_strip.png, 19.1-21.3): a large cropped hand hovers and reaches beside a tealight and an open book, in sepia. Nothing is handed over and no lantern or box appears. The shot works as moody archive b-roll and contradicts nothing in the VO, so a viewer would not see it as wrong. But the storyboard's beat-4 image (teacher handing over a box or lantern) is missing, which the client would notice. Minor."
+    }
+   },
+   {
+    "id": "visual-carve-order",
+    "time": "10.38-13.05",
+    "severity": "minor",
+    "problem": "The two carving stills are in the wrong order for the narration. On 'orang mengukir lobak' the turnip already has a finished angry face, and on 'jadi wajah seram' (scary face) the screen shows a different turnip with a friendly smiling face.",
+    "evidence": "/tmp/qa_visual/quad1.png, third tile (10.9, carve: angled eyes and jagged teeth) and fourth tile (12.3, carveFace: smiley). The shots are placed at build.mjs:193-194.",
+    "fix": "Swap the slots at build.mjs:193-194: put carveFace (knife going into the smiley turnip) at c.orang\u2192c.wajah and carve (the angry face) at c.wajah\u2192c.menyalakan, so 'wajah seram' lands on the scary face.",
+    "verified": {
+     "id": "visual-carve-order",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced, though the effect is subtle. At 10.9 ('orang mengukir lobak') the turnip already has slanted angry eyes and a jagged grimace. At 12.3 ('jadi wajah seram') a different turnip has a toothy grin (/tmp/sk/cv.png). Both are already carved with a knife in frame, so swapping build.mjs:193-194 costs nothing and puts the scarier face on 'wajah seram'. Low impact; minor polish only."
+    }
+   },
+   {
+    "id": "visual-lilin-di-dalam",
+    "time": "13.05-16.40",
+    "severity": "minor",
+    "problem": "Beat 3 never shows a candle inside a lantern. The 'LILIN DI DALAM' title sits over a match lighting a free-standing pillar candle, and the shot meant as 'lantern on a misty stone window' is a plain candle on a modern white window frame with an open book. The storyboard's 'candle put in, lantern on a misty stone window' image is missing, even though the approved turnip-lantern still shows exactly that.",
+    "evidence": "/tmp/qa_visual/lil.png (13.65-14.3) and /tmp/qa_visual/quad2.png (second tile, 14.8). The shots are candleLight at build.mjs:195 and window at build.mjs:196.",
+    "fix": "At c.lilin\u2192c.untuk, cut to the lit turnip lantern so the title sits on a real lantern: shot('turnip', c.lilin, c.untuk, {at: HOOK_AT+0.5, kb:[1.15,1.05], z:6}) plus a flicker(c.lilin, c.untuk) call. Keep candleLight for 'lalu menyalakan' only.",
+    "verified": {
+     "id": "visual-lilin-di-dalam",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced (/tmp/sk/c_strip.png). 'LILIN DI DALAM' (13.6-14.7) sits over a match lighting a free-standing pillar candle, and 'UNTUK MENGUSIR ARWAH' over a candle in a brass holder on a white-painted window sill with an open book and a blue night outside. There is no lantern, no stone and no mist. The title says 'candle inside' while nothing is inside anything, which is a visible text/image mismatch. The proposed fix is reasonable, though it adds a fifth use of the turnip still."
+    }
+   },
+   {
+    "id": "visual-splitbar-hidden",
+    "time": "32.95-38.92",
+    "severity": "minor",
+    "problem": "The accent divider between the two split panels never appears. It is drawn underneath both panels, so the seam is just a hard edge between the grey-blue turnip background and the black pumpkin panel.",
+    "evidence": "Pixel columns 532-548 at y=300 in /tmp/qa_visual/full_36.6.png and /tmp/qa_visual/f_38.88.png read luma 25/0 with no orange. #splitBar (build.mjs:397) has no z-index, while #splitL and #splitR carry .ct z-index:40 in the same #split stacking context and cover x 0-1080.",
+    "fix": "Add z-index:41 to #splitBar at build.mjs:397. It is already cut along with the split by the end card's z-order, but to be safe also add '#splitBar' to the cut() at build.mjs:283.",
+    "verified": {
+     "id": "visual-splitbar-hidden",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced. At 36.6 the seam pixels go straight from about (23,24,29) at x\u2264538 to (0,0,0) at x\u2265540 at y=100/300/1500, with no orange (#FF9A1F) anywhere. In index.html, #splitBar is the last child of #split but has no z-index, while #splitL/#splitR are .ct (position:absolute, z-index:40) and cover it. The intended accent divider never renders. Viewers will not miss a bar they never knew about, so this is minor (an implementation bug); z-index:41 on #splitBar fixes it."
+    }
+   }
+  ],
+  "rejected": [
+   {
+    "id": "visual-year-counter",
+    "problem": "The title counter rolls through years that are not verified facts ('SEKITAR 1812', 'SEKITAR 1862', 'SEKITAR 1898') while the subtitle directly below already says 'sekitar tahun 1900'. For about 1.1 s the title contradicts the caption, and a paused or screenshotted frame shows a wrong year.",
+    "why": "The counter exists. Frames from 6.40 to 7.6 show SEKITAR 1800 (fading in), 1812, 1841, 1871, 1888, 1897 and 1900, and it lands on 1900 at about 7.25, in sync with the VO saying '1900'. This is a standard count-up animation, and the rapidly changing digits read as motion, not as a claimed year. It is only on screen for about 1 s and settles on the verified value. A viewer would not take '1841' as a fact. This is a style choice, not a factual error."
+   }
+  ]
+ },
+ {
+  "lens": "audio",
+  "confirmed": [
+   {
+    "id": "audio-blow-late",
+    "time": "23.57-24.99 (flame dies 23.57-23.90; blow heard 24.29-24.99, peak 24.43)",
+    "severity": "major",
+    "problem": "The candle-blow SFX plays about 0.6 s late. You hear it after the candle-out shot has ended, over the relight shot where a match lights the candle, and it covers the turning-point word \"Tapi\".",
+    "evidence": "blow.wav has 0.46 s of near-silence before the blow starts. Placed at c.membuat+0.5 = 23.83, its audible part runs 24.29-24.99 with the peak at 24.43 (/tmp/qa_audio/py/sfxenv.py). On screen (/tmp/qa_audio/tile_blow2.png, frames 23.50-24.23) the flame leans at 23.57, is blown off at 23.77 and is out with smoke at 23.90. At 24.24 the shot cuts to the colour relight with a match striking (/tmp/qa_audio/tile_blow.png, frames 24.3-24.8). In the VO, \"membuatnya\" ends at about 23.86, there is silence from 23.90 to 24.17, and \"Tapi\" runs 24.18-24.64. Over \"Tapi\", VO is -15.2 LUFS against a bed of -17.6 LUFS (blow), only 2.4 dB apart, and the blow is 8-10 dB louder than the VO in the 1-2 kHz and 8-16 kHz bands.",
+    "fix": "build.mjs line 221: change sfx(\"blow\", fx(c.membuat + 0.5), 0.8) to sfx(\"blow\", fx(c.membuat - 0.03), 0.5). In my simulation this puts the onset at 23.75 and the peak at about 23.90, as the flame dies. The VO then sits +10 dB above it on \"Tapi\" and +22 dB in the 2-4 kHz band. Better still, trim the 0.46 s lead-in in tools/prep_sfx.sh (atrim/silenceremove for blow) so the cue time is the audible onset, then place it at about 23.72.",
+    "verified": {
+     "id": "audio-blow-late",
+     "real": true,
+     "severity": "major",
+     "note": "Reproduced. I rebuilt the stems from index.html and null-tested them against the render: the residual is -42.7 dB against a -14.8 dB mix, so the timings are trustworthy. blow.wav sits at about -38 dB until 0.44 s and peaks at 0.60 s. Placed at 23.83, it is audible from about 24.30. In the render's own 4-16 kHz band the level jumps to +18 dB at 24.32-24.48 while the VO is low, so the blow is in the actual mix at that point. Frames show the flame blown sideways at 23.80 and out with smoke at 23.95, then a cut to the colour match-relight at 24.24. The flame-out is silent, and the blow plays over a match lighting the candle and over \"Tapi\" (24.24-24.64). There, VO is -14.8 LUFS against a -17.6 LUFS bed, and the bed is 12 dB louder in 1-2 kHz. The proposed fix is sound: sfx(\"blow\", fx(c.membuat - 0.03), 0.5) at build.mjs:221 puts the audible onset near 23.74 and the peak near 23.90. Trimming the 0.44 s lead-in in prep_sfx.sh is the cleaner option."
+    }
+   },
+   {
+    "id": "audio-whoosh-masks-vo",
+    "time": "32.78-33.10 (\"Cuma\"); also 27.53-27.85 (\"membawanya\")",
+    "severity": "major",
+    "problem": "The split-screen whoosh lands right on \"Cuma\", the first word of the punchline, and is as loud as the voice. The map-sail whoosh also buries the consonants of \"membawanya\".",
+    "evidence": "The whoosh at c.cuma-0.15 = 32.70 (vol 0.45) is audible 32.78-33.10 and peaks at 32.94. Speech for \"Cuma\" runs 32.82-33.00. Over that word, VO is -16.6 LUFS and the bed is -16.4 LUFS, a margin of -0.2 dB. Above 1 kHz the whoosh is 10-20 dB louder than the voice (1-2k -11, 2-4k -13, 4-8k -17, 8-16k -21 dB). The VO has a real gap at 32.56-32.82 that the whoosh misses. The whoosh at 27.45 (vol 0.55) peaks at 27.69, in the middle of \"membawanya\" (27.60-28.08). The margin there is 5.6 dB (VO -13.5 vs bed -19.2 LUFS), and the whoosh is 11-23 dB louder than the VO above 2 kHz.",
+    "fix": "build.mjs line 275: change to sfx(\"whoosh\", fx(c.cuma - 0.39), 0.3) so the peak falls about 32.70, inside the VO gap and just ahead of the split slide-in at 32.75. Simulated margin over \"Cuma\": +19 dB broadband, +18 to +24 dB in every band above 1 kHz. build.mjs line 250: lower the sail whoosh from 0.55 to 0.25. Simulated margin over \"membawanya\": +14 dB.",
+    "verified": {
+     "id": "audio-whoosh-masks-vo",
+     "real": true,
+     "severity": "major",
+     "note": "Reproduced for \"Cuma\". The whoosh at 32.70 (peak 0.24 s into the file, so 32.94) covers the whole word, which runs 32.82-33.01. In 40 ms K-weighted windows the whoosh is at -16 to -20 and the VO at -15 to -19, a broadband margin of +1.6 dB over the word. Per band, VO minus bed is -12 dB at 1-2 kHz, -18 at 2-4 kHz and -24 at 4-8 kHz, so the first word of the punchline is stepped on. The VO is silent at 32.54-32.84, so the whoosh fits there. Caveat: the current peak lines up with the split slide-in (32.75-33.10). The suggested c.cuma-0.39 at 0.3 (build.mjs:275) peaks at 32.70, just ahead of the slide, which is acceptable. The \"membawanya\" part is weaker: 7.3 dB broadband over the word, with only about 80 ms (27.64-27.70, on \"mem-\") at 0 dB. On its own that part is minor; lowering build.mjs:250 to about 0.3 is enough."
+    }
+   },
+   {
+    "id": "audio-carve-masks-vo",
+    "time": "10.67-12.69 (\"mengukir lobak jadi wajah seram\")",
+    "severity": "major",
+    "problem": "The knife-scrape SFX runs under 2 s of narration only about 5 dB below the voice and is louder than the voice in the consonant bands. This includes the accent word \"lobak\".",
+    "evidence": "Carve is placed at c.mengukir-0.1 = 10.573 (vol 0.6) and is audible 10.67-12.97. Per-word K-weighted margins (VO minus bed): \"mengukir\" 4.7 dB (-14.4 vs -19.1 LUFS), \"lobak\" 5.6 dB, \"seram\" 5.8 dB, \"wajah\" 10.4 dB. The brief target is 12-20 dB. Over 10.67-11.50 the carve is louder than the VO in 1-2 kHz (-1 dB), 2-4 kHz (-3 dB), 4-8 kHz (-28 dB) and 8-16 kHz (-23 dB). Visually the timing is correct: it lines up with the carve and carveFace shots.",
+    "fix": "build.mjs line 197: lower to sfx(\"carve\", fx(c.mengukir - 0.1), 0.3). Simulated broadband margin over \"mengukir lobak\" becomes +14.7 dB, inside the 12-20 dB target. Optionally also add lowpass=f=5000 for carve in tools/prep_sfx.sh to take the scrape out of the sibilant band.",
+    "verified": {
+     "id": "audio-carve-masks-vo",
+     "real": true,
+     "severity": "minor",
+     "note": "The levels reproduce: \"mengukir\" has a 5.6 dB margin and \"lobak\" 6.4 dB. The \"2 s of narration at about 5 dB\" framing overstates it, though. carve.wav is three short scrapes of about 0.25 s each (10.65-10.91, 11.13-11.29, 11.46-11.62), followed by a quieter scrape at 11.9-13.0 that sits 10-25 dB under the VO. The bursts reach about 0 dB margin only on \"-kir\" (10.80-10.88) and \"lo-\" (11.20-11.28). The vowels stay 20 dB or more clear below 1 kHz, the sound is synced to the carve shot, and the storyboard asks for knife scraping. So this is a level issue on two syllables, not a broken line. Fix: lower build.mjs:197 from 0.6 to about 0.35. The optional 5 kHz low-pass is a nice extra."
+    }
+   },
+   {
+    "id": "audio-cta-bed-dies",
+    "time": "34.2-38.9",
+    "severity": "minor",
+    "problem": "The music fades out on its own from about 34 s, so the \"& ganti sayur\" punch and the whole CTA play almost dry. The sting at 38.9 then lands in near-silence instead of capping a live bed.",
+    "evidence": "Music momentary loudness: -35.6 LUFS at 33.9, -40.2 at 34.9, -45.5 at 35.4, -47.5 at 36.9, -50.0 at 37.9 and -55.1 at 38.9. Over the same span the VO runs -12 to -19 LUFS, so the bed is 30-38 dB under the voice for the last 4.5 s; per word: \"Kirim\" 34.2 dB, \"lihat\" 38.8 dB. The cause is the source track, not the mix envelope: raw/music/music_1.mp3 drops from -24.3 dB RMS at 33 s to -35.7 at 35 s and -43.6 at 38 s, because the 41-s generation's outro starts at about 34 s. The final ending itself is clean: it fades smoothly to -116 dB at 39.93 with no abrupt cut.",
+    "fix": "Rebuild assets/audio/music.m4a so the outro starts at the end cut (about 38.9). For example, insert a copy of the raw 25-30 s body section at about 30 s with acrossfade=d=0.5 so the body holds until about 39 s, then let the existing data-fade-out=0.6 (build.mjs line 460) and the sting close it. Alternatively, generate a ~45 s music take.",
+    "verified": {
+     "id": "audio-cta-bed-dies",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced. The music stem in the mix runs -31 to -37 LUFS from 24.5 to 34 s, -39/-40 at 34-35, then -47 to -54 from 35.0 to 38.9. Confirmed in the source: raw music_1.mp3 and music.m4a both drop from about -27 dB RMS at 34 s to -35.5 at 35 and -41.7 at 38. This is the generated track's outro, not the mix envelope. The claim that the \"& ganti sayur\" punch plays almost dry is overstated: the bed there is only about 4 dB below normal. The CTA at 35.4-38.9 is effectively dry, though, about 35 dB under the VO, and the sting lands on silence. Minor. The proposed fix (extend the body section with an acrossfade so the outro starts at about 38.9) is reasonable."
+    }
+   },
+   {
+    "id": "audio-pause-ganti-sayur",
+    "time": "33.85-34.02",
+    "severity": "minor",
+    "problem": "The scripted beat before \"dan ganti sayur\" is only about 0.17 s, so it barely registers as a pause. The storyboard asks for ~0.3 s, and the recording note asks for a small pause.",
+    "evidence": "VO envelope: \"benua...\" decays to -49 dBFS at 33.88 and \"dan\" starts at 34.02 (-29 dBFS at 34.03). That is about 0.17 s of silence. cap_pauses.py keeps this gap untouched (return 99 for \"...\"), so the TTS's own short pause is what ships.",
+    "fix": "In tools/cap_pauses.py, change the \"...\" case so it pads the pause to about 0.35 s by inserting silence at the run midpoint, rather than leaving it at 99. Then re-run it and node build.mjs. Cues are chained to words, so all later beats shift automatically and TOTAL grows by about 0.15 s.",
+    "verified": {
+     "id": "audio-pause-ganti-sayur",
+     "real": true,
+     "severity": "minor",
+     "note": "Reproduced. In vo.wav, mapped to video time, \"benua\" decays to silence at about 33.88. A low-centroid voiced onset (the \"d\" of \"dan\") follows at 34.03-34.05, which gives a silence of about 0.15-0.19 s at the 2%-of-peak threshold. That is shorter than the ordinary sentence gaps nearby (0.30 s before \"Cuma\", 0.30 s before \"Kirim\") and short of the storyboard's ~0.3 s. cap_pauses.py does leave \"...\" untouched (return 99). Mitigation: \"benua\" is drawn out with a falling tail (33.33-33.88), which partly carries the beat, so this is minor. Fix as proposed: pad the pause to about 0.35 s in cap_pauses.py and rebuild."
+    }
+   },
+   {
+    "id": "audio-missing-ambience",
+    "time": "0.4-2.3, 5.5-10.4, 13.05-14.7, 24.24",
+    "severity": "minor",
+    "problem": "Several storyboard audio elements are missing: the low hum under the hook, the night wind in latar 2, and a flame sound when the candle is lit (13.05) and re-lit on screen with a match (24.3).",
+    "evidence": "Under \"Ini bukan kepala mumi\" (0.43-2.03) the whole bed is -50 to -54 LUFS. The music is silent until about 1.2 s and only reaches -40 LUFS at about 2.9 s, so after the match strike the hook is dry VO. Between the ting (5.59-5.87) and the carve (10.67) the only bed is music; there is no wind on the map or the night shot (8.72-10.38). The SFX list in build.mjs (lines 168-286) has no hum, wind or flame cue. naskah.md lists \"low hum + match strike at 0\", \"night wind\" and \"knife scraping, flame\".",
+    "fix": "Generate three short ElevenLabs SFX (low drone, night wind, match-flare/flame whoosh) and add them to the PICK list in tools/prep_sfx.sh. Then add to build.mjs: sfx(\"hum\", 0.0, ~0.35) running under the hook; sfx(\"wind\", fx(c.irl - 0.2), ~0.25) through c.orang; sfx(\"flame\", fx(c.menyalakan), ~0.4) and sfx(\"flame\", fx(c.tapi + 0.05), ~0.4) for the relight. Keep each at least 12 dB under the VO (VO here is about -11 to -20 LUFS per word).",
+    "verified": {
+     "id": "audio-missing-ambience",
+     "real": true,
+     "severity": "minor",
+     "note": "Confirmed. build.mjs only places match, whoosh, ting, carve, blow, pop and sting. raw/sfx has no hum, wind or flame takes. The stem reconstruction nulls to -42.7 dB, so no other audio source is present. After the match tail (below -42 dB by 0.4 s) the hook is dry VO, and the music only reaches -40 LUFS at about 2.5 s. That matches \"dark music fades in\", but there is no low hum. The map and night shots (5.5-10.4) carry music only, with no night wind. The candle-light shot (13.05) and the match relight (24.24) have no flame sound; the late blow currently plays over the relight instead. These are explicit storyboard items the client would miss. Minor. Note that the proposed fix spends ElevenLabs credits on three new SFX."
+    }
+   }
+  ],
+  "rejected": [
+   {
+    "id": "audio-dip-shallow",
+    "problem": "The music dip under the problem act only works for its first half. From 21.3 s the track swells back up, so at the candle-out moment the music is nearly back to its pre-dip level, and the lift on \"Tapi\" is small.",
+    "why": "The measurements roughly hold: pre-dip at 13-15.5 s is about -32 LUFS, 16.5-21 s is -38 to -46, 21-24 s is about -36, and after \"Tapi\" (24.5-27.5) it is -31 to -33.6. Still, the storyboard's \"music drops\" is delivered (an 8-12 dB dip at 16.5-21), and the music does rise at \"Tapi\", about 3-4 dB back to the pre-dip level. The remaining complaint is a preference for a deeper second half of the dip, on a bed that sits 18-20 dB under the voice the whole time. No viewer would notice that as a defect. It is a taste call, not a checkable fault."
+   }
+  ]
+ }
+]

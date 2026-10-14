@@ -1,0 +1,160 @@
+[
+ {
+  "lens": "script",
+  "fixes": [
+   {
+    "id": "script-01",
+    "fixed": false,
+    "note": "Only reduced, not fixed. In v2 the counter starts at 1890 instead of 1800 (index.html: `<span id=\"yr\">1890</span>`, `YR = { v: 1890 }`, tween 1890->1900 from 6.42 s for 0.83 s with power2.out). Frames /tmp/v2s/v2_script_6.40.png to 7.30.png, contact sheet /tmp/v2s/yr_sheet.png: 6.40 'SEKITAR 1890', 6.50 '1893', 6.60 '1895', 6.70 '1897', 6.80 '1898', 6.90 '1899', 7.00 '1900'. The caption 'Irlandia, sekitar tahun 1900.' is on screen in every one of these frames, so two different years still show together for about 0.57 s, and a freeze-frame still shows years like 'SEKITAR 1893'. The finding's own fix says 'so no 18xx year ever appears', and this version does not meet that. The counter also reaches 1900 at about 6.97 s, 0.28 s before the VO says '1900' (7.25). Fix: delete the YR tween (build.mjs line 191) and set the initial value to 1900 (build.mjs lines 477 and 503)."
+   },
+   {
+    "id": "script-02",
+    "fixed": true,
+    "note": "Checked in /tmp/v2s/mu_sheet.png and /tmp/v2s/mu_crop.png. The note fades in at about 19.40, is fully visible from 19.50 and is gone by about 24.15, so it is on screen for about 4.6 s (it was about 1.2 s). It is cream INK text (#F7F2E8, 38 px) on a dark pill and is clearly readable over the bright hand shot (20.50) and the bookshelf shot (22.20). 'National Museum of Ireland' now sits on one line. At top:600 it stays clear of the two-line '#t8 TAK ADA LAGI YANG MEMBUAT' title (23.50 frame)."
+   },
+   {
+    "id": "script-03",
+    "fixed": true,
+    "note": "index.html now has 26 caption chunks (cap-0 to cap-25) and every one is 2-4 words. captions.txt matches the qa/naskah.md VO word for word (checked in code). I checked each chunk in the render (/tmp/v2s/cap_sheet.png, one frame per chunk). The earlier one-word chunks are merged: 'Ini bukan kepala mumi.', 'nenek moyang labu Halloween.', 'Irlandia, sekitar tahun 1900.', 'Tiap malam Halloween,', 'untuk mengusir arwah.', 'Masalahnya, tradisi ini memudar.', 'membawanya ke Amerika,', 'lebih gampang diukir.', 'lalu lihat reaksinya.'."
+   },
+   {
+    "id": "script-04",
+    "fixed": true,
+    "note": "The four cited chunks no longer end on a function word: 'Seorang guru sampai menyerahkan' / 'satu lentera ke museum,' (cap-11/12), 'Kirim ke teman' / 'yang paling penakut,' (cap-23/24), and cap-19 no longer ends on 'yang'. However, the re-chunk now breaks the same phrase in a new place: 'dengan labu yang jauh' / 'lebih gampang diukir.' This is reported as a regression below."
+   },
+   {
+    "id": "script-07",
+    "fixed": true,
+    "note": "Checked in /tmp/v2s/arw_sheet.png. The arrows are now solid orange SVG shapes at cap height (index.html .arw svg), not a hairline fallback glyph. They are placed outside the centring flow. Measured at 28.60: IRLANDIA is centred at x 497 and AMERIKA spans x 314-678 (centre 496). At 31.00: LOBAK is centred at x 499 and LABU spans x 363-631 (centre 497). Each word now lines up with the word above it."
+   }
+  ],
+  "regressions": [
+   {
+    "time": "34.22-34.43",
+    "severity": "minor",
+    "problem": "The subtitle 'dan ganti sayur.' comes in about 0.2 s after the VO starts saying 'dan', so this is the one place where the subtitle lags speech by more than 0.15 s. This is the scripted beat after 'Cuma pindah benua...'. 'dan' is heard while 'Cuma pindah benua\u2026' is still on screen. The cause is the 'dan' start in the word table, about 0.23 s late, which the 0.19 s pause pad then carried over.",
+    "evidence": "I confirmed the VO is placed in the render at +0.35 s (cross-correlation 0.99, offset 0.000 in windows from 33 to 36 s). Energy in assets/vo/vo.wav, given in video time: 'benua' has decayed to -47 dB by 33.88. Digital silence (the inserted pad) runs 33.96-34.12, then there is noise floor. 'dan' starts at 34.21-34.23 (peak -13 dB at 34.28-34.34, nasal held to 34.62). 'ganti' starts at 34.63. The only word between 'benua...' and 'ganti' is 'dan'. audio_meta.json w73 'dan' has start 34.103, which is 34.453 in video time and about 0.23 s late. That makes cap-22 data-start=34.403. Frames in /tmp/v2s/dan_sheet.png: 34.27, 34.33 and 34.40 still show 'Cuma pindah benua\u2026', and 'dan ganti sayur.' first shows at about 34.43-34.47. Every other chunk start lines up with its measured onset to within 0.07 s.",
+    "fix": "In assets/vo/audio_meta.json set w73 'dan' start to 33.86 (34.21 video time) and rebuild. cap-22 then starts at about 34.16. A more robust option is the caption loop in build.mjs (about line 369): snap each chunk start to the first energy rise in vo.wav within \u00b10.3 s of the aligned word start. #t12b '& GANTI SAYUR' (34.59) is keyed to 'ganti' and can stay."
+   },
+   {
+    "time": "30.11-31.47 (also 26.19-27.55)",
+    "severity": "minor",
+    "problem": "The new caption DP splits 'yang jauh lebih gampang' ('much easier') after 'jauh'. Read on its own, the chunk 'dengan labu yang jauh' means 'with a pumpkin that is far away'. In a segment about moving across continents that is a real misreading, and it stays on screen for 1.36 s before 'lebih gampang diukir.' resolves it. A milder case is 'Imigran Irlandia sudah' / 'membawanya ke Amerika,', which ends a chunk on the aspect marker 'sudah' and splits 'sudah membawanya'.",
+    "evidence": "index.html cap-19 'dengan <em>labu</em> yang jauh' (data-start 30.11, duration 1.36), cap-20 'lebih gampang diukir.' and cap-16 'Imigran Irlandia sudah'. The render frame /tmp/v2s/v2_script_cap19.png (30.61) shows 'dengan labu yang jauh'. Cause: the NOBREAK set in build.mjs (line ~342) does not include 'jauh' or 'sudah'.",
+    "fix": "Add 'jauh' and 'sudah' to NOBREAK in build.mjs. I simulated the existing DP with that change (/tmp/v2s/dp.mjs). It gives 'Imigran Irlandia' / 'sudah membawanya ke Amerika,' / 'lalu mengganti' / 'lobak dengan labu' / 'yang jauh lebih' / 'gampang diukir.'. That is 27 chunks, all 2-4 words, and nothing else changes. 'lobak dengan labu' then starts at 'lobak' (29.76), the same moment as the LOBAK title."
+   }
+  ]
+ },
+ {
+  "lens": "visual",
+  "fixes": [
+   {
+    "id": "visual-loop-vignette",
+    "fixed": true,
+    "note": "Fixed. Frame 0 and the last frame (n=1203, 40.10 s) now match: luma means are 25.87 vs 25.85 for the whole frame, 17.17 vs 17.28 for the top 400 px, 14.34 vs 14.36 for the right 150 px and 12.62 vs 12.67 for the left 150 px. Mean absolute RGB difference is 1.14 and no pixel differs by more than 30. Side by side in /tmp/v2_visual/loop_cmp.png the two frames are identical: no moon, cottage or window brightening, and no title on either frame. #vig is now at z 32, above the end card (z 30)."
+   },
+   {
+    "id": "visual-museum-note",
+    "fixed": true,
+    "note": "Fixed. #t7n is absent at 19.40, fully visible from 19.50 through 24.00, and gone by 24.10, so it holds about 4.6 s. It is INK-coloured, about 38 px, on a dark pill, and the name stays on one line ('National Museum of Ireland'). It sits clear below both '1943, DONEGAL' and 'TAK ADA LAGI / YANG MEMBUAT' (/tmp/v2_visual/note_v2.png at 22.0 and 23.0)."
+   },
+   {
+    "id": "visual-matchcut-offset",
+    "fixed": true,
+    "note": "Fixed. The turnip eye band (rows 896-1013) and the pumpkin eye band (rows about 915-960) now overlap, and the mouths line up near rows 1115-1200. In the 50% blend (/tmp/v2_visual/mc_v2.png) both faces sit in the same position. The flash peak dropped from YAVG 195.6 to 64.6 and settles by 30.70. The clean pumpkin shot runs 30.56-31.60 (1.04 s, up from 0.64). The dy:140 offset opens a band at the top, but it measures luma 1.1 against 0.0, so it does not show."
+   },
+   {
+    "id": "visual-split-crop-safezone",
+    "fixed": false,
+    "note": "Partly fixed. The LOBAK and LABU chips moved to y\u22481400-1460, off the faces and below the captions. The turnip's right eye now ends about x 530, just inside the bar at 536. The pumpkin is still not framed: its face fills the 540 px panel edge to edge, and with the new x:+11 the crop has moved from the seam to the outer frame edge. From about 36.5 s to 39.1 s the mouth runs off the right edge of the frame (glow max R 173-180 in columns 1075-1079 at 37.0 and 38.9), and the right eye reaches x\u22481055, inside the right 120 px. v1 at 38.85 and v2 at 38.9 are framed almost identically (/tmp/v2_visual/split_v1v2.png and /tmp/v2_visual/pk_panel.png). The build comment's 'pumpkin x 342-716 fits' does not match the render, because the pumpkin clip grows over media time 2-8.4 s."
+   },
+   {
+    "id": "visual-pumpkincarve-jump",
+    "fixed": false,
+    "note": "Only partly fixed. The g-night grade cut the shot's YAVG from 96.8 to 56.1, but the target was 35-45. The cut is still a 2.2x jump: YAVG 25.2 to 56.1 at 31.600, then 50.9 to 23.7 at 32.800 (/tmp/v2_visual/yavg.csv). The softness was not addressed at all. assets/footage/pumpkinCarve.mp4 has not changed since commit 16ef3a8 and is still built from raw/pixabay/pumpkinCarve/3791214.jpg at 1280x855, so a 1:1 crop at 32.0 still shows smeared texture (/tmp/v2_visual/pc_detail.png). On the plus side, '\u2192 LABU' stays readable over it thanks to the shadow."
+   },
+   {
+    "id": "visual-carve-order",
+    "fixed": true,
+    "note": "Fixed. At 10.9 ('orang mengukir lobak') the knife is going into the plain smiling turnip. At 12.3 ('jadi wajah seram') the turnip with slanted angry eyes is on screen. This is the reverse of v1 (/tmp/v2_visual/carve_cmp.png shows v1 10.9, v1 12.3, v2 10.9, v2 12.3)."
+   },
+   {
+    "id": "visual-lilin-di-dalam",
+    "fixed": true,
+    "note": "Fixed, with one variation. 'LILIN DI DALAM' slams at 13.61 over the match flame, and at 13.89 (on 'di dalamnya') it cuts to the lit turnip lantern with flicker, which holds until the title exits at about 14.67. The title therefore sits on a real candle-in-lantern for about 0.78 of its 1.06 s. For the first 0.28 s it is still over the match, which fits the word 'lilin'. The 'untuk mengusir arwah' window shot is unchanged, but it was outside this fix's scope."
+   },
+   {
+    "id": "visual-splitbar-hidden",
+    "fixed": true,
+    "note": "Fixed. The orange divider now renders across the full height at x 536-543, with pixels at (255,152,28) / (253,152,28) at y=1000 from 33.2 through 38.9. It grows in from about 32.95 and is covered by the end card after 39.11, so nothing is left on the loop frames."
+   }
+  ],
+  "regressions": [
+   {
+    "time": "32.80-36.20 (also 34.0-39.1 right of the bar)",
+    "severity": "minor",
+    "problem": "A clip edge now shows at the split seam. #pz-turnip is translated x:-13 while it is still at scale 1.0-1.05, so the turnip still's right edge pulls away from the panel edge. A dark strip of root background, up to about 8 px wide, sits between the turnip and the orange bar and narrows as the push-in scales up. It reads as a one-sided black shadow on the divider. The pumpkin panel has the same issue in mirror: x:+11 while the scale falls from 1.05 to 1.0 opens a pure-black strip at x 544-551 from about 34 s. That one is nearly invisible against the black pumpkin background. v1 had no gap here.",
+    "evidence": "Mean column luma for y 300-1700 at 33.2: cols 515-527 \u2248 35-42 (turnip), cols 528-531 \u2248 9-10, cols 532-535 \u2248 17-19, bar 536-543 \u2248 130. v1 at 33.4 reads 30-47 all the way up to the seam. A 0.1 s scan shows the strip at cols 522-535 at 32.9, 528-531 from 33.0 to 33.5, 530-531 at 33.6-33.9, 531 at 34.0-34.3, and gone by about 36.3. Zoomed crops: /tmp/v2_visual/seam_strip.png (33.0, 34.0, 35.0, 37.0) and /tmp/v2_visual/seam_mouth.png. Cause: build.mjs, the two split panel tweens tl.fromTo(\"#pz-turnip\",{scale:1.0,x:-13},{scale:1.06,x:-13,...}) and tl.fromTo(\"#pz-pumpkin\",{scale:1.05,x:11},{scale:1.0,x:11,...}). The overhang 270*(scale-1) is smaller than |x|.",
+    "fix": "Drop the x translations and centre each face by moving the crop window instead, which never exposes an edge. Set object-position on the panel videos, e.g. #p-turnip{object-position:52.4% 50%} (shifts the content 13 px left) and #p-pumpkin{object-position:48% 50%} (shifts it 11 px right), and tween scale only. Alternatively, keep the turnip at scale \u22651.05 for the whole tween (e.g. 1.05\u21921.10) and keep the pumpkin at \u22651.045."
+   }
+  ]
+ },
+ {
+  "lens": "audio",
+  "fixes": [
+   {
+    "id": "audio-blow-late",
+    "fixed": true,
+    "note": "Blow is now at 23.30 with volume 0.5. In the render it becomes audible at 23.76 and peaks at 23.92 (-17.4 LUFS momentary). The frames match: the flame is blown off around 23.80-23.85 and smoke holds until the cut to the relight at 24.24 (/tmp/v2_audio_blowtile.png, /tmp/v2_audio_cuttile.png). Over 'Tapi' the VO is now +12.7 dB above the bed for the whole word and +13.8 dB on speech frames. In v1 it was +2.4 dB. Above 2 kHz the margin is +17 to +23 dB. One leftover: the blow tail (-21.6 to -28 LUFS) runs about 0.2 s past the cut into the relight and under 'Ta-' (+7 to +10.5 dB at 24.22-24.28). The earlier start also introduced a new overlap with '-nya'; see the regressions. Method: I rebuilt every stem from index.html using the renderer's mono-to-stereo pan and a global gain of 0.906. The null against the v2 audio leaves a residual of -44.1 dB against a -17.6 dB mix. Scripts and data are in /tmp/v2a/."
+   },
+   {
+    "id": "audio-whoosh-masks-vo",
+    "fixed": true,
+    "note": "'Cuma': the split whoosh is now at 32.46 with volume 0.3 and peaks at 32.70 (-17.3 LUFS). That falls inside the real VO gap: 'diukir' decays by about 32.54 and 'Cuma' starts at 32.84. Over 'Cuma' the VO is +12.7 dB above the bed broadband, with +17 dB at 1-2 kHz, +28 at 2-4 kHz and +23 at 4-8 kHz (it was -0.2 to +1.6 dB). 'membawanya' (27.60-28.08) no longer has a whoosh under it: frame margins are +15 to +22 dB. The sail whoosh moved with sail0 to 26.54 and now sits on the start of 'Irlandia'. That is listed as a separate minor regression."
+   },
+   {
+    "id": "audio-carve-masks-vo",
+    "fixed": false,
+    "note": "Improved by about 6 dB but still short of the 12-20 dB target. Carve is at volume 0.3. Word-window margins: 'mengukir' +10.4 dB (was 4.7/5.6) and 'lobak' +10.8 dB (was 5.6/6.4); on speech frames +11.7 and +11.0. The scrape bursts still reach -18.5 LUFS momentary and come within 0-6 dB of the voice in three places. '-kir' (10.82-10.86): +5.6 and +1.3 dB. 'lo-bak' (11.22-11.26): +4.6, -1.3 and +4.2 dB. The start of 'jadi' (11.54-11.60): -2.9 to +7.6 dB. Above 4 kHz the carve is still 22-25 dB louder than the VO over both words. The optional 5 kHz low-pass was not added (tools/prep_sfx.sh applies only peak normalisation). Simulated: volume 0.2 gives +13.6/+13.5 dB (bursts +7.7/+8.0); 0.15 gives +15.6/+15.1 dB (bursts +10)."
+   },
+   {
+    "id": "audio-cta-bed-dies",
+    "fixed": true,
+    "note": "Music bed loudness over 400 ms windows at 34.9, 35.4, 36.9, 37.9 and 38.9 s: -35.7, -32.2, -30.7, -36.9 and -35.5 LUFS. In v1 the same points were -40.2, -45.5, -47.5, -50.0 and -55.1. On CTA words the VO sits +15 to +27 dB above the music, so the bed is alive but not intrusive. The sting at 39.09 lands on music at about -30 LUFS. The music then fades from 39.5 to 40.11 and the last 20 ms are digitally silent (-127 dBFS), so there is no hard cut. Side note: the repeated body section is 6.0 s long, which is 10.5 beats of the track's weak ~0.57 s pulse (autocorrelation 0.3), so the splice near 29.75-30.25 may shift the pulse by about half a beat. The pulse is weak and the music is about 18 dB under the VO there, so I did not count it as a regression."
+   },
+   {
+    "id": "audio-pause-ganti-sayur",
+    "fixed": true,
+    "note": "In vo.wav (video time), 'benua' decays below -50 dBFS RMS at about 33.89. A digital-zero pad runs 33.955-34.145 (0.19 s), and 'dan' starts at 34.22-34.24. The pause is now about 0.33-0.35 s; it was 0.15-0.17 s. No click: the step at each pad edge is only about 0.0013 (-58 dBFS), and the mix's energy above 3 kHz at 33.955 and 34.145 stays at the -72 to -80 dB floor. A whole-mix scan for HF transients found only speech plosives and SFX attacks. Note: audio_meta.json runs about 0.1-0.2 s late here (it puts the end of 'benua...' at 34.347 and 'dan' at 34.453)."
+   },
+   {
+    "id": "audio-missing-ambience",
+    "fixed": true,
+    "note": "All three are in the render. Hum: 0-6 s at -27 to -34 LUFS momentary, the main bed under the hook (music is -46 to -56 there), 13-25 dB under the hook words, and the file fades out by about 5.5 s. Wind: 5.29-11.29, fading to silence by 11.3. Flame: at 13.10 and 24.29, crackles of -20 to -38 LUFS that rise above the music at 1-8 kHz and sit 17-23 dB under the VO on word average. The flame at 24.29 is partly covered by the blow tail for its first ~0.15 s but is audible in the gaps at 24.44-24.50 and 24.70. The wind is too loud under 'sekitar tahun 1900' (separate regression)."
+   }
+  ],
+  "regressions": [
+   {
+    "time": "6.37-8.30",
+    "severity": "minor",
+    "problem": "The new night wind is too loud under 'sekitar tahun 1900'. It is the loudest bed element there and keeps the VO under the ~12 dB margin.",
+    "evidence": "Wind stem momentary loudness is -23.5 to -28 LUFS across 6.40-8.00, 4.5-6.5 dB above the music. On speech frames the VO is above the whole bed by +9.7 dB on 'sekitar', +8.2 on 'tahun' and +10.0 on '1900.'. The wind alone is 9.6-11.6 dB under the VO. At 6.40-6.55 and 7.20-7.35 the wind is as loud as or louder than the VO (frame margins -2 to -5 dB). Its energy is below 1 kHz, so this is a balance problem rather than lost consonants. Source: build.mjs:188 sfx(\"wind\", fx(c.irl - 0.2), 0.25). Measured with /tmp/v2a/q5.py and q6.py.",
+    "fix": "Lower the wind to about 0.12 on build.mjs:188. Simulated word-window margins become 'tahun' +11.5 and '1900' +12.2. Alternatively, keep 0.25 only before 'Irlandia' (5.3-5.5) and between words by adding a fade, since the gust peak at 6.4-7.5 sits right under the line."
+   },
+   {
+    "time": "23.70-23.86",
+    "severity": "minor",
+    "problem": "Moving the blow earlier made its attack cover the final syllable of 'membuatnya' ('...yang membuatnya.'). This word was clean in v1.",
+    "evidence": "In the VO stem, '-nya' runs 23.70-23.86 and peaks at -21.4 LUFS at 23.72. The blow (onset 23.76) is at -24.2 at 23.80, -21.7 at 23.84 and -19.6 at 23.86. VO-minus-blow per frame is +3.9, -3.7, -7.7 and -7.2 dB at 23.78-23.84. Over the syllable the margin is +0.7 dB broadband and -22.8 dB at 1-2 kHz. The same blow's tail also crosses the cut at 24.24 into the relight shot (-21.6 to -28 LUFS under 'Ta-', +7 to +10.5 dB). Frames: /tmp/v2_audio_blowtile.png and /tmp/v2_audio_cuttile.png. Script: /tmp/v2a/q2.py 23.2 24.8.",
+    "fix": "On build.mjs:230, start the blow about 0.1 s later at fx(c.membuat + 0.08) (23.41). Cap it at about 0.82 s with a 0.3 s fade-out, either by adding an optional duration argument to sfx() or by trimming blow.wav in tools/prep_sfx.sh. Simulated: '-nya' rises from +0.7 to +12.4 dB and 'Tapi' from +12.7 to +18.3 dB. The blow then peaks at 23.98 (-19.9 LUFS) on the smoke frames and is down to -42 LUFS by 24.20, so it no longer crosses into the relight."
+   },
+   {
+    "time": "26.66-26.96",
+    "severity": "minor",
+    "problem": "The sail whoosh moved with sail0 from 'membawanya' to the start of 'Irlandia' ('Imigran Irlandia'), so it still lands on a word. 'Irlandia' was clean in v1.",
+    "evidence": "The whoosh at 26.54 (volume 0.25) peaks at 26.78 (-18.4 LUFS) while 'Irlandia' starts at 26.72. Frame margins are +8.9, -1.4, +4.0, +6.5 and +7.9 dB at 26.72-26.80. Over the first 150 ms (26.66-26.86) the margin is +9.0 dB broadband, and the whoosh is 1-2 dB louder than the VO at 2-8 kHz and 12-16 dB louder at 8-16 kHz. Whole-word margin is +11.8 dB. Script: /tmp/v2a/q2.py 26.4 27.9; source: build.mjs:261.",
+    "fix": "Lower build.mjs:261 to sfx(\"whoosh\", fx(sail0 - 0.05), 0.15). Simulated: onset margin +12.7 dB, whole word +14.7 dB, and the VO back above the whoosh in 2-8 kHz (+2 to +3.5 dB). This keeps the whoosh in sync with the ship."
+   }
+  ]
+ }
+]

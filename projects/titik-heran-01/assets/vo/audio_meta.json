@@ -1,0 +1,528 @@
+{
+ "voiceId": "mKyb2q1tbP41xJ8qTnox",
+ "voiceName": "Akram",
+ "modelId": "eleven_v4",
+ "source": "ElevenLabs flow YpSWNR6YtnCiwra54JQR, generation A6P5q9rcDz4TuAAMVv7j (take 3 of 4)",
+ "scenes": [
+  {
+   "id": "vo",
+   "text": "Ini bukan kepala mumi. Ini lentera lobak, nenek moyang labu Halloween. Irlandia, sekitar tahun 1900. Tiap malam Halloween, orang mengukir lobak jadi wajah seram, lalu menyalakan lilin di dalamnya, untuk mengusir arwah. Masalahnya, tradisi ini memudar. Seorang guru sampai menyerahkan satu lentera ke museum, karena sudah tak ada yang membuatnya. Tapi tradisinya nggak mati. Imigran Irlandia sudah membawanya ke Amerika, lalu mengganti lobak dengan labu yang jauh lebih gampang diukir. Cuma pindah benua... dan ganti sayur. Kirim ke teman yang paling penakut, lalu lihat reaksinya.",
+   "wav": "vo.wav",
+   "duration": 38.7,
+   "speechStart": 0.08,
+   "speechEnd": 38.78,
+   "words": [
+    {
+     "id": "w0",
+     "text": "Ini",
+     "start": 0.08,
+     "end": 0.32
+    },
+    {
+     "id": "w1",
+     "text": "bukan",
+     "start": 0.4,
+     "end": 0.8
+    },
+    {
+     "id": "w2",
+     "text": "kepala",
+     "start": 0.88,
+     "end": 1.12
+    },
+    {
+     "id": "w3",
+     "text": "mumi.",
+     "start": 1.2,
+     "end": 1.68
+    },
+    {
+     "id": "w4",
+     "text": "Ini",
+     "start": 1.92,
+     "end": 2.16
+    },
+    {
+     "id": "w5",
+     "text": "lentera",
+     "start": 2.267,
+     "end": 2.52
+    },
+    {
+     "id": "w6",
+     "text": "lobak,",
+     "start": 2.56,
+     "end": 3.19
+    },
+    {
+     "id": "w7",
+     "text": "nenek",
+     "start": 3.27,
+     "end": 3.51
+    },
+    {
+     "id": "w8",
+     "text": "moyang",
+     "start": 3.59,
+     "end": 3.91
+    },
+    {
+     "id": "w9",
+     "text": "labu",
+     "start": 4.07,
+     "end": 4.39
+    },
+    {
+     "id": "w10",
+     "text": "Halloween.",
+     "start": 4.51,
+     "end": 4.98
+    },
+    {
+     "id": "w11",
+     "text": "Irlandia,",
+     "start": 5.14,
+     "end": 5.96
+    },
+    {
+     "id": "w12",
+     "text": "sekitar",
+     "start": 6.02,
+     "end": 6.42
+    },
+    {
+     "id": "w13",
+     "text": "tahun",
+     "start": 6.5,
+     "end": 6.74
+    },
+    {
+     "id": "w14",
+     "text": "1900.",
+     "start": 6.9,
+     "end": 8.53
+    },
+    {
+     "id": "w15",
+     "text": "Tiap",
+     "start": 8.57,
+     "end": 8.81
+    },
+    {
+     "id": "w16",
+     "text": "malam",
+     "start": 8.89,
+     "end": 9.05
+    },
+    {
+     "id": "w17",
+     "text": "Halloween,",
+     "start": 9.17,
+     "end": 9.99
+    },
+    {
+     "id": "w18",
+     "text": "orang",
+     "start": 10.03,
+     "end": 10.27
+    },
+    {
+     "id": "w19",
+     "text": "mengukir",
+     "start": 10.323,
+     "end": 10.67
+    },
+    {
+     "id": "w20",
+     "text": "lobak",
+     "start": 10.75,
+     "end": 11.15
+    },
+    {
+     "id": "w21",
+     "text": "jadi",
+     "start": 11.27,
+     "end": 11.39
+    },
+    {
+     "id": "w22",
+     "text": "wajah",
+     "start": 11.43,
+     "end": 11.71
+    },
+    {
+     "id": "w23",
+     "text": "seram,",
+     "start": 11.79,
+     "end": 12.34
+    },
+    {
+     "id": "w24",
+     "text": "lalu",
+     "start": 12.38,
+     "end": 12.62
+    },
+    {
+     "id": "w25",
+     "text": "menyalakan",
+     "start": 12.7,
+     "end": 13.18
+    },
+    {
+     "id": "w26",
+     "text": "lilin",
+     "start": 13.26,
+     "end": 13.5
+    },
+    {
+     "id": "w27",
+     "text": "di",
+     "start": 13.54,
+     "end": 13.58
+    },
+    {
+     "id": "w28",
+     "text": "dalamnya,",
+     "start": 13.66,
+     "end": 14.3
+    },
+    {
+     "id": "w29",
+     "text": "untuk",
+     "start": 14.34,
+     "end": 14.74
+    },
+    {
+     "id": "w30",
+     "text": "mengusir",
+     "start": 14.793,
+     "end": 15.14
+    },
+    {
+     "id": "w31",
+     "text": "arwah.",
+     "start": 15.22,
+     "end": 15.85
+    },
+    {
+     "id": "w32",
+     "text": "Masalahnya,",
+     "start": 16.05,
+     "end": 17.17
+    },
+    {
+     "id": "w33",
+     "text": "tradisi",
+     "start": 17.25,
+     "end": 17.49
+    },
+    {
+     "id": "w34",
+     "text": "ini",
+     "start": 17.57,
+     "end": 17.73
+    },
+    {
+     "id": "w35",
+     "text": "memudar.",
+     "start": 17.85,
+     "end": 18.62
+    },
+    {
+     "id": "w36",
+     "text": "Seorang",
+     "start": 18.66,
+     "end": 18.98
+    },
+    {
+     "id": "w37",
+     "text": "guru",
+     "start": 19.02,
+     "end": 19.3
+    },
+    {
+     "id": "w38",
+     "text": "sampai",
+     "start": 19.42,
+     "end": 19.62
+    },
+    {
+     "id": "w39",
+     "text": "menyerahkan",
+     "start": 19.66,
+     "end": 20.18
+    },
+    {
+     "id": "w40",
+     "text": "satu",
+     "start": 20.26,
+     "end": 20.5
+    },
+    {
+     "id": "w41",
+     "text": "lentera",
+     "start": 20.58,
+     "end": 20.94
+    },
+    {
+     "id": "w42",
+     "text": "ke",
+     "start": 20.98,
+     "end": 21.06
+    },
+    {
+     "id": "w43",
+     "text": "museum,",
+     "start": 21.1,
+     "end": 21.82
+    },
+    {
+     "id": "w44",
+     "text": "karena",
+     "start": 21.86,
+     "end": 22.02
+    },
+    {
+     "id": "w45",
+     "text": "sudah",
+     "start": 22.1,
+     "end": 22.34
+    },
+    {
+     "id": "w46",
+     "text": "tak",
+     "start": 22.38,
+     "end": 22.5
+    },
+    {
+     "id": "w47",
+     "text": "ada",
+     "start": 22.58,
+     "end": 22.74
+    },
+    {
+     "id": "w48",
+     "text": "yang",
+     "start": 22.82,
+     "end": 22.9
+    },
+    {
+     "id": "w49",
+     "text": "membuatnya.",
+     "start": 22.98,
+     "end": 23.821
+    },
+    {
+     "id": "w50",
+     "text": "Tapi",
+     "start": 23.89,
+     "end": 24.29
+    },
+    {
+     "id": "w51",
+     "text": "tradisinya",
+     "start": 24.41,
+     "end": 24.77
+    },
+    {
+     "id": "w52",
+     "text": "nggak",
+     "start": 24.81,
+     "end": 25.01
+    },
+    {
+     "id": "w53",
+     "text": "mati.",
+     "start": 25.21,
+     "end": 25.85
+    },
+    {
+     "id": "w54",
+     "text": "Imigran",
+     "start": 25.89,
+     "end": 26.29
+    },
+    {
+     "id": "w55",
+     "text": "Irlandia",
+     "start": 26.37,
+     "end": 26.85
+    },
+    {
+     "id": "w56",
+     "text": "sudah",
+     "start": 26.93,
+     "end": 27.17
+    },
+    {
+     "id": "w57",
+     "text": "membawanya",
+     "start": 27.25,
+     "end": 27.73
+    },
+    {
+     "id": "w58",
+     "text": "ke",
+     "start": 27.77,
+     "end": 27.81
+    },
+    {
+     "id": "w59",
+     "text": "Amerika,",
+     "start": 27.85,
+     "end": 28.65
+    },
+    {
+     "id": "w60",
+     "text": "lalu",
+     "start": 28.69,
+     "end": 28.93
+    },
+    {
+     "id": "w61",
+     "text": "mengganti",
+     "start": 28.983,
+     "end": 29.33
+    },
+    {
+     "id": "w62",
+     "text": "lobak",
+     "start": 29.41,
+     "end": 29.73
+    },
+    {
+     "id": "w63",
+     "text": "dengan",
+     "start": 29.81,
+     "end": 30.05
+    },
+    {
+     "id": "w64",
+     "text": "labu",
+     "start": 30.21,
+     "end": 30.45
+    },
+    {
+     "id": "w65",
+     "text": "yang",
+     "start": 30.61,
+     "end": 30.77
+    },
+    {
+     "id": "w66",
+     "text": "jauh",
+     "start": 30.85,
+     "end": 31.13
+    },
+    {
+     "id": "w67",
+     "text": "lebih",
+     "start": 31.17,
+     "end": 31.41
+    },
+    {
+     "id": "w68",
+     "text": "gampang",
+     "start": 31.45,
+     "end": 31.73
+    },
+    {
+     "id": "w69",
+     "text": "diukir.",
+     "start": 31.81,
+     "end": 32.46
+    },
+    {
+     "id": "w70",
+     "text": "Cuma",
+     "start": 32.5,
+     "end": 32.66
+    },
+    {
+     "id": "w71",
+     "text": "pindah",
+     "start": 32.7,
+     "end": 32.9
+    },
+    {
+     "id": "w72",
+     "text": "benua...",
+     "start": 32.98,
+     "end": 33.997
+    },
+    {
+     "id": "w73",
+     "text": "dan",
+     "start": 34.103,
+     "end": 34.21
+    },
+    {
+     "id": "w74",
+     "text": "ganti",
+     "start": 34.29,
+     "end": 34.53
+    },
+    {
+     "id": "w75",
+     "text": "sayur.",
+     "start": 34.65,
+     "end": 35.179
+    },
+    {
+     "id": "w76",
+     "text": "Kirim",
+     "start": 35.25,
+     "end": 35.57
+    },
+    {
+     "id": "w77",
+     "text": "ke",
+     "start": 35.61,
+     "end": 35.65
+    },
+    {
+     "id": "w78",
+     "text": "teman",
+     "start": 35.73,
+     "end": 35.89
+    },
+    {
+     "id": "w79",
+     "text": "yang",
+     "start": 35.97,
+     "end": 36.13
+    },
+    {
+     "id": "w80",
+     "text": "paling",
+     "start": 36.17,
+     "end": 36.53
+    },
+    {
+     "id": "w81",
+     "text": "penakut,",
+     "start": 36.61,
+     "end": 37.14
+    },
+    {
+     "id": "w82",
+     "text": "lalu",
+     "start": 37.18,
+     "end": 37.5
+    },
+    {
+     "id": "w83",
+     "text": "lihat",
+     "start": 37.58,
+     "end": 37.82
+    },
+    {
+     "id": "w84",
+     "text": "reaksinya.",
+     "start": 37.9,
+     "end": 38.78
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "titik-heran-01",
+  "private": true,
+  "type": "module",
+  "description": "Titik Heran #1 — lentera lobak (Hyperframe Pro build)",
+  "scripts": {
+    "build": "node build.mjs .",
+    "lint": "node ../../plugins/hyperframe-pro/scripts/lint.mjs . build.mjs"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "d3-geo": "3.1.1",
+    "gsap": "3.15.0",
+    "hyperframes": "0.8.157",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  }
+}

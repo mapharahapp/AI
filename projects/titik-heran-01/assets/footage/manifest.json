@@ -1,0 +1,160 @@
+{
+ "night": {
+  "file": "assets/footage/night.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.7,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "video",
+   "id": "11721",
+   "page": "https://pixabay.com/videos/id-11721/",
+   "user": "Iconikmg"
+  },
+  "note": "focus 0.5"
+ },
+ "window": {
+  "file": "assets/footage/window.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.633,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "video",
+   "id": "250583",
+   "page": "https://pixabay.com/videos/id-250583/",
+   "user": "stefaniejockschat"
+  },
+  "note": "focus 0.5"
+ },
+ "carve": {
+  "file": "assets/footage/carve.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 1.0,
+  "still": true,
+  "generated": {
+   "tool": "ElevenLabs gpt-image-2.5-sunburst",
+   "flow": "YpSWNR6YtnCiwra54JQR",
+   "generation_id": "lRL0MxqRYY4RQ3Q8Y4an",
+   "source": "raw/ai/carve_2.png"
+  },
+  "note": "hands starting to carve a turnip; replaced Pixabay #10045 (potato, 606-px crop, unreadably soft on frame)"
+ },
+ "candleLight": {
+  "file": "assets/footage/candleLight.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.6,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "video",
+   "id": "143419",
+   "page": "https://pixabay.com/videos/id-143419/",
+   "user": "NickyPe"
+  },
+  "note": "focus 0.5"
+ },
+ "candleOut": {
+  "file": "assets/footage/candleOut.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.6,
+  "at": 0.95,
+  "pixabay": {
+   "kind": "video",
+   "id": "12659",
+   "page": "https://pixabay.com/videos/id-12659/",
+   "user": "astrid692"
+  },
+  "note": "focus 0.485"
+ },
+ "museum": {
+  "file": "assets/footage/museum.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.4,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "video",
+   "id": "329307",
+   "page": "https://pixabay.com/videos/id-329307/",
+   "user": "u_8gsy6544ad"
+  },
+  "note": "focus 0.5"
+ },
+ "handover": {
+  "file": "assets/footage/handover.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.4,
+  "at": 0.4,
+  "pixabay": {
+   "kind": "video",
+   "id": "111279",
+   "page": "https://pixabay.com/videos/id-111279/",
+   "user": "AttilaPergel"
+  },
+  "note": "focus 0.17"
+ },
+ "pumpkin": {
+  "file": "assets/footage/pumpkin.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 8.4,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "video",
+   "id": "308787",
+   "page": "https://pixabay.com/videos/id-308787/",
+   "user": "klaatubaradanikto"
+  },
+  "note": "focus 0.5"
+ },
+ "pumpkinCarve": {
+  "file": "assets/footage/pumpkinCarve.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 1.0,
+  "pixabay": {
+   "kind": "image",
+   "id": "3791214",
+   "page": "https://pixabay.com/photos/carving-cutting-eyes-fun-knife-3791214/",
+   "user": "Vladvictoria"
+  },
+  "note": "focus 0.63"
+ },
+ "turnip": {
+  "file": "assets/footage/turnip.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 12.0,
+  "at": 1.2,
+  "still": true,
+  "glowY": 55,
+  "generated": {
+   "tool": "ElevenLabs gpt-image-2.5-sunburst",
+   "flow": "YpSWNR6YtnCiwra54JQR",
+   "generation_id": "uIRoTqRJfeZVuqUfmOug",
+   "source": "raw/ai/turnip_3.png"
+  },
+  "note": "generic carved turnip lantern (not a replica of the museum object)"
+ },
+ "carveFace": {
+  "file": "assets/footage/carveFace.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 1.0,
+  "still": true,
+  "generated": {
+   "tool": "ElevenLabs gpt-image-2.5-sunburst",
+   "flow": "YpSWNR6YtnCiwra54JQR",
+   "generation_id": "UCVsEaXd2ir8tBKxNW6Q",
+   "source": "raw/ai/carve_1.png"
+  },
+  "note": "hands carving a face into a turnip"
+ }
+}
