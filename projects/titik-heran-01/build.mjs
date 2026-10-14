@@ -130,7 +130,8 @@ const show = (sel, at) => tl.push(`tl.set("${sel}",{autoAlpha:1},${fx(at)});`);
 const sfx = (name, at, vol = 0.8) => {
   const f = SFX[name];
   if (!f) { if (!DRAFT) throw new Error(`sfx "${name}" missing from assets/audio/sfx.json`); return; }
-  audio.push(`<audio id="sfx-${name}-${audio.length}" src="${f.file}" data-start="${fx(at)}" data-duration="${fx(f.dur)}" data-volume="${vol}"></audio>`);
+  const d = fx(Math.min(f.dur, TOTAL - at)), fade = d < f.dur ? ` data-fade-out="0.35"` : "";
+  audio.push(`<audio id="sfx-${name}-${audio.length}" src="${f.file}" data-start="${fx(at)}" data-duration="${d}" data-volume="${vol}"${fade}></audio>`);
 };
 
 // ---------------------------------------------------------------- shots (footage) ---------------------
@@ -155,9 +156,10 @@ function shot(slot, from, to, { at = null, kb = [1.0, 1.08], dx = 0, grade = "",
 // ---------------------------------------------------------------- B1 hook -----------------------------
 // Frame 0 is the turnip face, already moving (push-in); a zoom jolt lands ON "lobak".
 const HOOK_AT = FOOT.turnip?.at ?? 1.2;      // media time of the opening frame; the end card returns to it
-const hook = shot("turnip", 0, c.irl, { at: HOOK_AT, kb: [1.0, 1.06], z: 2 });
+const hook = shot("turnip", 0, c.irl, { at: HOOK_AT, kb: [1.0, 1.0], z: 2, hold: true });
+tl.push(`tl.fromTo("#${hook}",{scale:1.0},{scale:1.04,duration:${fx(c.lobak - 0.04)},ease:"none"},0);`);
 tl.push(`tl.to("#${hook}",{scale:1.17,duration:0.16,ease:"power4.out"},${fx(c.lobak - 0.04)});`);
-tl.push(`tl.to("#${hook}",{scale:1.22,duration:${fx(c.irl - c.lobak - 0.12)},ease:"none"},${fx(c.lobak + 0.12)});`);
+tl.push(`tl.to("#${hook}",{scale:1.22,duration:${fx(c.irl - c.lobak - 0.13)},ease:"none"},${fx(c.lobak + 0.13)});`);
 slam("#t1", 0.1);
 cut("#t1", fx(c.lobak - 0.04));               // same position, so a hard swap — never a soft overlap
 slam("#t2", fx(c.lobak - 0.04), { from: 1.5, d: 0.22 });
@@ -188,7 +190,7 @@ tl.push(`tl.set("#map",{autoAlpha:0},${fx(c.tiap + 0.15)});`);
 shot("night", fx(c.tiap - 0.2), c.orang, { kb: [1.12, 1.02], z: 3 });
 
 // ---------------------------------------------------------------- B3 latar: the making -----------------
-shot("carve", c.orang, c.wajah, { kb: [1.04, 1.12], z: 4 });
+shot("carve", c.orang, c.wajah, { kb: [1.02, 1.1], dx: -18, z: 4 });
 shot("carveFace", c.wajah, c.menyalakan, { kb: [1.12, 1.04], z: 5 });
 shot("candleLight", c.menyalakan, c.untuk, { kb: [1.0, 1.08], z: 6 });
 shot("window", c.untuk, c.masalah, { kb: [1.1, 1.0], z: 7 });
@@ -233,7 +235,7 @@ L = Math.ceil(L);
 const sail0 = fx(c.membawa - 0.1), sail1 = fx(c.amerika + 0.3);
 tl.push(`tl.set("#mapz",{scale:1,x:0,y:0},${fx(c.imigran - 0.5)});`);
 tl.push(`tl.set("#m-irl",{fill:"#5a3412"},${fx(c.imigran - 0.5)});`);
-tl.push(`tl.fromTo("#map",{autoAlpha:0},{autoAlpha:1,duration:0.3,ease:"power2.out"},${fx(c.imigran - 0.2)});`);
+tl.push(`tl.fromTo("#map",{autoAlpha:0},{autoAlpha:1,duration:0.3,ease:"power2.out",immediateRender:false},${fx(c.imigran - 0.2)});`);
 tl.push(`tl.fromTo("#m-route",{autoAlpha:0},{autoAlpha:1,duration:0.2,ease:"none"},${sail0});`);
 tl.push(`tl.fromTo("#m-routeMask",{strokeDashoffset:${L}},{strokeDashoffset:0,duration:${fx(sail1 - sail0)},ease:"power1.inOut"},${sail0});`);
 tl.push(`tl.fromTo("#m-ship",{autoAlpha:0},{autoAlpha:1,duration:0.2,ease:"none"},${sail0});`);
@@ -283,15 +285,39 @@ cut("#t13, #t13b, #chipL, #chipR, #splitL, #splitR", c.endcut);
 shot("turnip", c.endcut, TOTAL, { at: fx(HOOK_AT - END_HOLD), kb: [1.0, 1.0], z: 30, hold: true });
 sfx("sting", fx(c.endcut - 0.02), 0.75);
 
+// ---------------------------------------------------------------- candle flicker on a still lantern -----
+if (FOOT.turnip?.still) {
+  let seed = 7;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const REST = 0.34;
+  const flicker = (from, to) => {
+    tl.push(`tl.set("#flick",{opacity:${REST}},${fx(from)});`);
+    for (let t = from + 0.05; ;) {
+      const d = 0.06 + rnd() * 0.1, o = 0.16 + rnd() * 0.36;
+      if (t + d > to - 0.13) break;
+      tl.push(`tl.to("#flick",{opacity:${o.toFixed(2)},duration:${fx(d)},ease:"sine.inOut"},${fx(t)});`);
+      t = fx(t + d + 0.005);
+    }
+    tl.push(`tl.to("#flick",{opacity:${REST},duration:0.1,ease:"sine.inOut"},${fx(to - 0.12)});`);
+    tl.push(`tl.set("#flick",{opacity:0},${fx(to)});`);
+  };
+  flicker(0, c.irl);
+  flicker(c.masalah, c.seorang);
+  flicker(fx(c.mengganti - 0.3), c.labu2);
+  tl.push(`tl.set("#flick",{opacity:${REST}},${fx(c.endcut)});`);   // end card: the opening frame's level, held
+}
+
 // ---------------------------------------------------------------- split panels (videos inside) --------
 function panel(slot, from, to, at) {
   const f = FOOT[slot], dur = fx(to - from);
   if (!f) return `<div class="ph footage" style="position:absolute;inset:0;opacity:1;visibility:visible"><b>B-ROLL PIXABAY</b><span>${esc(slot)}</span></div>`;
-  return `<video id="p-${slot}" class="clip footage" muted playsinline preload="auto" src="${f.file}" data-start="${fx(from)}" data-duration="${dur}" data-media-start="${fx(at)}"></video>`;
+  return `<div id="pz-${slot}" class="pz"><video id="p-${slot}" class="clip footage" muted playsinline preload="auto" src="${f.file}" data-start="${fx(from)}" data-duration="${dur}" data-media-start="${fx(at)}"></video></div>`;
 }
 const splitFrom = fx(c.cuma - 0.1);
 const splitL = panel("turnip", splitFrom, c.endcut, HOOK_AT + 3.0);
 const splitR = panel("pumpkin", splitFrom, c.endcut, (FOOT.pumpkin?.at ?? 0) + 1.0);
+if (FOOT.turnip) tl.push(`tl.fromTo("#pz-turnip",{scale:1.0},{scale:1.1,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
+if (FOOT.pumpkin) tl.push(`tl.fromTo("#pz-pumpkin",{scale:1.06},{scale:1.0,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
 
 // ---------------------------------------------------------------- captions ---------------------------
 // The whole VO, 2-4 words a chunk, bold; "lobak", "1900" and "labu" in the accent colour.
@@ -353,6 +379,7 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #root{position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${BG}}
 .shot{position:absolute;inset:0;transform-origin:50% 45%}
 .shot video,.shot .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g-dim video{filter:sepia(0.6) saturate(0.55) brightness(0.58) contrast(1.15)}
 .g-sepia video,.g-sepia .ph{filter:sepia(0.85) saturate(0.45) contrast(1.08) brightness(0.72)}
 .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:0 120px;
   background:repeating-linear-gradient(135deg,#14181f 0 38px,#0e1116 38px 76px);opacity:0;visibility:hidden}
@@ -366,12 +393,15 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #splitL,#splitR{position:absolute;top:0;bottom:0;width:540px;overflow:hidden;opacity:0;visibility:hidden}
 #splitL{left:0} #splitR{right:0}
 #splitL video,#splitR video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-#splitBar{position:absolute;left:536px;top:0;width:8px;height:${H}px;background:${ACCENT};transform-origin:50% 50%;transform:scaleY(0)}
+.pz{position:absolute;inset:0;transform-origin:50% 48%}
+#splitBar{position:absolute;left:536px;top:0;width:8px;height:${H}px;background:${ACCENT};transform-origin:50% 50%}
 .chip{position:absolute;top:1010px;padding:10px 22px;border-radius:999px;background:rgba(5,6,8,0.72);font:800 40px/1 Inter,sans-serif;letter-spacing:0.04em}
 #chipL{left:40px;color:${INK}} #chipR{left:580px;color:${ACCENT}}
 #archive{position:absolute;inset:0;z-index:21;pointer-events:none;opacity:0;
   background:radial-gradient(ellipse at 50% 45%,rgba(60,38,10,0) 40%,rgba(30,18,4,0.55) 100%),repeating-linear-gradient(90deg,rgba(255,240,200,0.035) 0 2px,transparent 2px 160px)}
 #flash{position:absolute;inset:0;z-index:28;background:#fff6e6;opacity:0;visibility:hidden}
+#flick{position:absolute;inset:0;z-index:31;pointer-events:none;mix-blend-mode:screen;opacity:0;
+  background:radial-gradient(circle at 50% ${FOOT.turnip?.glowY ?? 52}%,rgba(255,150,40,0.6) 0,rgba(255,110,25,0.2) 26%,rgba(0,0,0,0) 58%)}
 #vig{position:absolute;inset:0;z-index:26;pointer-events:none;
   background:radial-gradient(ellipse at 50% 46%,rgba(0,0,0,0) 52%,rgba(0,0,0,0.6) 100%),
   linear-gradient(180deg,rgba(0,0,0,0.62) 0,rgba(0,0,0,0) 720px),linear-gradient(0deg,rgba(0,0,0,0.6) 0,rgba(0,0,0,0) 860px)}
@@ -399,9 +429,10 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
   ${body.join("\n  ")}
   <div id="archive"></div>
   <div id="map" class="ct"><div id="mapz">${mapSvg}</div></div>
-  <div id="split"><div id="splitL" class="ct">${splitL}</div><div id="splitR" class="ct">${splitR}</div><div id="splitBar"></div>
-    <div id="chipL" class="chip ct">LOBAK</div><div id="chipR" class="chip ct">LABU</div></div>
+  <div id="split"><div id="splitL" class="ct">${splitL}</div><div id="splitR" class="ct">${splitR}</div><div id="splitBar"></div></div>
+  <div id="chipL" class="chip ct">LOBAK</div><div id="chipR" class="chip ct">LABU</div>
   <div id="flash"></div>
+  <div id="flick"></div>
   <div id="vig"></div>
   <div id="t1" class="ttl ct">Ini bukan<br>kepala mumi</div>
   <div id="t2" class="ttl ct">Ini <em>lobak</em></div>

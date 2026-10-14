@@ -1,0 +1,16 @@
+carve.mp4  slot=carve  AI-GENERATED still (hands starting to carve a turnip); ElevenLabs gpt-image-2.5-sunburst, flow YpSWNR6YtnCiwra54JQR, generation lRL0MxqRYY4RQ3Q8Y4an. Replaces Pixabay #10045 (a potato), which was too soft once cropped to 9:16. Illustration, not a photo of a real object.
+night.mp4  slot=night  Pixabay video #11721 by Iconikmg  https://pixabay.com/videos/id-11721/  (Pixabay Content License; stock footage, not a record of the events narrated)
+window.mp4  slot=window  Pixabay video #250583 by stefaniejockschat  https://pixabay.com/videos/id-250583/  (Pixabay Content License; stock footage, not a record of the events narrated)
+candleLight.mp4  slot=candleLight  Pixabay video #143419 by NickyPe  https://pixabay.com/videos/id-143419/  (Pixabay Content License; stock footage, not a record of the events narrated)
+candleOut.mp4  slot=candleOut  Pixabay video #12659 by astrid692  https://pixabay.com/videos/id-12659/  (Pixabay Content License; stock footage, not a record of the events narrated)
+museum.mp4  slot=museum  Pixabay video #329307 by u_8gsy6544ad  https://pixabay.com/videos/id-329307/  (Pixabay Content License; stock footage, not a record of the events narrated)
+handover.mp4  slot=handover  Pixabay video #111279 by AttilaPergel  https://pixabay.com/videos/id-111279/  (Pixabay Content License; stock footage, not a record of the events narrated)
+pumpkin.mp4  slot=pumpkin  Pixabay video #308787 by klaatubaradanikto  https://pixabay.com/videos/id-308787/  (Pixabay Content License; stock footage, not a record of the events narrated)
+pumpkinCarve.mp4  slot=pumpkinCarve  Pixabay image #3791214 by Vladvictoria  https://pixabay.com/photos/carving-cutting-eyes-fun-knife-3791214/  (Pixabay Content License; stock footage, not a record of the events narrated)
+turnip.mp4  slot=turnip  AI-GENERATED still (generic carved turnip lantern (not a replica of the museum object)); ElevenLabs gpt-image-2.5-sunburst, flow YpSWNR6YtnCiwra54JQR, generation uIRoTqRJfeZVuqUfmOug. Pixabay has no turnip-lantern footage; user approved a generic AI image as the script's production note suggests. Illustration, not a photo of a real object.
+carveFace.mp4  slot=carveFace  AI-GENERATED still (hands carving a face into a turnip); ElevenLabs gpt-image-2.5-sunburst, flow YpSWNR6YtnCiwra54JQR, generation UCVsEaXd2ir8tBKxNW6Q. Pixabay has no turnip-lantern footage; user approved a generic AI image as the script's production note suggests. Illustration, not a photo of a real object.
+vo.wav  ElevenLabs TTS, voice Akram (mKyb2q1tbP41xJ8qTnox), eleven_v4, flow YpSWNR6YtnCiwra54JQR generation A6P5q9rcDz4TuAAMVv7j (take 3 of 4), pauses capped
+music.m4a  ElevenLabs Music v2.5 instrumental, flow YpSWNR6YtnCiwra54JQR generation HSgeL3hWBGmHeSWcjLL1, envelope dip under the problem act
+sfx/*.wav  ElevenLabs SFX v2, flow YpSWNR6YtnCiwra54JQR (match 2, ting 1, carve 1, blow 4, whoosh 3, pop 4, sting 2)
+atlantic.json  Natural Earth 1:50m/1:110m via world-atlas 2.0.2 (public domain)
+Facts: National Museum of Ireland (ghost turnip), Smithsonian Magazine 2021, National Geographic 2020 — see the doc 'Titik Heran: Naskah & Storyboard Video #1'
