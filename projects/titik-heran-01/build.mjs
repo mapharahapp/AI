@@ -127,10 +127,10 @@ const ping = (sel, at, to = 3.2) => {
 };
 const cut = (sel, at) => tl.push(`tl.set("${sel}",{autoAlpha:0},${fx(at)});`);
 const show = (sel, at) => tl.push(`tl.set("${sel}",{autoAlpha:1},${fx(at)});`);
-const sfx = (name, at, vol = 0.8) => {
+const sfx = (name, at, vol = 0.8, maxDur = null) => {
   const f = SFX[name];
   if (!f) { if (!DRAFT) throw new Error(`sfx "${name}" missing from assets/audio/sfx.json`); return; }
-  const d = fx(Math.min(f.dur, TOTAL - at)), fade = d < f.dur ? ` data-fade-out="0.35"` : "";
+  const d = fx(Math.min(f.dur, TOTAL - at, maxDur ?? Infinity)), fade = d < f.dur ? ` data-fade-out="${maxDur ? 0.3 : 0.35}"` : "";
   audio.push(`<audio id="sfx-${name}-${audio.length}" src="${f.file}" data-start="${fx(at)}" data-duration="${d}" data-volume="${vol}"${fade}></audio>`);
 };
 
@@ -167,7 +167,7 @@ slam("#t2", fx(c.lobak - 0.04), { from: 1.5, d: 0.22 });
 enter("#t2k", c.nenek, { y: 18 });
 exit("#t2, #t2k", fx(c.irl - X + 0.1));
 sfx("match", 0.0, 0.9);
-sfx("hum", 0.0, 0.12);
+sfx("hum", 0.0, 0.08);
 
 // ---------------------------------------------------------------- B2 latar: the map -------------------
 // Dark map, the Titik Heran red dot drops onto Ireland ON "Irlandia", then the camera dives to the island.
@@ -184,11 +184,10 @@ ping("#m-ring2", fx(c.y1900 + 0.2), 2.6);
 const diveEnd = fx(c.sekitar - 0.1 + c.y1900 - c.sekitar + 0.5);
 tl.push(`tl.to("#mapz",{scale:${fx(ZOOM * 1.08)},duration:${fx(c.tiap + 0.15 - diveEnd)},ease:"none"},${diveEnd});`);
 sfx("whoosh", fx(c.irl - 0.32), 0.5);
-sfx("ting", fx(c.irl + 0.1), 0.7);
-sfx("wind", fx(c.irl - 0.2), 0.25);
+sfx("ting", fx(c.irl + 0.1), 0.25);
+sfx("wind", fx(c.irl - 0.2), 0.08);
 slam("#t3", c.irl);
 enter("#t3y", c.sekitar, { y: 22 });
-tl.push(`tl.to(YR,{v:1900,duration:${fx(c.y1900 - c.sekitar - 0.05)},ease:"power2.out",snap:{v:1},onUpdate:()=>{document.getElementById("yr").textContent=Math.round(YR.v);}},${fx(c.sekitar + 0.05)});`);
 exit("#t3, #t3y", fx(c.tiap - 0.3));
 tl.push(`tl.to("#map",{autoAlpha:0,duration:0.35,ease:"power2.in"},${fx(c.tiap - 0.2)});`);
 tl.push(`tl.set("#map",{autoAlpha:0},${fx(c.tiap + 0.15)});`);
@@ -200,9 +199,9 @@ shot("carve", c.wajah, c.menyalakan, { kb: [1.12, 1.04], z: 5 });
 c.di = TA("di", c.lilin);
 shot("candleLight", c.menyalakan, c.di, { kb: [1.0, 1.06], z: 6 });
 shot("turnip", c.di, c.untuk, { at: HOOK_AT + 0.5, kb: [1.16, 1.06], z: 6 });
-sfx("flame", fx(c.menyalakan + 0.05), 0.4);
+sfx("flame", fx(c.menyalakan + 0.05), 0.22);
 shot("window", c.untuk, c.masalah, { kb: [1.1, 1.0], z: 7 });
-sfx("carve", fx(c.mengukir - 0.1), 0.3);
+sfx("carve", fx(c.mengukir - 0.1), 0.1);
 slam("#t4", c.lilin);
 cut("#t4", fx(c.untuk - 0.02));
 slam("#t5", fx(c.untuk - 0.02));
@@ -227,14 +226,14 @@ exit("#t7", fx(c.tak - 0.25));
 exit("#t7n", fx(c.tapi - 0.3));
 slam("#t8", fx(c.tak - 0.02));
 exit("#t8", fx(c.tapi - 0.3));
-sfx("blow", fx(c.membuat - 0.03), 0.5);
+sfx("blow", fx(c.membuat + 0.08), 0.5, 0.82);
 
 // ---------------------------------------------------------------- B5 resolusi -----------------------------
 // Colour comes back on "Tapi"; the dot crosses the Atlantic; the turnip match-cuts to a pumpkin ON "labu".
 const relight = shot("candleLight", c.tapi, fx(c.imigran + 0.2), { at: (FOOT.candleLight?.at ?? 0) + 0.4, kb: [1.08, 1.0], z: 12 });
 tl.push(`tl.fromTo("#${relight}",{filter:"sepia(0.9) saturate(0.35) brightness(0.6)"},{filter:"sepia(0) saturate(1.1) brightness(1)",duration:0.9,ease:"power2.out"},${fx(c.tapi)});`);
 slam("#t9", fx(c.tapi + 0.05));
-sfx("flame", fx(c.tapi + 0.05), 0.4);
+sfx("flame", fx(c.tapi + 0.05), 0.22);
 exit("#t9", fx(c.imigran - 0.3));
 
 // map, second visit: wide, the dot sails Ireland -> America along a dashed arc
@@ -258,8 +257,8 @@ tl.push(`tl.to(SAIL,{t:1,duration:${fx(sail1 - sail0)},ease:"power1.inOut",onUpd
 tl.push(`tl.fromTo("#m-adot",{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,duration:0.3,ease:"back.out(3)"},${sail1});`);
 ping("#m-aring", sail1);
 tl.push(`tl.fromTo("#m-usa",{fill:"#1d2636"},{fill:"#5a3412",duration:0.5,ease:"power2.out"},${sail1});`);
-sfx("whoosh", fx(sail0 - 0.05), 0.25);
-sfx("ting", fx(sail1), 0.6);
+sfx("whoosh", fx(sail0 - 0.05), 0.1);
+sfx("ting", fx(sail1), 0.35);
 slam("#t10", c.imigran);
 enter("#t10b", c.amerika, { y: 20 });
 exit("#t10, #t10b", fx(c.mengganti - X + 0.1));
@@ -272,7 +271,7 @@ shot("pumpkin", c.labu2, fx(c.jauh + 0.4), { kb: [1.08, 1.12], dy: 140, z: 14 })
 shot("pumpkinCarve", fx(c.jauh + 0.4), fx(c.cuma - 0.05), { kb: [1.0, 1.08], grade: "g-night", z: 15 });
 tl.push(`tl.set("#flash",{autoAlpha:0.3},${fx(c.labu2)});`);
 tl.push(`tl.to("#flash",{autoAlpha:0,duration:0.32,ease:"power2.out"},${fx(c.labu2 + 0.01)});`);
-sfx("pop", fx(c.labu2 - 0.03), 0.8);
+sfx("pop", fx(c.labu2 - 0.03), 0.35);
 slam("#t11", c.lobak2);
 enter("#t11b", c.labu2, { y: 20 });
 exit("#t11, #t11b", fx(c.cuma - X));
@@ -283,7 +282,7 @@ tl.push(`tl.fromTo("#splitR",{autoAlpha:0,x:120},{autoAlpha:1,x:0,duration:0.35,
 tl.push(`tl.fromTo("#splitBar",{scaleY:0},{scaleY:1,duration:0.4,ease:"power3.out"},${fx(c.cuma + 0.1)});`);
 enter("#chipL", fx(c.cuma + 0.2), { y: 12 });
 enter("#chipR", fx(c.cuma + 0.3), { y: 12 });
-sfx("whoosh", fx(c.cuma - 0.39), 0.3);
+sfx("whoosh", fx(c.cuma - 0.39), 0.12);
 slam("#t12", c.cuma);
 slam("#t12b", fx(c.ganti - 0.05), { from: 1.5 });
 exit("#t12, #t12b", fx(c.kirim - 0.3));
@@ -330,8 +329,8 @@ const splitL = panel("turnip", splitFrom, c.endcut, HOOK_AT + 3.0);
 const splitR = panel("pumpkin", splitFrom, c.endcut, (FOOT.pumpkin?.at ?? 0) + 1.0);
 // measured glow boxes (1080 frame): turnip x 374-732 (centre 553), pumpkin x 342-716 (centre 529) — both fit the
 // 540-px panel at scale >= 1, so never scale below 1 (that shows the clip's edges); just centre each face
-if (FOOT.turnip) tl.push(`tl.fromTo("#pz-turnip",{scale:1.0,x:-13},{scale:1.06,x:-13,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
-if (FOOT.pumpkin) tl.push(`tl.fromTo("#pz-pumpkin",{scale:1.05,x:11},{scale:1.0,x:11,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
+if (FOOT.turnip) tl.push(`tl.fromTo("#pz-turnip",{scale:1.0},{scale:1.05,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
+if (FOOT.pumpkin) tl.push(`tl.fromTo("#pz-pumpkin",{scale:0.88},{scale:0.84,duration:${fx(c.endcut - splitFrom)},ease:"none"},${splitFrom});`);
 
 // ---------------------------------------------------------------- captions ---------------------------
 // The whole VO, 2-4 words a chunk, bold; "lobak", "1900" and "labu" in the accent colour.
@@ -339,7 +338,7 @@ if (FOOT.pumpkin) tl.push(`tl.fromTo("#pz-pumpkin",{scale:1.05,x:11},{scale:1.0,
 // neighbour), never ending on a word that needs the next one, and preferring chunks that fit on one line.
 const caps = [];
 {
-  const NOBREAK = new Set(["yang", "ke", "di", "dengan", "satu", "sampai", "dan", "lalu", "untuk", "jadi", "ini", "tak"]);
+  const NOBREAK = new Set(["yang", "ke", "di", "dengan", "satu", "sampai", "dan", "lalu", "untuk", "jadi", "ini", "tak", "jauh", "sudah"]);
   const bare = (w) => w.text.toLowerCase().replace(/[^a-z0-9]/g, "");
   const len = (ws) => ws.reduce((a, w) => a + w.text.length, 0) + ws.length - 1;
   // clauses, then glue one-word clauses onto a neighbour (forward first) when the result stays <= 4 words
@@ -365,9 +364,22 @@ const caps = [];
     for (const [a, b] of cuts) chunks.push(cl.slice(a, b));
   }
   const hot = (t) => /^(lobak|labu|1900)/i.test(t);
+  // the aligner runs LATE after a pause (e.g. "dan" after "benua..."), never early: snap each chunk start back to
+  // the voice's rise out of silence within 0.3 s before the aligned start (a caption must never trail its word)
+  const wav = fs.readFileSync(path.join(proj, "assets/vo", VO.wav));
+  const dataAt = wav.indexOf("data") + 8, sr = wav.readUInt32LE(24), nS = (wav.length - dataAt) >> 1, hop = Math.round(sr / 100);
+  const rms = []; let peak = 0;
+  for (let i = 0; i + hop <= nS; i += hop) { let a = 0; for (let k = 0; k < hop; k++) { const v = wav.readInt16LE(dataAt + 2 * (i + k)); a += v * v; } const r = Math.sqrt(a / hop); rms.push(r); if (r > peak) peak = r; }
+  const onset = (t) => {
+    const thr = peak * 0.03, f0 = Math.max(1, Math.round((t - 0.3) * 100)), f1 = Math.min(rms.length - 1, Math.round((t + 0.02) * 100));
+    let best = null;
+    for (let f = f0; f <= f1; f++) if (rms[f - 1] < thr && rms[f] >= thr && (best === null || Math.abs(f / 100 - t) < Math.abs(best - t))) best = f / 100;
+    return best ?? t;
+  };
+  const startOf = (ch) => onset(ch[0].start);
   chunks.forEach((ch, i) => {
-    const st = fx(VO_START + ch[0].start - 0.05), nx = chunks[i + 1];
-    const en = fx(nx ? VO_START + nx[0].start - 0.05 : Math.min(c.endcut, VO_START + ch.at(-1).end + 0.25));
+    const st = fx(VO_START + startOf(ch) - 0.05), nx = chunks[i + 1];
+    const en = fx(nx ? VO_START + startOf(nx) - 0.05 : Math.min(c.endcut, VO_START + ch.at(-1).end + 0.25));
     const html = ch.map((w) => { const t = esc(w.text.replace(/\.\.\.$/, "…")); return hot(w.text) ? `<em>${t}</em>` : t; }).join(" ");
     caps.push(`<div class="cap clip" id="cap-${i}" data-start="${st}" data-duration="${fx(en - st)}">${html}</div>`);
     tl.push(`tl.fromTo("#cap-${i}",{y:14,scale:0.96,opacity:0},{y:0,scale:1,opacity:1,duration:0.14,ease:"power2.out"},${st});`);
@@ -411,7 +423,7 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #root{position:relative;width:${W}px;height:${H}px;overflow:hidden;background:${BG}}
 .shot{position:absolute;inset:0;transform-origin:50% 45%}
 .shot video,.shot .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.g-night video{filter:brightness(0.5) saturate(0.9) contrast(1.1)}
+.g-night video{filter:brightness(0.36) saturate(0.95) contrast(1.12)}
 .g-dim video{filter:sepia(0.6) saturate(0.55) brightness(0.58) contrast(1.15)}
 .g-sepia video,.g-sepia .ph{filter:sepia(0.85) saturate(0.45) contrast(1.08) brightness(0.72)}
 .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:0 120px;
@@ -427,6 +439,8 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #splitL{left:0} #splitR{right:0}
 #splitL video,#splitR video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pz{position:absolute;inset:0;transform-origin:50% 48%}
+#p-turnip{object-position:52.4% 50%}
+#pz-pumpkin{-webkit-mask-image:radial-gradient(ellipse 48% 30% at 50% 47%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 48% 30% at 50% 47%,#000 62%,transparent 100%)}
 #splitBar{position:absolute;left:536px;top:0;width:8px;height:${H}px;background:${ACCENT};transform-origin:50% 50%;z-index:41}
 .chip{position:absolute;top:1400px;padding:10px 22px;border-radius:999px;background:rgba(5,6,8,0.72);font:800 40px/1 Inter,sans-serif;letter-spacing:0.04em}
 #chipL{left:40px;color:${INK}} #chipR{left:580px;color:${ACCENT}}
@@ -474,7 +488,7 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
   <div id="t2" class="ttl ct">Ini <em>lobak</em></div>
   <div id="t2k" class="kick ct">nenek moyang labu Halloween</div>
   <div id="t3" class="ttl ct">Irlandia</div>
-  <div id="t3y" class="ttl ct">sekitar <span id="yr">1890</span></div>
+  <div id="t3y" class="ttl ct">sekitar <span>1900</span></div>
   <div id="t4" class="ttl ct">Lilin<br>di dalam</div>
   <div id="t5" class="ttl ct">Untuk mengusir<br><em>arwah</em></div>
   <div id="t6" class="ttl ct">memudar</div>
@@ -493,14 +507,14 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
   ${caps.join("\n  ")}
   ${draftBadge}
   <audio id="vo" src="assets/vo/${VO.wav}" data-start="${VO_START}" data-duration="${fx(VO.duration)}" data-volume="1"></audio>
-  <audio id="music" src="assets/audio/music.m4a" data-start="0" data-duration="${TOTAL}" data-volume="0.26" data-fade-out="0.6"></audio>
+  <audio id="music" src="assets/audio/music.m4a" data-start="0" data-duration="${TOTAL}" data-volume="0.22" data-fade-out="0.6"></audio>
   ${audio.join("\n  ")}
 </div>
 <script>
   window.__timelines = window.__timelines || {};
   gsap.set(".ct",{autoAlpha:0});
   gsap.set("#splitBar",{scaleY:0});
-  const YR = { v: 1890 }, SAIL = { t: 0 };
+  const SAIL = { t: 0 };
   const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
   ${tl.join("\n  ")}
   window.__timelines["main"] = tl;
