@@ -3,7 +3,7 @@
     python3 -I tools/pixabay.py search  videos|images "<query>" raw/pixabay/<slot>/<tag>   [--n 16] [--orientation vertical]
     python3 -I tools/pixabay.py fetch   videos|images <id> raw/pixabay/<slot>             (best rendition; writes <id>.json)
     python3 -I tools/pixabay.py sheet   <clip.mp4> <out.jpg>                               (1 frame/s, labelled — pick the segment)
-    python3 -I tools/pixabay.py prep    <clip.mp4|image> assets/footage/<slot>.mp4 [--focus 0.5] [--still-dur 9]
+    python3 -I tools/pixabay.py prep    <clip.mp4|image> assets/footage/<slot>.mp4 [--focus 0.5] [--still-dur 9] [--ss <sec> --t <sec>]
     python3 -I tools/pixabay.py record  <slot> assets/footage/<slot>.mp4 raw/pixabay/<slot>/<id>.json --at <sec> [--note "..."]
 
 `search` downloads every hit's thumbnail and tiles them into <dir>/sheet.jpg labelled with the Pixabay id, so
@@ -129,7 +129,7 @@ def sheet(clip, out):
     print(f"{clip}: {w}x{h} {d:.2f}s -> {out}")
 
 
-def prep(src, out, focus=0.5, still_dur=9.0):
+def prep(src, out, focus=0.5, still_dur=9.0, ss=None, t=None):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     is_img = os.path.splitext(src)[1].lower() in (".jpg", ".jpeg", ".png", ".webp")
     w, h, d = probe(src) if not is_img else (*probe(src)[:2], still_dur)
@@ -140,9 +140,10 @@ def prep(src, out, focus=0.5, still_dur=9.0):
     if cw < 1080: vf += ",unsharp=5:5:0.4:5:5:0.0"
     if is_img:
         cmd = ["ffmpeg", "-v", "error", "-y", "-loop", "1", "-t", str(still_dur), "-i", src, "-vf", vf + ",format=yuv420p"]
-    else:
-        cmd = ["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf]
-    run(cmd + ["-an", "-c:v", "libx264", "-crf", "18", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out])
+    else:   # --ss/--t keep only the window you will use (a 4K minute is slow to encode); `at` is then relative to it
+        cut = (["-ss", str(ss)] if ss is not None else []) + (["-t", str(t)] if t is not None else [])
+        cmd = ["ffmpeg", "-v", "error", "-y", *cut, "-i", src, "-vf", vf]
+    run(cmd + ["-an", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out])
     W, H, D = probe(out)
     print(f"prep {src} ({w}x{h}, crop {cw}x{ch}@x{cx}) -> {out} {W}x{H} {D:.2f}s" + ("  [upscaled]" if cw < 1080 else ""))
 
@@ -169,6 +170,7 @@ if __name__ == "__main__":
     if a[0] == "search": search(a[1], a[2], a[3], int(opt("--n", 16)), opt("--orientation"))
     elif a[0] == "fetch": fetch(a[1], a[2], a[3])
     elif a[0] == "sheet": sheet(a[1], a[2])
-    elif a[0] == "prep": prep(a[1], a[2], float(opt("--focus", 0.5)), float(opt("--still-dur", 9)))
+    elif a[0] == "prep": prep(a[1], a[2], float(opt("--focus", 0.5)), float(opt("--still-dur", 9)),
+                              float(opt("--ss")) if opt("--ss") else None, float(opt("--t")) if opt("--t") else None)
     elif a[0] == "record": record(a[1], a[2], a[3], opt("--at", 0), opt("--note", ""))
     else: sys.exit(__doc__)
