@@ -9,9 +9,17 @@ Hyperframe Pro loop in this repo: one voice take → word-locked cues → genera
 | Music bed | ElevenLabs Music v2.5, instrumental, variation 1, envelope dips under the problem act |
 | SFX | ElevenLabs SFX v2 — match, ting, carve, blow, whoosh, pop, sting (`tools/prep_sfx.sh`) |
 | Map | Natural Earth via `world-atlas` (`tools/make_map.mjs`) |
-| B-roll | **Pixabay** — 11 slots listed in `SLOTS` in `build.mjs`, sourced with `tools/pixabay.py` |
+| B-roll | **Pixabay** — 8 of 11 slots (licences in `publish/sources.txt`), sourced with `tools/pixabay.py` |
+| Turnip lantern + carving | generic AI stills (ElevenLabs gpt-image-2.5): Pixabay has no turnip-lantern footage; approved by the user, as the script's production note suggests |
 
 No HeyGen avatar.
+
+## Checks before a render
+
+```bash
+node build.mjs . && node ../../plugins/hyperframe-pro/scripts/lint.mjs . build.mjs
+python3 tools/audio_margins.py . 10 --speech-band     # voice above the bed, word by word
+```
 
 ## Build
 
