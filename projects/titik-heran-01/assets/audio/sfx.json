@@ -5,5 +5,8 @@
   "blow": { "file": "assets/audio/sfx/blow.wav", "dur": 1.480000, "take": 4, "gain_db": 28.8 },
   "whoosh": { "file": "assets/audio/sfx/whoosh.wav", "dur": 1.000000, "take": 3, "gain_db": -3.0 },
   "pop": { "file": "assets/audio/sfx/pop.wav", "dur": 0.800000, "take": 4, "gain_db": -2.9 },
-  "sting": { "file": "assets/audio/sfx/sting.wav", "dur": 2.000000, "take": 2, "gain_db": -3.0 }
+  "sting": { "file": "assets/audio/sfx/sting.wav", "dur": 2.000000, "take": 2, "gain_db": -3.0 },
+  "hum": { "file": "assets/audio/sfx/hum.wav", "dur": 6.000000, "take": 1, "gain_db": -2.8 },
+  "wind": { "file": "assets/audio/sfx/wind.wav", "dur": 6.000000, "take": 3, "gain_db": 7.5 },
+  "flame": { "file": "assets/audio/sfx/flame.wav", "dur": 1.480000, "take": 4, "gain_db": 1.4 }
 }

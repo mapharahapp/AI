@@ -3,7 +3,7 @@
 # write assets/audio/sfx/<name>.wav + assets/audio/sfx.json. The mix level is set per cue in build.mjs.
 set -euo pipefail
 cd "${1:-.}"
-PICK="match:2 ting:1 carve:1 blow:4 whoosh:3 pop:4 sting:2"
+PICK="match:2 ting:1 carve:1 blow:4 whoosh:3 pop:4 sting:2 hum:1 wind:3 flame:4"
 echo "{" > assets/audio/sfx.json; first=1
 for p in $PICK; do
   n=${p%%:*}; k=${p##*:}; src=raw/sfx/${n}_${k}.mp3; out=assets/audio/sfx/$n.wav
