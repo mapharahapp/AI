@@ -14,6 +14,10 @@ Hyperframe Pro loop in this repo: one voice take → word-locked cues → genera
 
 No HeyGen avatar. Pixabay has no footage of a moth swarm, so the swarm is drawn over real night footage of Sydney.
 
+Master: `publish/titik-heran-02_master.mp4` — 1080×1920, 30 fps, 41.1 s, H.264 + AAC, −13.8 LUFS integrated,
+true peak −1.3 dBFS, no black frames, last frame vs first frame SSIM 0.967 (the end card returns to frame 0 for the
+loop). Measured with `python3 -I tools/qa.py <video> qa/qa2_results.json`.
+
 ## Build
 
 ```bash
