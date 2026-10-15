@@ -211,10 +211,10 @@ for (let i = 0; i < 34; i++) SWP.conv.push({ th: R(2.3, 4.2), d: R(680, 1000), d
 // ---------------------------------------------------------------- map camera (evaluated by swarm.js) ----
 // transform-origin 0 0: a camera is {s, x, y} with screen = map * s + (x, y). cam() puts map point (mx,my) at (px,py).
 const cam = (s, mx, my, px, py) => ({ s, x: fx(px - mx * s), y: fx(py - my * s) });
-const V0 = cam(1.0, 540, 960, 540, 1010), V0b = cam(1.06, 540, 960, 540, 1010);
+const V0 = cam(1.0, 540, 960, 540, 1010), V0b = cam(1.1, 540, 960, 540, 1010);
 const V1 = cam(2.6, 880, 1120, 540, 930), V1z = cam(2.72, 880, 1120, 540, 930);
-const V2 = cam(2.5, 900, 1120, 540, 930), V2z = cam(2.62, 900, 1120, 540, 930);
-const V3 = cam(5.0, sx, sy, 540, 960), V3z = cam(5.35, sx, sy, 540, 960);
+const V2 = cam(2.5, 900, 1120, 540, 930), V2z = cam(2.74, 900, 1120, 540, 930);
+const V3 = cam(5.0, sx, sy, 540, 960), V3z = cam(5.75, sx, sy, 540, 960);
 SWP.cam = [
   { t0: fx(c.namanya - 0.2), t1: fx(c.tiap - 0.1), a: V0, b: V0b, ease: "none" },
   { t0: fx(c.tiap - 0.1), t1: fx(c.terbang - 0.05), a: V0b, b: V1, ease: "power2.inOut" },
@@ -300,7 +300,9 @@ SWP.scenes.push({ m: "wind", t0: fx(c.masalah - 0.25), t1: fx(c.dan2 + 0.15), s0
   w0: fx(c.angin - 0.25), w1: fx(c.dan2 + 0.1), p0: fx(c.angin + 0.1), p1: fx(c.pesisir + 0.25), slope: 0.3 });
 pop("#m-sw", fx(c.pesisir - 0.05), { from: 0 });
 ping("#m-sring", fx(c.pesisir));
-slam("#t6", c.angin);
+slam("#t6a", c.masalah, { from: 1.25 });
+cut("#t6a", fx(c.angin - 0.02));
+slam("#t6", fx(c.angin - 0.02));
 exit("#t6", fx(c.dan2 - 0.3));
 fadeOut("#map", fx(c.dan2 - 0.25), 0.3);
 // city lights: moths circling a tower's glow
@@ -329,6 +331,7 @@ const cum = (n) => fx(gLens.slice(0, n).reduce((a, b) => a + b, 0));
 const GL = Math.ceil(cum(gLens.length));
 SWP.graph = { L: GL };
 fadeIn("#graph", fx(c.tapi - 0.1), 0.3, true);
+tl.push(`tl.fromTo("#graph",{scale:1},{scale:1.06,duration:${fx(c.jangan + 0.1 - (c.tapi - 0.1))},ease:"none"},${fx(c.tapi - 0.1)});`);
 tl.push(`tl.to(GR,{len:${cum(1)},duration:${fx(c.nyaris - c.tapi - 0.3)},ease:"none"},${fx(c.tapi + 0.3)});`);
 tl.push(`tl.to(GR,{len:${cum(2)},duration:${fx(c.habis + 0.25 - c.nyaris)},ease:"power2.in"},${fx(c.nyaris)});`);
 tl.push(`tl.to(GR,{len:${cum(3)},duration:${fx(c.sedang2 - 0.2 - (c.habis + 0.25))},ease:"none"},${fx(c.habis + 0.25)});`);
@@ -338,7 +341,9 @@ pop("#g-y17", fx(c.habis + 0.2), { from: 0.6 });
 ping("#g-lring", fx(c.habis + 0.25), 2.8);
 pop("#g-y26", fx(c.pulih + 0.3), { from: 0.6 });
 ping("#g-ering", fx(c.pulih + 0.45), 2.8);
-slam("#t9", c.kabar);
+slam("#t9a", c.tapi, { from: 1.25 });
+cut("#t9a", fx(c.kabar - 0.02));
+slam("#t9", fx(c.kabar - 0.02));
 cut("#t9", fx(c.sedang2 - 0.06));
 slam("#t9b", fx(c.sedang2 - 0.06), { from: 1.25 });
 exit("#t9b", fx(c.jangan - 0.32));
@@ -509,7 +514,7 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #m-oring,#m-oring2,#m-aring,#m-sring,#m-sring2,#m-adot,#m-sw,#m-sdot,#m-odot,#m-route{opacity:0}
 #cons{position:absolute;inset:0;z-index:23;pointer-events:none}
 .cstar{transform-box:fill-box;transform-origin:50% 50%;opacity:0}
-#graph{position:absolute;inset:0;z-index:22}
+#graph{position:absolute;inset:0;z-index:22;transform-origin:50% 50%}
 #g-low,#g-y17,#g-y26,#g-lring,#g-ering{transform-box:fill-box;transform-origin:50% 50%;opacity:0}
 #dark{position:absolute;inset:0;z-index:11;background:#000;opacity:0;visibility:hidden}
 #swarm{position:absolute;left:0;top:0;width:${W}px;height:${H}px;z-index:31;pointer-events:none}
@@ -528,8 +533,8 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
 #t3{top:260px;font-size:124px}
 #t4{top:250px;font-size:92px} #t4b{top:350px;font-size:176px;color:${ACCENT}}
 #t5{top:250px;font-size:112px} #t5b{top:372px;font-size:112px} #t5n{top:510px}
-#t6{top:260px} #t7{top:260px} #t8{top:260px;font-size:116px}
-#t9{top:260px;font-size:140px} #t9b{top:250px;font-size:96px}
+#t6a{top:260px;font-size:120px} #t6{top:260px} #t7{top:260px} #t8{top:260px;font-size:116px}
+#t9a{top:260px;font-size:140px} #t9{top:260px;font-size:140px} #t9b{top:250px;font-size:96px}
 #t10{top:260px;font-size:112px} #t11{top:260px} #t12{top:260px;font-size:112px}
 #t13{top:240px;font-size:108px} #t13b{top:500px;font:800 40px/1.2 Inter,sans-serif;color:${INK};letter-spacing:0.02em}
 .cap{position:absolute;left:70px;right:150px;top:1230px;text-align:center;z-index:45;opacity:0;
@@ -557,9 +562,11 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
   <div id="t5" class="ttl ct">Dipandu <em>bintang</em></div>
   <div id="t5b" class="ttl ct">&amp; Bima Sakti</div>
   <div id="t5n" class="note ct">Dibuktikan di jurnal <i>Nature</i>, 2025</div>
+  <div id="t6a" class="ttl ct">Masalahnya…</div>
   <div id="t6" class="ttl ct">Angin <em>kencang</em></div>
   <div id="t7" class="ttl ct">Lampu <em>kota</em></div>
   <div id="t8" class="ttl ct">Nyasar ke <em>rumah</em></div>
+  <div id="t9a" class="ttl ct">Tapi…</div>
   <div id="t9" class="ttl ct">Kabar <em>baik</em></div>
   <div id="t9b" class="ttl ct">Terbaik dalam<br><em>hampir 10 tahun</em></div>
   <div id="t10" class="ttl ct">Jangan <em>disemprot</em></div>
@@ -578,7 +585,7 @@ body{font-family:Inter,system-ui,sans-serif;color:${INK};-webkit-font-smoothing:
   gsap.set(".ct",{autoAlpha:0});
   const GR = window.GR, CLK = { t: 0 };
   const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
-  ${tl.join("\n  ")}
+  ${tl.reduce((rows, x, i) => (i % 3 ? (rows[rows.length - 1] += " " + x) : rows.push(x), rows), []).join("\n  ")}
   // the drawn layer follows the playhead: a full-length proxy tween drives it (seek-safe, a pure function of t)
   tl.fromTo(CLK,{t:0},{t:${TOTAL},duration:${TOTAL},ease:"none",onUpdate:()=>drawAll(CLK.t)},0);
   drawAll(0);
