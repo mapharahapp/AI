@@ -1,0 +1,128 @@
+{
+ "sydney": {
+  "file": "assets/footage/sydney.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 5.6,
+  "at": 1.2,
+  "pixabay": {
+   "kind": "video",
+   "id": "213956",
+   "page": "https://pixabay.com/videos/id-213956/",
+   "user": "sangphotography"
+  },
+  "note": "hook + loop end card; media 0-5.6 s of the source"
+ },
+ "mothFace": {
+  "file": "assets/footage/mothFace.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 5.0,
+  "at": 0.0,
+  "pixabay": {
+   "kind": "image",
+   "id": "235022",
+   "page": "https://pixabay.com/photos/butterfly-moth-insect-235022/",
+   "user": "Josch13"
+  },
+  "note": "photo plate on black (tools/pixabay.py plate --bg black)"
+ },
+ "cave": {
+  "file": "assets/footage/cave.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.5,
+  "at": 0.5,
+  "pixabay": {
+   "kind": "video",
+   "id": "204199",
+   "page": "https://pixabay.com/videos/id-204199/",
+   "user": "Oleh_1977"
+  },
+  "note": "source 0.5-5.0 s"
+ },
+ "sky": {
+  "file": "assets/footage/sky.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 0.3,
+  "pixabay": {
+   "kind": "video",
+   "id": "283431",
+   "page": "https://pixabay.com/videos/id-283431/",
+   "user": "Kanenori"
+  },
+  "note": "native vertical; source 0-4 s"
+ },
+ "city": {
+  "file": "assets/footage/city.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 0.5,
+  "pixabay": {
+   "kind": "video",
+   "id": "214546",
+   "page": "https://pixabay.com/videos/id-214546/",
+   "user": "sangphotography"
+  },
+  "note": "source 1.5-5.5 s"
+ },
+ "window": {
+  "file": "assets/footage/window.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 5.0,
+  "at": 0.0,
+  "pixabay": {
+   "kind": "image",
+   "id": "1701542",
+   "page": "https://pixabay.com/photos/butterfly-window-insect-1701542/",
+   "user": "ivoxis"
+  },
+  "note": "photo plate, blurred self as background"
+ },
+ "screen": {
+  "file": "assets/footage/screen.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 3.533,
+  "at": 0.0,
+  "pixabay": {
+   "kind": "image",
+   "id": "2425906",
+   "page": "https://pixabay.com/photos/moth-screen-green-light-bug-wings-2425906/",
+   "user": "casino530"
+  },
+  "note": "photo plate, blurred moth-free strip as background"
+ },
+ "bulb": {
+  "file": "assets/footage/bulb.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 2.5,
+  "at": 0.65,
+  "pixabay": {
+   "kind": "video",
+   "id": "326939",
+   "page": "https://pixabay.com/videos/id-326939/",
+   "user": "Solarselle77"
+  },
+  "note": "source 4.0-6.5 s; switches off at clip time 1.23"
+ },
+ "stars": {
+  "file": "assets/footage/stars.mp4",
+  "w": 1080,
+  "h": 1920,
+  "dur": 4.0,
+  "at": 0.3,
+  "pixabay": {
+   "kind": "video",
+   "id": "169951",
+   "page": "https://pixabay.com/videos/id-169951/",
+   "user": "Kanenori"
+  },
+  "note": "source 2-6 s"
+ }
+}
