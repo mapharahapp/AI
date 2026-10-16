@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06
+usage: python3 render.py 05|06|07|08
 """
 import json, subprocess, sys, os
 
@@ -42,6 +42,64 @@ if EP == "05":
     ]
     # Scribe spells the TTS respelling; show the real name on screen
     FIX = {"selakan.": "coelacanth."}
+elif EP == "07":
+    TEMPO = 1.18
+    AUDIO = "vo07.mp3"
+    SHOTS = [
+        (0.0, 4.0, "clips/6681.mp4", 2, "v", True),
+        (4.0, 6.1, "clips/311.mp4", 22, "r", True),
+        (6.1, 8.5, "clips/105377.mp4", 0, "k", True),
+        (8.5, 10.8, "clips/213424.mp4", 0, "v", False),
+        (10.8, 14.0, "clips/26452.mp4", 2, "v", False),
+        (14.0, 19.5, "img/3212803.jpg", 0, "f", False),
+        (19.5, 21.3, "clips/86260.mp4", 4, "v", False),
+        (21.3, 24.2, "clips/6681.mp4", 9, "v", True),
+        (24.2, 28.8, "clips/105377.mp4", 8, "k", True),
+        (28.8, 32.4, "clips/146578.mp4", 2, "v", False),
+        (32.4, 36.0, "clips/236893.mp4", 4, "v", False),
+    ]
+    TITLES = [
+        (0.0, 4.0, "HIU INI LAHIR\\NZAMAN VOC?"),
+        (6.1, 8.5, "HIU GREENLAND"),
+        (8.5, 10.8, "LAUT ARKTIK"),
+        (10.8, 14.0, "±1 CM\\NPER TAHUN"),
+        (14.0, 19.5, "GIMANA CARA\\NHITUNG UMURNYA?"),
+        (19.5, 21.3, "2016\\N{\\fs54}Jurnal Science"),
+        (21.3, 24.2, "LENSA MATA"),
+        (24.2, 28.8, "±400 TAHUN"),
+        (28.8, 32.4, "BARU DEWASA\\NUMUR 150"),
+        (32.4, 36.0, "KAMU BARU TAHU?"),
+    ]
+    FIX = {}
+elif EP == "08":
+    TEMPO = 1.20
+    AUDIO = "vo08.mp3"
+    SHOTS = [
+        (0.0, 3.7, "img/1840201.jpg", 0, "f", True),
+        (3.7, 6.5, "clips/366842.mp4", 3, "v", True),
+        (6.5, 8.6, "clips/347.mp4", 4, "v", True),
+        (8.6, 11.8, "img/573339.jpg", 0, "f", True),
+        (11.8, 13.8, "clips/37712.mp4", 2, "v", False),
+        (13.8, 19.5, "clips/270311.mp4", 1, "v", False),
+        (19.5, 25.7, "img/9333958.jpg", 0, "i", False),
+        (25.7, 27.5, "clips/347.mp4", 0, "v", True),
+        (27.5, 31.5, "clips/123272.mp4", 1, "v", False),
+        (31.5, 34.0, "clips/218955.mp4", 2, "v", False),
+        (34.0, 37.2, "clips/367035.mp4", 2, "v", False),
+    ]
+    TITLES = [
+        (0.0, 3.7, "MANUSIA YANG\\NBEREVOLUSI?"),
+        (3.7, 6.5, "SUKU BAJAU\\N{\\fs54}Pengembara laut"),
+        (6.5, 11.8, "TANPA TABUNG"),
+        (11.8, 13.8, "KENAPA BISA?"),
+        (13.8, 19.5, "2018 · SULAWESI\\N{\\fs54}Jurnal Cell"),
+        (21.5, 25.7, "LIMPA +50%"),
+        (25.7, 27.5, "BAHKAN YANG\\NBUKAN PENYELAM"),
+        (27.5, 31.5, "TABUNG OKSIGEN\\NALAMI"),
+        (31.5, 34.0, "TERTULIS\\NDI GEN"),
+        (34.0, 37.2, "KAMU BARU TAHU?"),
+    ]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -82,8 +140,9 @@ for n, (a, b, src, off, kind, ilu) in enumerate(SHOTS):
     out = f"seg{EP}/{n:02d}.mp4"
     tag = (f",drawtext=fontfile=/usr/share/fonts/opentype/inter/Inter-Medium.otf:text=ilustrasi:"
            f"fontsize=30:fontcolor=white@0.75:x=w-tw-40:y=60") if ilu else ""
-    if kind == "v":
-        vf = f"{COVER},fps={FPS}{tag}"
+    if kind in ("v", "r"):
+        cover = COVER if kind == "v" else f"scale=-2:{H},crop={W}:{H}:iw-{W}:0,setsar=1"  # r: keep right edge
+        vf = f"{cover},fps={FPS}{tag}"
         cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(off), "-stream_loop", "-1", "-i", src,
                "-t", f"{dur:.3f}", "-vf", vf]
     elif kind == "k":
@@ -96,7 +155,7 @@ for n, (a, b, src, off, kind, ilu) in enumerate(SHOTS):
         vf = (f"[0:v]scale={W*2}:{H*2}:force_original_aspect_ratio=decrease,"
               f"pad={W*2}:{H*2}:(ow-iw)/2:(oh-ih)/2:color=0x05070a,format=yuv420p,"
               f"zoompan=z='1+0.12*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS}{tag}")
-        if src.endswith("6620258.jpg"):  # vertical aerial: fill the frame instead of letterboxing
+        if kind == "f" or src.endswith("6620258.jpg"):  # vertical aerial: fill the frame instead of letterboxing
             vf = (f"[0:v]scale={W*2}:{H*2}:force_original_aspect_ratio=increase,crop={W*2}:{H*2},"
                   f"zoompan=z='1+0.12*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS}{tag}")
         cmd = ["ffmpeg", "-v", "error", "-y", "-i", src, "-frames:v", str(frames),
@@ -120,7 +179,10 @@ def ts(t):
 words = [w for w in json.load(open(f"w{EP}.json"))["words"] if w["type"] == "word"]
 # show spoken numbers as digits in the captions
 NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan puluh tujuh,", "1997,")],
-        "06": [("tujuh puluh empat ribu", "74.000"), ("dua ribu delapan belas,", "2018,")]}[EP]
+        "06": [("tujuh puluh empat ribu", "74.000"), ("dua ribu delapan belas,", "2018,")],
+        "07": [("v o c.", "VOC."), ("satu sentimeter", "1 sentimeter"), ("dua ribu enam belas,", "2016,"),
+               ("empat ratus", "400"), ("seratus lima puluh.", "150.")],
+        "08": [("dua ribu delapan belas,", "2018,"), ("lima puluh persen", "50 persen")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
