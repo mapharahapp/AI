@@ -121,6 +121,31 @@ Aset Pixabay yang sudah dicek (18 Okt 2026):
 - Video: 381987 (danau garam merah muda, aerial), 239675 (pink lake), 381413 (pola danau garam), 168670 (uap mata air panas), 37997 (hieroglif), 135407 (flamingo di danau pink), 172579 (flamingo slow motion), 120394 (flamingo).
 - Foto: 4821665 (Ol Doinyo Lengai, Tanzania), 4316935 dan 5307205 (patung burung dari batu), 7295230 (kelelawar tergantung), 4289475 (sarkofagus Mesir), 4644652 (kawanan flamingo, Kenya), 167018 (kawanan flamingo kecil), 1484781 (flamingo Danau Nakuru, Kenya).
 
+### Shot list final (dipakai di video, 30,0 detik)
+
+Video final memakai 18 shot. VO Akram dirapikan jedanya lalu dipercepat 1,07x. Klip bertanda (ilustrasi) diberi label kecil "ilustrasi" di video.
+
+| # | Detik | VO | Visual | Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 1 | 0,0–1,8 | Ada danau yang katanya bisa mengubah | Aerial danau garam merah muda (ilustrasi) | video 239675 | **HEWAN JADI BATU?** |
+| 2 | 1,8–3,0 | hewan jadi batu. | Patung merpati dari batu (ilustrasi) | foto 3671600 | (lanjut) |
+| 3 | 3,0–5,5 | Danau Natron di Tanzania. | Foto Ol Doinyo Lengai di atas latar blur, keterangan "Ol Doinyo Lengai, dekat Danau Natron" | foto 4821665 | DANAU NATRON · TANZANIA |
+| 4 | 5,5–7,3 | Airnya sangat basa, | Tekstur kerak garam retak (ilustrasi) | video 352978 | **pH SAMPAI 10,5 · SUHU BISA 60°C** |
+| 5 | 7,3–8,7 | bisa membakar kulit hewan. | Aerial mata air panas jingga dan uapnya (ilustrasi) | video 168670 | (lanjut) |
+| 6 | 8,7–10,6 | Di tepinya, burung | Dua patung burung batu di atas latar blur, warna dingin (ilustrasi) | foto 216412 | BURUNG & KELELAWAR MATI |
+| 7 | 10,6–12,0 | dan kelelawar mati | Kelelawar tergantung, warna dingin (ilustrasi) | foto 7295230 | (lanjut) |
+| 8 | 12,0–13,5 | tampak seperti patung. | Patung burung batu (ilustrasi) | foto 276191 | SEPERTI PATUNG |
+| 9 | 13,5–14,9 | Benarkah jadi batu? | Patung merpati batu, zoom mundur (ilustrasi) | foto 3671600 | BENARKAH JADI BATU? |
+| 10 | 14,9–15,7 | Bukan. | Kristal garam, zoom hentak (ilustrasi) | foto 6635719 | **BUKAN BATU...** |
+| 11 | 15,7–17,3 | Garam soda di air danau | Aerial pola danau garam (ilustrasi) | video 381413 | (lanjut) |
+| 12 | 17,3–18,6 | mengawetkan bangkai mereka, | Wajah mumi di atas latar blur (ilustrasi) | foto 935258 | (lanjut) |
+| 13 | 18,6–19,7 | mirip mumi Mesir. | Topeng sarkofagus Mesir | foto 4078155 | **TAPI "MUMI"** |
+| 14 | 19,7–21,2 | Anehnya, | Flamingo di air (ilustrasi) | video 172579 | (tanpa judul) |
+| 15 | 21,2–22,6 | danau maut ini justru | Aerial danau merah muda (ilustrasi) | video 239675 | (tanpa judul) |
+| 16 | 22,6–24,0 | tempat lahir 3/4 | Kawanan flamingo di atas latar blur (ilustrasi) | foto 4644652 | **±75% FLAMINGO · KECIL DUNIA LAHIR DI SINI** |
+| 17 | 24,0–26,5 | flamingo kecil dunia. | Flamingo berjalan di air (ilustrasi) | video 120394 | (lanjut) |
+| 18 | 26,5–30,0 | Kamu berani ke sini? Tulis di komentar. | Kaki flamingo di air merah muda (ilustrasi) | video 345464 | KAMU BERANI KE SINI? · @titikheran |
+
 ---
 
 ## 7. Metadata unggah

@@ -120,6 +120,31 @@ Aset Pixabay yang sudah dicek (18 Okt 2026):
 - Video: 219241 (pulau tropis, Papua), 231923 (Raja Ampat), 272511 dan 47335 (Manhattan dari udara), 4544 (skyline Manhattan), 1366 (Patung Liberty), 209560 dan 374656 (kapal layar), 338280 (pertempuran galleon, buatan AI), 325497 (pena bulu dan tinta), 33237 (peta kuno), 134607 (pasar rempah), 1204 (bendera Inggris), 21413 (bendera Belanda).
 - Foto: 2110848, 2110851, dan 5174379 (buah pala dengan fuli), 7004902 (biji pala), 5779375 (pulau-pulau Maluku Utara).
 
+### Shot list final (dipakai di video, 30,0 detik)
+
+Video final memakai 18 shot. VO Akram dirapikan jedanya lalu dipercepat 1,08x. Klip bertanda (ilustrasi) diberi label kecil "ilustrasi" di video.
+
+| # | Detik | VO | Visual | Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 1 | 0,0–2,8 | Pulau kecil ini pernah dianggap lebih berharga | Aerial pulau tropis di Papua (ilustrasi) | video 219241 | **LEBIH BERHARGA DARI MANHATTAN?** |
+| 2 | 2,8–3,8 | dari Manhattan. | Empire State Building malam hari dari atas, zoom hentak | video 272511 | (lanjut) |
+| 3 | 3,8–5,0 | Pulau Run, di | Pulau bertebing kapur di Raja Ampat (ilustrasi) | video 231923 | PULAU RUN · BANDA, MALUKU |
+| 4 | 5,0–6,2 | Banda, Maluku. | Foto pulau-pulau Maluku Utara di atas latar blur (ilustrasi) | foto 5779375 | (lanjut) |
+| 5 | 6,2–7,5 | Dulu, pala cuma | Buah pala terbelah | foto 2110848 | PALA: DULU CUMA TUMBUH DI BANDA |
+| 6 | 7,5–8,7 | tumbuh di Banda, | Buah pala di pohon | foto 2110851 | (lanjut) |
+| 7 | 8,7–10,6 | harganya selangit di Eropa. | Pasar rempah (ilustrasi) | video 134607 | HARGA SELANGIT DI EROPA |
+| 8 | 10,6–11,6 | Masalahnya, | Kapal layar di pelabuhan (ilustrasi) | video 374656 | (tanpa judul) |
+| 9 | 11,6–12,8 | Run dikuasai Inggris, | Bendera Inggris berkibar | video 1204 | **INGGRIS VS BELANDA** |
+| 10 | 12,8–13,9 | padahal Belanda ingin | Bendera Belanda berkibar | video 21413 | (lanjut) |
+| 11 | 13,9–15,0 | memonopoli pala. | Biji pala di meja | foto 7004902 | (lanjut) |
+| 12 | 15,0–16,5 | Perang pun pecah. | Pertempuran kapal layar buatan AI, warna dingin, zoom hentak (ilustrasi) | video 338280 | **PERANG!** |
+| 13 | 16,5–19,0 | Tahun 1667, | Peta tua (ilustrasi) | video 33237 | **1667 · PERJANJIAN BREDA** |
+| 14 | 19,0–20,6 | perjanjian damai diteken. | Kamera geser dari pena bulu ke lilin dan buku tua (ilustrasi) | video 325497 | (lanjut) |
+| 15 | 20,6–22,0 | Belanda dapat Run, | Aerial pulau tropis di Papua (ilustrasi) | video 219241 | label BELANDA: PULAU RUN |
+| 16 | 22,0–24,3 | Inggris dapat Manhattan, | Layar terbelah: pulau (atas) dan kota Manhattan dari udara (bawah) | video 219241 + 47335 | label BELANDA: PULAU RUN dan INGGRIS: MANHATTAN |
+| 17 | 24,3–26,0 | yang kini jadi New York. | Patung Liberty | video 1366 | KINI JADI NEW YORK |
+| 18 | 26,0–30,0 | Menurutmu, siapa yang untung? Tulis di komentar. | Layar terbelah: pulau bertebing di Raja Ampat (atas) dan Empire State Building (bawah) | video 231923 + 272511 | SIAPA YANG UNTUNG? · @titikheran, label PULAU RUN: < 2.000 JIWA dan MANHATTAN: ±1,7 JUTA JIWA |
+
 ---
 
 ## 7. Metadata unggah
