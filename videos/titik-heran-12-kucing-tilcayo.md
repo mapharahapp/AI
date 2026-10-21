@@ -135,6 +135,26 @@ Aset Pixabay yang sudah dicek (20 Okt 2026, dilihat thumbnail-nya):
 - Video: 132002 (anak-anak kucing tergeletak di jalan), 132493 (anak kucing oranye di jalan berkerikil, vertikal 4K), 11673 (mangkuk nasi atau mi dengan sumpit), 11626 (nasi putih), 27038 (kucing bengal di kursi ruang tamu, 33 detik), 353437 (oselot berjalan di hutan), 174944 (heliks DNA berwarna, 4K), 197931 (heliks DNA hijau, 4K), 33079 (hutan tropis berkabut di pegunungan, 4K), 256770 (kucing makan dari piring, vertikal, cadangan).
 - Klip margay dan oselot lain di Pixabay (370679, 375126, 359040, 370645) ditandai "ai generated". Lebih baik tidak dipakai, atau beri label "ilustrasi".
 
+### Shot list final (dipakai di video, 30,0 detik)
+
+Video final memakai 11 shot. VO Akram mentahnya 39,1 detik, jadi jedanya dirapikan (jadi 32,4 detik) lalu dipercepat 1,1x, hasilnya 30,0 detik. Semua foto dan klip kucing, makanan, dan hutan diberi label kecil "ilustrasi" di pojok kanan atas. Animasi DNA tidak diberi label karena hanya simbol.
+
+Perubahan dari storyboard: pembuka memakai foto 7236420 (anak kucing bengal di latar gelap), dan bagian atas fotonya diperpanjang dengan tepi yang diburamkan supaya judul tidak menutupi wajahnya. Foto anak kucing di sofa (6656870) pindah ke kalimat "tutul dan ekornya beda" karena tutul dan ekornya kelihatan jelas, jadi label "TUTUL?" dan "EKOR?" bisa menunjuk langsung; foto tigrillo 2828667 tidak dipakai. Klip 11673 ternyata nasi, jadi mi diganti klip 11716, dan layar dibelah atas-bawah (mi di atas, nasi di bawah) karena videonya vertikal. Kata "kerabatnya" memakai potret oselot 10429935, bukan margay 10495132. Klip 33079 ternyata tidak menampilkan hutan, jadi diganti 265333. Klip oselot 353437 tidak dipakai karena ternyata buatan AI.
+
+| # | Detik | VO | Visual | Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 1 | 0,0–2,0 | Dikira kucing kampung, | Foto anak kucing bengal bertutul di latar gelap, zoom hentak, bagian atas foto diperpanjang supaya judul tidak menutupi wajah (ilustrasi) | foto 7236420 | **DIKIRA KUCING KAMPUNG?** |
+| 2 | 2,0–5,3 | ternyata spesies kucing baru pertama dalam 100 tahun. | Foto anak oselot di bebatuan (ilustrasi) | foto 6863538 | **SPESIES BARU!** · PERTAMA DALAM 100+ TAHUN |
+| 3 | 5,3–7,8 | Seorang warga Bolivia memungutnya di jalan, | Anak kucing oranye duduk di jalan berkerikil (ilustrasi) | video 132493 | **BOLIVIA, ±2016** |
+| 4 | 7,8–10,0 | lalu memberinya mi dan nasi setahun. | Layar dibelah dua: mi di atas, nasi putih di bawah (ilustrasi) | video 11716 + 11626 | **DIKASIH MI & NASI** · ±1 TAHUN |
+| 5 | 10,0–11,9 | Sadar kucing itu liar, | Kucing bengal duduk di kursi beludru biru (ilustrasi) | video 27038 | **TERNYATA KUCING LIAR** |
+| 6 | 11,9–14,0 | ia menyerahkannya ke suaka satwa. | Foto oselot berbaring di rumput, di atas latar blur (ilustrasi) | foto 1200175 | **SUAKA SATWA** · SENDA VERDE, BOLIVIA |
+| 7 | 14,0–17,9 | Ahli biologi di sana curiga, tutul dan ekornya beda. | Foto anak kucing bengal di sofa, di atas latar blur, push pelan; label "TUTUL?" lalu "EKOR?" muncul di tutul dan ekornya (ilustrasi) | foto 6656870 | **AHLI BIOLOGI CURIGA**, lalu **TUTUL & EKORNYA TIDAK COCOK** |
+| 8 | 17,9–20,1 | Tes DNA membuktikan, | Animasi heliks DNA berwarna (tanpa label) | video 174944 | **TES DNA** · 38 GENOM DIBANDINGKAN |
+| 9 | 20,1–24,3 | ia berpisah dari kerabatnya 1,4 juta tahun lalu. | Potret oselot, kerabat satu genus (ilustrasi) | foto 10429935 | **TERPISAH ±1,4 JUTA TAHUN LALU** |
+| 10 | 24,3–27,0 | Namanya tilcayo. Kalau kamu, | Hutan berkabut di pegunungan dari udara (ilustrasi) | video 265333 | **LEOPARDUS TILCAYO** · RESMI DINAMAI 17 SEP 2026 |
+| 11 | 27,0–30,0 | bakal sadar nggak? Tulis di komentar. | Foto anak kucing bengal menatap kamera, zoom out pelan (ilustrasi) | foto 7222680 | **KAMU BAKAL SADAR?** · @titikheran |
+
 ---
 
 ## 7. Metadata unggah

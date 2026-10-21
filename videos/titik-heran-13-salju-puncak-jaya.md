@@ -123,6 +123,27 @@ Aset Pixabay yang sudah dicek (20 Okt 2026, dilihat thumbnail-nya):
 - Foto: 2275399 (kapal layar tua di tengah badai dengan petir, render 3D), 1366926 (kapal layar di laut badai, cadangan), 9035692 (lukisan pria-pria tertawa, buatan AI), 2637043 (gletser Gunung Cayambe di Ekuador, gunung es di garis khatulistiwa, cadangan "salju di khatulistiwa").
 - Video: 2382 (kapal layar tua berlayar, cadangan scene 1), 22512 dan 125695 (drone puncak batu dengan salju tipis), 220945 (puncak batu bersalju dan awan), 376 (permukaan gletser mencair), 3147 (es menetes close-up), 154726 (air terjun salju mencair, cadangan), 26452 (jam pasir), 192281 (dua ilmuwan berjas lab, nuansa biru), 33237 dan 30090 (peta kuno, cadangan scene 1).
 
+### Shot list final (dipakai di video, 30,0 detik)
+
+Video final memakai 12 shot. VO Akram mentahnya 36,7 detik, jadi jedanya dirapikan (jadi 30,8 detik) lalu dipercepat sedikit (1,05x), hasilnya 30,0 detik. Label kecil di pojok kanan atas: "ilustrasi" untuk stok pengganti, dan "skema" untuk peta dan grafik buatan sendiri (skema13.py, peta dari data Natural Earth). Jam pasir tidak diberi label karena hanya simbol.
+
+Perubahan dari storyboard: lukisan orang tertawa dipakai dua kali (potongan kiri lalu kanan), dan judulnya dipindah ke tengah layar supaya wajah yang tertawa tidak tertutup. "Dia benar." tampil di drone puncak bersalju, lalu peta skema Papua muncul di kata "ada di Puncak Jaya" (urutannya dibalik dari storyboard). Tulisan kecil "gletser tropis terakhir antara Himalaya & Andes" tidak dipakai supaya layar tidak penuh. Grafik luas es diberi penghitung tahun 1988 → 2025 dan menyusut jadi dua bercak kecil. Tebal es (32 m → ±4 m) tampil di klip gletser dan es menetes, lalu "BISA HABIS AKHIR 2026" di jam pasir. Penampang es juga memperlihatkan inti es yang diangkat setelah dibor.
+
+| # | Detik | VO | Visual | Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 1 | 0,0–2,3 | 400 tahun lalu, penjelajah Belanda | Kapal layar tua di tengah badai dengan petir (render 3D), zoom hentak, grade sepia (ilustrasi) | foto 2275399 | **1623** · PENJELAJAH BELANDA |
+| 2 | 2,3–4,4 | ditertawakan karena mengaku melihat | Lukisan pria-pria tertawa buatan AI, potongan kiri, zoom hentak (ilustrasi) | foto 9035692 | **DITERTAWAKAN** · DI EROPA (di tengah layar) |
+| 3 | 4,4–6,3 | salju di dekat khatulistiwa. | Lukisan yang sama, potongan kanan (ilustrasi) | foto 9035692 | **"SALJU DI KHATULISTIWA?"** (di tengah layar) |
+| 4 | 6,3–7,9 | Dia benar. Salju itu | Drone puncak batu dengan salju tipis (ilustrasi) | video 22512 | **DIA BENAR!** |
+| 5 | 7,9–10,1 | ada di Puncak Jaya, Papua. | Animasi peta skema Pulau Papua: garis khatulistiwa, penanda Puncak Jaya pop-in, garis jarak ±450 km ke khatulistiwa, batas Papua Nugini (skema) | buatan sendiri (skema13.py) | **PUNCAK JAYA** · PAPUA · 4.884 m |
+| 6 | 10,1–12,8 | Tapi esnya kini tinggal 2 persen. | Grafik skema luas es: penghitung tahun 1988 → 2025, bidang es 4,3 km² menyusut jadi dua bercak kecil 0,09 km², catatan "luas es · data BMKG" (skema) | buatan sendiri (skema13.py) | **TINGGAL ±2%** (mulai di kata "tinggal") |
+| 7 | 12,8–14,4 | BMKG memperkirakan, | Permukaan gletser mencair, warna dingin (ilustrasi) | video 376 | **TEBAL ES** · 32 m (2010) → ±4 m (2024) |
+| 8 | 14,4–15,7 | es ini bisa habis | Es menetes close-up, warna dingin (ilustrasi) | video 3147 | (lanjut) |
+| 9 | 15,7–18,5 | paling cepat akhir 2026. | Jam pasir (tanpa label) | video 26452 | **BISA HABIS AKHIR 2026** · PERKIRAAN BMKG · STUDI LAIN: ±2030 |
+| 10 | 18,5–22,0 | Untungnya, ilmuwan sempat mengebor es ini, | Animasi skema penampang es: alat bor turun, bor menembus es ±32 m sampai batuan dasar, lalu inti es diangkat (skema) | buatan sendiri (skema13.py) | **2010: INTI ES DIBOR SAMPAI DASAR** |
+| 11 | 22,0–24,5 | dan menyimpan catatan iklimnya. | Dua ilmuwan berjas lab, nuansa biru dingin (ilustrasi) | video 192281 | **DISIMPAN BEKU** · JADI CATATAN IKLIM |
+| 12 | 24,5–30,0 | Menurutmu, es ini bertahan sampai kapan? Tulis di komentar. | Puncak batu bersalju dan awan, zoom out pelan (ilustrasi) | video 220945 | **BERTAHAN SAMPAI KAPAN?** · @titikheran |
+
 ---
 
 ## 7. Metadata unggah
