@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1090,6 +1090,106 @@ elif EP == "34":
                 f"\\N{{\\fs50}}{WT}lebih lama dari malam biasa", {"raw": True}),
                ("kirim", "end", "KIRIM KE TEMANMU\\NYANG HOBI\\NBEGADANG!\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
     FIX = {"kakinya": "Kakinya"}  # after the cut it opens the sentence (shows in the .srt; the burned-in captions are upper case)
+elif EP == "35":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 33,60 s: prep35.py cuts "Lalu," (32,76 s), then plain pauses tightened and a speed-up
+    AUDIO = "vo35cut.wav"
+    # the dramatic pauses ("yakin...", "Maluku...", "mendarat...", "dijuluki...", "Ternyata...", "ilmiahnya...") are kept whole
+    TIGHT = {"yakin": 1.0, "maluku": 1.0, "mendarat": 1.0, "dijuluki": 1.0, "ternyata": 1.0, "ilmiahnya": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    HOOK1, KAKI1 = 3.067, 1.333  # where shots 1 and 10 start inside skema_hook and skema_kaki (read off `plan`)
+    # made by skema35.py: img/6527482v.jpg frames the hook bird (a lesser bird-of-paradise) under the title; skema_hook rings the
+    # spot where its feet should be and pops a "?" on "tak"; img/6527482k.jpg is the bird cut out as a sepia trade skin with no feet,
+    # lying tilted in a dark box; skema_terbang floats that skin up through the sunbeams; skema_bulu runs a soft gold light down the
+    # plumes; img/6527482z.jpg is close on the stump; skema_kaki rings both feet of 1540371 and draws dashed cut lines above them on
+    # "dipotong"; skema_nama is a museum label card for Paradisaea apoda whose parts light up with their meanings on "Artinya";
+    # img/6527482c.jpg frames the whole bird lower for the CTA
+    SHOTS = [
+        (0, "tak", "clips/skema_hook.mp4", 0, "v", False, {"zoom": 0.06, "grade": "pop"}),
+        ("tak", "lima", "clips/skema_hook.mp4", HOOK1, "v", False, {"zoom": "punch", "grade": "pop"}),
+        ("lima", "dibawa", "img/5779375.jpg", 0, "b", False, {"zoom": 0.06, "tag": "Maluku Utara"}),
+        ("dibawa", "tanpa", "img/1572636.jpg", 0, "f", False, {"zoom": 0.07, "grade": "aged", "tag": "ilustrasi: kapal replika"}),
+        ("tanpa", "dikira", "img/6527482k.jpg", 0, "f", False, {"zoom": 0.05, "tag": "ilustrasi + efek"}),
+        ("dikira", "hanya", "clips/skema_terbang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + efek"}),
+        ("hanya", "ia", "img/8687801.jpg", 0, "b", True, {"zoom": 0.08}),
+        ("ia", "ke", "clips/skema_bulu.mp4", 0, "v", False, {"zoom": 0.05, "grade": "warm"}),
+        ("ke", "ternyata", "img/6527482z.jpg", 0, "f", False, {"zoom": 0.08, "grade": "dim"}),
+        ("ternyata", "dipotong", "clips/skema_kaki.mp4", 0, "v", False, {"zoom": 0.05, "grade": "pop"}),
+        ("dipotong", "tapi", "clips/skema_kaki.mp4", KAKI1, "v", False, {"zoom": "punch", "grade": "pop"}),
+        ("tapi", "paradisea", "img/850868.jpg", 0, "b", False, {"zoom": 0.06, "tag": "patung Linnaeus, Chicago"}),
+        ("paradisea", "tanpa#2", "clips/skema_nama.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tanpa#2", "pernah#2", "img/1540371.jpg", 0, "b", False, {"zoom": "punch", "grade": "pop"}),
+        ("pernah#2", "end", "img/6527482c.jpg", 0, "f", False, {"zoom": "pull", "grade": "warm"}),
+    ]
+    TITLES = [
+        (0, "cenderawasih", "DULU, EROPA\\NYAKIN..."),
+        ("cenderawasih", "lima", f"{WT}...CENDERAWASIH\\N{Y}TAK PUNYA KAKI?!"),
+        ("lima", "tanpa", "SEJAK 1522:\\NDIBAWA DARI MALUKU\\N{\\fs50}pertama lewat kapal ekspedisi Magellan,\\Nhadiah Raja Bacan untuk Raja Spanyol"),
+        ("tanpa", "dikira", "...TANPA KAKI\\N{\\fs50}begitu kulit dagangannya tiba di Eropa"),
+        ("dikira", "ia", "DIKIRA TAK PERNAH\\NMENDARAT\\N{\\fs50}terbang seumur hidup,\\Nhidup dari embun"),
+        ("ia", "burung", "DIJULUKI..."),
+        ("burung", "ke", "\"BURUNG SURGA\"\\N{\\fs50}bird of paradise\\N(di Maluku: \"burung dewata\")"),
+        ("ke", "ternyata", "KE MANA\\NKAKINYA?"),
+        ("ke>", "ternyata", "{\\fs260\\bord9\\t(0,250,\\fscx118\\fscy118)\\t(250,500,\\fscx100\\fscy100)\\t(500,750,\\fscx118\\fscy118)"
+                            "\\t(750,1000,\\fscx100\\fscy100)}?", {"pos": (5, 330, 1010)}),
+        ("ternyata", "dipotong", "TERNYATA\\NKAKINYA ADA!"),
+        ("dipotong", "tapi", "DIPOTONG\\NSEBELUM DIJUAL!\\N{\\fs50}kulit dagangan: kaki (dan sering\\Nsayapnya) dibuang"),
+        ("tapi", "tanpa#2", "NAMA ILMIAHNYA\\NSAMPAI SEKARANG:"),
+        ("tanpa#2", "pernah#2", f"{WT}BURUNG SURGA\\N{Y}TANPA KAKI!\\N{{\\fs50}}{WT}padahal kakinya ada"),
+        ("pernah#2", "end", "PERNAH LIHAT\\NCENDERAWASIH\\NLANGSUNG?\\N{\\fs50}jawab di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
+    ]
+    FIX = {"Paradisea": "Paradisaea"}  # spelled for the TTS; the real name on screen
+elif EP == "36":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.94, 30.0  # the v4 take is 30,40 s: plain pauses tightened to 29,06 s, natural speed, the CTA card held 0,94 s
+    AUDIO = "vo36.mp3"
+    # the dramatic pauses ("tahun...", "parfum...", "Pemiliknya...", "kain...", "siapa?", "Diduga...") are kept whole, and the
+    # sentence breaks after "tersentuh!", "koin.", "membawanya." and "dewasa." keep a little more air than the plain ones
+    TIGHT = {"tahun": 1.0, "parfum": 1.0, "pemiliknya": 1.0, "kain": 1.0, "siapa": 1.0, "diduga": 1.0,
+             "tersentuh": 0.5, "koin": 0.55, "membawanya": 0.5, "dewasa": 0.55}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    LEMARI1 = 3.333  # where shot 1 starts inside skema_lemari (read off `plan`)
+    # made by skema36.py: skema_lemari frames the old cupboard door with its key (Pixabay 3886500, a stand-in) and lets a gold light
+    # leak out of the door's seam on "isinya"; img/3832301v.jpg sets the glass bottle lower in its case, under the title;
+    # skema_kalung is the reconstruction: one cloth pouch (from 1281266) in sepia, then 24 small amulets (hands, feet, pine cones,
+    # grapes, Bes, Mercury; bone, glass, pottery, crystal) fly out of it one by one onto a cord; skema_tumbuh dissolves the Roman
+    # child statue into the Pompeii fresco while the necklace glows below; img/2458500v.jpg sets the arch under the CTA title
+    SHOTS = [
+        (0, "isinya", "clips/skema_lemari.mp4", 0, "v", True, {"zoom": 0.06}),
+        ("isinya", "arkeolog", "clips/skema_lemari.mp4", LEMARI1, "v", True, {"zoom": "punch"}),
+        ("arkeolog", "pinset", "img/4053847.jpg", 0, "b", False, {"zoom": 0.06, "tag": "Pompeii, Italia"}),
+        ("pinset", "tiga", "img/3832301v.jpg", 0, "f", True, {"zoom": 0.08, "grade": "dim"}),
+        ("tiga", "pemiliknya", "img/4786028.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.875, "grade": "warm"}),
+        ("pemiliknya", "di", "img/922764.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.51, "grade": "dusk",
+                                                                "tag": "ilustrasi: lukisan dinding Pompeii"}),
+        ("di", "milik", "clips/skema_kalung.mp4", 0, "v", False, {"zoom": 0.0, "tag": "rekonstruksi"}),
+        ("milik", "diduga", "img/1344300.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.276, "grade": "dim",
+                                                               "tag": "ilustrasi: patung anak Romawi"}),
+        ("diduga", "kamu", "clips/skema_tumbuh.mp4", 0, "v", False, {"zoom": 0.0, "grade": "warm", "tag": "ilustrasi + rekonstruksi"}),
+        ("kamu", "end", "img/2458500v.jpg", 0, "f", False, {"zoom": 0.06, "grade": "dusk", "tag": "Pompeii, Italia"}),
+    ]
+    TITLES = [
+        (0, "isinya", "LEMARI INI TERKUBUR\\N1.947 TAHUN..."),
+        ("isinya", "arkeolog", f"{WT}...ISINYA\\N{Y}TAK TERSENTUH!"),
+        ("arkeolog", "pinset", "POMPEII, ITALIA\\N{\\fs50}diumumkan 29 Oktober 2026,\\Nrumah di Via dell'Abbondanza"),
+        ("pinset", "tiga", "PINSET", {"pos": (8, 540, 300)}),
+        ("alat", "tiga", "ALAT RIAS", {"pos": (8, 540, 411)}),
+        ("botol", "tiga", "BOTOL PARFUM", {"pos": (8, 540, 522)}),
+    ]
+    # on "tiga puluh delapan" the coins count up, then the last step pops
+    STEP = 0.03
+    TITLES += [(f"tiga+{k * STEP:.2f}", f"tiga+{(k + 1) * STEP:.2f}",
+                f"{{\\fs200}}{2 * k}\\N{WT}KOIN PERUNGGU", {"raw": True}) for k in range(19)]
+    TITLES += [(f"tiga+{19 * STEP:.2f}", "pemiliknya",
+                f"{{\\fs200\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}38\\N{WT}KOIN PERUNGGU"
+                f"\\N{{\\fs50}}di keranjang anyaman kecil", {"raw": True}),
+               ("pemiliknya", "di", "PEMILIKNYA\\NTAK SEMPAT\\NMEMBAWANYA"),
+               ("di", "kalung", "DI KANTONG KAIN..."),
+               ("kalung", "milik", "KALUNG 24\\NJIMAT ANAK\\N{\\fs50}\"crepundia\": tulang, kaca, gerabah, kristal\\Nsetidaknya 24 buah"),
+               ("milik", "diduga", "MILIK SIAPA?"),
+               ("milik>", "diduga", "{\\fs260\\bord9\\t(0,250,\\fscx118\\fscy118)\\t(250,500,\\fscx100\\fscy100)"
+                                    "\\t(500,750,\\fscx118\\fscy118)\\t(750,1000,\\fscx100\\fscy100)}?", {"pos": (5, 880, 560)}),
+               ("diduga", "kamu", "JIMAT MASA\\NKECILNYA SENDIRI\\N{\\fs50}disimpan sampai dewasa\\N(dugaan peneliti)"),
+               ("kamu", "end", "KAMU MASIH SIMPAN\\NBARANG MASA KECIL\\NAPA?\\N{\\fs50}jawab di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    FIX = {"Pompei": "Pompeii"}  # spelled for the TTS ("pom-pe-i"); the real name on screen
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1290,7 +1390,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "31": [("lima hari", "5 hari")],
         "32": [("seribu delapan ratus", "1.800"), ("dua", "2")],
         "33": [("dua puluh lima ribu", "25.000")],
-        "34": [("delapan puluh persen!", "80%!")]}[EP]
+        "34": [("delapan puluh persen!", "80%!")],
+        "35": [("lima abad", "5 abad")],
+        "36": [("dua ribu tahun...", "2.000 tahun..."), ("tiga puluh delapan koin.", "38 koin."), ("dua puluh empat", "24")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
