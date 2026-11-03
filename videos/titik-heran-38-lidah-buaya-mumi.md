@@ -194,7 +194,7 @@ Catatan: jejak lidah buaya hanya ada di 2 dari 24 benda, jadi belum tentu semua 
 
 Kamu pakai lidah buaya buat apa? Jawab di komentar 👇
 
-Mumi, buku tua, laboratorium, dan apotek di video adalah ilustrasi, bukan benda yang diteliti. Foto kota Marburg asli.
+Mumi, naskah kuno, laboratorium, apotek, dan lumpang di video adalah ilustrasi, bukan benda yang diteliti; garis pindai di wajah mumi adalah skema. Foto kota Marburg asli.
 Sumber: Universitas Marburg, PNAS (Berger dkk. 2026), Phys.org, Popular Science, Discover
 
 #titikheran #mesirkuno #mumi #lidahbuaya #faktaunik
@@ -212,6 +212,29 @@ Fun fact: peneliti menduga orang Mesir kuno menyebut bahan ini "ankh-imi", artin
 | **Malam 18.00–19.00 WIB** (saran 18.30) | **#38 Jejak lidah buaya di kepala mumi Mesir** | Ada wajah mumi dan kalimat "makan mumi", kurang cocok untuk jam sarapan. Malam hari orang lebih santai menonton sampai habis dan menjawab "pakai lidah buaya buat apa?" di komentar. |
 
 Biasanya kita menayangkan luar negeri di pagi hari dan Indonesia di malam hari; kali ini sengaja dibalik karena isi kedua video. Data dua minggu terakhir menunjukkan jam tayang tidak menjelaskan jangkauan (review 2 Nov), jadi kalau Arif lebih suka pola biasa, menukarnya aman.
+
+---
+
+## 8. Shot list final (video yang dirender, 3 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (28,1 detik; transkrip Scribe sama persis dengan naskah). Karena take-nya pendek, tiga jeda dramatis dipanjangkan sedikit dengan suara ruang dari take itu sendiri (prep38.py: setelah "buaya..." +0,15 detik, "itu..." +0,35 detik, "obat." +0,22 detik) menjadi 28,8 detik; kecepatan asli (tidak dipercepat), kartu CTA ditahan 1,2 detik sampai 30 detik; tidak ada kata yang dibuang. Master -14,9 LUFS, true peak -2,0 dBTP. Waktu di bawah sesuai video akhir. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "ilustrasi: mumi Mesir di museum" untuk wajah mumi; "ilustrasi" untuk mumi di peti, ilmuwan, dan lumpang; "ilustrasi: naskah kuno" untuk kedua naskah; "Marburg, Jerman" untuk foto kota asli; "ilustrasi + skema" untuk pindaian; "ilustrasi: apotek tua" untuk rak toples.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:02,2 | Jejak lidah buaya... | `[curious]` penasaran | Gel bening menetes dari daun lidah buaya yang terbelah ke piring berisi potongan daun, push-in pelan, warna segar | foto 4529704 | **JEJAK LIDAH BUAYA...** |
+| 2 | 0:02,2–0:04,0 | ditemukan di kepala mumi Mesir | `[curious]` | Potong keras ke wajah mumi Mesir di museum, diperbesar 1,55x supaya seluruh wajah tampil (tepi atas dan bawah disambung lalu digelapkan), zoom hentak, grade museum redup (label "ilustrasi: mumi Mesir di museum") | foto 935258 (dibingkai ulang di skema38.py) | **...DI KEPALA MUMI MESIR!** ("MUMI MESIR!" kuning) |
+| 3 | 0:04,0–0:06,5 | berumur dua ribu tujuh ratus tahun. | `[curious]` | Mumi Mesir terbungkus kain di dalam peti kayu (Museum Vatikan), push-in pelan, grade redup (label "ilustrasi") | foto 2796707 | di "dua" (0:04,6) angka menghitung 0 → **2.700 TAHUN** (0:05,4) · abad ke-8 SM (penanggalan radiokarbon) |
+| 4 | 0:06,5–0:09,3 | Penulis abad pertengahan sudah menyebutnya... | `[intrigued]` tertarik | Naskah abad pertengahan bergambar terbuka di lemari kaca museum, push-in pelan, grade hangat (label "ilustrasi: naskah kuno") | foto 2757109 | **PENULIS ABAD PERTENGAHAN** · sudah menulis: mumi dibalsem dengan lidah buaya |
+| 5 | 0:09,3–0:11,9 | Tapi dianggap cuma menebak. | `[softly]` lembut | Close-up halaman naskah abad pertengahan bertulisan gotik, zoom hentak, grade tua; di "menebak" (0:10,75) tanda tanya kuning berdenyut di kanan teks (label "ilustrasi: naskah kuno") | foto 1503029 | **DIANGGAP CUMA MENEBAK** + **?** |
+| 6 | 0:11,9–0:13,7 | Universitas Marburg di Jerman | `[seriously]` tegas | Kastel dan kota tua Marburg di atas bukit, push-in pelan (label "Marburg, Jerman") | foto 239201 | **UNIVERSITAS MARBURG, JERMAN** |
+| 7 | 0:13,7–0:16,0 | menguji dua puluh empat benda kuno. | `[seriously]` | Ilmuwan bermasker memegang cawan petri, grade dingin, push-in pelan (label "ilustrasi") | foto 220005 | di "dua" (0:14,3) angka menghitung 0 → **24 BENDA DIUJI** (0:15,0) · perban, sisa balsem, bagian tubuh mumi, obat dari bubuk mumi |
+| 8 | 0:16,0–0:19,0 | Jejaknya muncul di kepala mumi itu... | `[amazed]` takjub | Kembali ke wajah mumi (foto adegan 2): garis pindai hijau berkisi menyapu dari dahi ke dagu (0:16,2–0:17,5), 14 titik hijau menyala saat dilewati; label **aloin** muncul di "kepala" (0:17,4) dan **aloeresin** di "mumi" (0:17,7); kamera mendekat pelan (label "ilustrasi + skema") | foto 935258 + pindaian (skema_scan, skema38.py) | **JEJAK DITEMUKAN!** · senyawa khas lidah buaya (terkait aloin dan aloeresin) |
+| 9 | 0:19,0–0:21,9 | dan di obat bubuk mumi abad kedelapan belas. | `[amazed]` | Rak toples porselen apotek tua hitam-putih, pan pelan sampai toples berlabel "ALOE" (berhenti 0:21,2); cahaya lembut menyorot toples itu saat pan berhenti (label "ilustrasi: apotek tua") | foto 4496863 (skema_apotek, skema38.py) | **OBAT BUBUK MUMI, ABAD KE-18** · "Mumia vera aegyptiaca" dari apotek di Offenbach, Jerman |
+| 10 | 0:21,9–0:23,8 | Ya, orang Eropa dulu | `[mischievously]` nakal | Lumpang porselen dengan alu, daun obat, dan buku tua di meja gelap, push-in pelan, grade hangat (label "ilustrasi") | foto 2055130 | **ORANG EROPA DULU...** (putih) |
+| 11 | 0:23,8–0:25,8 | makan mumi sebagai obat. | `[mischievously]` | Lumpang yang sama, zoom hentak di "makan", lalu jeda 0,6 detik (label "ilustrasi") | foto 2055130 | **...MAKAN MUMI!** ("MUMI!" kuning) · dijual di apotek sebagai "mumia" (abad ke-12 sampai ke-18) |
+| 12 | 0:25,8–0:30,0 | Kamu pakai lidah buaya buat apa? Tulis di komentar! | `[curious]` hangat | Lidah buaya dalam pot bulat di depan dinding bata, push-in pelan, grade hangat cerah; kartu CTA ditahan 1,2 detik setelah VO selesai | foto 7605895 | **KAMU PAKAI LIDAH BUAYA BUAT APA?** · rambut? kulit? diminum? · tulis di komentar · @titikheran |
+
+Beda dari storyboard: hook memakai gel lidah buaya yang menetes (4529704, dari daftar cadangan) karena lebih cepat terbaca sebagai lidah buaya daripada daun terbelah 4268793. Wajah mumi 935258 tidak dipotong biasa (potongan 9:16 hanya menampilkan rongga mata dan hidung), tapi diperbesar 1,55x dengan tepi atas dan bawah disambung, supaya seluruh wajah terbaca. Buku tua 2752773 (buku cetak, bukan naskah abad pertengahan) diganti dua foto naskah abad pertengahan asli, naskah bergambar di museum (2757109) dan halaman bertulisan gotik (1503029); keduanya bukan teks yang diteliti. Teks layar "NASKAH LAMA: MUMI DIBALSEM DENGAN LIDAH BUAYA" menjadi "PENULIS ABAD PERTENGAHAN · sudah menulis: mumi dibalsem dengan lidah buaya", dan "bukti kimia pertama" hanya ada di caption. Penghitung 0 → 2.700 dan 0 → 24 dibuat sebagai teks yang menghitung, bukan skema. Pindaian memberi dua label, "aloin" dan "aloeresin", sesuai senyawa di studi; senyawanya ditemukan lewat analisis kimia sampel, jadi garis pindai hanya skema. Shot lumpang dipecah dua dengan zoom hentak di "makan". Take Akram hanya 28,1 detik dengan jeda pendek, jadi tiga jeda dramatis dipanjangkan sedikit (lihat di atas) dan video tidak dipercepat.
 
 ---
 

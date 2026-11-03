@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1241,6 +1241,58 @@ elif EP == "37":
                ("dirawat", "menurutmu", "HIDUP 6–9\\NTAHUN LAGI\\N{\\fs50}dirawat kelompoknya\\N(dugaan peneliti)", {"raw": True}),
                ("menurutmu", "end", "MENURUTMU,\\NDIPOTONG\\NPAKAI APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
     FIX = {}
+elif EP == "38":
+    STYLE, LUFS, PAD, TEMPO = 2, -15, 1.2, 1.0  # the v4 take is 28,11 s; prep38.py grows three pauses to 28,80 s; natural speed, the CTA card held 1,2 s
+    AUDIO = "vo38pad.wav"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    NASKAH = "ilustrasi: naskah kuno"
+    # made by skema38.py: img/935258v.jpg sets the museum mummy face (935258, a stand-in for the Marburg head) into 9:16 at 1,55x,
+    # so the whole face reads (a cover crop shows one eye socket); skema_scan sweeps a green scan line down that face and lights up
+    # spots tagged aloin and aloeresin (a schematic: the compounds were found by chemical analysis of samples); skema_apotek
+    # pans the black-and-white apothecary shelf (4496863, a stand-in) to its ALOE jar
+    SHOTS = [
+        (0, "ditemukan", "img/4529704.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.28, "grade": "pop"}),
+        ("ditemukan", "berumur", "img/935258v.jpg", 0, "f", False, {"zoom": "punch", "grade": "dim",
+                                                                   "tag": "ilustrasi: mumi Mesir di museum"}),
+        ("berumur", "penulis", "img/2796707.jpg", 0, "f", True, {"zoom": 0.07, "grade": "dim"}),
+        ("penulis", "tapi", "img/2757109.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.22, "grade": "warm", "tag": NASKAH}),
+        ("tapi", "universitas", "img/1503029.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.3, "grade": "aged", "tag": NASKAH}),
+        ("universitas", "menguji", "img/239201.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.62, "tag": "Marburg, Jerman"}),
+        ("menguji", "jejaknya", "img/220005.jpg", 0, "f", True, {"zoom": 0.06, "grade": "cold"}),
+        ("jejaknya", "dan", "clips/skema_scan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("dan", "ya", "clips/skema_apotek.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: apotek tua"}),
+        ("ya", "makan", "img/2055130.jpg", 0, "f", True, {"zoom": 0.06, "grade": "warm"}),
+        ("makan", "kamu", "img/2055130.jpg", 0, "f", True, {"zoom": "punch", "grade": "warm"}),
+        ("kamu", "end", "img/7605895.jpg", 0, "f", False, {"zoom": 0.06, "grade": "pop"}),
+    ]
+    TITLES = [
+        (0, "ditemukan", "JEJAK\\NLIDAH BUAYA..."),
+        ("ditemukan", "dua#1", f"{WT}...DI KEPALA\\N{Y}MUMI MESIR!"),
+    ]
+    # on "dua ribu tujuh ratus" the years count up, then the last step pops; the same for "dua puluh empat" objects
+    STEP = 0.03
+    TITLES += [(f"dua#1+{k * STEP:.2f}", f"dua#1+{(k + 1) * STEP:.2f}",
+                f"{{\\fs200}}{k * 100:,}\\N{WT}TAHUN".replace(",", "."), {"raw": True}) for k in range(27)]
+    TITLES += [(f"dua#1+{27 * STEP:.2f}", "penulis",
+                f"{{\\fs200\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}2.700\\N{WT}TAHUN"
+                f"\\N{{\\fs50}}abad ke-8 SM (penanggalan radiokarbon)", {"raw": True}),
+               ("penulis", "tapi", "PENULIS ABAD\\NPERTENGAHAN\\N{\\fs50}sudah menulis: mumi dibalsem\\Ndengan lidah buaya"),
+               ("tapi", "universitas", "DIANGGAP\\NCUMA MENEBAK"),
+               ("menebak", "universitas", "{\\fs260\\bord9\\t(0,250,\\fscx118\\fscy118)\\t(250,500,\\fscx100\\fscy100)"
+                                          "\\t(500,750,\\fscx118\\fscy118)\\t(750,1000,\\fscx100\\fscy100)}?", {"pos": (5, 880, 700)}),
+               ("universitas", "dua#2", "UNIVERSITAS\\NMARBURG, JERMAN")]
+    TITLES += [(f"dua#2+{k * STEP:.2f}", f"dua#2+{(k + 1) * STEP:.2f}",
+                f"{{\\fs200}}{k}\\N{WT}BENDA DIUJI", {"raw": True}) for k in range(24)]
+    TITLES += [(f"dua#2+{24 * STEP:.2f}", "jejaknya",
+                f"{{\\fs200\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}24\\N{WT}BENDA DIUJI"
+                f"\\N{{\\fs50}}perban, sisa balsem, bagian tubuh mumi,\\Nobat dari bubuk mumi", {"raw": True}),
+               ("jejaknya", "dan", "JEJAK\\NDITEMUKAN!\\N{\\fs50}senyawa khas lidah buaya\\N(terkait aloin dan aloeresin)"),
+               ("dan", "ya", "OBAT BUBUK MUMI,\\NABAD KE-18\\N{\\fs50}\"Mumia vera aegyptiaca\"\\Ndari apotek di Offenbach, Jerman"),
+               ("ya", "makan", f"{WT}ORANG EROPA\\NDULU..."),
+               ("makan", "kamu", f"{WT}...MAKAN\\N{Y}MUMI!\\N{{\\fs50}}dijual di apotek sebagai \"mumia\"\\N(abad ke-12 sampai ke-18)"),
+               ("kamu", "end", "KAMU PAKAI\\NLIDAH BUAYA\\NBUAT APA?\\N{\\fs50}rambut? kulit? diminum?\\Ntulis di komentar"
+                               "\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1444,7 +1496,8 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "34": [("delapan puluh persen!", "80%!")],
         "35": [("lima abad", "5 abad")],
         "36": [("dua ribu tahun...", "2.000 tahun..."), ("tiga puluh delapan koin.", "38 koin."), ("dua puluh empat", "24")],
-        "37": [("tiga puluh satu ribu", "31.000"), ("tujuh ribu", "7.000"), ("enam", "6"), ("sembilan", "9")]}[EP]
+        "37": [("tiga puluh satu ribu", "31.000"), ("tujuh ribu", "7.000"), ("enam", "6"), ("sembilan", "9")],
+        "38": [("dua ribu tujuh ratus tahun.", "2.700 tahun."), ("dua puluh empat", "24"), ("kedelapan belas.", "ke-18.")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
