@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1190,6 +1190,57 @@ elif EP == "36":
                ("diduga", "kamu", "JIMAT MASA\\NKECILNYA SENDIRI\\N{\\fs50}disimpan sampai dewasa\\N(dugaan peneliti)"),
                ("kamu", "end", "KAMU MASIH SIMPAN\\NBARANG MASA KECIL\\NAPA?\\N{\\fs50}jawab di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
     FIX = {"Pompei": "Pompeii"}  # spelled for the TTS ("pom-pe-i"); the real name on screen
+elif EP == "37":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 32,16 s: plain pauses tightened to 31,28 s, then a 6,4 % speed-up
+    AUDIO = "vo37.mp3"
+    # the dramatic pauses ("dunia...", "tahun...", "rapi.", "anak-anak...") are kept whole; "sembuh." and "sebelumnya:" keep a beat
+    TIGHT = {"dunia": 1.0, "tahun": 1.0, "rapi": 1.0, "anak-anak": 1.0, "sembuh": 0.45, "sebelumnya": 0.3}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    ANAK1 = 2.367  # where shot 6 starts inside skema_anak (read off `plan`)
+    # made by skema37.py: skema_peta draws Borneo (Natural Earth coastlines) over the dimmed Kapuas river photo (3400179, a stand-in,
+    # West Kalimantan) and pops a pulsing dot at Liang Tebo in the Sangkulirang-Mangkalihat karst; skema_kerangka lays a line-art
+    # skeleton on the mossy ledge of the cave photo 1835823 (a stand-in), revealed head to toe, its left lower leg (the distal third
+    # of the tibia and fibula, and the foot) never drawn; on "tanpa" a red dashed ghost shows the missing part; skema_tulang zooms
+    # in on the stump: the clean oblique cut glints on "rapi", a fang sign is struck out on "digigit", and the cut end rounds over
+    # on "sembuh"; skema_anak is the reconstruction: a child's silhouette on one leg with a wooden stick, backlit on the same ledge,
+    # a warm glow on "selamat"; skema_rekor compares the two records as bars (Kalimantan 31.000, France 7.000, +24.000);
+    # skema_hidup grows the child into a teenager and fades in three adults by a fire glow on "dirawat"
+    SHOTS = [
+        (0, "ternyata", "img/650534.jpg", 0, "f", True, {"zoom": 0.07, "grade": "cold", "pos": 0.35}),
+        ("ternyata", "di#3", "img/2289357.jpg", 0, "f", True, {"zoom": "punch", "grade": "pop"}),
+        ("di#3", "kerangka", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("kerangka", "potongannya", "clips/skema_kerangka.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("potongannya", "ia#1", "clips/skema_tulang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ia#1", "dan", "clips/skema_anak.mp4", 0, "v", False, {"zoom": 0.04, "tag": "ilustrasi + rekonstruksi"}),
+        ("dan", "rekor", "clips/skema_anak.mp4", ANAK1, "v", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi + rekonstruksi"}),
+        ("rekor", "ia#2", "clips/skema_rekor.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ia#2", "menurutmu", "clips/skema_hidup.mp4", 0, "v", False, {"zoom": 0.04, "grade": "warm", "tag": "ilustrasi + rekonstruksi"}),
+        ("menurutmu", "end", "img/601542.jpg", 0, "f", True, {"zoom": 0.06, "grade": "pop"}),
+    ]
+    TITLES = [
+        (0, "ternyata", "{\\fs88}OPERASI AMPUTASI\\NTERTUA DI DUNIA..."),
+        ("ternyata", "di#3", f"{WT}...TERNYATA DI\\N{Y}KALIMANTAN!"),
+        ("di#3", "kerangka", "{\\fs84}LIANG TEBO,\\NKALIMANTAN TIMUR\\N{\\fs50}gua kapur, dicapai dengan perahu"),
+        ("kerangka", "tiga", "KERANGKA\\NMANUSIA PURBA"),
+    ]
+    # on "tiga puluh satu ribu" the years count up, then the last step pops
+    STEP = 0.03
+    TITLES += [(f"tiga+{k * STEP:.2f}", f"tiga+{(k + 1) * STEP:.2f}",
+                f"{{\\fs200}}{f'{k}.000' if k else '0'}\\N{WT}TAHUN", {"raw": True}) for k in range(31)]
+    TITLES += [(f"tiga+{31 * STEP:.2f}", "tanpa",
+                f"{{\\fs200\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}31.000\\N{WT}TAHUN\\N{{\\fs50}}sedikitnya",
+                {"raw": True}),
+               ("tanpa", "potongannya", "TANPA KAKI\\NKIRI BAWAH!"),
+               ("potongannya", "bukan", "POTONGANNYA\\NRAPI & MIRING"),
+               ("bukan", "tulangnya", "BUKAN DIGIGIT\\NHEWAN!\\N{\\fs50}juga bukan kecelakaan\\N(kata peneliti)"),
+               ("tulangnya", "ia#1", "TULANGNYA\\NSEMBUH"),
+               ("ia#1", "dan", "DIAMPUTASI SAAT\\NANAK-ANAK...\\N{\\fs50}(kemungkinan besar, kata peneliti)"),
+               ("dan", "rekor", f"{WT}...DAN\\N{Y}SELAMAT!"),
+               ("rekor", "ia#2", "REKOR LAMA:\\NPRANCIS"),
+               ("ia#2", "dirawat", "HIDUP 6–9\\NTAHUN LAGI"),
+               ("dirawat", "menurutmu", "HIDUP 6–9\\NTAHUN LAGI\\N{\\fs50}dirawat kelompoknya\\N(dugaan peneliti)", {"raw": True}),
+               ("menurutmu", "end", "MENURUTMU,\\NDIPOTONG\\NPAKAI APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1392,7 +1443,8 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "33": [("dua puluh lima ribu", "25.000")],
         "34": [("delapan puluh persen!", "80%!")],
         "35": [("lima abad", "5 abad")],
-        "36": [("dua ribu tahun...", "2.000 tahun..."), ("tiga puluh delapan koin.", "38 koin."), ("dua puluh empat", "24")]}[EP]
+        "36": [("dua ribu tahun...", "2.000 tahun..."), ("tiga puluh delapan koin.", "38 koin."), ("dua puluh empat", "24")],
+        "37": [("tiga puluh satu ribu", "31.000"), ("tujuh ribu", "7.000"), ("enam", "6"), ("sembilan", "9")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
