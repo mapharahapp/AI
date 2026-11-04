@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1293,6 +1293,86 @@ elif EP == "38":
                ("kamu", "end", "KAMU PAKAI\\NLIDAH BUAYA\\NBUAT APA?\\N{\\fs50}rambut? kulit? diminum?\\Ntulis di komentar"
                                "\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
     FIX = {}
+elif EP == "39":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 32,03 s: plain pauses tightened, then a small speed-up
+    AUDIO = "vo39.mp3"
+    # the dramatic pauses ("Flores...", "Bua...", "punah...") are kept whole
+    TIGHT = {"flores": 1.0, "bua": 1.0, "punah": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    BANGKAI = "ilustrasi: komodo & bangkai"
+    SHOTS = [
+        (0, "ternyata", "img/10518742v.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm"}),  # reframed by skema39.py foto()
+        ("ternyata", "namanya", "clips/167283.mp4", 0, "v", False, {"zoom": "punch", "pos": 0.55, "grade": "warm", "tag": BANGKAI}),
+        ("namanya", "dulu", "clips/skema_ukur.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: lanskap NTT + skema"}),
+        ("dulu", "tapi#1", "clips/skema_dugaan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: gajah Asia; Stegodon sudah punah"}),
+        ("tapi#1", "gigitan", "clips/skema_gua.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: gua kapur + skema"}),
+        ("gigitan", "bagian", "clips/167283.mp4", 4.0, "v", False, {"zoom": 0.05, "pos": 0.58, "grade": "warm", "tag": BANGKAI}),
+        ("bagian", "hari", "clips/skema_stegodon.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema + rekonstruksi"}),
+        ("hari", "tapi#2", "clips/skema_punah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + rekonstruksi"}),
+        ("tapi#2", "kamu", "img/10518757v.jpg", 0, "f", False, {"zoom": "punch", "grade": "pop"}),
+        ("kamu", "end", "clips/110536.mp4", 0, "v", False, {"zoom": 0.06, "pan": (0.5, 0.92), "grade": "pop"}),  # open jaws, then the eye
+    ]
+    TITLES = [
+        (0, "ternyata", "{\\fs88}MANUSIA PURBA\\NDI FLORES..."),
+        ("ternyata", "namanya", f"{WT}...MAKAN SISA\\NBURUAN {Y}KOMODO!\\N{{\\fs50}}{WT}menurut studi Science Advances 2026"),
+        ("namanya", "satu", f"HOMO\\NFLORESIENSIS\\N{{\\fs50}}{WT}dijuluki \"manusia hobbit\",\\Nfosilnya hanya ditemukan di Flores"),
+        ("satu", "dulu", f"{WT}TINGGINYA\\N{Y}±1 METER\\N{{\\fs50}}{WT}kerangka LB1: 1,06 meter"),
+        ("dulu", "tapi#1", f"{WT}DULU DIKIRA:\\N{Y}PEMBURU\\NGAJAH PURBA\\N{{\\fs50}}{WT}Stegodon, kerabat gajah"),
+    ]
+    # on "Tapi tulang-tulang" the bone count runs up, then the last step pops
+    STEP = 0.03
+    TITLES += [(f"tapi#1+{k * STEP:.2f}", f"tapi#1+{(k + 1) * STEP:.2f}",
+                f"{{\\fs200}}{k * 100:,}\\N{WT}PECAHAN TULANG".replace(",", "."), {"raw": True}) for k in range(32)]
+    TITLES += [(f"tapi#1+{32 * STEP:.2f}", "bercerita",
+                f"{{\\fs200\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}3.155\\N{WT}PECAHAN TULANG"
+                f"\\N{{\\fs50}}Stegodon dari gua Liang Bua,\\Ndiperiksa ulang", {"raw": True}),
+               ("bercerita", "gigitan", f"{WT}...BERCERITA\\N{Y}LAIN\\N{{\\fs50}}{WT}Liang Bua, Flores"),
+               ("gigitan", "goresan", f"{{\\fs80}}{WT}BEKAS GIGITAN KOMODO:\\N{Y}BAGIAN PALING\\NBERDAGING"
+                                      f"\\N{{\\fs50}}{WT}komodo makan duluan (kata peneliti)"),
+               ("goresan", "kebanyakan", f"{{\\fs80}}{WT}GORESAN ALAT\\NBATU {Y}HOBBIT?"),
+               ("kebanyakan", "hari", f"{{\\fs80}}{WT}KEBANYAKAN DI\\N{Y}TULANG SISA\\N{{\\fs50}}{WT}rusuk, ruas jari, pecahan tengkorak"),
+               ("hari", "tapi#2", f"{WT}HARI INI,\\NHOBBIT {Y}PUNAH...\\N{{\\fs50}}{WT}jejak terakhirnya ±50.000 tahun lalu"),
+               ("tapi#2", "kamu", f"{WT}...TAPI KOMODONYA\\N{Y}MASIH ADA!\\N{{\\fs50}}{WT}hidup liar di Flores, Komodo, Rinca"),
+               ("kamu", "end", "KAMU BERANI\\NREBUTAN MAKANAN\\NSAMA KOMODO?\\N{\\fs50}jawab di komentar"
+                               "\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    FIX = {"hobit?": "hobbit?", "hobit": "hobbit"}  # the TTS input spells "hobit" so Akram reads it the Indonesian way
+elif EP == "40":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 31,71 s: plain pauses tightened, then a small speed-up
+    AUDIO = "vo40.mp3"
+    # the dramatic pauses ("sejarah...", "hari ini...", "menjauh...", before and inside the greeting) are kept whole;
+    # whispered words have quiet gaps between syllables ("Ar-ti-nya" lost its "ti" to a 0,18 s cut) and Scribe stretches
+    # "sekalian..." and "berpisah," over their pauses, so they are protected by name
+    TIGHT = {"artinya": 1.0, "sejarah": 1.0, "ini": 1.0, "menjauh": 1.0, "sekarat": 0.45, "indonesia": 1.0, "sekalian": 1.0,
+             "berpisah": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    SHOTS = [
+        (0, "benda", "clips/20042s.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.56, "grade": "cold", "tag": "ilustrasi 3D"}),
+        ("benda", "artinya", "clips/skema_jarak.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("artinya", "balasannya", "clips/skema_kirim.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: antena radio + skema"}),
+        ("balasannya", "hampir", "clips/skema_balas.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: antena radio + skema"}),
+        ("hampir", "tapi", "clips/skema_daya.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("tapi", "selamat#1", "clips/skema_piringan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("selamat#1", "kalau", "clips/skema_sapaan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("kalau", "end", "img/4006343v.jpg", 0, "f", False, {"zoom": 0.06, "grade": "base"}),
+    ]
+    TITLES = [
+        (0, "benda", f"{WT}VOYAGER 1\\NSEBENTAR LAGI\\N{Y}CETAK SEJARAH"),
+        ("sebentar", "benda", "{\\3c&H00E1FF&\\c&H141414&}18 NOV 2026", {"style": "Label", "pos": (5, 540, 720)}),
+        ("benda", "artinya", f"{{\\fs84}}{WT}BENDA BUATAN MANUSIA\\NPERTAMA SEJAUH\\N{Y}1 HARI CAHAYA"
+                             f"\\N{{\\fs50}}{WT}±25,9 miliar km dari Bumi"),
+        ("artinya", "balasannya", f"{WT}KIRIM {Y}\"HALO\"\\N{WT}HARI INI..."),
+        ("balasannya", "hampir", f"{WT}...BALASANNYA\\NDATANG {Y}LUSA\\N{{\\fs50}}{WT}sinyal radio butuh 24 jam sekali jalan"),
+        ("hampir", "kini", f"{WT}HAMPIR {Y}50 TAHUN\\N{WT}TERBANG\\N{{\\fs50}}diluncurkan 5 September 1977"),
+        ("kini", "tapi", f"{WT}KINI DAYANYA\\N{Y}SEKARAT\\N{{\\fs50}}{WT}turun ±4 watt per tahun,\\Ntinggal 2 alat sains menyala"),
+        ("tapi", "bahasa", f"{WT}PIRINGAN EMAS\\N{Y}(GOLDEN RECORD)\\N{{\\fs50}}{WT}sapaan dalam 55 bahasa"),
+        ("bahasa", "selamat#1", f"{WT}SALAH SATUNYA\\N{Y}BAHASA INDONESIA!"),
+        ("selamat#1", "selamat#2", f"{{\\i1}}{WT}\"SELAMAT MALAM\\NHADIRIN SEKALIAN...\""),
+        ("selamat#2", "kalau", f"{{\\i1}}{WT}\"...SELAMAT BERPISAH,\\N{Y}DAN SAMPAI\\NBERTEMU LAGI.\""
+                               f"\\N{{\\i0\\fs50}}{WT}sapaan asli: Ilyas Harun, 1977 (dibacakan ulang)"),
+        ("kalau", "end", "KALAU BOLEH\\NTITIP PESAN,\\NKAMU MAU\\NBILANG APA?\\N{\\fs50}tulis di komentar"
+                         "\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
+    ]
+    FIX = {"Voyejer": "Voyager"}  # the TTS input spells "Voyejer" so Akram says it the way Indonesians do
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1396,6 +1476,10 @@ def tighten(audio, keep):
         k = max(0.0, want - (t0 - quiet0) - (quiet1 - t1))
         if t1 - t0 > k + 0.03:
             cuts.append((t0 + 0.6 * k, t1 - 0.4 * k))
+    if sys.argv[2:] == ["plan"]:  # where the cuts fall, so a whispered word cut in half shows up before the render
+        for c0, c1 in cuts:
+            i = [k for k, w in enumerate(words) if w["start"] <= c0][-1]
+            print(f"  cut {c0:6.2f}-{c1:6.2f} ({c1 - c0:.2f}s) after \"{words[i]['text']}\"")
     xf = 441  # 10 ms crossfade at each joint
     ramp = np.linspace(0, 1, xf, dtype=np.float32)
     y, last = None, 0
@@ -1497,7 +1581,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "35": [("lima abad", "5 abad")],
         "36": [("dua ribu tahun...", "2.000 tahun..."), ("tiga puluh delapan koin.", "38 koin."), ("dua puluh empat", "24")],
         "37": [("tiga puluh satu ribu", "31.000"), ("tujuh ribu", "7.000"), ("enam", "6"), ("sembilan", "9")],
-        "38": [("dua ribu tujuh ratus tahun.", "2.700 tahun."), ("dua puluh empat", "24"), ("kedelapan belas.", "ke-18.")]}[EP]
+        "38": [("dua ribu tujuh ratus tahun.", "2.700 tahun."), ("dua puluh empat", "24"), ("kedelapan belas.", "ke-18.")],
+        "39": [("satu meter.", "1 meter.")],
+        "40": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("lima puluh tahun", "50 tahun")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
@@ -1510,7 +1596,7 @@ for phrase, digits in NUMS:
 chunks, cur = [], []
 for w in words:
     cur.append(w)
-    end_sentence = w["text"][-1] in ".,?:!"
+    end_sentence = w["text"].rstrip("\"'”)")[-1:] in tuple(".,?:!")  # a closing quote still ends the clause (#40: lagi.")
     if len(cur) == 3 or end_sentence:
         chunks.append(cur); cur = []
 if cur:
@@ -1566,7 +1652,7 @@ for w in words:
     if cur and len(" ".join(x["text"] for x in cur + [w])) > 84:
         cues.append(cur); cur = []
     cur.append(w)
-    if w["text"][-1] in ".,?!:":
+    if w["text"].rstrip("\"'”)")[-1:] in tuple(".,?!:"):
         cues.append(cur); cur = []
 if cur:
     cues.append(cur)
