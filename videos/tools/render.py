@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1373,6 +1373,96 @@ elif EP == "40":
                          "\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
     ]
     FIX = {"Voyejer": "Voyager"}  # the TTS input spells "Voyejer" so Akram says it the way Indonesians do
+elif EP == "41":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.69, 30.0  # the v4 take is 29,31 s: natural speed, no pause tightened, the CTA card held 0,69 s
+    AUDIO = "vo41.mp3"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema41.py: skema_tinggi (the bloom pulled back, a ruler card with a 1,7 m person and the 3,2 m record, smell rings
+    # out to 800 m), skema_mekar (the Bonn bud with a 7-year bar that ends in a 2-day sliver, then the photo wilts to grey) and
+    # skema_resmi (the Bronx aerial with a gold "BUNGA RESMI" stamp)
+    SHOTS = [
+        (0, "tapi", "img/2443620.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "pop"}),
+        ("tapi", "tingginya", "clips/3627.mp4", 0, "v", True, {"zoom": 0.04, "pos": 0.42, "grade": "warm"}),
+        ("tingginya", "masalahnya", "clips/skema_tinggi.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("masalahnya", "di#2", "clips/skema_mekar.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("di#2", "sampai#2", "img/1505672.jpg", 0, "f", False, {"zoom": 0.08, "grade": "bright"}),
+        ("sampai#2", "kamu", "clips/skema_resmi.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kamu", "end", "img/2443620.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.5, "grade": "dusk"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "tapi", f"{{\\fs88}}{WT}BUNGA BANGKAI\\NDARI {Y}SUMATRA"),
+        ("busuk", "tapi", f"{LAB_ON}BAUNYA BUSUK!", {"style": "Label", "pos": (5, 540, 600)}),
+        ("tapi", "tingginya", f"{WT}TAPI DIANTRE\\N{Y}BERJAM-JAM\\N{WT}DI LUAR NEGERI"
+                              f"\\N{{\\fs50}}The Huntington, AS (Juli 2026):\\N±5.000 orang sehari,\\Nada yang antre 3 jam lebih"),
+        ("tingginya", "aromanya", f"{WT}BISA LEBIH DARI\\N{Y}3 METER\\N{{\\fs50}}{WT}rekor 3,2 m (Belgia, 2024)"),
+        ("aromanya", "masalahnya", f"{WT}BAUNYA TERCIUM\\NSAMPAI {Y}800 M\\N{{\\fs50}}{WT}untuk memanggil\\Nkumbang bangkai dan lalat"),
+        ("masalahnya", "layu", f"{WT}MEKARNYA\\N{Y}BERTAHUN-TAHUN\\N{WT}SEKALI\\N{{\\fs50}}biasanya 3–7 tahun sekali"),
+        ("layu", "di#2", f"{WT}LALU {Y}LAYU\\N{WT}DALAM 1–2 HARI"),
+        ("di#2", "sampai#2", f"{WT}NEW YORK, {Y}1937\\N{{\\fs50}}{WT}pertama mekar di benua Amerika,\\Nrumah kacanya diserbu\\Npengunjung dan wartawan"),
+        ("sampai#2", "kamu", f"{Y}1939:\\N{WT}DIJADIKAN\\NBUNGA RESMI\\N{Y}BRONX!\\N{{\\fs50}}{WT}dari hutan Sumatra ke New York"),
+        ("kamu", "end", "KAMU BERANI\\NANTRE UNTUK\\NMENCIUMNYA?\\N{\\fs50}jawab di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
+    ]
+    # two answer buttons light up in turn from "berani" to the end
+    for k in range(9):
+        a, b = f"berani+{k * 0.45:.2f}", f"berani+{(k + 1) * 0.45:.2f}" if k < 8 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}BERANI", {"style": "Label", "pos": (5, 300, 1080), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}NGGAK DEH", {"style": "Label", "pos": (5, 760, 1080), "raw": True})]
+    FIX = {}
+elif EP == "42":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 31,16 s: plain pauses tightened, then a small speed-up
+    AUDIO = "vo42.mp3"
+    # the dramatic pauses ("tahun...", "diputar...", "sken...", "terlihat:", between the spelled letters, "artinya...") are kept
+    # whole; "mencoba," keeps a short breath before "gagal"
+    TIGHT = {"tahun": 1.0, "diputar": 1.0, "mencoba": 0.45, "sken": 1.0, "terlihat": 1.0, "a": 1.0, "en": 1.0, "ce": 1.0,
+             "e": 0.5, "artinya": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    MUSEUM = "foto: Amgueddfa Cymru – Museum Wales"
+    # made by skema42.py: img/lock1v.jpg and img/lock4v.jpg set the museum photos of the real lock into 9:16 on their black
+    # ground; skema_cincin (the four letter rings outlined and numbered, turn arrows, a red stamp and a shake on "gagal", a 3,2 cm
+    # dimension line) and skema_kode (the same photo in a cyan scan look; on each spelled letter its ring lights up and shows
+    # the letter: a schematic, not the real CT image)
+    SHOTS = [
+        (0, "dan#1", "img/lock1v.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": MUSEUM}),
+        ("dan#1", "pemburu", "img/lock4v.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": MUSEUM}),
+        ("pemburu", "tempat", "clips/89527.mp4", 0, "v", True, {"zoom": 0.04, "pos": 0.42, "grade": "warm"}),
+        ("tempat", "empat#2", "clips/197525.mp4", 0, "v", True, {"zoom": 0.04, "grade": "cold"}),
+        ("empat#2", "sampai", "clips/skema_cincin.mp4", 0, "v", False, {"zoom": 0.0, "tag": "foto: Amgueddfa Cymru + skema"}),
+        ("sampai", "dan#2", "img/3895160.jpg", 0, "b", False, {"zoom": 0.06, "grade": "cold", "tag": "ilustrasi: alat CT scan"}),
+        ("dan#2", "tak", "clips/skema_kode.mp4", 0, "v", False, {"zoom": 0.0, "tag": "foto: Amgueddfa Cymru + skema"}),
+        ("tak", "end", "clips/145647.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.6, "grade": "dusk"}),
+    ]
+    FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    SCAN = "{\\an7\\bord0\\shad0\\blur5\\1c&HFFE45A&\\1a&H30&\\move(0,560,0,1340)\\p1}m 0 0 l 1080 0 1080 7 0 7{\\p0}"
+    TITLES = [
+        (0, "dan#1", f"{{\\fs84}}{WT}GEMBOK {Y}KAPAL KARAM\\N{WT}TERKUNCI {Y}400+ TAHUN"),
+        ("kapal", "dan#1", "{\\3c&H00E1FF&\\c&H141414&}KARAM 1583", {"style": "Label", "pos": (5, 540, 580)}),
+        ("dan#1", "pemburu", f"{WT}...DAN KODENYA\\N{Y}BARU SAJA\\NDIPECAHKAN!\\N{{\\fs50}}{WT}diumumkan 4 November 2026"),
+        ("dipecahkan", "dipecahkan+0.3", FLASH, {"raw": True}),
+        ("pemburu", "tempat", f"{{\\fs84}}{WT}DITEMUKAN\\N{Y}PEMBURU HARTA\\N{WT}DI PANTAI {Y}WALES\\N{{\\fs50}}{WT}dengan detektor logam"),
+        ("tempat", "empat#2", f"{{\\fs84}}{WT}KAPAL {Y}ANN FRANCIS\\N{WT}KARAM DIHANTAM\\N{Y}BADAI\\N{{\\fs50}}{WT}malam 28 Desember 1583"),
+        ("empat#2", "diputar", f"{Y}4 CINCIN HURUF\\N{{\\fs50}}{WT}6 huruf di tiap cincin"),
+    ]
+    # on "diputar" the combination count runs up, then the last step pops
+    STEP = 0.03
+    TITLES += [(f"diputar+{k * STEP:.2f}", f"diputar+{(k + 1) * STEP:.2f}",
+                f"{Y}4 CINCIN HURUF\\N{WT}= {{\\fs120}}{round(1296 * k / 32):,}\\N{{\\fs72}}KOMBINASI".replace(",", "."), {"raw": True})
+               for k in range(32)]
+    TITLES += [(f"diputar+{32 * STEP:.2f}", "gagal",
+                f"{Y}4 CINCIN HURUF\\N{WT}= {{\\fs120\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}1.296"
+                f"\\N{{\\fs72}}KOMBINASI", {"raw": True}),
+               ("gagal", "sampai", f"{WT}SEMUA YANG\\NMENCOBA {Y}GAGAL\\N{{\\fs50}}{WT}tingginya cuma 3,2 cm"),
+               ("sampai", "dan#2", f"{WT}DIPINDAI DENGAN\\N{Y}MICRO-CT\\N{{\\fs50}}{WT}alat yang biasa dipakai\\Nuntuk memindai tulang\\N(Cardiff University)"),
+               ("memindainya", "dan#2", SCAN, {"raw": True}),
+               ("dan#2", "a", f"{WT}KODENYA\\NTERLIHAT..."),
+               ("a", "en", f"{WT}KODENYA:\\N{{\\fs170}}{Y}A"),
+               ("en", "ce", f"{WT}KODENYA:\\N{{\\fs170}}{Y}A N"),
+               ("ce", "e", f"{WT}KODENYA:\\N{{\\fs170}}{Y}A N C"),
+               ("e", "tak", f"{WT}KODENYA:\\N{{\\fs170}}{Y}A N C E"),
+               ("tak", "menurutmu", f"{{\\fs170}}{Y}ANCE = ?\\N{{\\fs84}}{WT}TAK ADA YANG\\NTAHU ARTINYA"),
+               ("menurutmu", "end", "MENURUTMU\\NARTINYA APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    FIX = {"Wels,": "Wales,", "En...": "N...", "Ce...": "C..."}  # the TTS input spells "Wels" and the letter names
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1583,7 +1673,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "37": [("tiga puluh satu ribu", "31.000"), ("tujuh ribu", "7.000"), ("enam", "6"), ("sembilan", "9")],
         "38": [("dua ribu tujuh ratus tahun.", "2.700 tahun."), ("dua puluh empat", "24"), ("kedelapan belas.", "ke-18.")],
         "39": [("satu meter.", "1 meter.")],
-        "40": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("lima puluh tahun", "50 tahun")]}[EP]
+        "40": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("lima puluh tahun", "50 tahun")],
+        "41": [("tiga meter...", "3 meter..."), ("delapan ratus meter.", "800 meter."), ("dua hari.", "2 hari.")],
+        "42": [("empat ratus tahun...", "400 tahun..."), ("empat cincin", "4 cincin"), ("si ti sken...", "CT scan...")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
