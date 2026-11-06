@@ -1418,19 +1418,18 @@ elif EP == "42":
     TIGHT = {"tahun": 1.0, "diputar": 1.0, "mencoba": 0.45, "sken": 1.0, "terlihat": 1.0, "a": 1.0, "en": 1.0, "ce": 1.0,
              "e": 0.5, "artinya": 1.0}
     Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
-    MUSEUM = "foto: Amgueddfa Cymru – Museum Wales"
-    # made by skema42.py: img/lock1v.jpg and img/lock4v.jpg set the museum photos of the real lock into 9:16 on their black
-    # ground; skema_cincin (the four letter rings outlined and numbered, turn arrows, a red stamp and a shake on "gagal", a 3,2 cm
-    # dimension line) and skema_kode (the same photo in a cyan scan look; on each spelled letter its ring lights up and shows
-    # the letter: a schematic, not the real CT image)
+    # made by skema42.py (Pixabay + skema only, Arif 2026-11-06): img/hook42v.jpg and img/hook42c.jpg set Pixabay's antique
+    # brass padlock (2503865, "ilustrasi") on a dark ground; skema_cincin and skema_kode draw the Ann Francis lock from the
+    # museum record (four letter rings between two lettered end plates): rings numbered, spun in vain, a red stamp and a 3,2 cm
+    # dimension line on "gagal"; then an X-ray look where each ring turns to A, N, C, E and the shackle lifts
     SHOTS = [
-        (0, "dan#1", "img/lock1v.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": MUSEUM}),
-        ("dan#1", "pemburu", "img/lock4v.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": MUSEUM}),
+        (0, "dan#1", "img/hook42v.jpg", 0, "f", True, {"zoom": 0.08, "grade": "warm"}),
+        ("dan#1", "pemburu", "img/hook42c.jpg", 0, "f", True, {"zoom": "punch", "grade": "warm"}),
         ("pemburu", "tempat", "clips/89527.mp4", 0, "v", True, {"zoom": 0.04, "pos": 0.42, "grade": "warm"}),
         ("tempat", "empat#2", "clips/197525.mp4", 0, "v", True, {"zoom": 0.04, "grade": "cold"}),
-        ("empat#2", "sampai", "clips/skema_cincin.mp4", 0, "v", False, {"zoom": 0.0, "tag": "foto: Amgueddfa Cymru + skema"}),
+        ("empat#2", "sampai", "clips/skema_cincin.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
         ("sampai", "dan#2", "img/3895160.jpg", 0, "b", False, {"zoom": 0.06, "grade": "cold", "tag": "ilustrasi: alat CT scan"}),
-        ("dan#2", "tak", "clips/skema_kode.mp4", 0, "v", False, {"zoom": 0.0, "tag": "foto: Amgueddfa Cymru + skema"}),
+        ("dan#2", "tak", "clips/skema_kode.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
         ("tak", "end", "clips/145647.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.6, "grade": "dusk"}),
     ]
     FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
