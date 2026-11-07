@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1462,6 +1462,103 @@ elif EP == "42":
                ("tak", "menurutmu", f"{{\\fs170}}{Y}ANCE = ?\\N{{\\fs84}}{WT}TAK ADA YANG\\NTAHU ARTINYA"),
                ("menurutmu", "end", "MENURUTMU\\NARTINYA APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
     FIX = {"Wels,": "Wales,", "En...": "N...", "Ce...": "C..."}  # the TTS input spells "Wels" and the letter names
+elif EP == "43":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 29,73 s: no pause tightened, a 1% speed-up lands on 30,0 s
+    AUDIO = "vo43.mp3"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema43.py: img/hook43.jpg and img/hook43c.jpg frame Pixabay's fiery streak over a riverside town (1715020,
+    # "ilustrasi") larger than kind b would, the second closer on its bright head; img/11180v.jpg puts Cassiopeia A on black
+    # (kind b showed the band's edges on its red blur); skema_swift draws the Swift telescope (shape
+    # approximate) above the Earth with a 2004-2026 bar against the planned 2 years; skema_orbit lowers its orbit while the
+    # active Sun pulses and the upper air thickens, ending on "275 km"; skema_link sends the LINK robot to 12-15 km, sets it
+    # tumbling and drops it into the air with a tail of fire, calendar cards 25 SEP 2026 / 4 NOV 2026
+    SHOTS = [
+        (0, "bukan", "img/hook43.jpg", 0, "f", True, {"zoom": 0.08, "grade": "pop"}),
+        ("bukan", "itu", "img/559641.jpg", 0, "f", True, {"zoom": "punch", "grade": "base"}),
+        ("itu", "teleskop", "img/hook43c.jpg", 0, "f", True, {"zoom": 0.1, "grade": "pop"}),
+        ("teleskop", "tapi#1", "img/11612.jpg", 0, "f", False, {"zoom": 0.06, "grade": "base", "tag": "ilustrasi: roket Delta II lain"}),
+        ("tapi#1", "memburu", "clips/skema_swift.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("memburu", "masalahnya", "img/11180v.jpg", 0, "f", False,
+         {"zoom": 0.08, "grade": "base", "tag": "ilustrasi: sisa supernova Cassiopeia A"}),
+        ("masalahnya", "nasa#2", "clips/skema_orbit.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("nasa#2", "tapi#2", "img/693224.jpg", 0, "b", False, {"zoom": 0.06, "grade": "base", "tag": "ilustrasi: lengan robot ISS"}),
+        ("tapi#2", "kamu", "clips/skema_link.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kamu", "end", "img/5862911.jpg", 0, "b", False, {"zoom": 0.06, "grade": "dusk", "tag": "Masjid Raya Al-Mashun, Medan"}),
+    ]
+    FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    # a burst of light from the middle of the supernova remnant on "ledakan"
+    BURST = ("{\\an5\\pos(540,870)\\bord0\\shad0\\blur36\\1c&HE8F8FF&\\fscx15\\fscy15\\t(0,260,\\fscx260\\fscy260)\\fad(0,520)\\p1}"
+             "m -100 0 b -100 -55 -55 -100 0 -100 b 55 -100 100 -55 100 0 b 100 55 55 100 0 100 b -55 100 -100 55 -100 0{\\p0}")
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "bukan", f"{{\\fs88}}{WT}BOLA API DI\\NLANGIT {Y}SUMATRA"),
+        ("rabu", "bukan", f"{LAB_ON}RABU 4 NOV · 19.39 WIB", {"style": "Label", "pos": (5, 540, 575)}),
+        ("bukan", "itu", "{\\3c&H2C2CDC&\\c&HFFFFFF&\\fs96\\frz6}BUKAN METEOR!", {"style": "Label", "pos": (5, 540, 690)}),
+        ("itu", "teleskop", f"{WT}SATELIT {Y}NASA\\N{WT}YANG JATUH\\NTERBAKAR\\N{{\\fs50}}teleskop Swift, ±1.450 kg"),
+        ("terbakar", "terbakar+0.3", FLASH, {"raw": True}),
+        ("teleskop", "tapi#1", f"{WT}DIRANCANG\\NUNTUK {Y}2 TAHUN\\N{{\\fs50}}{WT}diluncurkan 20 November 2004"),
+        ("tapi#1", "memburu", f"{WT}BERTAHAN\\NHAMPIR {Y}22 TAHUN"),
+        ("ledakan", "ledakan+0.6", BURST, {"raw": True}),
+    ]
+    # on "memburu" the burst count runs up, then the last step pops
+    STEP, SUB = 0.03, f"\\N{{\\fs50}}{WT}dan ±1.400 supernova:\\Nledakan terdahsyat di alam semesta"
+    TITLES += [(f"memburu+{k * STEP:.2f}", f"memburu+{(k + 1) * STEP:.2f}",
+                f"{Y}{round(2000 * k / 30):,}\\N{WT}LEDAKAN\\NSINAR GAMMA{SUB}".replace(",", "."), {"raw": True}) for k in range(30)]
+    TITLES += [(f"memburu+{30 * STEP:.2f}", "masalahnya",
+                f"{Y}{{\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}2.000+{{\\fscx100\\fscy100}}\\N{WT}LEDAKAN"
+                f"\\NSINAR GAMMA{SUB}", {"raw": True}),
+               ("masalahnya", "nasa#2", f"{WT}TANPA\\N{Y}MESIN PENDORONG"),
+               ("nasa#2", "tapi#2", f"{Y}$30 JUTA\\N{WT}UNTUK ROBOT\\NPENYELAMAT\\N{{\\fs50}}±Rp540 miliar · robot LINK\\Ndari Katalyst Space"),
+               ("tapi#2", "dan", f"{WT}ROBOTNYA\\N{Y}HILANG KENDALI"),
+               ("dan", "kamu", f"{WT}...DAN MALAH\\NJATUH {Y}DULUAN!\\N{{\\fs50}}{WT}25 September 2026,\\N40 hari sebelum Swift"),
+               ("kamu", "end", "KAMU SEMPAT\\NLIHAT\\NCAHAYANYA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran")]
+    # two answer buttons light up in turn from "lihat" to the end
+    for k in range(6):
+        a, b = f"lihat+{k * 0.45:.2f}", f"lihat+{(k + 1) * 0.45:.2f}" if k < 5 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}SEMPAT LIHAT", {"style": "Label", "pos": (5, 320, 1090), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}NGGAK", {"style": "Label", "pos": (5, 780, 1090), "raw": True})]
+    FIX = {"Nasa": "NASA"}  # the TTS input spells "Nasa" so Akram says it as a word
+elif EP == "44":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 30,51 s: no pause tightened, a 3,8% speed-up lands on 30,0 s
+    AUDIO = "vo44.mp3"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema44.py: img/dadu44.jpg (Pixabay dice 1502706 framed larger than kind b), img/jung44.jpg (the red-sail junk
+    # 2644630 with the Hong Kong skyline blurred into haze and the modern hull name softened), clips/topan.mp4 (typhoon
+    # photo 67581 turning slowly about its eye), skema_bangkai (seabed cross-section: the buried stern under 1 m+ of mud at
+    # ±18 m, a knife, a mortar bowl and fish bones, then 5 dice) and skema_kepingan (old dominoes 969104 with an inset card of
+    # one 3 x 1,5 cm tile beside a 1 cm die on a ruler, shape approximate)
+    SHOTS = [
+        # 751c = Pixabay 751 without its 2.35:1 letterbox and fade-in, gamma lifted (skema44.py prep)
+        (0, "dan#1", "clips/751c.mp4", 0, "v", True, {"zoom": 0.04, "pos": 0.43, "grade": "base"}),
+        ("dan#1", "armadanya", "img/dadu44.jpg", 0, "f", True, {"zoom": 0.08, "grade": "warm"}),
+        ("armadanya", "tapi", "img/jung44.jpg", 0, "f", False, {"zoom": 0.06, "grade": "sepia", "tag": "ilustrasi: kapal jung Tiongkok"}),
+        ("tapi", "badai", "clips/topan.mp4", 0, "v", False, {"zoom": 0.0, "grade": "cold", "tag": "ilustrasi: topan dari satelit"}),
+        ("badai", "di#2", "clips/216500.mp4", 20.5, "v", True, {"zoom": 0.04, "grade": "cold"}),
+        ("di#2", "dan#3", "clips/skema_bangkai.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan#3", "sepertinya", "clips/skema_kepingan.mp4", 0, "v", True, {"zoom": 0.0}),
+        ("sepertinya", "kalau", "img/5926938.jpg", 0, "b", True, {"zoom": 0.07, "grade": "base"}),
+        ("kalau", "end", "clips/28659.mp4", 2.4, "v", False, {"zoom": 0.0, "pan": (0.0, 1.0), "grade": "warm"}),
+    ]
+    FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    LAB = "{\\3c&H00E1FF&\\c&H141414&}"
+    TITLES = [
+        (0, "dan#1", f"{{\\fs88}}{WT}KAPAL PERANG\\N{Y}MONGOL\\N{WT}TENGGELAM 1281"),
+        ("tenggelam", "dan#1", f"{LAB}745 TAHUN DI DASAR LAUT", {"style": "Label", "pos": (5, 540, 690)}),
+        ("dadu#1", "armadanya", f"{WT}...DAN DI DALAMNYA\\NADA {Y}DADU!\\N{{\\fs50}}{WT}diumumkan 28 Oktober 2026"),
+        ("dadu#1", "dadu#1+0.3", FLASH, {"raw": True}),
+        ("armadanya", "menaklukkan", f"{WT}ARMADA\\N{Y}KUBILAI KHAN\\N{{\\fs50}}{WT}cucu Jenghis Khan"),
+        ("menaklukkan", "tapi", f"{Y}±4.400 KAPAL\\N±140.000 ORANG\\N{{\\fs50}}{WT}tahun 1281, untuk menaklukkan Jepang"),
+        ("tapi", "badai", f"{WT}TOPAN\\NMENENGGELAMKAN\\N{Y}SEBAGIAN BESAR\\N{WT}ARMADA\\N{{\\fs50}}15 Agustus 1281"),
+        ("badai", "kamikaze", f"{WT}BADAI YANG\\NDIJULUKI..."),
+        ("kamikaze", "di#2", f"{{\\fs150}}{Y}KAMIKAZE\\N{{\\fs50}}{WT}artinya \"angin dewa\""),
+        ("di#2", "lima", f"{WT}DI DEKAT\\N{Y}ALAT DAPUR\\N{WT}DAN TULANG IKAN..."),
+        ("lima", "dan#3", f"{{\\fs130}}{Y}5 DADU\\N{{\\fs50}}{WT}masing-masing ±1 cm"),
+        ("dan#3", "sepertinya", f"{Y}29 KEPINGAN\\N{WT}MIRIP DOMINO\\N{{\\fs50}}benda permainan pertama\\Ndari ±4.000 artefak di situs ini"),
+        ("sepertinya", "kalau", f"{WT}DIDUGA\\N{Y}ALAT HIBURAN\\N{WT}AWAK KAPAL\\N{{\\fs50}}kata peneliti Kokugakuin University"),
+        ("kalau", "end", "KALAU KAMU,\\NMAU MAIN APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
+    ]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1674,7 +1771,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "39": [("satu meter.", "1 meter.")],
         "40": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("lima puluh tahun", "50 tahun")],
         "41": [("tiga meter...", "3 meter..."), ("delapan ratus meter.", "800 meter."), ("dua hari.", "2 hari.")],
-        "42": [("empat ratus tahun...", "400 tahun..."), ("empat cincin", "4 cincin"), ("si ti sken...", "CT scan...")]}[EP]
+        "42": [("empat ratus tahun...", "400 tahun..."), ("empat cincin", "4 cincin"), ("si ti sken...", "CT scan...")],
+        "43": [("dua tahun...", "2 tahun..."), ("dua puluh dua tahun,", "22 tahun,"), ("tiga puluh juta dolar", "30 juta dolar")],
+        "44": [("tujuh abad", "7 abad"), ("lima dadu...", "5 dadu..."), ("dua puluh sembilan", "29")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
