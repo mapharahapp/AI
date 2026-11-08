@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1559,6 +1559,120 @@ elif EP == "44":
         ("kalau", "end", "KALAU KAMU,\\NMAU MAIN APA?\\N{\\fs50}tulis di komentar\\N{\\fs58\\c&HFFFFFF&}@titikheran"),
     ]
     FIX = {}
+elif EP == "45":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo45.mp3"
+    # the v4 take is 32,64 s: plain pauses tightened to 31,11 s, v4's dramatic pauses after "getahnya...", "dongeng..." and
+    # "mendunia..." kept whole (the one after "percaya..." is trimmed to keep the hook tight); a 5,8% speed-up lands on 30,0 s
+    TIGHT = {"getahnya#1": 1.0, "dongeng#1": 1.0, "mendunia": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema45.py: pohon45 (1037212 tilting up from the buttress roots), tajuk45 (canopy 306357 turning slowly),
+    # majalah45 (old pages, sepia, with a typography card THE LONDON MAGAZINE · DESEMBER 1783), dongeng45 (the pages and card
+    # in black and white, a red stamp DONGENG! slams on "dongeng"), kapal45 (Soviet submarine U-461 3180636 pushing in, speed
+    # lines from "kapal") and anchar45 (navy sonar card, АНЧАР flips into ANCAR, "nama Jawa pohon upas" on "nama")
+    SHOTS = [
+        (0, "membunuh", "clips/pohon45.mp4", 0, "v", False, {"zoom": 0.0, "grade": "forest", "tag": "ilustrasi: pohon lain"}),
+        ("membunuh", "namanya", "clips/157861.mp4", 0, "v", True, {"zoom": 0.07, "grade": "crimson"}),
+        ("namanya", "narapidana", "clips/tajuk45.mp4", 0, "v", True, {"zoom": 0.0, "grade": "forest"}),
+        ("narapidana", "hampir", "clips/majalah45.mp4", 0, "v", True, {"zoom": 0.0}),
+        ("hampir", "ternyata", "img/19176.jpg", 0, "b", True, {"zoom": 0.07, "grade": "bw"}),
+        ("ternyata", "getahnya#2", "clips/dongeng45.mp4", 0, "v", True, {"zoom": 0.0}),
+        ("getahnya#2", "anehnya", "img/6817925.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.4, "tag": "ilustrasi: getah pohon lain"}),
+        ("anehnya", "mendunia", "img/1619740.jpg", 0, "b", False, {"zoom": 0.07, "grade": "sepia", "tag": "ilustrasi: kamus lain"}),
+        ("mendunia", "sampai", "img/4013049.jpg", 0, "b", False, {"zoom": 0.08, "tag": "Alexander Pushkin"}),
+        ("sampai", "ancar", "clips/kapal45.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: kapal selam Soviet lain"}),
+        ("ancar", "di#3", "clips/anchar45.mp4", 0, "v", False, {"zoom": 0.0}),
+        ("di#3", "end", "img/4365774.jpg", 0, "f", False, {"zoom": 0.06, "grade": "morning", "tag": "Gunung Halimun Salak, Jawa Barat"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    # a blood-red flash on "membunuh"
+    RFLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H1E1ED2&\\1a&H58&\\fad(0,320)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    TITLES = [
+        (0, "membunuh", f"{{\\fs88}}{WT}POHON {Y}PEMBUNUH\\N{WT}DARI {Y}JAWA?"),
+        (0, "namanya", f"{LAB_ON}KATA EROPA, 1783", {"style": "Label", "pos": (5, 540, 235)}),
+        ("membunuh", "membunuh+0.32", RFLASH, {"raw": True}),
+        ("membunuh", "namanya", f"{WT}BURUNG YANG\\NLEWAT {Y}JATUH\\NMATI?"),
+        ("namanya", "narapidana", f"{{\\fs120}}{Y}POHON UPAS\\N{{\\fs56\\i1}}{WT}Antiaris toxicaria\\N{{\\fs50\\i0}}nama Jawa: upas, ancar"),
+        ("hampir", "ternyata", f"{WT}KATANYA, HANYA\\N{Y}2 DARI 20\\N{WT}YANG KEMBALI"),
+        ("getahnya#2", "tapi", f"{WT}GETAHNYA\\NMEMANG {Y}RACUN\\NANAK SUMPIT"),
+        ("tapi", "anehnya", f"{WT}TAPI {Y}TAK MEMBUNUH\\N{WT}DARI JAUH"),
+        ("anehnya", "mendunia", f"{WT}DONGENGNYA\\N{Y}MENDUNIA"),
+        # the dictionary line sits in a box on the photo (as a title line it ran onto the white page)
+        ("anehnya", "mendunia", f"{LAB_OFF}{{\\fs46}}kamus Inggris:\\N{{\\fs52}}{Y}upas = \"pengaruh jahat\"", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("mendunia", "sampai", f"{WT}PUISI {Y}PUSHKIN\\N{{\\fs110}}{Y}\"АНЧАР\"\\N{{\\fs50}}{WT}tahun 1828"),
+        ("sampai", "kapal", f"{WT}SAMPAI\\N{Y}UNI SOVIET\\N{WT}MENAMAI..."),
+    ]
+    # on "kapal" the speed counts up from 0 to 82,8 km/jam, then the last step pops
+    KT, SUBK = f"{WT}KAPAL SELAM\\N{Y}TERCEPAT DI DUNIA\\N{{\\fs130}}", f"\\N{{\\fs50}}{WT}tahun 1970 · rekornya belum terpecahkan"
+    def kmh(v):
+        return f"{v:.1f}".replace(".", ",")
+    TITLES += [("kapal", "kapal+0.25", f"{KT}0 KM/JAM{SUBK}")]
+    TITLES += [(f"kapal+{0.25 + (k - 1) * 0.03:.2f}", f"kapal+{0.25 + k * 0.03:.2f}", f"{KT}{kmh(82.8 * k / 24)} KM/JAM{SUBK}", {"raw": True})
+               for k in range(1, 24)]
+    TITLES += [("kapal+0.94", "ancar", f"{KT}{{\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}82,8 KM/JAM{SUBK}", {"raw": True}),
+               ("di#3", "end", f"{WT}DI DAERAHMU,\\NPOHON INI\\N{Y}DISEBUT APA?\\N{{\\fs50}}{WT}tulis di komentar\\N{{\\fs58\\c&HFFFFFF&}}@titikheran")]
+    # three answer buttons light up in turn from "disebut" to the end
+    for k in range(8):
+        a, b = f"disebut+{k * 0.4:.2f}", f"disebut+{(k + 1) * 0.4:.2f}" if k < 7 else "end"
+        for j, (nm, x) in enumerate(zip(("UPAS", "ANCAR", "IPUH"), (262, 540, 818))):
+            TITLES.append((a, b, f"{LAB_ON if k % 3 == j else LAB_OFF}{nm}", {"style": "Label", "pos": (5, x, 1112), "raw": True}))
+    FIX = {}
+elif EP == "46":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # the v4 take is 30,75 s: no pause tightened, a 4,6% speed-up lands on 30,0 s
+    AUDIO = "vo46.mp3"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema46.py: trex46 (T. rex 376989 pushing in toward its skull), kaki46 (the T. rex foot cutout 1700918 on a dark
+    # ground, a red line running down the middle toe from "tulang"), allo46.jpg (Allosaurus skull 60588 on black),
+    # skema_tulang (bone cross-section, the canal ringed on "saluran", zoom through into it, ovals light up from "ada"),
+    # skema_heme (heme skeleton wiped in, Fe on "heme", O2 docking on "oksigen"), api46 (burning building 224206, the foot bone
+    # glowing over it from "selamat") and tengkorak46.jpg (dark museum skull 241962 set low under the CTA)
+    SHOTS = [
+        (0, "di#1", "clips/trex46.mp4", 0, "v", False, {"zoom": 0.0, "grade": "base", "tag": "ilustrasi: kerangka T. rex"}),
+        ("di#1", "pemangsa", "clips/kaki46.mp4", 0, "v", False, {"zoom": 0.05, "tag": "ilustrasi: kaki T. rex"}),
+        ("pemangsa", "padahal", "img/allo46.jpg", 0, "f", False, {"zoom": 0.07, "tag": "ilustrasi: tengkorak Allosaurus"}),
+        ("padahal", "tapi", "img/1757353.jpg", 0, "f", True, {"zoom": 0.08, "grade": "cold", "pos": 0.6}),
+        ("tapi", "mirip", "clips/skema_tulang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("mirip", "dengan", "clips/6583.mp4", 2, "v", False, {"zoom": 0.06, "grade": "pop", "tag": "ilustrasi: sel darah merah"}),
+        ("dengan", "dan", "clips/skema_heme.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan", "makanya", "clips/api46.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: kebakaran gedung lain"}),
+        ("makanya", "percaya", "clips/8625.mp4", 2, "v", False, {"zoom": 0.06, "pos": 0.32, "grade": "warm"}),
+        ("percaya", "end", "img/tengkorak46.jpg", 0, "f", True, {"zoom": 0.06}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    RPULSE = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&H1E1ED2&\\1a&H68&\\fad(60,380)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    TITLES = [
+        (0, "di#1", f"{WT}JEJAK {Y}DARAH\\N{WT}DINOSAURUS"),
+        (0, "di#1", f"{LAB_ON}PNAS · 2 NOV 2026", {"style": "Label", "pos": (5, 540, 235)}),
+        ("darah#1", "darah#1+0.4", RPULSE, {"raw": True}),
+        ("di#1", "berumur", f"{WT}DI TULANG\\N{Y}DINOSAURUS"),
+    ]
+    # from "berumur" the age counts up to 115 juta tahun, the last step pops
+    AGE = f"\\N{{\\fs92}}{WT}JUTA TAHUN\\N{{\\fs50}}umur fosil tulang kakinya"
+    TITLES += [("berumur", "berumur+0.2", f"{{\\fs170}}{Y}0{AGE}")]
+    TITLES += [(f"berumur+{0.2 + (k - 1) * 0.03:.2f}", f"berumur+{0.2 + k * 0.03:.2f}", f"{{\\fs170}}{Y}{round(115 * k / 24)}{AGE}", {"raw": True})
+               for k in range(1, 24)]
+    TITLES += [("berumur+0.89", "pemangsa", f"{{\\fs170}}{Y}{{\\t(0,110,\\fscx116\\fscy116)\\t(110,220,\\fscx100\\fscy100)}}115{AGE}", {"raw": True}),
+               ("pemangsa", "padahal", f"{{\\fs110}}{Y}ARATASAURUS\\N{{\\fs56}}{WT}pemangsa ±3,1 m · ±34 kg\\NCeará, Brasil"),
+               ("padahal", "jutaan", f"{WT}DARAH\\NMESTINYA\\N{Y}HANCUR"),
+               ("jutaan", "tapi", f"{WT}DARAH\\NMESTINYA\\N{Y}HANCUR\\N{{\\fs50}}{WT}jutaan tahun lalu", {"raw": True}),
+               ("tapi", "mirip", f"{WT}DI SALURAN\\N{Y}PEMBULUH DARAH\\N{WT}TULANGNYA..."),
+               ("mirip", "dengan", f"{WT}MIRIP SEL\\N{Y}DARAH MERAH"),
+               ("dengan", "dan", f"{WT}JEJAK {Y}HEME\\N{{\\fs50}}{WT}pembawa oksigen dalam darah\\N{Y}pertama di dunia, kata peneliti"),
+               ("dan", "selamat", f"{WT}MUSEUM NASIONAL\\NBRASIL {Y}TERBAKAR\\N{{\\fs50}}{WT}2 September 2018"),
+               ("selamat", "selamat+0.3", FLASH, {"raw": True}),
+               ("selamat", "makanya", f"{WT}TULANG INI\\N{Y}SELAMAT!\\N{{\\fs50}}{WT}disimpan di bagian\\Nyang tidak terbakar"),
+               ("makanya", "aratasaurus", f"{WT}NAMANYA\\N{{\\fs110}}{Y}ARATASAURUS"),
+               ("aratasaurus", "kadal", f"{Y}ARA{WT} = lahir\\N{Y}ATÁ{WT} = api\\N{Y}SAURUS{WT} = kadal\\N{{\\fs50}}dari bahasa Tupi dan Yunani"),
+               ("kadal", "percaya", f"{Y}\"KADAL YANG\\NLAHIR DARI API\""),
+               ("percaya", "end", f"{WT}PERCAYA, INI\\N{Y}DARAH\\NDINOSAURUS?\\N{{\\fs50}}{WT}tidak semua ilmuwan yakin\\N{{\\fs58\\c&HFFFFFF&}}@titikheran")]
+    # two answer buttons light up in turn from "dinosaurus#2" to the end
+    for k in range(8):
+        a, b = f"dinosaurus#2+{k * 0.45:.2f}", f"dinosaurus#2+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PERCAYA", {"style": "Label", "pos": (5, 330, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}RAGU", {"style": "Label", "pos": (5, 760, 1175), "raw": True})]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1773,7 +1887,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "41": [("tiga meter...", "3 meter..."), ("delapan ratus meter.", "800 meter."), ("dua hari.", "2 hari.")],
         "42": [("empat ratus tahun...", "400 tahun..."), ("empat cincin", "4 cincin"), ("si ti sken...", "CT scan...")],
         "43": [("dua tahun...", "2 tahun..."), ("dua puluh dua tahun,", "22 tahun,"), ("tiga puluh juta dolar", "30 juta dolar")],
-        "44": [("tujuh abad", "7 abad"), ("lima dadu...", "5 dadu..."), ("dua puluh sembilan", "29")]}[EP]
+        "44": [("tujuh abad", "7 abad"), ("lima dadu...", "5 dadu..."), ("dua puluh sembilan", "29")],
+        "45": [],
+        "46": [("seratus lima belas juta tahun!", "115 juta tahun!"), ("tiga meter", "3 meter")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
@@ -1867,6 +1983,11 @@ GRADES = {"base": "eq=contrast=1.06:saturation=1.12", "pop": "eq=contrast=1.08:s
           "aged": "colorchannelmixer=.6965:.3845:.0945:0:.1745:.843:.084:0:.136:.267:.5655,eq=contrast=1.06",
           # dusk: twilight with bluish shadows and warm light on the stone, brighter than dim (the #32 hook)
           "dusk": "eq=brightness=-0.03:contrast=1.1:saturation=1.1,colorbalance=bs=0.06:bm=0.03:rh=0.05:rm=0.03",
+          # forest: deep green shade for the #45 hook; crimson: blood-red duotone; bw: black and white; morning: fresh green light
+          "forest": "eq=brightness=-0.07:contrast=1.12:saturation=0.85,colorbalance=rs=-0.04:gs=0.02:bs=-0.02:rm=-0.04:gm=0.03:bm=-0.03:rh=-0.03:bh=-0.03",
+          "crimson": "hue=s=0.15,eq=contrast=1.2:brightness=-0.1,colorbalance=rs=0.3:rm=0.24:rh=0.14:gs=-0.06:gm=-0.1:gh=-0.06:bs=-0.08:bm=-0.12:bh=-0.08",
+          "bw": "hue=s=0,eq=contrast=1.12:brightness=-0.02",
+          "morning": "eq=contrast=1.06:saturation=1.12:gamma=1.06,colorbalance=rh=0.04:gh=0.03:bh=-0.02:gm=0.02",
           # day for night: highlights pulled down to moonlight, colour drained, shadows pushed blue
           "night": "curves=all='0/0 0.35/0.11 0.7/0.32 1/0.56',eq=saturation=0.5,colorbalance=bs=0.16:bm=0.1:bh=0.05:rs=-0.06:rm=-0.05:gs=-0.02,"
                    "eq=contrast=1.06:saturation=1.12"}
