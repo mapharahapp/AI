@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1673,6 +1673,81 @@ elif EP == "46":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PERCAYA", {"style": "Label", "pos": (5, 330, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}RAGU", {"style": "Label", "pos": (5, 760, 1175), "raw": True})]
     FIX = {}
+elif EP == "47":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0  # v4 take 35,8 s; prep47.py cuts "dan teman-temannya" (34,8 s), pauses tightened
+    AUDIO = "vo47cut.wav"
+    TIGHT = {"dunia": 0.32, "kemudian": 0.4, "tahun": 1.0, "indonesia": 0.22, "sejarah": 0.22, "panas": 0.24, "swiss": 0.2,
+             "menantang": 0.16, "seram": 0.22, "shelley": 0.14, "frankenstein#2": 0.24, "pertama": 0.22, "tambora#2": 0.2}  # the dramatic beats after "dunia" and "kemudian" and the whispered one after "tahun" stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    SHOTS = [
+        (0, "tambora#1", "img/4544803.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.62, "grade": "base"}),
+        ("tambora#1", "setahun", "img/4543976.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "base"}),
+        ("setahun", "hujan", "clips/108610.mp4", 2, "v", True, {"zoom": 0.05, "grade": "cold"}),
+        ("hujan", "bairon#2", "clips/44512.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.6, "grade": "night", "tag": "ilustrasi: Danau Jenewa"}),
+        ("bairon#2", "mary", "clips/107189.mp4", 4, "v", True, {"zoom": 0.06, "pos": 0.55, "grade": "warm"}),
+        ("mary", "dari", "clips/325497.mp4", 0, "v", True, {"zoom": 0.06, "pos": 0.72, "grade": "warm"}),
+        ("dari", "percaya", "clips/205561.mp4", 0, "v", True, {"zoom": 0.06, "pos": 0.5, "grade": "crimson"}),
+        ("percaya", "end", "img/4562844.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.35, "grade": "dusk"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "lahir#1", f"{{\\fs120}}{WT}FRANKENSTEIN"),
+        ("lahir#1", "tambora#1", f"{{\\fs120}}{WT}FRANKENSTEIN\\N{{\\fs76}}{Y}LAHIR GARA-GARA\\NGUNUNG DI\\NINDONESIA?", {"raw": True}),
+        ("tambora#1", "setahun", f"{Y}GUNUNG\\NTAMBORA\\N{{\\fs56}}{WT}10 April 1815\\N{{\\fs50}}letusan terbesar\\Nyang pernah tercatat"),
+        ("setahun", "hujan", f"{WT}1816:\\N{Y}TAHUN TANPA\\NMUSIM PANAS\\N{{\\fs50}}{WT}salju turun di bulan Juni"),
+        ("hujan", "bairon#2", f"{Y}DANAU JENEWA,\\NSWISS\\N{{\\fs50}}{WT}Juni 1816 · hujan tak henti\\NLord Byron, Percy Shelley,\\NMary & John Polidori"),
+        ("bairon#2", "mary", f"{WT}TANTANGAN\\NBYRON:\\N{Y}\"TULIS CERITA\\NPALING SERAM!\""),
+        ("mary", "frankenstein#2", f"{Y}MARY SHELLEY\\N{{\\fs110}}{WT}18 TAHUN\\N{{\\fs44}}waktu itu masih Mary Godwin"),
+        ("frankenstein#2", "dari", f"{{\\fs120}}{Y}FRANKENSTEIN\\N{{\\fs56}}{WT}novelnya terbit 1818"),
+        ("dari", "percaya", f"{Y}THE VAMPYRE\\N{{\\fs56}}{WT}John Polidori, 1819\\N{{\\fs50}}disebut cerita vampir\\Nmodern pertama\\N{Y}78 tahun sebelum Dracula"),
+        ("percaya", "end", f"{WT}PERCAYA,\\N{Y}FRANKENSTEIN\\NLAHIR DARI\\NTAMBORA?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"tambora#2+{k * 0.45:.2f}", f"tambora#2+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PERCAYA", {"style": "Label", "pos": (5, 300, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}KEBETULAN", {"style": "Label", "pos": (5, 770, 1175), "raw": True})]
+    FIX = {"Bairon": "Byron", "Bairon,": "Byron,"}
+elif EP == "48":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo48.mp3"
+    TIGHT = {"mati": 0.5, "artinya": 1.0, "sana": 0.45}  # the hook's beat and the whispered beats stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema48.py: mars48v.jpg (NASA Mars globe 11012 on a black vertical canvas), skema_tgo (orbiter at the limb,
+    # HCl dots rising over a fissure), retak48 (Mars surface 11604 with glowing fresh cracks and yellow gas wisps),
+    # skema_magma (ground section: ice plug sublimates, gas escapes, a dim magma pocket with "?")
+    SHOTS = [
+        (0, "di#1", "img/mars48v.jpg", 0, "f", False, {"zoom": 0.07, "grade": "base"}),
+        ("di#1", "wahana", "img/11607.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "ilustrasi: Olympus Mons, tetangga Alba Mons"}),
+        ("wahana", "retakanretakan", "clips/skema_tgo.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("retakanretakan", "zat", "clips/retak48.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi: permukaan Mars + skema"}),
+        ("zat", "artinya", "clips/168342.mp4", 3, "v", True, {"zoom": 0.05, "pos": 0.5, "grade": "base"}),
+        ("artinya", "mungkin", "clips/skema_magma.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("mungkin", "dan", "clips/62006.mp4", 4, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "warm", "tag": "ilustrasi: lubang gas di Bumi"}),
+        ("dan", "menurutmu", "img/11613.jpg", 0, "f", False, {"zoom": 0.07, "grade": "base", "tag": "ilustrasi: kawah Victoria, Mars"}),
+        ("menurutmu", "end", "img/mars48v.jpg", 0, "f", False, {"zoom": "pull", "grade": "base"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "ternyata", f"{{\\fs130}}{Y}MARS\\N{WT}BELUM MATI?"),
+        (0, "di#1", f"{LAB_ON}SCIENCE ADVANCES · 4 NOV 2026", {"style": "Label", "pos": (5, 540, 235)}),
+        ("ternyata", "di#1", f"{{\\fs130}}{Y}MARS\\N{WT}BOCOR GAS\\NGUNUNG API!", {"raw": True}),
+        ("di#1", "tidur", f"{{\\fs110}}{Y}ALBA MONS\\N{{\\fs56}}{WT}gunung api terluas di Mars"),
+        ("tidur", "wahana", f"{{\\fs110}}{Y}ALBA MONS\\N{{\\fs56}}{WT}gunung api terluas di Mars\\N{{\\fs50}}letusan besar terakhir\\N±3,5 miliar tahun lalu", {"raw": True}),
+        ("wahana", "hidrogen", f"{WT}TRACE GAS\\NORBITER\\N{{\\fs56}}{Y}wahana ESA (Eropa)"),
+        ("hidrogen", "retakanretakan", f"{Y}HIDROGEN\\NKLORIDA (HCl)\\N{{\\fs50}}{WT}di Bumi, gas ini\\Nkeluar dari magma"),
+        ("retakanretakan", "zat", f"{WT}TEPAT DI ATAS\\N{Y}RETAKAN SEGAR\\N{{\\fs50}}{WT}umurnya < 1 juta tahun"),
+        ("zat", "artinya", f"{Y}HCl {WT}=\\NBAHAN {Y}ASAM\\NLAMBUNG{WT} KITA!"),
+        ("artinya", "dan", f"{WT}MUNGKIN\\NMASIH ADA\\N{Y}MAGMA\\N{{\\fs50}}{WT}belum terbukti"),
+        ("dan", "menurutmu", f"{WT}TEMPAT MENCARI\\N{Y}KEHIDUPAN\\N{WT}DI MARS\\N{{\\fs46}}\"would make a lot of sense\"\\NDaniel Mège, peneliti"),
+        ("menurutmu", "end", f"{{\\fs120}}{Y}MARS:\\N{WT}HIDUP ATAU\\NMATI?\\N{{\\fs50}}ilmuwan belum sepakat\\N{{\\fs58}}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"hidup+{k * 0.45:.2f}", f"hidup+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}HIDUP", {"style": "Label", "pos": (5, 330, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}MATI", {"style": "Label", "pos": (5, 750, 1175), "raw": True})]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1889,7 +1964,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "43": [("dua tahun...", "2 tahun..."), ("dua puluh dua tahun,", "22 tahun,"), ("tiga puluh juta dolar", "30 juta dolar")],
         "44": [("tujuh abad", "7 abad"), ("lima dadu...", "5 dadu..."), ("dua puluh sembilan", "29")],
         "45": [],
-        "46": [("seratus lima belas juta tahun!", "115 juta tahun!"), ("tiga meter", "3 meter")]}[EP]
+        "46": [("seratus lima belas juta tahun!", "115 juta tahun!"), ("tiga meter", "3 meter")],
+        "47": [("delapan belas tahun...", "18 tahun...")],
+        "48": []}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

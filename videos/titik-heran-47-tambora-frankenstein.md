@@ -182,7 +182,7 @@ Tentu ide ceritanya tetap dari kepala Mary sendiri. Yang jelas, cuaca buruk 1816
 
 Percaya nggak, Frankenstein lahir dari Tambora? Atau cuma kebetulan? Tulis di komentar 👇
 
-Danau, badai, lilin, buku, dan kelelawar di video adalah ilustrasi.
+Salju, danau, meja menulis, lilin, buku, dan bulan merah di video adalah ilustrasi.
 Sumber: Wikipedia (Year Without a Summer, Mary Shelley, The Vampyre), La Brújula Verde, Schurer dkk. 2019 (Environmental Research Letters), NASA Earth Observatory
 
 #titikheran #gunungtambora #frankenstein #sejarahdunia #faktaunik
@@ -209,3 +209,25 @@ Seperti #37–#46, Indonesia pagi dan luar negeri malam. Jam tayang tidak menjel
 - The Conversation (2020), "Did a volcanic eruption in Indonesia really lead to the creation of Frankenstein?" (hanya judul; halaman tidak bisa dibuka dari sini): https://theconversation.com/did-a-volcanic-eruption-in-indonesia-really-lead-to-the-creation-of-frankenstein-130212
 - Schurer dkk. (2019), Environmental Research Letters, DOI 10.1088/1748-9326/ab3a10
 - Bukti viral: Tuan V, https://www.youtube.com/watch?v=bGyMQhbrwJM · Arschoo, https://www.youtube.com/watch?v=1GXnrcva8Uc · MKM Things, https://www.youtube.com/watch?v=OnB9_Cnxqa0 · Sejengkal Peta, https://www.youtube.com/watch?v=wcrqdK2KBuc · Kenapa Begitu, https://www.youtube.com/watch?v=nYbs8QKUxFc · Ternyata Gitu, https://www.youtube.com/watch?v=oSJG_8-kY5E · CIBERTALES, https://www.youtube.com/watch?v=Z8ieOjXVMYM · Date un Vlog, https://www.youtube.com/watch?v=HzP5CXyVyrs · João Stickman, https://www.youtube.com/watch?v=_7ST4E1g2js · Tahu Bareng (The Scream), https://www.youtube.com/watch?v=tS8mx8sZxtE
+
+
+---
+
+## 8. Shot list final (video yang dirender, 9 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (35,8 detik). Transkrip Scribe sama dengan naskah; "Byron" ditulis "Bairon" untuk TTS, subtitle tetap "Byron". Karena take lebih dari 33 detik, frasa opsional **"dan teman-temannya" dibuang** (35,8 → 34,8 detik), jeda biasa dirapatkan di 12 titik (→ 31,0 detik; jeda setelah "dunia", "kemudian", dan "tahun" tetap dibiarkan), lalu dipercepat 1,055x. Subtitle menulis "18 tahun" sebagai angka. Master -15,0 LUFS, true peak -2,3 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "ilustrasi" untuk salju, meja menulis, lilin dan buku, dan bulan merah; "ilustrasi: Danau Jenewa".
+
+Beda dari storyboard: kelelawar diganti **bulan merah** (video 205561, grade merah gelap), karena klip kelelawar di Pixabay ternyata kelelawar makan buah di kebun binatang (67495) atau animasi/green screen (239723, 345462, 52997, 135384). Kilat 305 tidak dipakai (animasi, bukan rekaman asli); danau cukup diberi grade malam kelabu. Shot 2 memakai foto Tambora 4543976 (cadangan), karena lebih tajam dari 4543242.
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:05,5 | Frankenstein, monster paling terkenal di dunia... lahir gara-gara gunung di Indonesia! | `[curious]` | Foto asli kawah Gunung Tambora, push-in pelan | foto 4544803 | **FRANKENSTEIN** → di "lahir" + **LAHIR GARA-GARA GUNUNG DI INDONESIA?** |
+| 0:05,5–0:08,2 | Tambora meletus terdahsyat dalam sejarah. | `[dramatic]` | Foto asli kawah Tambora sudut lain, push-in | foto 4543976 | **GUNUNG TAMBORA** · 10 April 1815 · letusan terbesar yang pernah tercatat |
+| 0:08,2–0:11,6 | Setahun kemudian... Eropa kehilangan musim panas. | `[dramatic]` | Salju turun di pepohonan, grade dingin (label "ilustrasi") | video 108610 | **1816: TAHUN TANPA MUSIM PANAS** · salju turun di bulan Juni |
+| 0:11,6–0:15,0 | Hujan badai mengurung Lord Byron di sebuah vila di Swiss. | `[softly]` | Danau Jenewa asli, grade malam kelabu (label "ilustrasi: Danau Jenewa") | video 44512 | **DANAU JENEWA, SWISS** · Juni 1816 · hujan tak henti · Lord Byron, Percy Shelley, Mary & John Polidori |
+| 0:15,0–0:18,0 | Byron menantang: siapa bisa menulis cerita paling seram? | `[curious]` | Meja menulis dengan pena bulu, gulungan kertas, dan jam saku, grade hangat (label "ilustrasi") | video 107189 | **TANTANGAN BYRON: "TULIS CERITA PALING SERAM!"** |
+| 0:18,0–0:21,8 | Mary Shelley, delapan belas tahun... mulai menulis Frankenstein. | `[whispers]` (satu-satunya) | Lilin menyala di atas buku tua, grade hangat (label "ilustrasi") | video 325497 | **MARY SHELLEY · 18 TAHUN** (waktu itu masih Mary Godwin) → **FRANKENSTEIN** · novelnya terbit 1818 |
+| 0:21,8–0:25,9 | Dari tantangan itu, lahir juga cerita vampir modern pertama! | `[dramatic]` | Bulan purnama muncul dari gelap, grade merah tua (label "ilustrasi") | video 205561 | **THE VAMPYRE** · John Polidori, 1819 · disebut cerita vampir modern pertama · 78 tahun sebelum Dracula |
+| 0:25,9–0:30,0 | Percaya nggak, Frankenstein lahir dari Tambora? Tulis di komentar! | `[curious]` | Foto asli Tambora berkabut saat senja, push-in pelan | foto 4562844 | **PERCAYA, FRANKENSTEIN LAHIR DARI TAMBORA?** · @titikheran · tombol **PERCAYA** / **KEBETULAN** menyala bergantian mulai "Tambora" |
+
+File: `videos/titik-heran-47.mp4`, `videos/titik-heran-47.srt`, caption di `videos/captions/titik-heran-47-tambora-frankenstein.md`. Alat: `videos/tools/prep47.py` (memotong "dan teman-temannya"), `render.py 47`.

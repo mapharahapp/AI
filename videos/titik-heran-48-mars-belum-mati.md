@@ -204,3 +204,26 @@ Fun fact: Alba Mons tingginya cuma sekitar 6,8 km, jauh lebih pendek dari tetang
 - CBC (6 Nov 2026, hanya judul; halaman tidak bisa dibuka dari sini): https://www.cbc.ca/news/science/mars-volcanism-9.7410453
 - ESA di X: https://x.com/esa/status/2118263144996905025
 - Bukti viral: Bang Ekal, https://www.youtube.com/watch?v=kwuMXaApHrU · INDONESIA SAINS, https://www.youtube.com/watch?v=BLV72id8wag · Wong Penasaran (2023), https://www.youtube.com/watch?v=KEQqhsLR4zE
+
+
+---
+
+## 8. Shot list final (video yang dirender, 9 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (32,0 detik). Transkrip Scribe sama dengan naskah, tanpa ejaan khusus ("Alba Mons" dan "hidrogen klorida" terbaca benar). Tidak ada kata yang dibuang; jeda biasa dirapatkan di 6 titik (→ 31,2 detik; jeda setelah "mati", "Artinya", dan "sana" tetap dibiarkan), lalu dipercepat 1,063x. Master -14,9 LUFS, true peak -2,2 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "ilustrasi: Olympus Mons, tetangga Alba Mons", "skema" (wahana dan potongan tanah), "ilustrasi: permukaan Mars + skema", "ilustrasi" (orang memegang perut), "ilustrasi: lubang gas di Bumi", "ilustrasi: kawah Victoria, Mars".
+
+Beda dari storyboard: lubang gas memakai video 62006 (belerang dan uap di Islandia, cadangan) karena lebih jelas dari 3959. Skema retakan dipecah dua: retakan menyala digambar di atas foto asli permukaan Mars (retak48), dan potongan tanah dengan es, gas, dan magma "?" (skema_magma). Kantong magma dibuat redup dan diberi "?" karena belum terbukti. Hook memakai foto Mars 11012 di kanvas hitam vertikal (mars48v.jpg) supaya planetnya utuh di bawah judul.
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:05,1 | Mars, yang dikira planet mati... ternyata membocorkan gas khas gunung api! | `[curious]` | Foto asli planet Mars (NASA) utuh di ruang hitam berbintang, push-in pelan | foto 11012 (skema48.py prep) | **MARS BELUM MATI?** → di "ternyata" **MARS BOCOR GAS GUNUNG API!** · lencana **SCIENCE ADVANCES · 4 NOV 2026** |
+| 0:05,1–0:09,9 | Di Alba Mons, gunung api terluas di Mars yang sudah tidur miliaran tahun. | `[softly]` | Foto asli Olympus Mons dari atas, push-in ke kaldera (label "ilustrasi: Olympus Mons, tetangga Alba Mons") | foto 11607 | **ALBA MONS** · gunung api terluas di Mars → + letusan besar terakhir ±3,5 miliar tahun lalu |
+| 0:09,9–0:13,1 | Wahana Eropa mencium hidrogen klorida, tepat di atas | `[curious]` | Skema: tepi planet Mars dengan atmosfer jingga, sinar matahari menembus atmosfer ke wahana di kanan; di "hidrogen" titik kuning naik dari retakan dan menyala saat melewati sinar, label "HCl" (label "skema") | skema48.py (tgo), tekstur foto 11012 | **TRACE GAS ORBITER** · wahana ESA (Eropa) → **HIDROGEN KLORIDA (HCl)** · di Bumi, gas ini keluar dari magma |
+| 0:13,1–0:14,5 | retakan-retakan segar. | `[curious]` | Foto asli permukaan Mars berbatu; retakan menyala digambar di atasnya, asap kuning tipis naik (label "ilustrasi: permukaan Mars + skema") | foto 11604 + skema48.py (retak) | **TEPAT DI ATAS RETAKAN SEGAR** · umurnya < 1 juta tahun |
+| 0:14,5–0:16,7 | Zat yang sama dengan asam lambung kita! | `[curious]` | Orang memegang perut (video asli, dipotong vertikal) (label "ilustrasi") | video 168342 | **HCl = BAHAN ASAM LAMBUNG KITA!** |
+| 0:16,7–0:19,0 | Artinya... di bawah sana, | `[whispers]` (satu-satunya) | Skema potongan tanah: sumbat es menguap, gas kuning keluar dengan label "gas HCl", kantong magma merah redup menyala di "di" dan "?" muncul di "sana" (label "skema") | skema48.py (magma) | **MUNGKIN MASIH ADA MAGMA** · belum terbukti |
+| 0:19,0–0:20,5 | mungkin masih ada magma. | `[whispers]` | Lubang gas belerang yang mengepul di Islandia (video asli), grade hangat (label "ilustrasi: lubang gas di Bumi") | video 62006 | (sama) |
+| 0:20,5–0:25,2 | Dan kata peneliti, retakan itu tempat yang masuk akal untuk mencari kehidupan! | `[dramatic]` | Foto asli kawah Victoria di Mars (NASA), push-in pelan (label "ilustrasi: kawah Victoria, Mars") | foto 11613 | **TEMPAT MENCARI KEHIDUPAN DI MARS** · "would make a lot of sense" · Daniel Mège, peneliti |
+| 0:25,2–0:30,0 | Menurutmu, Mars masih hidup atau sudah mati? Tulis di komentar! | `[curious]` | Kembali ke foto Mars utuh, zoom out pelan | foto 11012 | **MARS: HIDUP ATAU MATI?** · ilmuwan belum sepakat · @titikheran · tombol **HIDUP** / **MATI** menyala bergantian mulai "hidup" |
+
+File: `videos/titik-heran-48.mp4`, `videos/titik-heran-48.srt`, caption di `videos/captions/titik-heran-48-mars-belum-mati.md`. Alat: `videos/tools/skema48.py`, `render.py 48`.
