@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -1748,6 +1748,91 @@ elif EP == "48":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}HIDUP", {"style": "Label", "pos": (5, 330, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}MATI", {"style": "Label", "pos": (5, 750, 1175), "raw": True})]
     FIX = {}
+elif EP == "49":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo49.mp3"
+    TIGHT = {"kalah": 1.0, "bayinya": 0.4, "aslinya": 1.0, "london": 0.4}  # the hook's beat and the whispered one stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema49.py: skema_garis (Wallace Line drawn over Natural Earth land, Ternate pulses), skema_rute (an envelope
+    # flies Ternate -> London, two papers slide together, the two authors' places stay empty on "tanpa")
+    SHOTS = [
+        (0, "garagara", "img/62967.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "top": 0.3, "grade": "aged"}),
+        ("garagara", "wolles#1", "img/2742643.jpg", 0, "f", True, {"zoom": 0.07, "pos": 0.55, "grade": "warm"}),
+        ("wolles#1", "menulisnya", "clips/skema_garis.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("menulisnya", "isinya", "img/2547757.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.42, "grade": "dusk", "tag": "Ternate, kini"}),
+        ("isinya", "darwin#2", "clips/107189.mp4", 4, "v", True, {"zoom": 0.06, "pos": 0.8, "grade": "warm"}),
+        ("darwin#2", "keduanya", "img/62911.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "top": 0.2, "grade": "aged"}),
+        ("keduanya", "darwin#3", "clips/skema_rute.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("darwin#3", "wolles#3", "clips/4926.mp4", 1, "v", True, {"zoom": 0.05, "pos": 0.5, "grade": "warm"}),
+        ("wolles#3", "dan", "clips/210305.mp4", 3, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi: hutan tropis"}),
+        ("dan", "menurutmu", "img/447578.jpg", 0, "f", True, {"zoom": 0.07, "pos": 0.6, "grade": "night"}),
+        ("menurutmu", "end", "img/62967.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "top": 0.3, "grade": "aged"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "garagara", f"{{\\fs120}}{Y}DARWIN\\N{WT}HAMPIR\\NKALAH?"),
+        ("garagara", "wolles#1", f"{WT}GARA-GARA\\NSURAT DARI\\N{Y}TERNATE!"),
+        ("wolles#1", "menulisnya", f"{Y}ALFRED RUSSEL\\NWALLACE\\N{{\\fs56}}{WT}penemu Garis Wallace"),
+        ("menulisnya", "isinya", f"{Y}TERNATE, 1858\\N{{\\fs56}}{WT}ditulis saat baru\\Nsembuh dari demam"),
+        ("isinya", "darwin#2", f"{WT}ISINYA\\N{Y}NYARIS SAMA\\N{WT}DENGAN IDE..."),
+        ("darwin#2", "dua", f"{WT}...YANG DARWIN\\N{Y}SIMPAN"),
+        ("dua", "keduanya", f"{{\\fs130}}{Y}20 TAHUN!\\N{{\\fs48}}{WT}\"Semua orisinalitasku\\Nakan hancur.\"\\N{{\\fs40}}surat Darwin, 18 Juni 1858"),
+        ("keduanya", "tanpa", f"{Y}1 JULI 1858\\N{WT}LONDON\\N{{\\fs56}}dibacakan bersama"),
+        ("tanpa", "darwin#3", f"{WT}TANPA\\N{Y}PENULISNYA"),
+        ("darwin#3", "wolles#3", f"{WT}DARWIN:\\N{Y}BERDUKA\\N{{\\fs50}}{WT}putranya meninggal 28 Juni"),
+        ("wolles#3", "dan", f"{WT}WALLACE:\\N{Y}MASIH DI PAPUA\\N{{\\fs50}}{WT}tak tahu apa-apa"),
+        ("dan", "menurutmu", f"{WT}SURAT ASLINYA\\N{Y}HILANG\\N{{\\fs50}}{WT}sampai sekarang"),
+        ("menurutmu", "end", f"{WT}DUNIA CUMA\\NINGAT DARWIN.\\N{Y}ADIL?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"adil+{k * 0.45:.2f}", f"adil+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}ADIL", {"style": "Label", "pos": (5, 330, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}TIDAK ADIL", {"style": "Label", "pos": (5, 740, 1175), "raw": True})]
+    FIX = {"Wolles,": "Wallace,", "Wolles": "Wallace"}
+elif EP == "50":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo50.mp3"
+    TIGHT = {"kan": 0.4, "lidah": 1.0, "belajar": 0.3, "pun": 1.0}  # the beat after "lidah" and the whispered one stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema50.py: skema_jalur (a body outline: the stomach lights on "perut", signal dots climb to the brain, dopamine
+    # glows there slowly from "dopamin"), skema_kiri (the brain from above, the left half lights; it dims and a "?" rises on
+    # "peneliti"), img/cta50.jpg (black coffee | cappuccino side by side)
+    SHOTS = [
+        (0, "tapi#1", "clips/236256.mp4", 0, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "warm"}),
+        ("tapi#1", "kata", "clips/46989.mp4", 6, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base"}),
+        ("kata", "tapi#2", "clips/31672.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.36, "grade": "warm"}),
+        ("tapi#2", "otak#2", "clips/skema_jalur.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("otak#2", "membawa", "clips/143567.mp4", 0, "v", True, {"zoom": 0.06, "pos": 0.5, "grade": "base"}),
+        ("membawa", "jadi", "clips/80134.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "warm"}),
+        ("jadi", "anehnya", "clips/139660.mp4", 1, "v", False, {"zoom": 0.06, "pos": 0.3, "grade": "base", "tag": "ilustrasi: tikus"}),
+        ("anehnya", "kamu", "clips/skema_kiri.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kamu", "end", "img/cta50.jpg", 0, "f", False, {"zoom": 0.05, "grade": "warm"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "tapi#1", f"{WT}KENAPA\\N{Y}KOPI PAHIT\\N{WT}JADI ENAK?"),
+        (0, "kata", f"{LAB_ON}NATURE · 4 NOV 2026", {"style": "Label", "pos": (5, 540, 235)}),
+        ("tapi#1", "kata", f"{WT}KENAPA\\NSEKARANG\\N{Y}KETAGIHAN?"),
+        ("kata", "bukan", f"{WT}KATA ILMUWAN\\N{Y}JURNAL NATURE\\N{{\\fs50}}{WT}UC San Francisco"),
+        ("bukan", "tapi#2", f"{WT}BUKAN\\N{Y}LIDAH..."),
+        ("tapi#2", "saat", f"{WT}TAPI\\N{{\\fs130}}{Y}PERUT!"),
+        ("saat", "dopamin", f"{WT}MINUMAN\\NSAMPAI DI\\N{Y}PERUT"),
+        ("dopamin", "otak#2", f"{WT}OTAK MELEPAS\\N{Y}DOPAMIN\\N{{\\fs50}}{WT}pelan-pelan, bermenit-menit"),
+        ("otak#2", "membawa", f"{WT}OTAK\\N{Y}BELAJAR..."),
+        ("membawa", "jadi", f"{WT}RASA INI\\N{Y}= ENERGI"),
+        ("jadi", "terasa", f"{WT}PAHIT\\N{Y}JADI ENAK"),
+        ("terasa", "anehnya", f"{WT}PAHIT\\N{Y}JADI ENAK\\N{{\\fs50}}{WT}diuji pada tikus,\\Nterlihat juga pada manusia", {"raw": True}),
+        ("anehnya", "peneliti", f"{WT}LEBIH KUAT\\NDI {Y}OTAK KIRI"),
+        ("peneliti", "kamu", f"{WT}PENELITI\\N{Y}BELUM TAHU\\N{WT}KENAPA"),
+        ("kamu", "end", f"{WT}TIM {Y}PAHIT\\N{WT}ATAU TIM\\N{Y}MANIS?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"tim+{k * 0.45:.2f}", f"tim+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PAHIT", {"style": "Label", "pos": (5, 270, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}MANIS", {"style": "Label", "pos": (5, 810, 1175), "raw": True})]
+    FIX = {"Neicher,": "Nature,"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -1966,7 +2051,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "45": [],
         "46": [("seratus lima belas juta tahun!", "115 juta tahun!"), ("tiga meter", "3 meter")],
         "47": [("delapan belas tahun...", "18 tahun...")],
-        "48": []}[EP]
+        "48": [],
+        "49": [("dua puluh tahun!", "20 tahun!")],
+        "50": []}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

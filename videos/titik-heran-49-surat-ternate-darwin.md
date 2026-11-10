@@ -209,3 +209,25 @@ Fun fact: Wallace menjelajah Nusantara sekitar 8 tahun dan mengumpulkan lebih da
 - Rookmaaker & van Wyhe (2024), "Shared experiences of Alfred Russel Wallace and Hermann von Rosenberg" (Wallace di Dorey, Mei 1858): https://rhinoresourcecenter.com/library/references/shared-experiences-of-alfred-russel-wallace-and-hermann-von-rosenberg-in-exploring-the-ornithology-of-new-guinea-and-the-aru-islands-in-1858-1860
 - Scientia, "Rediscovering Alfred Russel Wallace: The True Location of His Ternate Residence": https://www.scientia.global/rediscovering-alfred-russel-wallace-the-true-location-of-his-ternate-residence/
 - Bukti viral: Forrest Galante IG https://www.instagram.com/reel/DfcW3uUOw1d · TikTok https://www.tiktok.com/@forrestgalante/video/7700573587727519007 · Nyata Tapi Aneh https://www.youtube.com/watch?v=C3g-zZrUd6k · Bagus Muljadi https://www.youtube.com/watch?v=B92NPsuSgig · QJP https://www.youtube.com/watch?v=Oe6ioBaHclg
+
+## 8. Shot list final (video yang dirender, 10 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (31,0 detik). Transkrip Scribe sama dengan naskah; "Wallace" ditulis "Wolles" untuk TTS dan dikembalikan ke "Wallace" di subtitle. Tidak ada kata yang dibuang; jeda biasa dirapatkan di 10 titik (→ 29,7 detik; jeda setelah "kalah" dan "aslinya" tetap dibiarkan), lalu dipercepat 1,011x. Master -14,9 LUFS, true peak -2,3 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "ilustrasi" (amplop bersegel, tangan menulis, lilin, tumpukan surat), "skema" (peta dan rute surat), "Ternate, kini", "ilustrasi: hutan tropis".
+
+Beda dari storyboard: adegan 2 dibuka dengan amplop bersegel lilin (2742643, ilustrasi) di "gara-gara", lalu peta Garis Wallace di "Wallace", lalu foto Teluk Ternate senja (2547757) di "menulisnya". Patung Darwin (1959791) tidak dipakai; kutipan "Semua orisinalitasku akan hancur" tampil di bawah "20 TAHUN!" di potret Darwin 62911. Tombol CTA ditulis **ADIL** / **TIDAK ADIL** supaya cocok dengan pertanyaan VO. Foto Darwin diberi ruang di atas (perpanjangan blur) supaya judul tidak menutup wajah.
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,3 | Charles Darwin hampir kalah... | `[curious]` | Potret asli Darwin, punch-in, grade sepia | foto 62967 | **DARWIN HAMPIR KALAH?** |
+| 0:02,3–0:04,7 | gara-gara sepucuk surat dari Ternate! | `[curious]` | Amplop tua bersegel lilin merah, push-in (label "ilustrasi") | foto 2742643 | **GARA-GARA SURAT DARI TERNATE!** |
+| 0:04,7–0:06,8 | Wallace, penemu Garis Wallace, | `[softly]` | Skema peta Indonesia (Natural Earth): Garis Wallace kuning putus-putus tergambar dari Bali-Lombok ke utara, titik Ternate berdenyut, label "Garis Wallace" muncul di "Garis" (label "skema") | skema49.py (garis) | **ALFRED RUSSEL WALLACE** · penemu Garis Wallace |
+| 0:06,8–0:09,3 | menulisnya saat baru sembuh dari demam. | `[softly]` | Foto asli Teluk Ternate senja dengan Gunung Gamalama (label "Ternate, kini") | foto 2547757 | **TERNATE, 1858** · ditulis saat baru sembuh dari demam |
+| 0:09,3–0:11,5 | Isinya nyaris sama dengan ide | `[dramatic]` | Tangan menulis dengan pena bulu di meja lilin (label "ilustrasi") | video 107189 | **ISINYA NYARIS SAMA DENGAN IDE...** |
+| 0:11,5–0:13,7 | yang Darwin simpan 20 tahun! | `[dramatic]` | Potret asli Darwin duduk, push-in | foto 62911 | **...YANG DARWIN SIMPAN** → di "dua" **20 TAHUN!** · "Semua orisinalitasku akan hancur." · surat Darwin, 18 Juni 1858 |
+| 0:13,7–0:17,6 | Keduanya lalu dibacakan bersama di London... tanpa penulisnya. | `[curious]` | Skema: amplop terbang dari Ternate ke London, dua kertas WALLACE dan DARWIN bergeser menyatu di "London", di "tanpa" dua sosok kosong putus-putus muncul di kiri-kanan (label "skema") | skema49.py (rute) | **1 JULI 1858 · LONDON** · dibacakan bersama → **TANPA PENULISNYA** |
+| 0:17,6–0:20,1 | Darwin sedang memakamkan bayinya, | `[softly]` | Lilin menyala di ruang gelap (label "ilustrasi") | video 4926 | **DARWIN: BERDUKA** · putranya meninggal 28 Juni |
+| 0:20,1–0:21,8 | Wallace masih di Papua. | `[softly]` | Hutan berkabut dari atas (label "ilustrasi: hutan tropis") | video 210305 | **WALLACE: MASIH DI PAPUA** · tak tahu apa-apa |
+| 0:21,8–0:25,5 | Dan surat aslinya... sampai sekarang tak pernah ditemukan. | `[whispers]` (satu-satunya) | Tumpukan surat tua, grade biru gelap (label "ilustrasi") | foto 447578 | **SURAT ASLINYA HILANG** · sampai sekarang |
+| 0:25,5–0:30,0 | Menurutmu, adil nggak dunia cuma ingat Darwin? Tulis di komentar! | `[curious]` | Kembali ke potret Darwin, zoom out pelan | foto 62967 | **DUNIA CUMA INGAT DARWIN. ADIL?** · @titikheran · tombol **ADIL** / **TIDAK ADIL** menyala bergantian mulai "adil" |
+
+File: `videos/titik-heran-49.mp4`, `videos/titik-heran-49.srt`, caption di `videos/captions/titik-heran-49-surat-ternate-darwin.md`. Alat: `videos/tools/skema49.py`, `render.py 49`.

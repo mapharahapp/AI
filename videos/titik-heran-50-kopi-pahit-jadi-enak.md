@@ -207,3 +207,24 @@ Fun fact: hal yang sama kata peneliti juga berlaku untuk cokelat hitam dan air t
 - News-Medical (4 Nov 2026): https://www.news-medical.net/news/20261104/Gut-brain-dopamine-pathway-drives-learned-food-preferences-over-time.aspx
 - ScienceDaily, berita utama 9 Nov 2026 ("Scientists Finally Discover Why We Learn to Love Bitter Coffee"): https://www.sciencedaily.com/news/top/science/
 - Bukti minat kopi di Indonesia: Ruang Ilmu https://www.youtube.com/watch?v=8sSq__ewbSo · Ketawa Itu Sehat https://www.youtube.com/watch?v=xkx0yOAL1EU
+
+## 8. Shot list final (video yang dirender, 10 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (30,7 detik). Transkrip Scribe sama dengan naskah; "Nature" ditulis "Neicher" untuk TTS dan dikembalikan ke "Nature" di subtitle. Tidak ada kata yang dibuang; jeda biasa dirapatkan di 9 titik (→ 29,4 detik; jeda setelah "lidah" dan "pun" tetap dibiarkan), kecepatan asli (1,001x). Master -14,9 LUFS, true peak -2,0 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "skema" (jalur perut-otak, otak kiri-kanan), "ilustrasi" (animasi saraf), "ilustrasi: tikus".
+
+Beda dari storyboard: animasi lambung 4062 tidak dipakai karena ada tulisan bahasa Inggris di dalamnya; lambung digambar sendiri di skema_jalur yang berjalan dari "tapi perut!" sampai "pelan-pelan". Video laboratorium 262464 dibuang (shot-nya hanya 1 detik); keterangan "diuji pada tikus, terlihat juga pada manusia" pindah ke shot tikus. Otak kiri dan "?" memakai satu skema (skema_kiri) yang meredup di "peneliti". CTA memakai foto kopi hitam dan cappuccino berdampingan kiri-kanan (cta50.jpg).
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,3 | Kopi pahit pertamamu nggak enak, kan? | `[curious]` | Secangkir kopi di kasur pagi (video asli vertikal), push-in | video 236256 | **KENAPA KOPI PAHIT JADI ENAK?** · lencana **NATURE · 4 NOV 2026** |
+| 0:02,3–0:04,6 | Tapi kenapa sekarang ketagihan? | `[curious]` | Espresso mengalir dari mesin ke gelas | video 46989 | **KENAPA SEKARANG KETAGIHAN?** |
+| 0:04,6–0:08,9 | Kata ilmuwan di jurnal Nature, yang mengajari otakmu bukan lidah... | `[curious]` | Orang menyeruput kopi hitam, close-up cangkir | video 31672 | **KATA ILMUWAN JURNAL NATURE** · UC San Francisco → **BUKAN LIDAH...** |
+| 0:08,9–0:14,2 | tapi perut! Saat minuman sampai di perut, otak melepas dopamin pelan-pelan. | `[curious]` → `[softly]` | Skema tubuh: lambung menyala di "perut", tetes minuman turun ke lambung, titik sinyal kuning naik ke otak, di "dopamin" otak pelan-pelan terisi percikan kuning (label "skema") | skema50.py (jalur) | **TAPI PERUT!** → **MINUMAN SAMPAI DI PERUT** → **OTAK MELEPAS DOPAMIN** · pelan-pelan, bermenit-menit |
+| 0:14,2–0:16,1 | Otak belajar: rasa ini | `[dramatic]` | Animasi saraf otak menyala biru (label "ilustrasi") | video 143567 | **OTAK BELAJAR...** |
+| 0:16,1–0:17,3 | membawa energi, | `[dramatic]` | Biji kopi sangrai berasap (video asli 4K) | video 80134 | **RASA INI = ENERGI** |
+| 0:17,3–0:19,5 | jadi pahitnya terasa enak. | `[dramatic]` | Tikus makan di atas batu (label "ilustrasi: tikus") | video 139660 | **PAHIT JADI ENAK** → + diuji pada tikus, terlihat juga pada manusia |
+| 0:19,5–0:22,9 | Anehnya, sinyal itu lebih kuat di otak kiri. | `[curious]` | Skema otak dari atas, belahan KIRI menyala kuning dan berdenyut di "kiri" (label "skema") | skema50.py (kiri) | **LEBIH KUAT DI OTAK KIRI** |
+| 0:22,9–0:25,4 | Peneliti pun... belum tahu kenapa. | `[whispers]` (satu-satunya) | Skema yang sama meredup, "?" besar muncul di tengah (label "skema") | skema50.py (kiri) | **PENELITI BELUM TAHU KENAPA** |
+| 0:25,4–0:30,0 | Kamu tim kopi pahit atau kopi manis? Tulis di komentar! | `[curious]` | Kopi hitam (kiri) dan cappuccino dengan biji kopi (kanan), foto asli berdampingan | foto 2619216 + 8342636 (skema50.py prep) | **TIM PAHIT ATAU TIM MANIS?** · @titikheran · tombol **PAHIT** / **MANIS** menyala bergantian mulai "tim" |
+
+File: `videos/titik-heran-50.mp4`, `videos/titik-heran-50.srt`, caption di `videos/captions/titik-heran-50-kopi-pahit-jadi-enak.md`. Alat: `videos/tools/skema50.py`, `render.py 50`.
