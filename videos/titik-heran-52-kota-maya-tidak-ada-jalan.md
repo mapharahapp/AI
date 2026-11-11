@@ -205,3 +205,26 @@ Fun fact: kota musuhnya, Ocomtún, ditemukan tim yang sama tahun 2023, dan nama 
 - Arkeonews, "Newly Discovered Maya City Reveals Its Ancient Name, Ruler, and Rival" (10 Nov 2026): https://arkeonews.net/newly-discovered-maya-city-reveals-its-ancient-name-ruler-and-rival/
 - Media Meksiko: Xataka https://www.xataka.com.mx/investigacion/inah-logra-descifrar-verdadero-nombre-minanbe-sitio-arqueologico-maya-descubierto-este-ano-campeche · UnoTV https://www.unotv.com/estados/campeche/descifran-el-nombre-original-de-minanbe-sitio-maya-recien-descubierto-en-campeche/
 - Bukti viral: IG @natgeohistory https://www.instagram.com/reel/DdZ0MeIiHpQ · IG @shawnryanshow https://www.instagram.com/reel/Dc2S7J1Mg_9 · YouTube MATA KETIGA https://www.youtube.com/watch?v=iGjqysdwuhc · Tribunnews (Ocomtún 2023) https://www.youtube.com/watch?v=bu4w0qHqSAM
+
+---
+
+## 8. Shot list final (video yang dirender, 11 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (33,6 detik). Transkrip Scribe sama dengan naskah. Sesuai rencana naskah, kata opsional **"tersembunyi"** dan **"juga"** dibuang (prep52.py, → 32,6 detik), jeda biasa dirapatkan di 8 titik (→ 31,6 detik; jeda setelah "Meksiko", "bernama", "itu" dan seluruh kalimat bisikan dibiarkan utuh), lalu dipercepat 1,073x. Master -14,9 LUFS, true peak -2,1 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "ilustrasi: Calakmul, Campeche", "ilustrasi: situs Maya lain", "ilustrasi", "skema".
+
+Beda dari storyboard: video hutan 78685 ternyata hutan pegunungan Alpen, jadi diganti video piramida Maya di hutan Guatemala 35423 (label "ilustrasi: situs Maya lain"). Bisikan memakai foto kuil Maya malam dengan Bima Sakti 7708716. Glif ditulis "SAK" + "IL" (bukan gambar glif asli), dan peta memberi catatan "posisi perkiraan" karena koordinat situs tidak dipublikasikan; arah Ocomtún mengikuti sumber (40 km di barat laut).
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:05,2 | Kota suku Maya ditemukan di hutan Meksiko... dan namanya "Tidak Ada Jalan"! | `[curious]` | Piramida Calakmul menyembul dari hutan, punch-in (label "ilustrasi: Calakmul, Campeche") | foto 3921773 | **KOTA SUKU MAYA DITEMUKAN** → di "namanya": **NAMANYA: "TIDAK ADA JALAN"** |
+| 0:05,2–0:06,8 | Saking terpencilnya, | `[softly]` | Piramida Maya di tengah hutan (label "ilustrasi: situs Maya lain") | video 35423 | **MINANBÉ** = "tidak ada jalan" · bahasa Maya Yukatek |
+| 0:06,8–0:09,7 | arkeolog harus membabat hutan lima kilometer. | `[softly]` | Skema LiDAR: garis pindai mengupas kanopi hijau jadi relief abu-abu alun-alun dan piramida; di "lima" jalur kuning masuk dari bawah, "±5 km jalur dibabat" (label "skema") | skema52.py (lidar) | **5 KM HUTAN DIBABAT** · ditemukan Mei 2026 |
+| 0:09,7–0:12,2 | Nama aslinya baru saja terbaca: | `[dramatic]` | Stela Maya berukir di Tikal (label "ilustrasi: situs Maya lain") | foto 4943698 | **NAMA ASLINYA BARU TERBACA** |
+| 0:12,2–0:15,1 | kemungkinan Sakil, dari kata "putih". | `[dramatic]` | Skema dua blok batu SAK + IL menyatu di "Sakil" jadi **SAKIL?**, "sak = putih" muncul di "putih" (label "skema") | skema52.py (glif) | **KEMUNGKINAN SAKIL** · dari kata sak = "putih" |
+| 0:15,1–0:17,8 | Rajanya bernama... Kelelawar! | `[dramatic]` | Kelelawar buah menggantung, punch-in (label "ilustrasi") | foto 4136563 | **RAJANYA: SUUTZ'** · artinya **"KELELAWAR"** |
+| 0:17,8–0:20,7 | Dan nama Sakil terukir di kota musuhnya: | `[curious]` | Skema peta Yukatan: Minanbé berdenyut, garis putus-putus ke Ocomtún di barat laut, "±40 km" di "kota" (label "skema", "posisi perkiraan") | skema52.py (peta) | **KOTA MUSUH: OCOMTÚN** · 40 km di barat laut |
+| 0:20,7–0:22,9 | seorang tawanan, tangannya terikat. | `[curious]` | Skema garis putih di batu: sosok tengkurap, tangan terikat di punggung, tali menyala kuning di "terikat"; kotak **DARI SAKIL** (label "skema") | skema52.py (tawanan) | **TAWANAN "DARI SAKIL"** |
+| 0:22,9–0:26,0 | Siapa yang menang perang itu... belum ada yang tahu. | `[whispers]` (satu-satunya) | Kuil Maya malam dengan Bima Sakti, grade biru gelap (label "ilustrasi: situs Maya lain") | foto 7708716 | **SIAPA YANG MENANG?** · belum ada yang tahu · ±600–900 M |
+| 0:26,0–0:30,0 | Menurutmu, Sakil menang atau kalah? Tulis di komentar! | `[curious]` | Kembali ke foto Calakmul, zoom out pelan | foto 3921773 | **SAKIL: MENANG ATAU KALAH?** · @titikheran · tombol **MENANG** / **KALAH** menyala bergantian |
+
+File: `videos/titik-heran-52.mp4`, `videos/titik-heran-52.srt`, caption di `videos/captions/titik-heran-52-kota-maya-tidak-ada-jalan.md`. Alat: `videos/tools/prep52.py`, `videos/tools/skema52.py`, `render.py 52`.

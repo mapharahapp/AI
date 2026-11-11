@@ -1833,6 +1833,87 @@ elif EP == "50":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PAHIT", {"style": "Label", "pos": (5, 270, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}MANIS", {"style": "Label", "pos": (5, 810, 1175), "raw": True})]
     FIX = {"Neicher,": "Nature,"}
+elif EP == "51":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.64, 30.0  # the v4 take is 29,36 s: natural speed, no pause tightened, the CTA held
+    AUDIO = "vo51.mp3"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema51.py: skema_peta (Sumatra-Borneo from Natural Earth, Belitung pulses, a dashed route China -> Persian Gulf
+    # through the Gelasa Strait), skema_cangkir (an eight-sided gold cup outline turning), skema_label (a museum name card:
+    # BELITUNG struck out, TANG SHIPWRECK appears). 749c/750c/751c = Pixabay wreck clips with the 2.35:1 letterbox cropped off.
+    SHOTS = [
+        (0, "malah", "img/4866775.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.55, "grade": "pop", "tag": "Belitung, kini"}),
+        ("malah", "enam", "clips/751c.mp4", 1, "v", True, {"zoom": 0.06, "pos": 0.62, "grade": "cold"}),
+        ("enam", "kapal#1", "clips/749c.mp4", 1, "v", True, {"zoom": 0.06, "pos": 0.5, "grade": "cold"}),
+        ("kapal#1", "kapalnya", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kapalnya", "sabut", "img/2455049.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.42, "grade": "warm", "tag": "ilustrasi: kapal dhow"}),
+        ("sabut", "ada", "img/2554182.jpg", 0, "f", True, {"zoom": 0.08, "pos": 0.5, "grade": "warm"}),
+        ("ada", "terbesar", "img/944893.jpg", 0, "f", True, {"zoom": 0.07, "pos": 0.5, "grade": "base"}),
+        ("terbesar", "tapi", "clips/skema_cangkir.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tapi", "di#1", "img/430643.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.55, "grade": "base", "tag": "Singapura, kini"}),
+        ("di#1", "harus", "clips/skema_label.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("harus", "end", "img/4866775.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.55, "grade": "pop", "tag": "Belitung, kini"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "dinasti#1", f"{WT}HARTA KARUN\\NDI LAUT\\N{Y}BELITUNG"),
+        ("dinasti#1", "enam", f"{WT}HARTA KARUN\\N{{\\fs120}}{Y}DINASTI\\NTANG!"),
+        ("enam", "kapal#1", f"{{\\fs130}}{Y}60.000\\N{WT}BENDA\\N{{\\fs50}}ditemukan 1998, kedalaman 17 m"),
+        ("kapal#1", "kapalnya", f"{WT}KAPAL ARAB\\N{Y}±1.200 TAHUN\\N{{\\fs50}}{WT}karam sekitar tahun 830"),
+        ("kapalnya", "tanpa", f"{WT}DIJAHIT\\N{Y}SABUT KELAPA"),
+        ("tanpa", "ada", f"{{\\fs130}}{Y}0 PAKU\\N{{\\fs50}}{WT}kapal Arab kuno pertama\\Nyang pernah ditemukan"),
+        ("ada", "terbesar", f"{WT}CANGKIR\\N{Y}EMAS\\N{WT}DINASTI TANG"),
+        ("terbesar", "tapi", f"{Y}TERBESAR\\N{{\\fs56}}{WT}yang pernah ditemukan"),
+        ("tapi", "singapura#1", f"{WT}TAPI\\NKOLEKSINYA\\N{Y}DIJUAL..."),
+        ("singapura#1", "di#1", f"{WT}KE {Y}SINGAPURA\\N{{\\fs110}}±US$32 JUTA\\N{{\\fs50}}{WT}tahun 2005"),
+        ("di#1", "harus", f"{WT}DI SANA NAMANYA\\N{Y}BUKAN LAGI\\NBELITUNG"),
+        ("harus", "end", f"{WT}HARUS\\N{Y}PULANG\\N{WT}ATAU {Y}TETAP?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"harus+{k * 0.45:.2f}", f"harus+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}PULANG", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}TETAP", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {}
+elif EP == "52":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo52cut.wav"  # prep52.py drops "tersembunyi" and "juga"
+    TIGHT = {"meksiko": 1.0, "bernama": 1.0, "itu": 1.0, "siapa": 1.0, "yang#1": 1.0, "belum": 1.0, "ada#2": 1.0, "yang#2": 1.0, "tahu": 1.0}  # the beats and the whisper stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema52.py: skema_lidar (a jungle seen from above, a scan line peels it to a grey relief of plazas and a pyramid),
+    # skema_glif (a carved stone block: SAK + AJAW glow, SAKIL forms), skema_peta (Yucatan from Natural Earth, Minanbe and Ocomtun
+    # 40 km apart), skema_tawanan (a neutral line drawing of a bound captive lying face down on stone, a glyph box DARI SAKIL)
+    SHOTS = [
+        (0, "saking", "img/3921773.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.42, "grade": "pop", "tag": "ilustrasi: Calakmul, Campeche"}),
+        ("saking", "arkeolog", "clips/35423.mp4", 0, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "forest", "tag": "ilustrasi: situs Maya lain"}),
+        ("arkeolog", "nama#1", "clips/skema_lidar.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("nama#1", "kemungkinan", "img/4943698.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.4, "grade": "warm", "tag": "ilustrasi: situs Maya lain"}),
+        ("kemungkinan", "rajanya", "clips/skema_glif.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("rajanya", "dan#2", "img/4136563.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.5, "grade": "base"}),
+        ("dan#2", "seorang", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("seorang", "siapa", "clips/skema_tawanan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("siapa", "menurutmu", "img/7708716.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "night", "tag": "ilustrasi: situs Maya lain"}),
+        ("menurutmu", "end", "img/3921773.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.42, "grade": "pop", "tag": "ilustrasi: Calakmul, Campeche"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "namanya", f"{WT}KOTA\\N{Y}SUKU MAYA\\N{WT}DITEMUKAN"),
+        ("namanya", "saking", f"{WT}NAMANYA:\\N{Y}\"TIDAK ADA\\NJALAN\""),
+        ("saking", "arkeolog", f"{Y}MINANBÉ\\N{{\\fs56}}{WT}= \"tidak ada jalan\"\\Nbahasa Maya Yukatek"),
+        ("arkeolog", "nama#1", f"{{\\fs130}}{Y}5 KM\\N{WT}HUTAN DIBABAT\\N{{\\fs50}}ditemukan Mei 2026"),
+        ("nama#1", "kemungkinan", f"{WT}NAMA ASLINYA\\N{Y}BARU TERBACA"),
+        ("kemungkinan", "rajanya", f"{WT}KEMUNGKINAN\\N{{\\fs130}}{Y}SAKIL\\N{{\\fs50}}{WT}dari kata sak = \"putih\""),
+        ("rajanya", "dan#2", f"{WT}RAJANYA:\\N{Y}SUUTZ'\\N{{\\fs60}}{WT}artinya {Y}\"KELELAWAR\""),
+        ("dan#2", "seorang", f"{WT}KOTA MUSUH:\\N{Y}OCOMTÚN\\N{{\\fs50}}{WT}40 km di barat laut"),
+        ("seorang", "siapa", f"{WT}TAWANAN\\N{Y}\"DARI SAKIL\""),
+        ("siapa", "menurutmu", f"{WT}SIAPA YANG\\N{Y}MENANG?\\N{{\\fs50}}{WT}belum ada yang tahu · ±600–900 M"),
+        ("menurutmu", "end", f"{Y}SAKIL:\\N{WT}MENANG ATAU\\NKALAH?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"menurutmu+{k * 0.45:.2f}", f"menurutmu+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}MENANG", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}KALAH", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2053,7 +2134,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "47": [("delapan belas tahun...", "18 tahun...")],
         "48": [],
         "49": [("dua puluh tahun!", "20 tahun!")],
-        "50": []}[EP]
+        "50": [],
+        "51": [("enam puluh ribu", "60.000"), ("seribu dua ratus", "1.200"), ("tiga puluh dua juta", "32 juta")],
+        "52": [("lima kilometer.", "5 kilometer.")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

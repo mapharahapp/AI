@@ -207,3 +207,27 @@ Fun fact: tiruan kapal ini pernah dibuat persis sama di Oman, namanya Jewel of M
 - Daily Galaxy, "Fishermen Diving for Sea Cucumbers Found a 1,200-Year-Old Arab Ship Loaded With 60,000 Pieces of Chinese Treasure" (6 Nov 2026): https://dailygalaxy.com/2026/11/divers-find-belitung-shipwreck-60000-chinese-artifacts/
 - The Southeast Asia Desk, "The Belitung Shipwreck: How Heritage Became Southeast Asia's Soft Power Battleground" (16 Okt 2026): https://www.thesoutheastasiadesk.com/p/belitung-shipwreck-heritage-soft-power-indonesia-singapore-sovereignty
 - Bukti viral dan celah: irma indriani https://www.youtube.com/watch?v=FFDQUct0SJk · Dengung Fakta https://www.youtube.com/watch?v=p2vcDMNbGIk · Lidipedia https://www.youtube.com/watch?v=81DdxnuAl1k · IG @goldensignal888 https://www.instagram.com/reel/DeYQcjhqZUT · IG @treazorx https://www.instagram.com/reel/De9-aZyhitW
+
+---
+
+## 8. Shot list final (video yang dirender, 11 Nov 2026)
+
+Durasi 30,0 detik. VO Akram di Eleven v4 satu take (29,4 detik). Transkrip Scribe sama dengan naskah. Tidak ada kata yang dibuang dan tidak ada jeda yang dirapatkan; kecepatan asli (1,001x), sisa waktu jadi jeda CTA. Master -14,9 LUFS, true peak -2,2 dBTP. Ada **watermark "@titikheran" tipis di tengah layar**. Label pojok: "Belitung, kini", "ilustrasi", "ilustrasi: kapal dhow", "skema", "Singapura, kini".
+
+Beda dari storyboard: foto keramik 7995207 ternyata guci perunggu, jadi diganti mangkuk keramik hijau 944893. Video bangkai kapal 749/750/751 aslinya letterbox 2.35:1, jadi pita hitamnya dipotong (749c/751c). Papan nama museum memakai foto Singapura 430643 yang di-blur sebagai latar.
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,4 | Nelayan Belitung cari teripang... | `[curious]` | Pantai batu granit Belitung, punch-in pelan (label "Belitung, kini") | foto 4866775 | **HARTA KARUN DI LAUT BELITUNG** |
+| 0:02,4–0:05,2 | malah menemukan harta karun Dinasti Tang! | `[curious]` | Penyelam di bawah laut dengan sinar matahari (label "ilustrasi") | video 751 (crop) | → di "Dinasti": **HARTA KARUN DINASTI TANG!** |
+| 0:05,2–0:07,0 | Enam puluh ribu benda, dalam | `[dramatic]` | Bangkai kapal di dasar laut, ikan lewat (label "ilustrasi") | video 749 (crop) | **60.000 BENDA** · ditemukan 1998, kedalaman 17 m |
+| 0:07,0–0:09,6 | kapal Arab seribu dua ratus tahun! | `[dramatic]` | Skema peta: rute kuning dari Cina turun ke Selat Gelasa, Belitung berdenyut merah, "±830 M" muncul di "seribu", rute abu-abu lanjut "menuju Teluk Persia" (label "skema") | skema51.py (peta) | **KAPAL ARAB ±1.200 TAHUN** · karam sekitar tahun 830 |
+| 0:09,6–0:10,5 | Kapalnya dijahit | `[curious]` | Kapal dhow di pelabuhan Muscat (label "ilustrasi: kapal dhow") | foto 2455049 | **DIJAHIT SABUT KELAPA** |
+| 0:10,5–0:13,2 | sabut kelapa, tanpa satu paku pun. | `[curious]` | Serat sabut kelapa close-up (label "ilustrasi") | foto 2554182 | → di "tanpa": **0 PAKU** · kapal Arab kuno pertama yang pernah ditemukan |
+| 0:13,2–0:14,7 | Ada cangkir emas Dinasti Tang | `[dramatic]` | Mangkuk keramik hijau kuno (label "ilustrasi") | foto 944893 | **CANGKIR EMAS DINASTI TANG** |
+| 0:14,7–0:16,9 | terbesar yang pernah ditemukan. | `[dramatic]` | Skema cangkir emas bersegi delapan berputar pelan, berkilau (label "skema") | skema51.py (cangkir) | **TERBESAR** yang pernah ditemukan · pita "cangkir emas · bersegi 8" |
+| 0:16,9–0:22,4 | Tapi koleksinya dijual... ke Singapura, tiga puluh dua juta dolar. | `[softly]` | Marina Bay Singapura malam hari (label "Singapura, kini") | foto 430643 | **TAPI KOLEKSINYA DIJUAL...** → di "Singapura": **KE SINGAPURA ±US$32 JUTA** · tahun 2005 |
+| 0:22,4–0:25,2 | Di sana, namanya bukan lagi Belitung. | `[softly]` | Skema papan nama Asian Civilisations Museum: "BELITUNG" dicoret di "bukan", **TANG SHIPWRECK** muncul di "Belitung" (label "skema") | skema51.py (label) + foto 430643 blur | **DI SANA NAMANYA BUKAN LAGI BELITUNG** |
+| 0:25,2–0:30,0 | Harus pulang ke Indonesia, atau tetap di Singapura? Tulis di komentar! | `[curious]` | Kembali ke pantai Belitung, zoom out pelan | foto 4866775 | **HARUS PULANG ATAU TETAP?** · @titikheran · tombol **PULANG** / **TETAP** menyala bergantian |
+
+File: `videos/titik-heran-51.mp4`, `videos/titik-heran-51.srt`, caption di `videos/captions/titik-heran-51-harta-karun-belitung.md`. Alat: `videos/tools/skema51.py`, `render.py 51`.
