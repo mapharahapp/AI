@@ -1914,6 +1914,96 @@ elif EP == "52":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}MENANG", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}KALAH", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
     FIX = {}
+elif EP == "53":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo53.mp3"
+    TIGHT = {"berdiri": 1.0, "menulis": 0.4, "itu": 1.0}  # the hook's beat and the beat before Sumedang stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema53.py: skema_konstruksi (the 1887-1889 construction photos of the Eiffel Tower as a stop-motion, Pixabay
+    # 349818), skema_peta (Natural Earth: a dashed ship line Java -> Paris, 1889), skema_kutipan (an old newspaper card, the 1913
+    # quote word by word, no face), skema_sumedang (West Java from Natural Earth, Sumedang pulses)
+    SHOTS = [
+        (0, "menara", "img/2386220.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "Paris, kini"}),
+        ("menara", "tapi", "clips/skema_konstruksi.mp4", 0, "v", False, {"zoom": 0.0, "tag": "foto 1887–1889"}),
+        ("tapi", "gamelan#1", "img/1161682.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "base", "tag": "Paris, ±1900"}),
+        ("gamelan#1", "ada", "img/5025076.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.5, "grade": "warm"}),
+        ("ada", "komposer", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("komposer", "gamelan#2", "clips/146052.mp4", 0, "v", True, {"zoom": 0.06, "pos": 0.45, "grade": "warm"}),
+        ("gamelan#2", "sampai", "clips/6875.mp4", 2, "v", True, {"zoom": 0.05, "pos": 0.5, "grade": "warm"}),
+        ("sampai", "dia", "img/2412400.jpg", 0, "f", True, {"zoom": 0.08, "pos": 0.5, "grade": "base"}),
+        ("dia", "bising", "clips/skema_kutipan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("bising", "salah", "clips/3834.mp4", 3, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi: pasar malam"}),
+        ("salah", "kini", "img/7852175.jpg", 0, "f", True, {"zoom": 0.08, "pos": 0.5, "grade": "warm"}),
+        ("kini", "tim", "clips/skema_sumedang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tim", "end", "img/5025076.jpg", 0, "f", True, {"zoom": "pull", "pos": 0.5, "grade": "warm"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "menara", f"{WT}TAHUN\\N{{\\fs150}}{Y}1889"),
+        ("menara", "tapi", f"{WT}MENARA\\N{Y}EIFFEL\\N{WT}BARU BERDIRI"),
+        ("tapi", "gamelan#1", f"{WT}TAPI PARIS\\N{Y}TERPUKAU..."),
+        ("gamelan#1", "ada", f"{Y}GAMELAN\\NJAWA!"),
+        ("ada", "komposer", f"{WT}\"KAMPUNG JAWA\"\\NDI PARIS\\N{{\\fs130}}{Y}65 ORANG\\N{{\\fs50}}{WT}dari Jawa (Hindia Belanda)"),
+        ("komposer", "gamelan#2", f"{WT}KOMPOSER\\N{Y}CLAUDE\\NDEBUSSY\\N{{\\fs50}}{WT}27 tahun · Prancis"),
+        ("gamelan#2", "sampai", f"{WT}GAMELAN\\N{Y}MENGUBAH\\N{WT}MUSIKNYA"),
+        ("sampai", "dia", f"{WT}LAHIR LAGU PIANO\\N{Y}\"PAGODES\"\\N{{\\fs50}}{WT}tahun 1903"),
+        ("dia", "bising", f"{WT}DIA BAHKAN\\N{Y}MENULIS..."),
+        ("bising", "salah", f"{WT}TABUHAN EROPA\\N{Y}CUMA BISING\\NSIRKUS\\N{{\\fs50}}{WT}Claude Debussy, 1913"),
+        ("salah", "kini", f"{WT}SALAH SATU\\N{Y}GAMELAN ITU..."),
+        ("kini", "tim", f"{WT}KINI DI\\N{{\\fs130}}{Y}SUMEDANG\\N{{\\fs50}}{WT}gamelan Sari Oneng, dibuat 1825"),
+        ("tim", "end", f"{WT}TIM {Y}GAMELAN\\N{WT}ATAU TIM\\N{Y}ORKESTRA?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"tim+{k * 0.45:.2f}", f"tim+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}GAMELAN", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}ORKESTRA", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {"Aifel": "Eiffel", "Debusi": "Debussy", "Pagod.": "Pagodes."}
+elif EP == "54":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo54cut.wav"  # prep54.py drops "burung", "Ya," and "ini:"
+    TIGHT = {"tireks": 1.0, "infernogalus": 1.0, "juga": 1.0, "manusia": 0.45}  # the name beat and the reveal beats stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema54.py: skema_siluet (line silhouettes: Infernogallus beside a T. rex for scale, a "±12 KG" pill),
+    # skema_rahang (a toothless beaked skull, the jaw arrow swings front-back; a T. rex jaw arrow up-down for contrast),
+    # skema_kunyah (a parrot beak and a human jaw side by side with the same front-back arrow)
+    SHOTS = [
+        (0, "doyan", "img/376989.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "warm", "tag": "T. rex, museum"}),
+        ("doyan", "namanya", "img/379893.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.5, "grade": "pop"}),
+        ("namanya", "ayam#1", "img/447801.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.4, "grade": "dim", "tag": "T. rex, museum"}),
+        ("ayam#1", "dia", "img/9162593.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.5, "grade": "warm"}),
+        ("dia", "seukuran", "clips/skema_siluet.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("seukuran", "rahangnya", "clips/31330.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi: seukuran kalkun"}),
+        ("rahangnya", "mungkin", "clips/skema_rahang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("mungkin", "otot", "img/371233.jpg", 0, "f", True, {"zoom": 0.08, "pos": 0.5, "grade": "pop"}),
+        ("otot", "seperti#2", "clips/149105.mp4", 0, "v", True, {"zoom": 0.05, "pos": 0.5, "grade": "base"}),
+        ("seperti#2", "dan", "img/7443991.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.4, "grade": "forest", "tag": "nuri kabare, masa kini"}),
+        ("dan", "dia#2", "clips/skema_kunyah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dia#2", "ayam#2", "img/846357.jpg", 0, "f", True, {"zoom": 0.07, "pos": 0.4, "grade": "pop"}),
+        ("ayam#2", "end", "img/376989.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.45, "grade": "warm", "tag": "T. rex, museum"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "doyan", f"{WT}HIDUP BARENG\\N{{\\fs130}}{Y}T. REX"),
+        ("doyan", "namanya", f"{WT}DINOSAURUS\\N{Y}PEMAKAN\\NBUAH!"),
+        ("namanya", "ayam#1", f"{{\\fs84}}{Y}INFERNOGALLUS\\N{{\\fs56}}{WT}jamesi"),
+        ("ayam#1", "dia", f"{WT}ARTINYA:\\N{Y}\"AYAM\\NNERAKA\"\\N{{\\fs50}}{WT}dari Hell Creek, AS"),
+        ("dia", "seukuran", f"{WT}PEMAKAN BUAH\\N{{\\fs130}}{Y}PERTAMA\\N{{\\fs50}}{WT}yang diketahui · ±66 juta tahun lalu"),
+        ("seukuran", "rahangnya", f"{WT}SEUKURAN\\N{Y}KALKUN\\N{{\\fs50}}{WT}±12 kg"),
+        ("rahangnya", "mungkin", f"{WT}RAHANG\\N{Y}MAJU-MUNDUR\\N{{\\fs50}}{WT}hasil CT scan tengkorak"),
+        ("mungkin", "otot", f"{WT}BUAH BERBIJI\\N{Y}SEPERTI\\NPERSIK\\N{{\\fs50}}{WT}(diduga)"),
+        ("otot", "seperti#2", f"{WT}OTOT RAHANG\\N{Y}MIRIP NURI\\N{WT}PEMAKAN BUAH"),
+        ("seperti#2", "dan", f"{Y}NURI KABARE\\N{{\\fs56}}{WT}burung pemakan buah\\Ndari Papua"),
+        ("dan", "dia#2", f"{WT}DAN...\\N{{\\fs130}}{Y}MANUSIA"),
+        ("dia#2", "ayam#2", f"{WT}MENGUNYAH\\N{Y}MIRIP KITA"),
+        ("ayam#2", "end", f"{Y}AYAM NERAKA:\\N{WT}SERAM ATAU\\NLUCU?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"ayam#2+{k * 0.45:.2f}", f"ayam#2+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}SERAM", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}LUCU", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {"Ti-reks...": "T. rex...", "Infernogalus...": "Infernogallus...", "kabaré": "kabare", "dia": "Dia", "neraka": "neraka:"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2136,7 +2226,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "49": [("dua puluh tahun!", "20 tahun!")],
         "50": [],
         "51": [("enam puluh ribu", "60.000"), ("seribu dua ratus", "1.200"), ("tiga puluh dua juta", "32 juta")],
-        "52": [("lima kilometer.", "5 kilometer.")]}[EP]
+        "52": [("lima kilometer.", "5 kilometer.")],
+        "53": [("delapan belas delapan puluh sembilan,", "1889,"), ("enam puluh lima", "65")],
+        "54": []}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

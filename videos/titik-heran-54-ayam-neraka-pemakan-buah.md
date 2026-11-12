@@ -188,7 +188,7 @@ Fosilnya, tengkorak hampir lengkap, kini dipajang di Royal Ontario Museum, Kanad
 
 Menurutmu, ayam neraka ini seram, atau lucu? Tulis di komentar 👇
 
-Kerangka T. rex dan Triceratops adalah fosil di museum lain; kalkun, nuri, dan buah adalah ilustrasi; siluet dan rahang adalah skema yang digambar sendiri.
+Kerangka T. rex adalah fosil di museum lain; kalkun, nuri, buah, dan anak makan semangka adalah ilustrasi; siluet, rahang, dan profil kunyah adalah skema yang digambar sendiri.
 Sumber: Funston dkk., Nature Communications (2026), Royal Ontario Museum (28 Okt 2026), ScienceAlert (8 Nov 2026), Reuters (30 Okt 2026)
 
 #titikheran #dinosaurus #fosil #sains #faktaunik
@@ -210,3 +210,38 @@ Fun fact: kelompok dinosaurus ini (oviraptorosaurus) tidak punya gigi sama sekal
 - Everything Dinosaur, "Infernogallus jamesi Fossil on Display at Royal Ontario Museum" (11 Nov 2026): https://blog.everythingdinosaur.com/blog/_archives/2026/11/11/infernogallus-jamesi-fossil-on-display-at-royal-ontario-museum.html
 - EurekAlert (rilis Stony Brook): https://www.eurekalert.org/news-releases/1149430
 - Bukti viral dan celah: Fexze Fakta https://www.youtube.com/watch?v=GNFvO3IO1mA · KILAS JERNIH https://www.youtube.com/watch?v=mdDvx2XgSDk · IG @worldmesh3d https://www.instagram.com/reel/DfcqB4VsFRh · IG @browaitfilms https://www.instagram.com/reel/DfTNvzRRpf8 · IG @amr.alawadhi https://www.instagram.com/reel/Dfc8B-loSpj
+
+---
+
+## 8. Shot list final (video 13 Nov 2026)
+
+Take Akram v4 (satu take): 33,9 detik, transkrip cocok kata per kata (ejaan TTS "Ti-reks", "Infernogalus", "kabaré"). Karena atempo akan 1,14, prep54.py membuang kata opsional **"burung"**, **"Ya,"** dan **"ini:"** (sambungan di titik paling sunyi, crossfade 20 ms; sebelum "Ya," jeda 0,35 detik setelah "manusia." dipertahankan): 32,25 detik. TIGHT merapatkan 4 jeda biasa (jeda setelah "T. rex...", "Infernogallus..." dan "juga..." utuh) jadi 31,85 detik, atempo 1,083, video 30,0 detik. Master -14,9 LUFS, true peak -2,2 dBFS. Tanpa bisikan.
+
+VO yang terdengar di video:
+```
+Hidup bareng T. rex... dinosaurus ini malah doyan buah!
+Namanya Infernogallus... artinya, ayam neraka.
+Dia dinosaurus pemakan buah pertama yang diketahui, seukuran kalkun.
+Rahangnya bisa bergeser maju-mundur, untuk melumat buah berbiji, mungkin seperti persik.
+Otot rahangnya mirip nuri pemakan buah, seperti nuri kabare dari Papua.
+Dan juga... manusia. Dia mengunyah mirip kita.
+Ayam neraka: seram, atau lucu? Tulis di komentar!
+```
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,8 | Hidup bareng T. rex... dinosaurus ini malah | `[curious]` | Kerangka T. rex di museum, punch-in, label "T. rex, museum" | foto 376989 | HIDUP BARENG **T. REX** |
+| 0:02,8–0:03,9 | doyan buah! | `[curious]` | Tumpukan persik pipih, label "ilustrasi" | foto 379893 | DINOSAURUS **PEMAKAN BUAH!** |
+| 0:03,9–0:06,9 | Namanya Infernogallus... artinya, | `[dramatic]` | Tengkorak T. rex close-up, gelap, label "T. rex, museum" | foto 447801 | **INFERNOGALLUS** jamesi |
+| 0:06,9–0:08,2 | ayam neraka. | `[dramatic]` | Kalkun jantan mengembangkan bulu, label "ilustrasi" | foto 9162593 | ARTINYA: **"AYAM NERAKA"** · dari Hell Creek, AS |
+| 0:08,2–0:11,4 | Dia dinosaurus pemakan buah pertama yang diketahui, | `[curious]` | Skema siluet: si "ayam neraka" (garis kuning) di depan siluet T. rex, buah merah muncul di paruh, "±12 kg", "skala perkiraan" | skema54 (siluet) | PEMAKAN BUAH **PERTAMA** · yang diketahui · ±66 juta tahun lalu |
+| 0:11,4–0:12,6 | seukuran kalkun. | `[curious]` | Kalkun hitam, label "ilustrasi: seukuran kalkun" | video 31330 | SEUKURAN **KALKUN** · ±12 kg |
+| 0:12,6–0:16,6 | Rahangnya bisa bergeser maju-mundur, untuk melumat buah berbiji, | `[dramatic]` | Skema tengkorak berparuh tanpa gigi, rahang bawah bergeser maju-mundur dengan panah, buah berbiji muncul di "melumat" | skema54 (rahang) | RAHANG **MAJU-MUNDUR** · hasil CT scan tengkorak |
+| 0:16,6–0:18,1 | mungkin seperti persik. | `[dramatic]` | Buah ceri, label "ilustrasi" | foto 371233 | BUAH BERBIJI **SEPERTI PERSIK** · (diduga) |
+| 0:18,1–0:20,6 | Otot rahangnya mirip nuri pemakan buah, | `[curious]` | Nuri makan, label "ilustrasi" | video 149105 | OTOT RAHANG **MIRIP NURI** PEMAKAN BUAH |
+| 0:20,6–0:22,6 | seperti nuri kabare dari Papua. | `[curious]` | Nuri kabare vertikal, grade hutan, label "nuri kabare, masa kini" | foto 7443991 | **NURI KABARE** · burung pemakan buah dari Papua |
+| 0:22,6–0:24,8 | Dan juga... manusia. | `[softly]` | Skema dua profil: kepala nuri lalu kepala manusia, rahang bawah bergeser dengan panah yang sama | skema54 (kunyah) | DAN... **MANUSIA** |
+| 0:24,8–0:26,3 | Dia mengunyah mirip kita. | `[softly]` | Anak makan semangka, label "ilustrasi" | foto 846357 | MENGUNYAH **MIRIP KITA** |
+| 0:26,3–0:30,0 | Ayam neraka: seram, atau lucu? Tulis di komentar! | `[curious]` | Kembali ke kerangka T. rex, pull-out; tombol SERAM / LUCU menyala bergantian | foto 376989 | **AYAM NERAKA:** SERAM ATAU LUCU? · @titikheran |
+
+Beda dari storyboard: skema rahang tanpa pembanding T. rex atas-bawah (VO tidak menyebutnya, jadi dibuat lebih sederhana); CTA memakai satu foto dengan dua tombol bergantian, bukan layar dibelah dua. File: `videos/titik-heran-54.mp4` dan `.srt`; skema di `videos/tools/skema54.py`, potongan VO di `videos/tools/prep54.py`.
