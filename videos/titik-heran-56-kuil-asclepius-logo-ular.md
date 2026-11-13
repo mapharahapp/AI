@@ -187,7 +187,7 @@ Di kuil-kuil Asclepius, orang sakit tidur semalaman berharap disembuhkan lewat m
 
 Kamu berani tidur bareng ular demi sembuh? Berani atau nggak? 👇
 
-Ambulans, pecahan tembikar, dan ular di video adalah ilustrasi; teater dan reruntuhan adalah Epidaurus masa kini; patung Asclepius dari museum Rhodes; peta, denah, dan logo tongkat adalah skema yang digambar sendiri.
+Ambulans dan ular yang merayap di video adalah ilustrasi; teater dan reruntuhan adalah Epidaurus masa kini; patung Asclepius dari museum Rhodes; peta, denah, pecahan bertulisan, dan logo tongkat adalah skema yang digambar sendiri.
 Sumber: Greek City Times / Ta Nea (11 Nov 2026), HeritageDaily (12 Nov 2026), Pausanias, Description of Greece 2.27–2.28
 
 #titikheran #mitologiyunani #arkeologi #sejarahdunia #faktaunik
@@ -209,3 +209,37 @@ Fun fact: logo ular dengan DUA ekor dan sayap itu bukan tongkat Asclepius, tapi 
 - Wikipedia, "Asclepius": https://en.wikipedia.org/wiki/Asclepius · "Rod of Asclepius": https://en.wikipedia.org/wiki/Rod_of_Asclepius
 - NHTSA, Star of Life (ems.gov): https://www.ems.gov/assets/HS808721.pdf · NCOAE: https://ncoae.org/blog/the-star-of-life-its-origin-meaning-and-function/
 - Bukti viral dan celah: harryware MISTERI https://www.youtube.com/watch?v=uyJonxu2juk · @realoutliners https://www.instagram.com/reel/DffZbLHT557 · @siegeandstone https://www.tiktok.com/@siegeandstone/video/7705581511516458273
+
+## 8. Shot list final (video 13 Nov 2026)
+
+Take Akram v4 (satu take): 34,64 detik, transkrip cocok kata per kata (ejaan TTS "We Ha O", "Asklepius", "seribu delapan ratus"; di subtitle jadi "WHO", "Asclepius", "1.800"). Karena atempo akan 1,15, prep56.py membuang **"kota kuno"** (jadi "hilang di Epidaurus") dan pertanyaan penutup kedua **"Berani atau nggak?"** (tetap tampil sebagai tombol BERANI / NGGAK): 32,93 detik. Kata lain yang menempel ("lalu lokasinya", "Dan di") tidak dipotong karena tidak ada celah sunyi. TIGHT merapatkan 8 jeda jadi 31,32 detik, atempo 1,065, video 30,0 detik. Master -15,0 LUFS, true peak -2,3 dBFS. Tanpa bisikan.
+
+VO yang terdengar di video:
+```
+Logo ular di ambulans dan WHO... tongkat dewa Yunani, Asclepius.
+Kuilnya yang hilang di Epidaurus akhirnya dipastikan!
+Lebih dari 1.800 tahun lalu, penjelajah Pausanias mencatatnya, lalu lokasinya jadi teka-teki.
+Kuncinya: pecahan tembikar bertuliskan nama Asclepius.
+Di kuil Asclepius, orang sakit tidur semalaman, berharap disembuhkan lewat mimpi.
+Dan di lantainya... ular sungguhan merayap bebas!
+Berani tidur bareng ular demi sembuh?
+```
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,1 | Logo ular di ambulans dan | `[curious]` | Ambulans asli dengan logo Star of Life, punch-in, label "ambulans, kini" | foto 3266960 | LOGO ULAR **DI AMBULANS** |
+| 0:02,1–0:03,6 | WHO... tongkat | `[curious]` | Skema logo: Star of Life biru memudar, tinggal tongkat berlilit satu ular, pil "tongkat Asclepius" | skema56 (logo) | DAN DI LOGO **WHO** |
+| 0:03,6–0:05,5 | dewa Yunani, Asclepius. | `[curious]` | Patung Asclepius dengan tongkat berular, latar hitam, label "patung Asclepius, museum" | foto 884041 | TONGKAT **ASCLEPIUS** · dewa pengobatan Yunani |
+| 0:05,5–0:07,4 | Kuilnya yang hilang di Epidaurus | `[dramatic]` | Teater dan lembah Epidaurus, label "Epidaurus, kini" | foto 2830081 | KUILNYA **HILANG** · Epidaurus, Yunani |
+| 0:07,4–0:08,8 | akhirnya dipastikan! | `[dramatic]` | Orkestra teater Epidaurus dari atas, punch-in, label "Epidaurus, kini" | foto 7259980 | AKHIRNYA **DIPASTIKAN!** · November 2026 |
+| 0:08,8–0:11,2 | Lebih dari 1.800 tahun lalu, | `[curious]` | Tribun teater Epidaurus, sepia, label "Epidaurus, kini" | foto 596233 | LEBIH DARI **1.800** TAHUN LALU |
+| 0:11,2–0:15,3 | penjelajah Pausanias mencatatnya, lalu lokasinya jadi teka-teki. | `[curious]` | Skema gulungan "Pausanias, ±160 M" dengan kutipannya, lalu peta Peloponnesos: Epidaurus berdenyut dengan "?" | skema56 (pausanias) | PENJELAJAH **PAUSANIAS** MENCATATNYA → LOKASINYA **TEKA-TEKI** |
+| 0:15,3–0:19,0 | Kuncinya: pecahan tembikar bertuliskan nama Asclepius. | `[dramatic]` | Skema denah: Teater Kecil, garis "±20 m", kotak "tempat suci Asclepius"; lalu pecahan tembikar, huruf ΑΣΚΛΗΠΙ muncul satu per satu | skema56 (denah) | KUNCINYA: **PECAHAN TEMBIKAR** → BERTULISKAN **ASCLEPIUS** |
+| 0:19,0–0:22,3 | Di kuil Asclepius, orang sakit tidur semalaman, | `[softly]` | Tribun teater Epidaurus, gelap, label "Epidaurus, kini" | foto 3149395 | ORANG SAKIT **TIDUR SEMALAMAN** |
+| 0:22,3–0:23,9 | berharap disembuhkan lewat mimpi. | `[softly]` | Relief tongkat berular, label "tongkat Asclepius, relief" | foto 265516 | BERHARAP **SEMBUH LEWAT MIMPI** |
+| 0:23,9–0:25,3 | Dan di lantainya... | `[dramatic]` | Lantai batu teater Epidaurus close-up, gelap, label "Epidaurus, kini" | foto 1475013 | DAN DI **LANTAINYA...** |
+| 0:25,3–0:27,3 | ular sungguhan merayap bebas! | `[dramatic]` | Ular merayap di tanah, label "ilustrasi" | video 279885 | **ULAR SUNGGUHAN** MERAYAP BEBAS! |
+| 0:27,3–0:30,0 | Berani tidur bareng ular demi sembuh? | `[curious]` | Ular Aesculapian (Zamenis) di rumput, pull-out, label "ular Aesculapian, kini"; tombol BERANI / NGGAK menyala bergantian | foto 1511856 | BERANI TIDUR **BARENG ULAR?** · @titikheran |
+
+Beda dari storyboard: hook memakai foto ambulans asli 3266960 (video ambulans 266539 dan semua video ambulans terbaru di Pixabay ternyata buatan AI); foto pecahan tembikar 2828844 tidak dipakai, diganti skema pecahan bertulisan nama Asclepius; VO dipangkas seperti di atas. File: `videos/titik-heran-56.mp4` dan `.srt`; skema di `videos/tools/skema56.py`, potongan VO di `videos/tools/prep56.py`.
+

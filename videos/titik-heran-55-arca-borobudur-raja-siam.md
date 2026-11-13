@@ -186,7 +186,7 @@ Patung gajah perunggu di depan Museum Nasional Jakarta, asal julukan "Museum Gaj
 
 Menurutmu, ini hadiah persahabatan atau kekeliruan besar? Tulis di komentar 👇
 
-Gerobak sapi, arca Ganesha, dan arca Buddha selain Borobudur di video adalah ilustrasi; peta, kartu kutipan, dan siluet patung gajah adalah skema yang digambar sendiri.
+Gerobak sapi dan arca Ganesha di video adalah ilustrasi; peta, kartu kutipan, dan siluet patung gajah adalah skema yang digambar sendiri.
 Sumber: Pietersma, TRaNS (Cambridge University Press, 2026), Bloembergen & Eickhoff, The Politics of Heritage in Indonesia (2020), Museum Nasional Indonesia
 
 #titikheran #borobudur #sejarahindonesia #thailand #faktaunik
@@ -208,3 +208,27 @@ Fun fact: kepala-kepala arca Buddha Borobudur yang hilang ternyata BUKAN dibawa 
 - Mojok, "Alasan Museum Nasional Disebut Museum Gajah, Ada Kaitannya dengan Raja Thailand": https://mojok.co/kilas/museum-nasional-disebut-sebagai-museum-gajah/
 - Bloembergen & Eickhoff, *The Politics of Heritage in Indonesia* (Cambridge UP, 2020): https://www.cambridge.org/core/books/politics-of-heritage-in-indonesia/exchange-protection-and-the-social-life-of-javas-antiquities-1860s1910s/913EAA5D215DCD474554519A926C0A51
 - Bukti viral dan celah: Dunia Sebelum Kita https://www.youtube.com/watch?v=N8bTDY-7u98 · Otak dan Peradaban https://www.youtube.com/watch?v=9Z5CRi8FZ0g · Tau Gak? (gajah kembar Singapura) https://www.youtube.com/watch?v=jjbmJ6JvApQ · @m.ga_official https://www.instagram.com/reel/DfZamxcvkz8
+
+## 8. Shot list final (video 13 Nov 2026)
+
+Take Akram v4 (satu take): 33,44 detik, transkrip cocok kata per kata (ejaan TTS "delapan belas sembilan puluh enam", "Ganesa"; di subtitle jadi "1896" dan "Ganesha"). TIGHT merapatkan 12 jeda (jeda setelah "Borobudur..." dan "jam..." dipertahankan) jadi 31,84 detik, atempo 1,083, video 30,0 detik. Master -14,9 LUFS, true peak -2,2 dBFS. Tanpa bisikan. VO sama persis dengan naskah.
+
+| Waktu | VO | Arahan suara | Visual | ID Pixabay | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,1 | Tahun 1896, | `[curious]` | Siluet arca Buddha Borobudur saat matahari terbit, punch-in, label "Borobudur, kini" | foto 5208489 | TAHUN **1896** |
+| 0:02,1–0:05,3 | Raja Siam mengunjungi Borobudur... lalu pulang membawa | `[curious]` | Video udara lanskap sekitar Borobudur, label "Borobudur, kini" | video 166320 | RAJA SIAM **KE BOROBUDUR** · Raja Chulalongkorn · Thailand |
+| 0:05,3–0:06,8 | delapan gerobak arca! | `[curious]` | Gerobak sapi, sepia, label "ilustrasi" | foto 4550840 | PULANG BAWA **8 GEROBAK** ARCA! |
+| 0:06,8–0:07,9 | Arca Buddha, | `[dramatic]` | Arca Buddha di antara stupa, label "Borobudur, kini" | foto 1210622 | **ARCA BUDDHA** |
+| 0:07,9–0:09,5 | singa penjaga, relief, | `[dramatic]` | Deretan stupa Borobudur, label "Borobudur, kini" | foto 2166750 | ARCA BUDDHA · **SINGA PENJAGA** · **RELIEF** (bertambah per kata) |
+| 0:09,5–0:11,2 | semuanya diizinkan Belanda. | `[dramatic]` | Arca Buddha dan stupa close-up, punch-in, label "Borobudur, kini" | foto 2434193 | SEMUANYA **DIIZINKAN BELANDA** |
+| 0:11,2–0:14,3 | Di Singosari, Malang, dia cuma mampir setengah jam... | `[curious]` | Skema peta Jawa: 8 gerobak sudah di pantai utara, Singosari berdenyut, pil "±30 menit" | skema55 (rute) | **SINGOSARI** MALANG → CUMA MAMPIR **±30 MENIT** |
+| 0:14,3–0:15,0 | dan minta arca | `[curious]` | Candi Singosari, label "Candi Singosari, kini" | foto 200290 | DAN MINTA **ARCA...** |
+| 0:15,0–0:15,8 | Ganesha. | `[curious]` | Arca Ganesha batu, punch-in, label "ilustrasi" | foto 959646 | **GANESHA** |
+| 0:15,8–0:16,9 | Dikabulkan! | `[curious]` | Arca Ganesha kuningan, label "ilustrasi" | foto 6467612 | **DIKABULKAN!** |
+| 0:16,9–0:19,3 | Sebagian kini dipajang di Museum Nasional | `[dramatic]` | Grand Palace Bangkok, label "Bangkok, kini" | foto 7997042 | SEBAGIAN **KINI DI...** → MUSEUM NASIONAL **BANGKOK, THAILAND** |
+| 0:19,3–0:20,6 | Bangkok, Thailand. | `[dramatic]` | Skema kartu kertas tua: "Kekeliruan yang patut disesalkan dari 1896." — Theodoor van Erp | skema55 (kutipan) | MUSEUM NASIONAL **BANGKOK, THAILAND** |
+| 0:20,6–0:25,4 | Dan patung gajah di depan Museum Gajah, Jakarta? Hadiah dari raja yang sama! | `[softly]` | Skema patung gajah perunggu di atas alas, fasad bertiang; pil "Museum Nasional (Museum Gajah), Jakarta" lalu "hadiah Raja Chulalongkorn · kunjungan 1871" | skema55 (gajah) | PATUNG GAJAH **MUSEUM GAJAH** JAKARTA? → HADIAH DARI **RAJA YANG SAMA!** |
+| 0:25,4–0:30,0 | Hadiah persahabatan, atau kekeliruan besar? Tulis di komentar! | `[curious]` | Kembali ke siluet Borobudur, pull-out; tombol HADIAH / KEKELIRUAN menyala bergantian | foto 5208489 | **HADIAH** ATAU **KEKELIRUAN?** · @titikheran |
+
+Beda dari storyboard: hook memakai teks "TAHUN 1896" dan "RAJA SIAM KE BOROBUDUR" (kata Thailand di subjudul sebelum detik 3); Grand Palace memakai foto 7997042 (foto 1340953 ternyata maket Angkor Wat); tanpa stempel "DIIZINKAN"; peta tanpa garis kapal ke Bangkok. Foto asli patung gajah Museum Gajah tidak ada di Pixabay dan situs foto lain diblokir jaringan, jadi patungnya digambar sebagai skema. File: `videos/titik-heran-55.mp4` dan `.srt`; skema di `videos/tools/skema55.py`.
+

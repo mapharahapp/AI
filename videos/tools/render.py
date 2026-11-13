@@ -2004,6 +2004,104 @@ elif EP == "54":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}SERAM", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}LUCU", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
     FIX = {"Ti-reks...": "T. rex...", "Infernogalus...": "Infernogallus...", "kabaré": "kabare", "dia": "Dia", "neraka": "neraka:"}
+elif EP == "55":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo55.mp3"
+    TIGHT = {"borobudur": 0.4, "jam": 0.4}  # the beats before "lalu" and "dan minta" stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema55.py: skema_rute (Java from Natural Earth, the eight carts parked on the north coast, Singosari pulses with
+    # "±30 menit"), skema_kutipan (an old paper card, Van Erp's "kekeliruan yang patut disesalkan dari 1896"),
+    # skema_gajah (a line-drawn bronze elephant on its pedestal before a columned facade: no photo of it on Pixabay)
+    SHOTS = [
+        (0, "raja#1", "img/5208489.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.55, "grade": "warm", "tag": "Borobudur, kini"}),
+        ("raja#1", "delapan#2", "clips/166320.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "warm", "tag": "Borobudur, kini"}),
+        ("delapan#2", "arca#2", "img/4550840.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.4, "grade": "sepia"}),
+        ("arca#2", "singa", "img/1210622.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "warm", "tag": "Borobudur, kini"}),
+        ("singa", "semuanya", "img/2166750.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.6, "grade": "base", "tag": "Borobudur, kini"}),
+        ("semuanya", "di#1", "img/2434193.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": "Borobudur, kini"}),
+        ("di#1", "dan#1", "clips/skema_rute.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan#1", "ganesa", "img/200290.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "base", "tag": "Candi Singosari, kini"}),
+        ("ganesa", "dikabulkan", "img/959646.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.5, "grade": "warm"}),
+        ("dikabulkan", "sebagian", "img/6467612.jpg", 0, "f", True, {"zoom": "punch", "pos": 0.55, "grade": "warm"}),
+        ("sebagian", "bangkok", "img/7997042.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.45, "grade": "pop", "tag": "Bangkok, kini"}),
+        ("bangkok", "dan#2", "clips/skema_kutipan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan#2", "hadiah#2", "clips/skema_gajah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("hadiah#2", "end", "img/5208489.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.55, "grade": "warm", "tag": "Borobudur, kini"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "raja#1", f"{WT}TAHUN\\N{{\\fs150}}{Y}1896"),
+        ("raja#1", "delapan#2", f"{WT}RAJA SIAM\\N{Y}KE BOROBUDUR\\N{{\\fs50}}{WT}Raja Chulalongkorn · Thailand"),
+        ("delapan#2", "arca#2", f"{WT}PULANG BAWA\\N{{\\fs150}}{Y}8 GEROBAK\\N{{\\fs92}}{WT}ARCA!"),
+        ("arca#2", "singa", f"{Y}ARCA\\NBUDDHA"),
+        ("singa", "relief", f"{WT}ARCA BUDDHA\\N{Y}SINGA\\NPENJAGA"),
+        ("relief", "semuanya", f"{WT}ARCA BUDDHA\\NSINGA PENJAGA\\N{Y}RELIEF"),
+        ("semuanya", "di#1", f"{WT}SEMUANYA\\N{Y}DIIZINKAN\\NBELANDA"),
+        ("di#1", "cuma", f"{Y}SINGOSARI\\N{WT}MALANG"),
+        ("cuma", "dan#1", f"{WT}CUMA MAMPIR\\N{{\\fs130}}{Y}±30 MENIT"),
+        ("dan#1", "ganesa", f"{WT}DAN MINTA\\N{Y}ARCA..."),
+        ("ganesa", "dikabulkan", f"{{\\fs130}}{Y}GANESHA"),
+        ("dikabulkan", "sebagian", f"{Y}DIKABULKAN!"),
+        ("sebagian", "museum#1", f"{WT}SEBAGIAN\\N{Y}KINI DI..."),
+        ("museum#1", "dan#2", f"{WT}MUSEUM NASIONAL\\N{Y}BANGKOK,\\NTHAILAND"),
+        ("dan#2", "hadiah#1", f"{WT}PATUNG GAJAH\\N{Y}MUSEUM GAJAH\\N{WT}JAKARTA?"),
+        ("hadiah#1", "hadiah#2", f"{WT}HADIAH DARI\\N{Y}RAJA\\NYANG SAMA!"),
+        ("hadiah#2", "end", f"{Y}HADIAH\\N{WT}ATAU\\N{Y}KEKELIRUAN?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"hadiah#2+{k * 0.45:.2f}", f"hadiah#2+{(k + 1) * 0.45:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}HADIAH", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}KEKELIRUAN", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {"Ganesa.": "Ganesha."}
+elif EP == "56":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo56cut.wav"  # prep56.py drops "kota kuno" and the closing "Berani atau nggak?"
+    TIGHT = {"o": 0.4, "lantainya": 0.45, "asklepius#1": 0.22, "dipastikan": 0.22, "teka-teki": 0.22, "asklepius#2": 0.22,
+             "mimpi": 0.22, "bebas": 0.25}  # the beats after WHO and before the snakes stay; sentence ends a little shorter
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema56.py: skema_logo (a drawn Star of Life fades and leaves the rod of Asclepius), skema_pausanias (a scroll
+    # card with his line, then the Peloponnese from Natural Earth with Epidaurus and a "?"), skema_denah (the Small Theatre and
+    # the sanctuary box as a plan, then a sherd with ΑΣΚΛΗΠΙ written letter by letter)
+    SHOTS = [
+        (0, "we", "img/3266960.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "ambulans, kini"}),
+        ("we", "dewa", "clips/skema_logo.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dewa", "kuilnya", "img/884041.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "base", "tag": "patung Asclepius, museum"}),
+        ("kuilnya", "akhirnya", "img/2830081.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.4, "grade": "base", "tag": "Epidaurus, kini"}),
+        ("akhirnya", "lebih", "img/7259980.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "Epidaurus, kini"}),
+        ("lebih", "penjelajah", "img/596233.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "sepia", "tag": "Epidaurus, kini"}),
+        ("penjelajah", "kuncinya", "clips/skema_pausanias.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kuncinya", "di#3", "clips/skema_denah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("di#3", "berharap", "img/3149395.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "dim", "tag": "Epidaurus, kini"}),
+        ("berharap", "dan#2", "img/265516.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "tongkat Asclepius, relief"}),
+        ("dan#2", "ular#2", "img/1475013.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "dim", "tag": "Epidaurus, kini"}),
+        ("ular#2", "berani#1", "clips/279885.mp4", 0, "v", True, {"zoom": 0.05, "pos": 0.5, "grade": "base"}),
+        ("berani#1", "end", "img/1511856.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "forest", "tag": "ular Aesculapian, kini"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "we", f"{WT}LOGO ULAR\\N{Y}DI AMBULANS"),
+        ("we", "dewa", f"{WT}DAN DI LOGO\\N{{\\fs130}}{Y}WHO"),
+        ("dewa", "kuilnya", f"{WT}TONGKAT\\N{Y}ASCLEPIUS\\N{{\\fs50}}{WT}dewa pengobatan Yunani"),
+        ("kuilnya", "akhirnya", f"{WT}KUILNYA\\N{Y}HILANG\\N{{\\fs50}}{WT}Epidaurus, Yunani"),
+        ("akhirnya", "lebih", f"{WT}AKHIRNYA\\N{Y}DIPASTIKAN!\\N{{\\fs50}}{WT}November 2026"),
+        ("lebih", "penjelajah", f"{WT}LEBIH DARI\\N{{\\fs150}}{Y}1.800\\N{{\\fs92}}{WT}TAHUN LALU"),
+        ("penjelajah", "lalu#2", f"{WT}PENJELAJAH\\N{Y}PAUSANIAS\\N{WT}MENCATATNYA"),
+        ("lalu#2", "kuncinya", f"{WT}LOKASINYA\\N{Y}TEKA-TEKI"),
+        ("kuncinya", "bertuliskan", f"{WT}KUNCINYA:\\N{Y}PECAHAN\\NTEMBIKAR"),
+        ("bertuliskan", "di#3", f"{WT}BERTULISKAN\\N{Y}ASCLEPIUS"),
+        ("di#3", "berharap", f"{WT}ORANG SAKIT\\N{Y}TIDUR\\NSEMALAMAN"),
+        ("berharap", "dan#2", f"{WT}BERHARAP\\N{Y}SEMBUH\\NLEWAT MIMPI"),
+        ("dan#2", "ular#2", f"{WT}DAN DI\\N{Y}LANTAINYA..."),
+        ("ular#2", "berani#1", f"{Y}ULAR\\NSUNGGUHAN\\N{WT}MERAYAP BEBAS!"),
+        ("berani#1", "end", f"{WT}BERANI TIDUR\\N{Y}BARENG ULAR?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(6):
+        a, b = f"berani#1+{k * 0.45:.2f}", f"berani#1+{(k + 1) * 0.45:.2f}" if k < 5 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}BERANI", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}NGGAK", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {"Asklepius.": "Asclepius.", "Asklepius,": "Asclepius,", "Asklepius": "Asclepius"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2228,7 +2326,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "51": [("enam puluh ribu", "60.000"), ("seribu dua ratus", "1.200"), ("tiga puluh dua juta", "32 juta")],
         "52": [("lima kilometer.", "5 kilometer.")],
         "53": [("delapan belas delapan puluh sembilan,", "1889,"), ("enam puluh lima", "65")],
-        "54": []}[EP]
+        "54": [],
+        "55": [("delapan belas sembilan puluh enam,", "1896,")],
+        "56": [("we ha o...", "WHO..."), ("seribu delapan ratus", "1.800")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
