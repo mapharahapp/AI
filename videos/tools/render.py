@@ -2102,6 +2102,98 @@ elif EP == "56":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}BERANI", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}NGGAK", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
     FIX = {"Asklepius.": "Asclepius.", "Asklepius,": "Asclepius,", "Asklepius": "Asclepius"}
+elif EP == "57":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo57.mp3"
+    TIGHT = {"lama": 0.45, "sama": 0.4, "awalnya": 0.3, "komodo#1": 0.25, "york": 0.22, "komodo#3": 0.22, "mati": 0.25,
+             "raksasa": 0.22, "komodo#4": 0.25}  # the beats after "tak lama" and "hal yang sama" stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema57.py: skema_peta (Natural Earth world map, a dashed ship line Komodo -> New York, "1926"),
+    # skema_koran (a typed 1926-style newspaper card, NYT headline + "38.000 pengunjung"), skema_versus (komodo vs gorila
+    # split with a pulsing VS, used to the end under the TIM KOMODO / TIM GORILA labels)
+    SHOTS = [
+        (0, "pulau", "img/6675010.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "New York, kini"}),
+        ("pulau", "tahun", "clips/167283.mp4", 1, "v", False, {"zoom": 0.06, "pos": 0.45, "grade": "pop", "tag": "komodo, kini"}),
+        ("tahun", "douglas", "clips/167290.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.62, "grade": "warm", "tag": "komodo, kini"}),
+        ("douglas", "puluhan", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("puluhan", "tapi", "clips/skema_koran.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tapi", "sahabatnya", "img/10518742.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "ash", "tag": "komodo, kini"}),
+        ("sahabatnya", "langsung", "clips/272511.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "cold", "tag": "New York, kini"}),
+        ("langsung", "sama", "img/6858030.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "base", "tag": "New York, kini"}),
+        ("sama", "rencana", "clips/128698.mp4", 0, "v", False, {"zoom": "punch", "pos": 0.41, "grade": "dim", "tag": "ilustrasi"}),
+        ("rencana", "end", "clips/skema_versus.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "pulau", f"{{\\fs130}}{Y}KING KONG"),
+        ("pulau", "tahun", f"{WT}LAHIR DARI\\N{Y}PULAU\\NKOMODO"),
+        ("tahun", "douglas", f"{{\\fs150}}{Y}1926"),
+        ("douglas", "membawa", f"{WT}DOUGLAS\\N{Y}BURDEN\\N{{\\fs50}}{WT}petualang Amerika"),
+        ("membawa", "puluhan", f"{Y}2 KOMODO\\NHIDUP\\N{WT}KE NEW YORK"),
+        ("puluhan", "tapi", f"{WT}PULUHAN RIBU\\N{Y}ORANG DATANG\\N{{\\fs50}}{WT}38.000 dalam satu hari"),
+        ("tapi", "keduanya", f"{WT}TAK LAMA..."),
+        ("keduanya", "sahabatnya", f"{WT}TAK LAMA...\\N{Y}KEDUANYA\\NMATI"),
+        ("sahabatnya", "langsung", f"{WT}MERIAN C.\\N{Y}COOPER\\N{{\\fs50}}{WT}pembuat film"),
+        ("langsung", "dengan", f"{WT}LANGSUNG\\N{Y}MEMBAYANGKAN\\N{WT}HAL YANG SAMA..."),
+        ("dengan", "rencana", f"{WT}DENGAN\\N{Y}GORILA\\NRAKSASA"),
+        ("rencana", "gorila#2", f"{WT}RENCANA\\N{Y}AWALNYA?"),
+        ("gorila#2", "kalau", f"{Y}GORILA\\N{WT}vs\\N{Y}KOMODO!\\N{{\\fs50}}{WT}lahirlah King Kong (1933)"),
+        ("kalau", "end", f"{WT}KAMU PILIH\\N{Y}YANG MANA?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(6):
+        a, b = f"kalau+{k * 0.5:.2f}", f"kalau+{(k + 1) * 0.5:.2f}" if k < 5 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}TIM KOMODO", {"style": "Label", "pos": (5, 270, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}TIM GORILA", {"style": "Label", "pos": (5, 810, 1175), "raw": True})]
+    FIX = {"Nyu": "New", "Merien": "Merian", "Kuper,": "Cooper,"}
+elif EP == "58":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo58cut.wav"  # prep58.py drops "ini berjajar", the sentence-opening "Dan" and the CTA's "itu,"
+    TIGHT = {"lingkaran": 0.3, "minyak#2": 0.25, "itu": 0.3, "dinosaurus": 0.18, "kilometer": 0.18, "peduli": 0.18,
+             "membuktikannya": 0.2, "ciksyulub": 0.18, "maya": 0.2, "asteroid#2": 0.25}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema58.py: skema_cincin (Yucatán from Natural Earth, cenote dots appear along a half circle, then the full dashed
+    # 180 km ring round Chicxulub), skema_magnet (contour lines like a 1978 magnetic survey bending into an arc, then the ring),
+    # skema_batu (a drill-core card "sumur Pemex" with a stamp "BUKTI HANTAMAN · 1990")
+    SHOTS = [
+        (0, "setengah", "img/5066180.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "Yucatán, kini"}),
+        ("setengah", "bekas", "clips/skema_cincin.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("bekas", "tahun", "clips/350715.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("tahun", "glen", "clips/343874.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("glen", "malah", "clips/11945.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.42, "grade": "base", "tag": "ilustrasi"}),
+        ("malah", "ia", "clips/skema_magnet.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ia", "dua", "img/1853667.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "sepia", "tag": "ilustrasi"}),
+        ("dua", "inilah", "clips/skema_batu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("inilah", "kolamkolam", "clips/trex58.mp4", 0, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("kolamkolam", "jadi", "img/2299636.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "base", "tag": "Yucatán, kini"}),
+        ("jadi", "asteroid#2", "img/3774303.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm", "tag": "Chichén Itzá, kini"}),
+        ("asteroid#2", "end", "img/10225212.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "pop", "tag": "Yucatán, kini"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "setengah", f"{WT}KOLAM BIRU\\N{Y}DI MEKSIKO"),
+        ("setengah", "bekas", f"{WT}MEMBENTUK\\N{Y}SETENGAH\\NLINGKARAN"),
+        ("bekas", "tahun", f"{WT}BEKAS\\N{Y}ASTEROID\\N{{\\fs50}}{WT}pembunuh dinosaurus"),
+        ("tahun", "glen", f"{{\\fs150}}{Y}1978"),
+        ("glen", "mencari", f"{WT}GLEN\\N{Y}PENFIELD\\N{{\\fs50}}{WT}perusahaan minyak Pemex"),
+        ("mencari", "malah", f"{WT}MENCARI\\N{Y}MINYAK..."),
+        ("malah", "seratus", f"{WT}MALAH\\N{Y}MENEMUKAN\\NCINCIN"),
+        ("seratus", "ia", f"{WT}CINCIN\\N{{\\fs150}}{Y}180 KM"),
+        ("ia", "hampir", f"{WT}DILAPORKAN..."),
+        ("hampir", "dua", f"{WT}DILAPORKAN...\\N{Y}NYARIS\\NDIABAIKAN"),
+        ("dua", "membuktikannya", f"{{\\fs150}}{Y}12{{\\fs92}}{WT}\\NTAHUN KEMUDIAN"),
+        ("membuktikannya", "inilah", f"{WT}BATU SUMUR BOR\\N{Y}JADI BUKTI"),
+        ("inilah", "kolamkolam", f"{WT}KAWAH\\N{Y}CHICXULUB\\N{{\\fs50}}{WT}66 juta tahun lalu"),
+        ("kolamkolam", "jadi", f"{WT}KOLAM INI\\N{Y}BERNAMA\\NCENOTE"),
+        ("jadi", "asteroid#2", f"{WT}JADI SUMBER AIR\\N{Y}PERADABAN\\NMAYA"),
+        ("asteroid#2", "end", f"{WT}ASTEROID ITU...\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(6):
+        a, b = f"asteroid#2+{k * 0.45:.2f}", f"asteroid#2+{(k + 1) * 0.45:.2f}" if k < 5 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}BENCANA", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}BERKAH", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
+    FIX = {"Penfild": "Penfield", "Cik-syulub!": "Chicxulub!", "senote": "cenote", "kolam-kolam": "Kolam-kolam", "Asteroid": "Asteroid,"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2328,7 +2420,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "53": [("delapan belas delapan puluh sembilan,", "1889,"), ("enam puluh lima", "65")],
         "54": [],
         "55": [("delapan belas sembilan puluh enam,", "1896,")],
-        "56": [("we ha o...", "WHO..."), ("seribu delapan ratus", "1.800")]}[EP]
+        "56": [("we ha o...", "WHO..."), ("seribu delapan ratus", "1.800")],
+        "57": [("seribu sembilan ratus dua puluh enam,", "1926,")],
+        "58": [("seribu sembilan ratus tujuh puluh delapan,", "1978,"), ("seratus delapan puluh", "180")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

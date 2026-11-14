@@ -202,3 +202,33 @@ Fun fact: cincin cenote ini dipetakan tahun 1987 oleh Charles Duller, yang seben
 - Pope, Ocampo & Duller, "Mexican site for K/T impact crater?", *Nature* 351 (1991)
 - NASA NTRS, "Surficial geology of the Chicxulub impact crater, Yucatan, Mexico": https://ntrs.nasa.gov/citations/19980211540
 - Bukti viral: @nattyfax https://www.instagram.com/reel/DfnVOutTTky · FutureFound AI https://www.youtube.com/watch?v=xO9HhkKtYOo · GeologyHub https://www.youtube.com/watch?v=dsQuEOVGYFE · celah Indonesia: Nasacahara https://www.youtube.com/watch?v=bRQr-njwDCA
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 14 Nov 2026)
+
+Take Akram v4 (1 take, 592 kredit): 36,72 detik, terlalu panjang. Dipotong di jeda bersih dengan prep58.py (crossfade 20 ms): **"ini berjajar"** (kalimat 1), **"Dan"** (kalimat 5) dan **"itu"** kedua (kalimat 6) → 34,38 detik. "sedang" tidak dipotong karena tidak ada jeda bersih (akan memotong "mencari"). Jeda dirapatkan di 10 titik (TIGHT) → 32,09 detik, lalu atempo 1,091 → **video 30,01 detik**, master -14,9 LUFS, true peak -2,3 dBFS.
+
+VO yang terdengar: "Ratusan kolam biru di Meksiko membentuk setengah lingkaran... bekas asteroid pembunuh dinosaurus! Tahun 1978, Glen Penfield dari perusahaan minyak sedang mencari minyak... malah menemukan cincin raksasa 180 kilometer. Ia melaporkannya, tapi hampir tak ada yang peduli. Dua belas tahun kemudian, batu dari sumur bor tua membuktikannya: inilah kawah Chicxulub! Kolam-kolam bernama cenote itu... jadi sumber air peradaban Maya. Asteroid, bencana atau berkah?"
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,0 | Ratusan kolam biru di Meksiko membentuk | `[curious]` | Cenote vertikal, punch-in (label "Yucatán, kini") | foto 5066180 | **KOLAM BIRU DI MEKSIKO** |
+| 0:02,0–0:03,1 | setengah lingkaran... | `[curious]` | Skema peta Yucatán: 22 titik cenote biru muncul membentuk busur, pin "Chicxulub" | skema58 (cincin, Natural Earth) | MEMBENTUK **SETENGAH LINGKARAN** |
+| 0:03,1–0:05,2 | bekas asteroid pembunuh dinosaurus! | `[curious]` | Meteor menyala masuk atmosfer (label "ilustrasi") | video 350715 | **BEKAS ASTEROID** pembunuh dinosaurus |
+| 0:05,2–0:07,7 | Tahun 1978, | `[dramatic]` | Anjungan minyak lepas pantai saat senja, grade hangat (label "ilustrasi") | video 343874 | **1978** |
+| 0:07,7–0:10,9 | Glen Penfield dari perusahaan minyak sedang mencari minyak... | `[dramatic]` | Kapal derek/anjungan di laut (label "ilustrasi") | video 11945 | **GLEN PENFIELD** perusahaan minyak Pemex → MENCARI MINYAK... |
+| 0:10,9–0:14,4 | malah menemukan cincin raksasa 180 kilometer. | `[dramatic]` | Skema survei magnet: pesawat menyapu 4 jalur, cincin anomali muncul, lalu lingkaran penuh + garis diameter + pill "180 km" | skema58 (magnet) | MALAH **MENEMUKAN CINCIN** → CINCIN **180 KM** |
+| 0:14,4–0:17,7 | Ia melaporkannya, tapi hampir tak ada yang peduli. | `[curious]` | Tumpukan koran tua, sepia (label "ilustrasi") | foto 1853667 | DILAPORKAN... → **NYARIS DIABAIKAN** |
+| 0:17,7–0:21,5 | Dua belas tahun kemudian, batu dari sumur bor tua membuktikannya: | `[dramatic]` | Skema kartu "sampel batu dari sumur bor Pemex" + inti bor, stempel merah "BUKTI HANTAMAN / 1990" | skema58 (batu) | **12 TAHUN** KEMUDIAN → **BATU SUMUR BOR** JADI BUKTI |
+| 0:21,5–0:23,1 | inilah kawah Chicxulub! | `[dramatic]` | T. rex menoleh di latar oranye-gelap (green screen di-key sendiri; label "ilustrasi") | video 140144 | **KAWAH CHICXULUB** 66 juta tahun lalu |
+| 0:23,1–0:25,3 | Kolam-kolam bernama cenote itu... | `[softly]` | Cenote gua dengan stalaktit (label "Yucatán, kini") | foto 2299636 | KOLAM INI **BERNAMA CENOTE** |
+| 0:25,3–0:27,0 | jadi sumber air peradaban Maya. | `[softly]` | Piramida Chichén Itzá, grade hangat (label "Chichén Itzá, kini") | foto 3774303 | JADI SUMBER AIR **PERADABAN MAYA** |
+| 0:27,0–0:30,0 | Asteroid, bencana atau berkah? | `[curious]` | Cenote toska jernih, pull-out (label "Yucatán, kini"); tombol **BENCANA** / **BERKAH** menyala bergantian tiap 0,45 detik | foto 10225212 | **ASTEROID ITU...** · @titikheran |
+
+Beda dari storyboard (§6):
+- VO dipotong 3 bagian (lihat atas); makna tidak berubah.
+- Adegan "cari minyak" memakai dua klip anjungan (343874 + 11945, keduanya ilustrasi 3D) sebelum skema magnet; skema cincin penuh 180 km digabung ke skema magnet.
+- T. rex 140144 ternyata green screen; di-key ke latar oranye-gelap (trex58.mp4), bukan di atas peta.
+- Teks layar akhir "ASTEROID ITU..." dengan tombol BENCANA/BERKAH, bukan "BENCANA ATAU BERKAH?" (pertanyaannya sudah ada di subtitle).
+- Foto 323147 tidak dipakai.

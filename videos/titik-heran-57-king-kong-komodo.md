@@ -181,7 +181,7 @@ Sahabat Burden, pembuat film Merian C. Cooper, menulis bahwa kisah itu membuatny
 
 Kalau kamu sutradaranya, pilih monster yang mana? Tim komodo atau tim gorila? 👇
 
-Gorila, pesawat, dan foto kota adalah ilustrasi/masa kini; komodo adalah komodo masa kini; peta, koran, dan layar versus adalah skema yang dibuat sendiri.
+Gorila di video adalah ilustrasi; foto New York dan komodo adalah masa kini; peta, koran, dan layar versus adalah skema yang dibuat sendiri (judul koran diketik ulang).
 Sumber: National Geographic "The Demise of the Komodo Kings"; UW–Madison News (Gregg Mitman); The Hollywood Reporter (Ray Morton); Slate "The Vault" (2012)
 
 #titikheran #komodo #kingkong #sejarahdunia #faktaunik
@@ -203,3 +203,32 @@ Fun fact: di naskah awal, King Kong tewas disambar petir di puncak gedung. Saat 
 - Mental Floss, "King Kong Was Inspired by a Real-Life Komodo Dragon Hunt": https://www.mentalfloss.com/article/642927/komodo-dragon-hunt-inspired-king-kong
 - SEAsia (10 Okt 2026): https://seasia.co/2026/10/10/did-you-know-that-the-film-king-kong-was-inspired-by-a-komodo-dragon
 - Bukti celah: Dunia Pintar https://www.youtube.com/watch?v=x-1CEOwoS28 · 391nsight https://www.youtube.com/watch?v=skaZY8NnaKo · World List https://www.youtube.com/watch?v=IuIgY1CCaEI
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 14 Nov 2026)
+
+Take Akram v4 (1 take, 525 kredit): 33,20 detik. Jeda dirapatkan di 9 titik (TIGHT) → 31,18 detik, lalu atempo 1,061 → **video 29,99 detik**, master -14,9 LUFS, true peak -2,3 dBFS. Semua 60 kata naskah terbaca (kata opsional tidak perlu dibuang).
+
+VO yang terdengar: "King Kong ternyata lahir dari Pulau Komodo! Tahun 1926, petualang Amerika Douglas Burden membawa dua komodo hidup ke kebun binatang New York. Puluhan ribu orang datang melihat "naga" dari Komodo. Tapi tak lama... keduanya mati. Sahabatnya, pembuat film Merian Cooper, langsung membayangkan hal yang sama... dengan gorila raksasa. Rencana awalnya? Gorila melawan komodo! Kalau kamu sutradaranya, tim komodo atau tim gorila?"
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,7 | King Kong ternyata lahir dari | `[curious]` | Empire State Building vertikal, push-in cepat (label "New York, kini") | foto 6675010 | **KING KONG** |
+| 0:01,7–0:02,8 | Pulau Komodo! | `[curious]` | Komodo menjulurkan lidah (label "komodo, kini") | video 167283 | LAHIR DARI **PULAU KOMODO** |
+| 0:02,8–0:06,3 | Tahun 1926, petualang Amerika | `[dramatic]` | Komodo berjalan, grade hangat (label "komodo, kini") | video 167290 | **1926** |
+| 0:06,3–0:10,2 | Douglas Burden membawa dua komodo hidup ke kebun binatang New York. | `[dramatic]` | Skema peta dunia: garis putus-putus Komodo → New York, pill "1926", catatan "garis lurus, bukan rute kapal" | skema57 (peta, Natural Earth) | **DOUGLAS BURDEN** petualang Amerika → **2 KOMODO HIDUP KE NEW YORK** |
+| 0:10,2–0:13,6 | Puluhan ribu orang datang melihat "naga" dari Komodo. | `[curious]` | Skema kartu koran "NEW YORK TIMES · 1926 / DRAGONS OF LEGEND COME TO BRONX ZOO" (diketik ulang), pill merah "38.000 pengunjung" | skema57 (koran) | **PULUHAN RIBU ORANG DATANG** · 38.000 dalam satu hari |
+| 0:13,6–0:16,5 | Tapi tak lama... keduanya mati. | `[softly]` | Close-up komodo, grade abu-abu pucat (label "komodo, kini") | foto 10518742 | TAK LAMA... **KEDUANYA MATI** |
+| 0:16,5–0:19,1 | Sahabatnya, pembuat film Merian Cooper, | `[dramatic]` | Manhattan dan Empire State, grade dingin (label "New York, kini") | video 272511 | **MERIAN C. COOPER** pembuat film |
+| 0:19,1–0:20,6 | langsung membayangkan hal yang | `[dramatic]` | Empire State senja (label "New York, kini") | foto 6858030 | LANGSUNG **MEMBAYANGKAN** HAL YANG SAMA... |
+| 0:20,6–0:22,7 | sama... dengan gorila raksasa. | `[dramatic]` | Gorila silverback, push-in, agak gelap (label "ilustrasi") | video 128698 | DENGAN **GORILA RAKSASA** |
+| 0:22,7–0:25,8 | Rencana awalnya? Gorila melawan komodo! | `[dramatic]` | Skema versus: panel kiri komodo, panel kanan gorila, badge **VS** berdenyut | skema57 (versus) dari foto 10532631 + frame video 128698 | RENCANA **AWALNYA?** → **GORILA vs KOMODO!** · lahirlah King Kong (1933) |
+| 0:25,8–0:30,0 | Kalau kamu sutradaranya, tim komodo atau tim gorila? | `[curious]` | Skema versus lanjut, tombol **TIM KOMODO** / **TIM GORILA** menyala bergantian tiap 0,5 detik | skema57 (versus) | **KAMU PILIH YANG MANA?** · @titikheran |
+
+Beda dari storyboard (§6):
+- Pesawat dua sayap (video 953) tidak dipakai; adegan 6 penuh di skema versus supaya "GORILA vs KOMODO" lebih lama di layar.
+- Kartu koran digambar sendiri di atas kertas polos, bukan di atas foto 2608394 (foto itu ternyata koran Jerman 1925).
+- Skema versus memakai foto komodo 10532631 (cadangan) dan frame gorila dari video 128698.
+- Ditambah foto 6858030 (Empire State senja) dan video 272511 untuk adegan Cooper.
+- Caption: kalimat label disesuaikan (tidak ada pesawat di video).
