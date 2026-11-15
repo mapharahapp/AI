@@ -97,7 +97,7 @@ Alternatif hook:
 
 ## 5. Naskah VO dengan arahan suara (siap dibacakan Akram v4)
 
-61 kata. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "kucing" (4x), "Mesir kuno", "mumi" (3x), "tengkorak", "persembahan", "Inggris", "pupuk".
+60 kata. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "kucing" (4x), "Mesir kuno", "mumi" (3x), "tengkorak", "persembahan", "Inggris", "pupuk".
 
 ```
 [curious] Kucing suci Mesir kuno ternyata hidup menderita!
