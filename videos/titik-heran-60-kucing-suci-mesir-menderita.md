@@ -185,7 +185,7 @@ Nasib mumi-mumi itu juga tidak tenang. Februari 1890, sekitar 180.000 mumi kucin
 
 Menurutmu, kucing Mesir itu dipuja atau dimanfaatkan? 👇
 
-Kucing hidup dan ladang di video adalah ilustrasi masa kini; patung adalah patung kucing Mesir kuno; peta, kisi tengkorak, dan kartu lelang adalah skema buatan sendiri.
+Kucing hidup dan ladang di video adalah ilustrasi masa kini; patung adalah patung kucing Mesir kuno; foto tiang kuil adalah Mesir masa kini; peta dan kisi 131 ikon tengkorak adalah skema buatan sendiri.
 Sumber: Van Neer, De Cupere, Ottoni, Journal of Archaeological Science (2026); Gizmodo (10 Nov 2026); Archaeology Magazine (13 Nov 2026); Elliott, Journal of Egyptian Archaeology (2023); Natural History Museum London
 
 #titikheran #mesirkuno #kucing #mumi #faktaunik
@@ -207,3 +207,32 @@ Fun fact: 7 dari 131 tengkorak itu bukan kucing rumahan, melainkan kucing rawa l
 - Chris Elliott, "Cats, Commerce, and Cemeteries: The Mummified Felines of Beni Hasan", Journal of Egyptian Archaeology (2023), DOI 10.1177/03075133231206409: https://www.citedrive.com/en/discovery/cats-commerce-and-cemeteries-the-mummified-felines-of-beni-hasan
 - Natural History Museum London, "Animal mummies": https://www.nhm.ac.uk/discover/animal-mummies.html
 - Bukti topik dasar: Tamu! https://www.youtube.com/watch?v=S62qQ5p4J8o · Sepulang Sekolah https://www.youtube.com/watch?v=EbaEOaFnZCs · megaansc https://www.youtube.com/watch?v=i-q60GRwCsA
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 15 Nov 2026)
+
+Take Akram v4 (1 take, 581 kredit): 33,68 detik. Jeda dirapatkan di 6 titik (TIGHT; jeda sebelum "bahkan", sebelum "untuk dijadikan pupuk", dan sebelum "atau" dibiarkan) → 31,86 detik, lalu atempo 1,084 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,3 dBFS. Semua 60 kata naskah terbaca (kata opsional tidak perlu dibuang).
+
+VO yang terdengar: "Kucing suci Mesir kuno ternyata hidup menderita! Ilmuwan memeriksa 131 tengkorak kucing mumi berusia lebih dari 2.000 tahun. Lebih dari separuhnya menyimpan bekas penyakit... bahkan bekas pukulan. Mereka diduga dikurung berdesakan, lalu dijadikan mumi persembahan untuk para dewa. Tahun 1890, 180.000 mumi kucing dari tempat yang sama dikirim ke Inggris... untuk dijadikan pupuk. Menurutmu, kucing Mesir itu dipuja... atau dimanfaatkan?"
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,5 | Kucing suci Mesir kuno | `[curious]` | Patung kucing perunggu Mesir, push-in cepat (label "patung kucing Mesir kuno") | foto 5401885 | KUCING SUCI **MESIR KUNO** |
+| 0:01,5–0:03,0 | ternyata hidup menderita! | `[curious]` | Close-up kucing liar lusuh, grade dingin (label "ilustrasi") | foto 2072339 | TERNYATA **HIDUP MENDERITA** |
+| 0:03,0–0:04,0 | Ilmuwan memeriksa | `[dramatic]` | Tiang-tiang kuil Karnak berhieroglif (label "Mesir, kini") | video 37997 (pita hitam dipotong) | ILMUWAN **MEMERIKSA...** |
+| 0:04,0–0:11,1 | 131 tengkorak kucing mumi berusia lebih dari 2.000 tahun. Lebih dari separuhnya menyimpan bekas penyakit... | `[dramatic]` → `[curious]` | Skema kisi 131 ikon tengkorak kucing muncul satu per satu; 81 berubah merah; pill "81 dari 131 · sakit atau terluka" | skema60 (hitung) | **131** TENGKORAK KUCING MUMI → BERUSIA **2.000+** TAHUN → **62%** BEKAS PENYAKIT |
+| 0:11,1–0:12,6 | bahkan bekas pukulan. | `[curious]` | Anak kucing kurus menatap, grade abu-abu (label "ilustrasi") | foto 3503184 | BAHKAN **BEKAS PUKULAN** |
+| 0:12,6–0:14,7 | Mereka diduga dikurung berdesakan, | `[dramatic]` | Kucing di balik jeruji, agak gelap (label "ilustrasi") | foto 3041236 | DIDUGA **DIKURUNG BERDESAKAN** |
+| 0:14,7–0:17,3 | lalu dijadikan mumi persembahan untuk para dewa. | `[dramatic]` | Patung kucing Mesir dari samping, grade hangat (label "patung kucing Mesir kuno") | foto 5401858 | DIJADIKAN **MUMI PERSEMBAHAN** |
+| 0:17,3–0:24,0 | Tahun 1890, 180.000 mumi kucing dari tempat yang sama dikirim ke Inggris... | `[dramatic]` | Skema peta: garis putus-putus Beni Hasan (Mesir) → Liverpool (Inggris), pill "19,5 ton · dilelang sebagai pupuk", catatan "garis lurus, bukan rute kapal" | skema60 (peta, Natural Earth) | **1890** → **180.000** MUMI KUCING |
+| 0:24,0–0:25,5 | untuk dijadikan pupuk. | `[softly]` | Ladang ditaburi pupuk, sepia (label "ilustrasi") | foto 6135606 | ...DIJADIKAN **PUPUK** |
+| 0:25,5–0:30,0 | Menurutmu, kucing Mesir itu dipuja... atau dimanfaatkan? | `[curious]` | Patung kucing perunggu lagi, zoom keluar pelan, grade senja; tombol **DIPUJA** / **DIMANFAATKAN** menyala bergantian | foto 5401885 | **MENURUTMU?** · @titikheran |
+
+Beda dari storyboard (§6):
+- Potongan kedua hook memakai foto kucing lusuh 2072339, bukan video 130789, supaya kata "menderita" langsung terasa.
+- Kartu lelang 1890 tidak dibuat; angka "19,5 ton · dilelang sebagai pupuk" masuk ke peta.
+- Layar CTA memakai foto patung 5401885 dengan dua tombol, bukan skema versus terpisah.
+- Foto 3201562 (patung suvenir modern) dan 140372 (ternyata patung Anubis, bukan kucing) tidak dipakai.
+- Video 37997 ternyata berpita hitam (letterbox); dipotong dulu menjadi clips/karnak60.mp4.
+- Pengucapan dicek lewat transkrip yang diselaraskan dengan naskah (tidak ada kata hilang).

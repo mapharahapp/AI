@@ -2194,6 +2194,94 @@ elif EP == "58":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}BENCANA", {"style": "Label", "pos": (5, 290, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}BERKAH", {"style": "Label", "pos": (5, 790, 1175), "raw": True})]
     FIX = {"Penfild": "Penfield", "Cik-syulub!": "Chicxulub!", "senote": "cenote", "kolam-kolam": "Kolam-kolam", "Asteroid": "Asteroid,"}
+elif EP == "59":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo59.mp3"
+    TIGHT = {"jakarta": 0.3, "lumpuh#2": 0.45, "rahasianya": 0.3, "kasar": 0.3, "nobel#1": 0.22, "beri#2": 0.22, "sendiri": 0.22,
+             "ayam#2": 0.22, "satu": 0.22, "nobel#2": 0.25}  # the beats after "lumpuh..." and "Rahasianya?" stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema59.py: skema_nobel (a self-drawn medal card "HADIAH NOBEL KEDOKTERAN 1929"), skema_beras (a rice grain in
+    # section, the bran layer lights up as "VITAMIN B1", then is polished away), skema_versus (nasi putih vs nasi merah, VS)
+    SHOTS = [
+        (0, "ayam#1", "clips/11626.mp4", 2, "v", False, {"zoom": "punch", "pos": 0.5, "grade": "pop"}),
+        ("ayam#1", "dan", "clips/190144.mp4", 27, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "pop", "tag": "ilustrasi"}),
+        ("dan", "di#2", "clips/skema_nobel.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("di#2", "memburu", "img/1033489.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.55, "grade": "sepia", "tag": "Jakarta, kini"}),
+        ("memburu", "tibatiba", "clips/86260.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "aged", "tag": "ilustrasi"}),
+        ("tibatiba", "lalu", "clips/147982.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.35, "grade": "ash", "tag": "ilustrasi"}),
+        ("lalu", "rahasianya", "clips/105228.mp4", 0.5, "v", False, {"zoom": 0.06, "pos": 0.62, "grade": "pop", "tag": "ilustrasi"}),
+        ("rahasianya", "untuk", "img/1583098.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("untuk", "makanannya", "clips/205365.mp4", 0.3, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("makanannya", "yang", "img/4264846.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.3, "grade": "warm"}),
+        ("yang", "tahun", "clips/skema_beras.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tahun", "kamu", "clips/skema_nobel.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kamu", "end", "clips/skema_versus.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "ayam#1", f"{{\\fs120}}{Y}NASI PUTIH"),
+        ("ayam#1", "dan", f"{WT}BIKIN\\N{Y}AYAM\\NLUMPUH"),
+        ("dan", "di#2", f"{WT}BERUJUNG\\N{Y}HADIAH\\NNOBEL!"),
+        ("di#2", "memburu", f"{{\\fs110}}{Y}BATAVIA\\N{{\\fs50}}{WT}kini Jakarta · dokter Christiaan Eijkman"),
+        ("memburu", "tibatiba", f"{WT}MEMBURU\\N{Y}KUMAN\\NBERI-BERI"),
+        ("tibatiba", "lalu", f"{WT}AYAM LAB\\N{Y}LUMPUH..."),
+        ("lalu", "rahasianya", f"{WT}LALU\\N{Y}SEMBUH\\NSENDIRI?!"),
+        ("rahasianya", "juru", f"{{\\fs110}}{Y}RAHASIANYA?"),
+        ("juru", "menolak", f"{WT}JURU MASAK\\N{Y}BARU"),
+        ("menolak", "makanannya", f"{WT}MENOLAK MEMBERI\\N{Y}NASI TENTARA\\N{WT}UNTUK AYAM"),
+        ("makanannya", "yang", f"{WT}DIGANTI\\N{Y}BERAS KASAR"),
+        ("yang", "tahun", f"{WT}KULIT ARI =\\N{Y}VITAMIN B1"),
+        ("tahun", "kamu", f"{{\\fs150}}{Y}1929"),
+        ("kamu", "end", f"{WT}KAMU\\N{Y}TIM MANA?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(6):
+        a, b = f"kamu+{k * 0.45:.2f}", f"kamu+{(k + 1) * 0.45:.2f}" if k < 5 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}NASI PUTIH", {"style": "Label", "pos": (5, 280, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}NASI MERAH", {"style": "Label", "pos": (5, 800, 1175), "raw": True})]
+    FIX = {"Kristian": "Christiaan", "Aikman": "Eijkman"}
+elif EP == "60":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo60.mp3"
+    TIGHT = {"penyakit": 0.45, "inggris": 0.5, "dipuja": 0.35, "menderita": 0.22, "tahun#1": 0.2, "pukulan": 0.22, "dewa": 0.22,
+             "puluh#3": 0.15, "pupuk": 0.25, "berdesakan": 0.15}  # the beats before "bahkan" and "untuk dijadikan pupuk" stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema60.py: karnak60.mp4 (video 37997 without its letterbox), skema_hitung (131 small cat-skull icons, 81 of
+    # them turn red), skema_peta (Natural Earth, a dashed line Beni Hasan -> Liverpool, "1890", "180.000 mumi kucing")
+    SHOTS = [
+        (0, "ternyata", "img/5401885.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "patung kucing Mesir kuno"}),
+        ("ternyata", "ilmuwan", "img/2072339.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "cold", "tag": "ilustrasi"}),
+        ("ilmuwan", "seratus", "clips/karnak60.mp4", 0.3, "v", False, {"zoom": 0.05, "pos": 0.4, "grade": "warm", "tag": "Mesir, kini"}),
+        ("seratus", "bahkan", "clips/skema_hitung.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("bahkan", "mereka", "img/3503184.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.45, "grade": "ash", "tag": "ilustrasi"}),
+        ("mereka", "lalu", "img/3041236.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.6, "grade": "dim", "tag": "ilustrasi"}),
+        ("lalu", "tahun#2", "img/5401858.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm", "tag": "patung kucing Mesir kuno"}),
+        ("tahun#2", "untuk#2", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("untuk#2", "menurutmu", "img/6135606.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.6, "grade": "sepia", "tag": "ilustrasi"}),
+        ("menurutmu", "end", "img/5401885.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "dusk", "tag": "patung kucing Mesir kuno"}),
+    ]
+    LAB_ON, LAB_OFF = "{\\3c&H00E1FF&\\c&H141414&}", "{\\3c&H20401E0A&\\c&HFFFFFF&}"
+    TITLES = [
+        (0, "ternyata", f"{WT}KUCING SUCI\\N{Y}MESIR KUNO"),
+        ("ternyata", "ilmuwan", f"{WT}TERNYATA\\N{Y}HIDUP\\NMENDERITA"),
+        ("ilmuwan", "seratus", f"{WT}ILMUWAN\\N{Y}MEMERIKSA..."),
+        ("seratus", "berusia", f"{{\\fs150}}{Y}131{{\\fs92}}{WT}\\NTENGKORAK\\NKUCING MUMI"),
+        ("berusia", "lebih#2", f"{WT}BERUSIA\\N{{\\fs130}}{Y}2.000+{{\\fs92}}{WT}\\NTAHUN"),
+        ("lebih#2", "bahkan", f"{{\\fs150}}{Y}62%{{\\fs92}}{WT}\\NBEKAS PENYAKIT"),
+        ("bahkan", "mereka", f"{WT}BAHKAN\\N{Y}BEKAS\\NPUKULAN"),
+        ("mereka", "lalu", f"{WT}DIDUGA\\N{Y}DIKURUNG\\NBERDESAKAN"),
+        ("lalu", "tahun#2", f"{WT}DIJADIKAN\\N{Y}MUMI\\NPERSEMBAHAN"),
+        ("tahun#2", "seratus#2", f"{{\\fs150}}{Y}1890"),
+        ("seratus#2", "untuk#2", f"{{\\fs120}}{Y}180.000\\N{{\\fs80}}{WT}MUMI KUCING"),
+        ("untuk#2", "menurutmu", f"{WT}...DIJADIKAN\\N{{\\fs150}}{Y}PUPUK"),
+        ("menurutmu", "end", f"{WT}MENURUTMU?\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    for k in range(8):
+        a, b = f"menurutmu+{k * 0.5:.2f}", f"menurutmu+{(k + 1) * 0.5:.2f}" if k < 7 else "end"
+        on = k % 2 == 0
+        TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}DIPUJA", {"style": "Label", "pos": (5, 270, 1175), "raw": True}),
+                   (a, b, f"{LAB_OFF if on else LAB_ON}DIMANFAATKAN", {"style": "Label", "pos": (5, 760, 1175), "raw": True})]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2422,7 +2510,10 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "55": [("delapan belas sembilan puluh enam,", "1896,")],
         "56": [("we ha o...", "WHO..."), ("seribu delapan ratus", "1.800")],
         "57": [("seribu sembilan ratus dua puluh enam,", "1926,")],
-        "58": [("seribu sembilan ratus tujuh puluh delapan,", "1978,"), ("seratus delapan puluh", "180")]}[EP]
+        "58": [("seribu sembilan ratus tujuh puluh delapan,", "1978,"), ("seratus delapan puluh", "180")],
+        "59": [("beri beri.", "beri-beri."), ("b satu.", "B1."), ("seribu sembilan ratus dua puluh sembilan,", "1929,")],
+        "60": [("seratus tiga puluh satu", "131"), ("dua ribu", "2.000"), ("seribu delapan ratus sembilan puluh,", "1890,"),
+               ("seratus delapan puluh ribu", "180.000")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

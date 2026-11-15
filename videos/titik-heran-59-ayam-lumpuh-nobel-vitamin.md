@@ -188,7 +188,7 @@ Catatan: nasi putih aman sebagai bagian dari makanan yang beragam. Yang berbahay
 
 Kamu tim nasi putih atau nasi merah? 👇
 
-Klip ayam dan dapur adalah ilustrasi masa kini; gambar butir beras, kartu Nobel, dan layar versus adalah skema buatan sendiri.
+Klip ayam, mikroskop, dan semangkuk nasi adalah ilustrasi masa kini; gedung tua adalah Kota Tua Jakarta masa kini; gambar butir beras, kartu Nobel (medali digambar sendiri), dan layar versus adalah skema buatan sendiri.
 Sumber: NobelPrize.org (Christiaan Eijkman, 1929); Allchin, "Christiaan Eijkman & the Cause of Beriberi"; Journal of Neurology (2018); SEAsia (11 Okt 2026)
 
 #titikheran #vitamin #nasiputih #sejarahindonesia #faktaunik
@@ -209,3 +209,34 @@ Fun fact: Eijkman sendiri salah menebak. Ia mengira nasi putih mengandung racun 
 - SEAsia (24 Jun 2026): https://seasia.co/2026/06/24/how-christiaan-eijkmans-hunt-for-beriberi-in-batavia-led-to-the-discovery-of-vitamins
 - Wikipedia, Christiaan Eijkman: https://en.wikipedia.org/wiki/Christiaan_Eijkman
 - Bukti ramai: Menulis Digital https://www.youtube.com/watch?v=43r5jUdEDhY · FableCatch https://www.youtube.com/watch?v=dfgor0VmtfQ · Heranium https://www.youtube.com/watch?v=uwqkb3NI8fk
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 15 Nov 2026)
+
+Take Akram v4 (1 take, 544 kredit): 32,72 detik. Jeda dirapatkan di 10 titik (TIGHT) → 30,81 detik, lalu atempo 1,048 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,4 dBFS. Semua 62 kata naskah terbaca (kata opsional tidak perlu dibuang).
+
+VO yang terdengar: "Nasi putih pernah bikin ayam lumpuh di Jakarta... dan berujung Hadiah Nobel! Di Batavia, dokter Belanda Christiaan Eijkman memburu kuman penyebab beri-beri. Tiba-tiba ayam-ayam labnya lumpuh... lalu sembuh sendiri! Rahasianya? Juru masak baru menolak memberi nasi tentara untuk ayam. Makanannya diganti beras kasar... yang kulit arinya menyimpan vitamin B1. Tahun 1929, Eijkman meraih Hadiah Nobel. Kamu tim nasi putih atau nasi merah?"
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,6 | Nasi putih pernah bikin | `[curious]` | Nasi putih close-up, push-in cepat | video 11626 | **NASI PUTIH** |
+| 0:01,6–0:03,1 | ayam lumpuh di Jakarta... | `[curious]` | Ayam jago menatap kamera (label "ilustrasi") | video 190144 | BIKIN **AYAM LUMPUH** |
+| 0:03,1–0:04,8 | dan berujung Hadiah Nobel! | `[curious]` | Skema kartu medali emas, sinar berputar, pill "HADIAH NOBEL KEDOKTERAN" | skema59 (nobel) | BERUJUNG **HADIAH NOBEL!** |
+| 0:04,8–0:07,5 | Di Batavia, dokter Belanda Christiaan Eijkman | `[dramatic]` | Gedung kolonial Kota Tua, sepia (label "Jakarta, kini") | foto 1033489 | **BATAVIA** · kini Jakarta · dokter Christiaan Eijkman |
+| 0:07,5–0:09,5 | memburu kuman penyebab beri-beri. | `[dramatic]` | Mikroskop lab, grade tua (label "ilustrasi") | video 86260 | MEMBURU **KUMAN BERI-BERI** |
+| 0:09,5–0:12,2 | Tiba-tiba ayam-ayam labnya lumpuh... | `[curious]` | Ayam jago dan betina, grade abu-abu (label "ilustrasi") | video 147982 | AYAM LAB **LUMPUH...** |
+| 0:12,2–0:13,3 | lalu sembuh sendiri! | `[curious]` | Ayam jago hitam tegak, warna cerah (label "ilustrasi") | video 105228 | LALU **SEMBUH SENDIRI?!** |
+| 0:13,3–0:16,9 | Rahasianya? Juru masak baru menolak memberi nasi tentara | `[dramatic]` | Semangkuk nasi putih di meja kayu gelap (label "ilustrasi") | foto 1583098 | **RAHASIANYA?** → JURU MASAK **BARU** → MENOLAK MEMBERI **NASI TENTARA** UNTUK AYAM |
+| 0:16,9–0:17,8 | untuk ayam. | `[dramatic]` | Ayam betina mematuk di tanah (label "ilustrasi") | video 205365 | MENOLAK MEMBERI **NASI TENTARA** UNTUK AYAM |
+| 0:17,8–0:20,0 | Makanannya diganti beras kasar... | `[curious]` | Nasi dan beras merah di mangkuk bambu | foto 4264846 | DIGANTI **BERAS KASAR** |
+| 0:20,0–0:22,5 | yang kulit arinya menyimpan vitamin B1. | `[curious]` | Skema potongan butir beras: kulit ari menyala kuning, pill "kulit ari", "VITAMIN B1", catatan "nasi putih: kulit ari sudah digosok habis" | skema59 (beras) | KULIT ARI = **VITAMIN B1** |
+| 0:22,5–0:26,8 | Tahun 1929, Eijkman meraih Hadiah Nobel. | `[dramatic]` | Skema kartu medali, pill "HADIAH NOBEL KEDOKTERAN", "Christiaan Eijkman · 1929", catatan "medali digambar sendiri, bukan medali asli" | skema59 (nobel) | **1929** |
+| 0:26,8–0:30,0 | Kamu tim nasi putih atau nasi merah? | `[curious]` | Skema versus: panel nasi putih dan nasi merah, badge **VS** berdenyut, tombol **NASI PUTIH** / **NASI MERAH** menyala bergantian | skema59 (versus) dari foto 1583098 + 4264846 | KAMU **TIM MANA?** · @titikheran |
+
+Beda dari storyboard (§6):
+- Skema ayam rebah/tegak tidak dibuat; adegan "lumpuh lalu sembuh" memakai dua klip ayam asli dengan grade abu-abu lalu cerah.
+- Adegan "memburu kuman" memakai klip mikroskop lab 86260 (asli, sudah dipakai di #46).
+- Adegan juru masak memakai foto semangkuk nasi 1583098, bukan klip dapur; kutipan parafrase "Nasi tentara bukan untuk ayam!" diganti teks deskriptif "MENOLAK MEMBERI NASI TENTARA UNTUK AYAM".
+- "Beras kasar" memakai foto 4264846 (nasi dan beras merah), yang juga jadi panel "nasi merah" di layar versus; foto 4994747 dan 4727417 tidak dipakai.
+- Pengucapan dicek lewat transkrip yang diselaraskan dengan naskah (tidak ada kata hilang); dengarkan sekali "Eijkman" dan "Nobel" sebelum unggah.
