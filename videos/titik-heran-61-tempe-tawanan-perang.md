@@ -186,13 +186,13 @@ Saat Jepang menduduki Jawa (1942–1945), tawanan perang Belanda dan Inggris di 
 
 Tempe sudah tercatat di Serat Centhini sekitar 1815. Setelah perang, pabrik tempe pertama di Eropa dibuka imigran Indonesia di Belanda, dan tempe komersial pertama di Amerika lahir tahun 1961.
 
-Sekarang "budaya tempe" diajukan Indonesia ke UNESCO. Keputusannya diambil di sidang Komite Warisan Budaya Takbenda di Xiamen, 30 November sampai 5 Desember 2026.
+Sekarang "budaya tempe" diajukan Indonesia ke UNESCO. Keputusannya diambil di sidang Komite Warisan Budaya Takbenda UNESCO di Xiamen, Tiongkok (30 November sampai 5 Desember 2026); nominasi dibahas 1–3 Desember.
 
 Catatan: tempe membantu karena mudah dicerna dan bergizi, bukan obat disentri.
 
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Kawat berduri dan barak tua adalah ilustrasi masa kini; gunung adalah Sindoro–Sumbing masa kini; gambar jamur, kartu kesimpulan, dan kartu sidang adalah skema buatan sendiri.
+Tangan di kawat berduri, jendela berjeruji, barak tua, dan karung kedelai adalah ilustrasi masa kini; gunung adalah Sindoro–Sumbing masa kini; tempe di salad dan spageti adalah foto masa kini; gambar jamur, kartu kesimpulan, dan kartu sidang adalah skema buatan sendiri.
 Sumber: Shurtleff & Aoyagi, History of Tempeh; Nout & Kiers (Wageningen University), Tempeh as a Functional Food; The Jakarta Post; UNESCO (sidang ke-21 Komite WBTb)
 
 #titikheran #tempe #unesco #sejarahindonesia #faktaunik
@@ -215,3 +215,35 @@ Fun fact: Bung Karno pernah berpesan "jangan jadi bangsa tempe". Tapi dalam pida
 - UNESCO ICH, 21.COM: https://ich.unesco.org/en/21com · Nominasi "Culture of Tempe" (Daftar Representatif 2026): https://ich.unesco.org/en/video/81941
 - Riau1 (18 Jun 2026), berkas tempe diajukan 29 Mar 2025: https://www.riau1.com/berita/nasional/tempe-akan-jadi-warisan-budaya-dunia-unesco
 - Detik (22 Des 2025), "Budaya Tempe Goes to UNESCO": https://www.detik.com/pop/culture/d-8272648/budaya-tempe-goes-to-unesco
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 16 Nov 2026)
+
+Take Akram v4 (1 take, 519 kredit): 32,03 detik. Jeda dirapatkan di 9 titik (TIGHT) → 29,98 detik, lalu atempo 1,02 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,3 dBFS. Semua 63 kata naskah terbaca (kata opsional "dan Inggris" dan "ini" tidak perlu dibuang). Tanpa bisikan.
+
+VO yang terdengar: "Mental tempe katanya lemah... padahal tempe pernah menyelamatkan nyawa tawanan perang! Saat Jepang menduduki Jawa, tawanan Belanda dan Inggris terkapar disentri. Kedelai rebus pun tak bisa mereka cerna. Tapi tempe bisa... jamurnya sudah mencerna kedelai duluan. Ilmuwan yang ikut ditawan menyimpulkan: banyak yang selamat berkat tempe. Awal Desember ini, UNESCO memutuskan: tempe jadi warisan dunia atau tidak. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,4 | Mental tempe katanya | `[curious]` | Tempe goreng vertikal, punch-in cepat | foto 5966113 | MENTAL TEMPE **= LEMAH?** |
+| 0:01,4–0:02,3 | lemah... | `[curious]` | Tempe mentah berselimut jamur putih, punch-in | foto 4930032 | MENTAL TEMPE **= LEMAH?** |
+| 0:02,3–0:03,8 | padahal tempe pernah | `[curious]` | Salad dengan potongan tempe | foto 1343291 | TEMPE PERNAH **SELAMATKAN NYAWA** |
+| 0:03,8–0:05,7 | menyelamatkan nyawa tawanan perang! | `[curious]` | Tangan menggenggam kawat berduri, grade tua (label "ilustrasi") | foto 3460021 | **TAWANAN PERANG!** |
+| 0:05,7–0:07,8 | Saat Jepang menduduki Jawa, | `[dramatic]` | Sindoro–Sumbing di atas awan, sepia (label "Jawa, kini") | foto 3779159 | **1942–1945** · JEPANG MENDUDUKI JAWA |
+| 0:07,8–0:10,7 | tawanan Belanda dan Inggris terkapar disentri. | `[dramatic]` | Jendela berjeruji di bangunan bata tua, grade abu (label "ilustrasi") | video 20465 | TAWANAN **BELANDA & INGGRIS** → TERKAPAR **DISENTRI** |
+| 0:10,7–0:13,2 | Kedelai rebus pun tak bisa mereka cerna. | `[dramatic]` | Kedelai kuning di karung goni, zoom pelan (label "ilustrasi") | foto 2039641 | KEDELAI **REBUS?** → TAK BISA **DICERNA** |
+| 0:13,2–0:14,8 | Tapi tempe bisa... | `[curious]` | Tempe mentah, punch-in ke jamur | foto 4930032 | TAPI **TEMPE BISA!** |
+| 0:14,8–0:17,0 | jamurnya sudah mencerna kedelai duluan. | `[curious]` | Skema: benang jamur putih tumbuh dari kedelai, menyatukannya, lalu jadi blok tempe asli; pill "JAMUR RHIZOPUS" dan "protein & lemak dipecah" | skema61 (jamur) dari foto 4930032 | JAMUR **"MENCERNA"** KEDELAI DULUAN |
+| 0:17,0–0:19,2 | Ilmuwan yang ikut ditawan menyimpulkan: | `[dramatic]` | Barak bata tua yang ditinggalkan, sepia (label "ilustrasi") | video 141636 | ILMUWAN **IKUT DITAWAN** MENYIMPULKAN... |
+| 0:19,2–0:21,5 | banyak yang selamat berkat tempe. | `[dramatic]` | Skema kartu kertas tua "KESIMPULAN: Banyak tawanan selamat berkat **TEMPE**", baris kecil "ringkasan kesimpulan A.G. van Veen, ilmuwan pangan yang ikut ditawan (1946)", di atas barak sepia | skema61 (kesimpulan) dari video 141636 | BANYAK YANG **SELAMAT BERKAT TEMPE** |
+| 0:21,5–0:22,8 | Awal Desember ini, | `[curious]` | Spageti dengan tempe (label "ilustrasi: tempe di luar negeri") | foto 3298694 | AWAL **DESEMBER** |
+| 0:22,8–0:26,8 | UNESCO memutuskan: tempe jadi warisan dunia atau tidak. | `[curious]` | Skema kartu kalender **DESEMBER 2026 · 1–3** di atas foto tempe goreng yang diburamkan, pill "Sidang Warisan Budaya Takbenda UNESCO", "Xiamen, Tiongkok", "nominasi: Budaya Tempe", stempel **?** berdenyut (tanpa logo UNESCO) | skema61 (unesco) dari foto 5966113 | **UNESCO** MEMUTUSKAN... → TEMPE: **WARISAN DUNIA?** |
+| 0:26,8–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Tempe mentah, pull-out pelan | foto 4930032 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- Hook dipecah jadi empat gambar (tempe goreng, tempe mentah, salad tempe 1343291, kawat berduri) supaya tiap gambar di 3 detik pertama di bawah 1,8 detik.
+- Adegan kedelai tidak memakai tanda ✕ (font render tidak punya glyph itu); teks layar "TAK BISA DICERNA" menggantikannya.
+- Kartu UNESCO memakai stempel "?" berdenyut, bukan pill "WARISAN DUNIA?", karena kalimat itu sudah ada di judul layar.
+- Foto cadangan 58846 dan 7577002 ternyata bunga, bukan tempe; tidak dipakai.
+- "UNESCO" dibaca Akram dari ejaan "Yunesko"; subtitle dan .srt menulis "UNESCO". Transkrip diselaraskan dengan naskah, jadi pengucapan tidak bisa dicek dari teks: dengarkan sekali "UNESCO" dan "Follow" sebelum unggah.

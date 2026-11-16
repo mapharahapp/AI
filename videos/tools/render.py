@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|62 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -2282,6 +2282,91 @@ elif EP == "60":
         TITLES += [(a, b, f"{LAB_ON if on else LAB_OFF}DIPUJA", {"style": "Label", "pos": (5, 270, 1175), "raw": True}),
                    (a, b, f"{LAB_OFF if on else LAB_ON}DIMANFAATKAN", {"style": "Label", "pos": (5, 760, 1175), "raw": True})]
     FIX = {}
+elif EP == "61":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo61.mp3"
+    TIGHT = {"perang": 0.3, "disentri": 0.3, "duluan": 0.3, "tempe#4": 0.3, "tidak": 0.3}  # the beats after "lemah..." and "bisa..." stay
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema61.py: skema_jamur (soybeans wrapped by white mould threads that knit into a tempe block),
+    # skema_kesimpulan (an old paper card with van Veen's conclusion, marked as a summary), skema_unesco (a calendar card
+    # "1-3 DESEMBER 2026" over the fried-tempe photo and a pulsing "?" stamp, no UNESCO logo)
+    SHOTS = [
+        (0, "lemah", "img/5966113.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop"}),
+        ("lemah", "padahal", "img/4930032.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "warm"}),
+        ("padahal", "menyelamatkan", "img/1343291.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.42, "grade": "pop"}),
+        ("menyelamatkan", "saat", "img/3460021.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "aged", "tag": "ilustrasi"}),
+        ("saat", "tawanan#2", "img/3779159.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.42, "grade": "sepia", "tag": "Jawa, kini"}),
+        ("tawanan#2", "kedelai#1", "clips/20465.mp4", 0.5, "v", False, {"zoom": 0.06, "pos": 0.6, "grade": "ash", "tag": "ilustrasi"}),
+        ("kedelai#1", "tapi", "img/2039641.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("tapi", "jamurnya", "img/4930032.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.6, "grade": "pop"}),
+        ("jamurnya", "ilmuwan", "clips/skema_jamur.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ilmuwan", "banyak", "clips/141636.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "sepia", "tag": "ilustrasi"}),
+        ("banyak", "awal", "clips/skema_kesimpulan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("awal", "yunesko", "img/3298694.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.4, "grade": "pop", "tag": "ilustrasi: tempe di luar negeri"}),
+        ("yunesko", "follow", "clips/skema_unesco.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/4930032.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm"}),
+    ]
+    TITLES = [
+        (0, "padahal", f"{WT}MENTAL TEMPE\\N{{\\fs130}}{Y}= LEMAH?"),
+        ("padahal", "tawanan#1", f"{WT}TEMPE PERNAH\\N{Y}SELAMATKAN\\NNYAWA"),
+        ("tawanan#1", "saat", f"{{\\fs120}}{Y}TAWANAN\\NPERANG!"),
+        ("saat", "tawanan#2", f"{{\\fs120}}{Y}1942–1945\\N{{\\fs60}}{WT}JEPANG MENDUDUKI JAWA"),
+        ("tawanan#2", "terkapar", f"{WT}TAWANAN\\N{Y}BELANDA\\N& INGGRIS"),
+        ("terkapar", "kedelai#1", f"{WT}TERKAPAR\\N{{\\fs130}}{Y}DISENTRI"),
+        ("kedelai#1", "tak", f"{WT}KEDELAI\\N{Y}REBUS?"),
+        ("tak", "tapi", f"{WT}TAK BISA\\N{{\\fs130}}{Y}DICERNA"),
+        ("tapi", "jamurnya", f"{WT}TAPI\\N{{\\fs130}}{Y}TEMPE BISA!"),
+        ("jamurnya", "ilmuwan", f"{WT}JAMUR\\N{Y}\"MENCERNA\"\\N{WT}KEDELAI DULUAN"),
+        ("ilmuwan", "banyak", f"{WT}ILMUWAN\\N{Y}IKUT DITAWAN\\N{WT}MENYIMPULKAN..."),
+        ("banyak", "awal", f"{WT}BANYAK YANG\\N{Y}SELAMAT\\NBERKAT TEMPE"),
+        ("awal", "yunesko", f"{WT}AWAL\\N{{\\fs130}}{Y}DESEMBER"),
+        ("yunesko", "tempe#5", f"{{\\fs120}}{Y}UNESCO\\N{{\\fs92}}{WT}MEMUTUSKAN..."),
+        ("tempe#5", "follow", f"{WT}TEMPE:\\N{Y}WARISAN\\NDUNIA?"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Yunesko": "UNESCO", "Yunesko,": "UNESCO,"}
+elif EP == "62":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo62.mp3"
+    TIGHT = {"mereka#2": 0.3, "sinabar#1": 0.3, "merkuri": 0.3, "senote#1": 0.3, "lipat": 0.3, "runtuh": 0.3}  # "sendiri..." and "tahun..." keep their beat
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema62.py: skema_inti (a Lago Coba sediment core, mercury bars climbing from 0,02 to 2,3 ug/g, ">100X",
+    # snail and algae icons fading), skema_waktu (a 0-900 M timeline, a red band 535-810 M "CENOTE XCACH")
+    SHOTS = [
+        (0, "meracuni", "clips/122329.mp4", 1, "v", False, {"zoom": "punch", "pos": 0.45, "grade": "pop", "tag": "Tulum, kini"}),
+        ("meracuni", "garagara", "img/2299636.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "cenote, ilustrasi"}),
+        ("garagara", "kuil", "img/2924891.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.3, "grade": "pop", "tag": "ilustrasi"}),
+        ("kuil", "bahkan", "img/1649598.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm", "tag": "Palenque, kini"}),
+        ("bahkan", "dari", "img/4909318.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm", "tag": "Uxmal, kini"}),
+        ("dari", "sinabar#2", "img/2924891.jpg", 0, "f", False, {"zoom": 0.12, "pos": 0.75, "grade": "pop", "tag": "ilustrasi"}),
+        ("sinabar#2", "hujan", "img/7259959.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "cold", "tag": "ilustrasi: merkuri"}),
+        ("hujan", "danau#1", "clips/181916.mp4", 0.5, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "cold", "tag": "ilustrasi"}),
+        ("danau#1", "senote#1", "img/3602207.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.55, "grade": "base", "tag": "laguna Yukatan, ilustrasi"}),
+        ("senote#1", "lumpur", "img/10225212.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "base", "tag": "cenote, ilustrasi"}),
+        ("lumpur", "di#1", "clips/skema_inti.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("di#1", "sampai", "clips/skema_waktu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("sampai", "follow", "clips/35423.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.6, "grade": "dusk", "tag": "Tikal, kini"}),
+        ("follow", "end", "img/853048.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "dusk", "tag": "Palenque, kini"}),
+    ]
+    TITLES = [
+        (0, "meracuni", f"{WT}SUKU MAYA\\N{{\\fs130}}{Y}TERNYATA..."),
+        ("meracuni", "garagara", f"{WT}MERACUNI\\N{Y}AIR\\NSENDIRI!"),
+        ("garagara", "kuil", f"{WT}GARA-GARA\\N{Y}WARNA\\NKESAYANGAN"),
+        ("kuil", "bahkan", f"{WT}KUIL\\N{Y}PATUNG"),
+        ("bahkan", "dari", f"{WT}BAHKAN JENAZAH\\N{Y}DILUMURI\\NMERAH"),
+        ("dari", "masalahnya", f"{{\\fs130}}{Y}SINABAR\\N{{\\fs60}}{WT}batu merah menyala"),
+        ("masalahnya", "sinabar#2", f"{{\\fs120}}{Y}MASALAHNYA..."),
+        ("sinabar#2", "hujan", f"{WT}SINABAR =\\N{Y}BIJIH\\NMERKURI"),
+        ("hujan", "danau#1", f"{{\\fs130}}{Y}HUJAN\\N{{\\fs92}}{WT}MENYAPUNYA..."),
+        ("danau#1", "lumpur", f"{WT}KE DANAU\\N{Y}& CENOTE"),
+        ("lumpur", "merkurinya", f"{WT}LUMPUR DANAU\\N{Y}DITELITI"),
+        ("merkurinya", "di#1", f"{WT}MERKURI\\N{{\\fs150}}{Y}>100X\\N{{\\fs80}}{WT}LIPAT!"),
+        ("di#1", "hampir", f"{WT}DI SATU\\N{Y}CENOTE..."),
+        ("hampir", "sampai", f"{WT}HAMPIR\\N{{\\fs150}}{Y}300\\N{{\\fs92}}{WT}TAHUN"),
+        ("sampai", "follow", f"{WT}SAMPAI KEJAYAAN\\N{Y}MAYA\\NRUNTUH"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"se-no-te.": "cenote.", "se-no-te,": "cenote,", "se-no-te": "cenote"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2513,7 +2598,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "58": [("seribu sembilan ratus tujuh puluh delapan,", "1978,"), ("seratus delapan puluh", "180")],
         "59": [("beri beri.", "beri-beri."), ("b satu.", "B1."), ("seribu sembilan ratus dua puluh sembilan,", "1929,")],
         "60": [("seratus tiga puluh satu", "131"), ("dua ribu", "2.000"), ("seribu delapan ratus sembilan puluh,", "1890,"),
-               ("seratus delapan puluh ribu", "180.000")]}[EP]
+               ("seratus delapan puluh ribu", "180.000")],
+        "61": [],
+        "62": [("seratus", "100"), ("tiga ratus", "300")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

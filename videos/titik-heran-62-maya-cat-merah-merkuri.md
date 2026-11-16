@@ -188,7 +188,7 @@ Catatan: peneliti tidak menyebut merkuri sebagai penyebab runtuhnya Maya. Kekeri
 
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Foto reruntuhan adalah Tulum, Palenque, Uxmal, dan Tikal masa kini (bukan lokasi studi); bubuk pigmen, logam cair, hujan, dan laguna adalah ilustrasi; grafik lumpur dan garis waktu adalah skema buatan sendiri.
+Foto reruntuhan adalah Tulum, Palenque, Uxmal, dan Tikal masa kini (bukan lokasi studi); bubuk pigmen, gua cenote, logam cair, hujan, dan laguna adalah ilustrasi; grafik lumpur dan garis waktu adalah skema buatan sendiri.
 Sumber: Waters et al., Science Advances (4 Nov 2026); EurekAlert/AAAS; Live Science; Gizmodo; Archaeology News
 
 #titikheran #sukumaya #sejarahdunia #arkeologi #faktaunik
@@ -211,3 +211,34 @@ Fun fact: tahun 1994 arkeolog membuka sebuah makam di Palenque dan menemukan jas
 - Archaeology Magazine (10 Nov 2026), "How Many Maya Cities Were Contaminated with Mercury?": https://archaeology.org/news/
 - University of Cincinnati, waduk Tikal tercemar merkuri (Scientific Reports 2020): https://www.uc.edu/news/articles/n20927014/ancient-maya-reservoirs-were-polluted-with-toxic-mercury-blue-green-algae.html
 - Tomb of the Red Queen (Palenque, 1994): https://en.wikipedia.org/wiki/Tomb_of_the_Red_Queen · National Geographic: https://www.nationalgeographic.com/history/history-magazine/article/Maya_Red_Queen
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 16 Nov 2026)
+
+Take Akram v4 (1 take, 523 kredit): 33,72 detik. Jeda dirapatkan di 11 titik (TIGHT) → 31,24 detik, lalu atempo 1,063 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,6 dBFS. Semua 64 kata terucap (kata opsional "menyala" dan "yang baru diteliti" tetap dipakai). Tanpa bisikan.
+
+VO yang terdengar: "Suku Maya ternyata meracuni air mereka sendiri... gara-gara warna kesayangan mereka! Kuil, patung, bahkan jenazah dilumuri merah menyala dari batu sinabar. Masalahnya, sinabar adalah bijih merkuri. Hujan menyapunya ke danau dan cenote. Lumpur danau yang baru diteliti: merkurinya melonjak lebih dari 100 kali lipat! Di satu cenote, racun itu bertahan hampir 300 tahun... sampai kejayaan Maya runtuh. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,3 | Suku Maya ternyata | `[curious]` | El Castillo Tulum, video asli, punch-in (label "Tulum, kini") | video 122329 | SUKU MAYA **TERNYATA...** |
+| 0:01,3–0:02,9 | meracuni air mereka sendiri... | `[curious]` | Air biru di gua cenote (label "cenote, ilustrasi") | foto 2299636 | MERACUNI **AIR SENDIRI!** |
+| 0:02,9–0:04,9 | gara-gara warna kesayangan mereka! | `[curious]` | Bubuk pigmen merah memenuhi layar, punch-in (label "ilustrasi") | foto 2924891 | GARA-GARA **WARNA KESAYANGAN** |
+| 0:04,9–0:06,5 | Kuil, patung, | `[dramatic]` | Kuil Prasasti Palenque di hutan, grade hangat (label "Palenque, kini") | foto 1649598 | KUIL **PATUNG** |
+| 0:06,5–0:08,8 | bahkan jenazah dilumuri merah menyala | `[dramatic]` | Fasad berukir Uxmal, grade hangat (label "Uxmal, kini") | foto 4909318 | BAHKAN JENAZAH **DILUMURI MERAH** |
+| 0:08,8–0:11,0 | dari batu sinabar. Masalahnya, | `[dramatic]` | Bubuk pigmen merah, zoom pelan (label "ilustrasi") | foto 2924891 | **SINABAR** · batu merah menyala → **MASALAHNYA...** |
+| 0:11,0–0:13,2 | sinabar adalah bijih merkuri. | `[dramatic]` | Logam cair keperakan, grade dingin (label "ilustrasi: merkuri") | foto 7259959 | SINABAR = **BIJIH MERKURI** |
+| 0:13,2–0:14,2 | Hujan menyapunya ke | `[curious]` | Tetes hujan di permukaan danau, grade dingin (label "ilustrasi") | video 181916 | **HUJAN** MENYAPUNYA... |
+| 0:14,2–0:15,3 | danau dan | `[curious]` | Laguna hijau-biru (label "laguna Yukatan, ilustrasi") | foto 3602207 | KE DANAU **& CENOTE** |
+| 0:15,3–0:16,7 | cenote. | `[curious]` | Cenote toska di bawah tebing gua (label "cenote, ilustrasi") | foto 10225212 | KE DANAU **& CENOTE** |
+| 0:16,7–0:21,5 | Lumpur danau yang baru diteliti: merkurinya melonjak lebih dari 100 kali lipat! | `[dramatic]` | Skema: inti lumpur "Lago Cobá" naik ke tempatnya, lapisan bermerkuri menyala merah; batang "AWAL 0,02" lalu "PUNCAK 2,3" (µg per gram lumpur) melonjak; pill **>100X**, "siput & ganggang lenyap", sumber "Science Advances, 4 Nov 2026" | skema62 (inti) | LUMPUR DANAU **DITELITI** → MERKURI **>100X** LIPAT! |
+| 0:21,5–0:25,6 | Di satu cenote, racun itu bertahan hampir 300 tahun... | `[dramatic]` | Skema garis waktu 0–900 M; pill "CENOTE XCACH"; pita merah tumbuh dari 535 ke 810 M; pill "±535–810 M" dan "merkuri di atas batas bahaya berat" | skema62 (waktu) | DI SATU **CENOTE...** → HAMPIR **300** TAHUN |
+| 0:25,6–0:27,2 | sampai kejayaan Maya runtuh. | `[dramatic]` | Kuil Tikal di hutan, grade senja (label "Tikal, kini") | video 35423 | SAMPAI KEJAYAAN **MAYA RUNTUH** |
+| 0:27,2–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Kuil Palenque berkabut, pull-out pelan, grade senja (label "Palenque, kini") | foto 853048 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- Adegan "danau dan cenote" ditambah foto cenote toska 10225212 (cadangan) supaya kata "cenote" punya gambar sendiri; hook memakai foto gua cenote 2299636 berlabel "cenote, ilustrasi".
+- Foto siput 3800682 tidak dipakai; "siput & ganggang lenyap" tampil sebagai pill di skema inti lumpur.
+- Garis waktu tidak memberi zona "kota ditinggalkan" (terlalu singkat untuk dibaca); urutan waktu itu dibawa VO dan klip Tikal sesudahnya, dan caption menjelaskan bahwa merkuri hanya tekanan tambahan.
+- "Cenote" dibaca Akram dari ejaan "se-no-te"; subtitle dan .srt menulis "cenote". Transkrip diselaraskan dengan naskah, jadi pengucapan tidak bisa dicek dari teks: dengarkan sekali "cenote", "sinabar", dan "Follow" sebelum unggah.
