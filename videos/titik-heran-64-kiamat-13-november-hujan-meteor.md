@@ -227,3 +227,35 @@ Tag teman kamu yang minggu lalu sempat panik soal "kiamat 13 November" 😆 Mau 
 - CNN Indonesia, "Viral ilmuwan prediksi kiamat 13 November 2026, cek faktanya" (5 Nov 2026): https://www.cnnindonesia.com/teknologi/20261105064736-199-1423467/viral-ilmuwan-prediksi-kiamat-13-november-2026-cek-faktanya
 - CNBC Indonesia, "Viral ahli fisika ramal bumi kiamat minggu depan, ini faktanya" (6 Nov 2026): https://www.cnbcindonesia.com/tech/20261106122328-37-782936/viral-ahli-fisika-ramal-bumi-kiamat-minggu-depan-ini-faktanya
 - Viva, "Heboh kiamat disebut terjadi 13 November 2026, ini dasar prediksi ilmuwan 66 tahun lalu": https://www.viva.co.id/berita/dunia/1927500-heboh-kiamat-disebut-terjadi-13-november-2026-ini-dasar-prediksi-ilmuan-66-tahun-lalu
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 17 Nov 2026)
+
+Take Akram v4 (1 take, 505 kredit): 30,8 detik. Jeda dirapatkan di 9 titik (TIGHT, jeda dramatis tetap dijaga) → 29,95 detik, lalu atempo 1,019 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,1 dBFS. 60 kata tertulis (64 terucap). Tanpa bisikan. Tidak ada kata yang dipotong.
+
+VO yang terdengar: "Kiamat 13 November ternyata pernah dikira benar-benar terjadi! Hampir 200 tahun lalu, langit Amerika hujan bintang... puluhan ribu per jam! Banyak yang berlutut berdoa, yakin dunia kiamat. Ternyata itu debu komet, yang dilewati Bumi setiap November. Banyak butirnya cuma sebesar pasir... tapi melesat 71 kilometer per detik! Debu yang sama... melintas lagi minggu ini. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,7 | Kiamat 13 November | `[curious]` | Langit penuh garis meteor di atas Bima Sakti, punch-in (tanpa label, gambar asli) | foto 3601198 | KIAMAT **13 NOVEMBER** |
+| 0:01,7–0:04,3 | ternyata pernah dikira benar-benar terjadi! | `[curious]` | Bima Sakti vertikal dengan meteor, push-in pelan | foto 10156068 | TERNYATA PERNAH **"TERJADI"?** |
+| 0:04,3–0:06,2 | Hampir 200 tahun lalu, | `[dramatic]` | Skema: kartu kertas tua "AMERIKA UTARA · DINI HARI / 13 November 1833 / dari Kanada sampai Karibia" di atas foto meteor yang digelapkan | skema64 (tanggal) di atas foto 3607859 | HAMPIR **200 TAHUN** LALU |
+| 0:06,2–0:08,4 | langit Amerika hujan bintang... | `[dramatic]` | Jejak bintang berputar dengan meteor, zoom pelan (label "ilustrasi: meteor masa kini") | foto 3603454 | LANGIT **HUJAN BINTANG** |
+| 0:08,4–0:10,2 | puluhan ribu per jam! | `[dramatic]` | Langit penuh meteor, crop sisi lain, zoom pelan (label "ilustrasi: meteor masa kini"); label kecil "perkiraan 50.000–150.000+ per jam" | foto 3601198 | **PULUHAN RIBU** METEOR / JAM! |
+| 0:10,2–0:12,3 | Banyak yang berlutut berdoa, | `[dramatic]` | Siluet pria berlutut berdoa dalam kabut, grade jingga redup (label "ilustrasi") | foto 1868418 | BANYAK YANG **BERLUTUT BERDOA** |
+| 0:12,3–0:14,0 | yakin dunia kiamat. | `[dramatic]` | Gereja malam dengan bintang jatuh, komposit (label "ilustrasi") | foto 5210922 | YAKIN **KIAMAT!** |
+| 0:14,0–0:16,1 | Ternyata itu debu komet, yang | `[curious]` | Timelapse komet berekor di langit senja (label "ilustrasi: komet NEOWISE") | video 45636 | TERNYATA... **DEBU KOMET** |
+| 0:16,1–0:18,1 | dilewati Bumi setiap November. | `[curious]` | Skema orbit: Matahari, orbit Bumi, jejak debu komet 55P/Tempel-Tuttle; Bumi bergerak dan menyala saat memotong jejak debu; pill "jalur debu komet 55P/Tempel-Tuttle", "mengitari Matahari ±33 tahun sekali", "skema · data orbit: NASA" | skema64 (orbit) | DILEWATI BUMI **TIAP NOVEMBER** |
+| 0:18,1–0:20,8 | Banyak butirnya cuma sebesar pasir... | `[dramatic]` | Makro pasir gelap berkilau, push-in pelan (label "ilustrasi: butir pasir") | foto 1846729 | BANYAK BUTIRNYA **SEBESAR PASIR** |
+| 0:20,8–0:24,0 | tapi melesat 71 kilometer per detik! | `[dramatic]` | Skema kecepatan: meteor hijau melesat, lalu garis Jakarta → Surabaya dengan titik berlari; pill "±660 km ≈ 10 detik" | skema64 (kecepatan) di atas foto 3603448 | MELESAT **71 KM** PER DETIK! |
+| 0:24,0–0:25,4 | Debu yang sama... | `[dramatic]` | Timelapse langit berbintang di atas pegunungan (label "ilustrasi") | video 14955 | DEBU **YANG SAMA...** |
+| 0:25,4–0:27,0 | melintas lagi minggu ini. | `[dramatic]` | Lanjutan timelapse; label "hujan meteor Leonid · 6–30 Nov · kini ±3–15/jam" | video 14955 | MELINTAS LAGI **MINGGU INI** |
+| 0:27,0–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Komet di atas siluet pohon saat senja, pull-out pelan (label "ilustrasi: komet NEOWISE") | foto 5416865 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- Penghitung angka (skema hitung) diganti foto 3601198 dengan label kecil "perkiraan 50.000–150.000+ per jam"; skema_info diganti label "hujan meteor Leonid · 6–30 Nov · kini ±3–15/jam". Dua-duanya tetap tidak menjanjikan badai meteor.
+- Judul orbit memakai kata VO, "DILEWATI BUMI TIAP NOVEMBER" (bukan "BUMI MELEWATINYA").
+- Perbandingan kecepatan tampil sebagai garis Jakarta–Surabaya dengan pill "±660 km ≈ 10 detik".
+- Emoji di teks layar tidak dipakai (renderer tidak menampilkannya).
+- Video komet 45636 di-crop di posisi 0,43 supaya kometnya masuk bingkai vertikal.

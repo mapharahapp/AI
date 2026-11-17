@@ -212,3 +212,36 @@ Tag teman kamu yang langsung "bisu" tiap kali disuruh kerja 😆 Btw, kata "oran
 - EcoWatch, "Orangutans are only non-human primates who can 'talk' about the past": https://www.ecowatch.com/orangutans-communication-2620109708.html
 - Wikipedia, "Orangutan" (Etymology: Bontius 1631; Taxonomy: Linnaeus 1758 *Homo troglodytes*; Cribb dkk. 2014): https://en.wikipedia.org/wiki/Orangutan
 - Earthstoriez, "Myths and folklore of the orang utan (Indonesia)": https://earthstoriez.com/myths-and-folklore-of-the-orang-utan-indonesia
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 17 Nov 2026)
+
+Take Akram v4 (1 take, 564 kredit): 35,24 detik. prep63.py memotong kata opsional "bahkan" dan "Tapi" (awal kalimat konflik) → 34,08 detik; jeda dirapatkan di 10 titik (TIGHT) → 31,51 detik, lalu atempo 1,072 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,3 dBFS. 62 kata terucap. Tanpa bisikan. Cek pengucapan dengan Scribe di audio asli (194 kredit): "Linnaeus" (dari ejaan "Li-ne-us"), "Batavia", "Sumatra", "dua puluh menit", dan "Follow" terdengar benar.
+
+VO yang terdengar: "Orangutan ternyata pernah dianggap bisa bicara... tapi sengaja diam, supaya tidak disuruh kerja! Dokter Belanda di Batavia mencatatnya... Linnaeus memasukkannya ke golongan manusia! Benarkah orangutan bisa "bicara"? Di hutan Sumatra, peneliti menyamar jadi harimau. Seekor induk diam sampai 20 menit... baru berteriak, seolah memberi tahu anaknya! Kemampuan yang dulu dikira cuma milik manusia: "membicarakan" masa lalu! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,8 | Orangutan ternyata pernah dianggap | `[curious]` | Orangutan jantan berpipi lebar menatap kamera, punch-in | foto 7760085 | ORANGUTAN **TERNYATA...** |
+| 0:01,8–0:02,9 | bisa bicara... | `[curious]` | Orangutan jantan membuka mulut, punch-in | foto 3508417 | **BISA BICARA?** |
+| 0:02,9–0:04,6 | tapi sengaja diam, | `[mischievously]` | Orangutan rebahan malas di jerami, zoom pelan | foto 5914224 | TAPI **SENGAJA DIAM** |
+| 0:04,6–0:06,2 | supaya tidak disuruh kerja! | `[mischievously]` | Orangutan bertopang dagu menatap datar | foto 5795183 | SUPAYA TIDAK **DISURUH KERJA!** |
+| 0:06,2–0:07,1 | Dokter Belanda di | `[dramatic]` | Gedoeng Jasindo, Kota Tua, grade sepia (label "Kota Tua Jakarta, kini") | foto 1033489 | DICATAT DI **BATAVIA** |
+| 0:07,1–0:08,3 | Batavia mencatatnya... | `[dramatic]` | Skema: kartu kertas tua "BATAVIA, ±1631" dengan ringkasan catatan Bontius ("Orang Melayu bilang, ia bisa bicara... tapi tidak mau, takut disuruh kerja.") | skema63 (catatan) di atas foto 1033489 | DICATAT DI **BATAVIA** |
+| 0:08,3–0:11,5 | Linnaeus memasukkannya ke golongan manusia! | `[dramatic]` | Skema: kartu nama Latin "Homo troglodytes · Linnaeus, 1758" di atas wajah orangutan; "Homo" menyala, pill "HOMO = GENUS MANUSIA" | skema63 (homo) di atas foto 571462 | LINNAEUS: **GOLONGAN MANUSIA!** |
+| 0:11,5–0:13,7 | Benarkah orangutan bisa "bicara"? | `[curious]` | Orangutan jantan makan buah, zoom pelan | foto 6814771 | BENARKAH **BISA "BICARA"?** |
+| 0:13,7–0:14,9 | Di hutan Sumatra, | `[dramatic]` | Orangutan bergelantung di pohon, grade hutan (label "ilustrasi") | video 180691 | HUTAN **KETAMBE** · ACEH |
+| 0:14,9–0:16,2 | peneliti menyamar jadi | `[dramatic]` | Pola loreng harimau (label "ilustrasi: kain loreng") | 2030341 | PENELITI **MENYAMAR JADI "HARIMAU"** |
+| 0:16,2–0:16,9 | harimau. | `[dramatic]` | Wajah harimau Sumatra, punch-in (label "harimau Sumatra, ilustrasi") | foto 7844188 | PENELITI **MENYAMAR JADI "HARIMAU"** |
+| 0:16,9–0:19,9 | Seekor induk diam sampai 20 menit... | `[dramatic]` | Skema: jam melingkar dari "predator pergi" 0 → 20 menit, tanda ±7; pill "rata-rata ±7 menit", "terlama 20 menit", sumber "Science Advances, 2018 · Ketambe, Aceh" | skema63 (jam) di atas foto 3985939 | INDUK **DIAM...** |
+| 0:19,9–0:21,7 | baru berteriak, seolah memberi tahu | `[dramatic]` | Induk dan anak di dahan, grade hutan, zoom pelan (label "ilustrasi") | foto 3985939 | BARU **BERTERIAK!** → SEOLAH **MEMBERI TAHU ANAKNYA** |
+| 0:21,7–0:22,3 | anaknya! | `[dramatic]` | Induk memeluk anak, grade hangat (label "ilustrasi") | foto 3534153 | SEOLAH **MEMBERI TAHU ANAKNYA** |
+| 0:22,3–0:25,4 | Kemampuan yang dulu dikira cuma milik manusia: | `[dramatic]` | Wajah orangutan close-up, grade hangat, push-in | foto 22054 | DULU DIKIRA **CUMA MANUSIA** |
+| 0:25,4–0:27,0 | "membicarakan" masa lalu! | `[dramatic]` | Wajah orangutan jantan, grade hangat; label "Science Advances, 2018" | foto 571462 | **"MEMBICARAKAN"** MASA LALU! |
+| 0:27,0–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Induk dan anak orangutan, pull-out pelan | foto 449561 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- Take 35,2 detik, jadi kata opsional "bahkan" dan "Tapi" di awal kalimat konflik dipotong ("Benarkah orangutan bisa 'bicara'?"); makna tidak berubah.
+- Hook memakai 3508417 (orangutan membuka mulut, pas dengan "bisa bicara?") dan tambahan 5795183 (orangutan bertopang dagu) untuk "supaya tidak disuruh kerja"; 22054 pindah ke adegan reveal.
+- Skema catatan dan kartu nama Latin dipisah jadi dua klip (catatan, homo); sumber "Science Advances, 2018" tampil di skema jam dan sebagai label di adegan reveal.

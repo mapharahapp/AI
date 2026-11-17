@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|62 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|64 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -2367,6 +2367,95 @@ elif EP == "62":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {"se-no-te.": "cenote.", "se-no-te,": "cenote,", "se-no-te": "cenote"}
+elif EP == "63":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo63cut.wav"  # prep63.py drops "bahkan" and the sentence-opening "Tapi" (the take ran 35,2 s)
+    TIGHT = {"bicara#1": 0.3, "mencatatnya": 0.3, "menit": 0.4, "kerja": 0.25, "manusia#1": 0.25, "bicara#2": 0.25,
+             "harimau": 0.25, "anaknya": 0.25, "lalu": 0.25, "diam#1": 0.18, "berteriak": 0.18}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema63.py: skema_catatan (an old paper card "Batavia, ±1631" with the Malays' story as Bontius noted it),
+    # skema_homo (a Latin name card "Homo troglodytes · Linnaeus, 1758" over an orangutan face, HOMO = GENUS MANUSIA),
+    # skema_jam (a circular timer from "PREDATOR PERGI" past "±7 MENIT rata-rata" to "20 MENIT" over the mother and baby)
+    SHOTS = [
+        (0, "bisa#1", "img/7760085.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.35, "grade": "pop"}),
+        ("bisa#1", "tapi", "img/3508417.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.7, "grade": "pop"}),
+        ("tapi", "supaya", "img/5914224.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.7, "grade": "warm"}),
+        ("supaya", "dokter", "img/5795183.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.3, "grade": "warm"}),
+        ("dokter", "batavia", "img/1033489.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "sepia", "tag": "Kota Tua Jakarta, kini"}),
+        ("batavia", "lineus", "clips/skema_catatan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lineus", "benarkah", "clips/skema_homo.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("benarkah", "di#2", "img/6814771.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base"}),
+        ("di#2", "peneliti", "clips/180691.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.55, "grade": "forest", "tag": "ilustrasi"}),
+        ("peneliti", "harimau", "img/2030341.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "base", "tag": "ilustrasi: kain loreng"}),
+        ("harimau", "seekor", "img/7844188.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "base", "tag": "harimau Sumatra, ilustrasi"}),
+        ("seekor", "baru", "clips/skema_jam.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("baru", "anaknya", "img/3985939.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.45, "grade": "forest", "tag": "ilustrasi"}),
+        ("anaknya", "kemampuan", "img/3534153.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("kemampuan", "membicarakan", "img/22054.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "warm"}),
+        ("membicarakan", "follow", "img/571462.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm"}),
+        ("follow", "end", "img/449561.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm"}),
+    ]
+    TITLES = [
+        (0, "bisa#1", f"{WT}ORANGUTAN\\N{{\\fs130}}{Y}TERNYATA..."),
+        ("bisa#1", "tapi", f"{{\\fs130}}{Y}BISA\\NBICARA?"),
+        ("tapi", "supaya", f"{WT}TAPI\\N{{\\fs130}}{Y}SENGAJA\\NDIAM"),
+        ("supaya", "dokter", f"{WT}SUPAYA TIDAK\\N{Y}DISURUH\\NKERJA!"),
+        ("dokter", "lineus", f"{WT}DICATAT DI\\N{{\\fs130}}{Y}BATAVIA"),
+        ("lineus", "benarkah", f"{WT}LINNAEUS:\\N{Y}GOLONGAN\\NMANUSIA!"),
+        ("benarkah", "di#2", f"{WT}BENARKAH\\N{Y}BISA\\N\"BICARA\"?"),
+        ("di#2", "peneliti", f"{WT}HUTAN\\N{Y}KETAMBE\\N{{\\fs70}}{WT}ACEH"),
+        ("peneliti", "seekor", f"{WT}PENELITI\\N{Y}MENYAMAR JADI\\N\"HARIMAU\""),
+        ("seekor", "baru", f"{WT}INDUK\\N{{\\fs130}}{Y}DIAM..."),
+        ("baru", "seolah", f"{WT}BARU\\N{{\\fs130}}{Y}BERTERIAK!"),
+        ("seolah", "kemampuan", f"{WT}SEOLAH\\N{Y}MEMBERI TAHU\\NANAKNYA"),
+        ("kemampuan", "membicarakan", f"{WT}DULU DIKIRA\\N{Y}CUMA\\NMANUSIA"),
+        ("membicarakan", "follow", f"{{\\fs84}}{Y}\"MEMBICARAKAN\"\\N{{\\fs110}}{WT}MASA LALU!"),
+        ("membicarakan", "follow", "Science Advances, 2018", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Li-ne-us": "Linnaeus"}
+elif EP == "64":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo64.mp3"
+    TIGHT = {"terjadi": 0.45, "bintang": 0.4, "berdoa": 0.35, "kiamat#2": 0.45, "komet": 0.35, "pasir": 0.35, "sama": 0.35}  # natural speed: keep the beats
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema64.py: skema_tanggal (an old newspaper card "13 NOVEMBER 1833 · AMERIKA UTARA" over meteors),
+    # skema_orbit (the Sun, Earth's orbit and the 33-year orbit of comet 55P/Tempel-Tuttle with its dust trail; Earth lights up
+    # where it crosses the trail, at NOVEMBER), skema_kecepatan (a meteor streak, "71 KM/DETIK" and a Jakarta-Surabaya line, ±10 s)
+    SHOTS = [
+        (0, "ternyata#1", "img/3601198.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "base"}),
+        ("ternyata#1", "hampir", "img/10156068.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base"}),
+        ("hampir", "langit", "clips/skema_tanggal.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("langit", "puluhan", "img/3603454.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "ilustrasi: meteor masa kini"}),
+        ("puluhan", "banyak#1", "img/3601198.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.8, "grade": "base", "tag": "ilustrasi: meteor masa kini"}),
+        ("banyak#1", "yakin", "img/1868418.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "dusk", "tag": "ilustrasi"}),
+        ("yakin", "ternyata#2", "img/5210922.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("ternyata#2", "dilewati", "clips/45636.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.43, "grade": "base", "tag": "ilustrasi: komet NEOWISE"}),
+        ("dilewati", "banyak#2", "clips/skema_orbit.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("banyak#2", "tapi", "img/1846729.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "base", "tag": "ilustrasi: butir pasir"}),
+        ("tapi", "debu#2", "clips/skema_kecepatan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("debu#2", "follow", "clips/14955.mp4", 1, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("follow", "end", "img/5416865.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.4, "grade": "dusk", "tag": "ilustrasi: komet NEOWISE"}),
+    ]
+    TITLES = [
+        (0, "ternyata#1", f"{WT}KIAMAT\\N{{\\fs130}}{Y}13 NOVEMBER"),
+        ("ternyata#1", "hampir", f"{WT}TERNYATA PERNAH\\N{{\\fs130}}{Y}\"TERJADI\"?"),
+        ("hampir", "langit", f"{WT}HAMPIR\\N{{\\fs130}}{Y}200 TAHUN\\N{{\\fs92}}{WT}LALU"),
+        ("langit", "puluhan", f"{WT}LANGIT\\N{Y}HUJAN\\NBINTANG"),
+        ("puluhan", "banyak#1", f"{{\\fs120}}{Y}PULUHAN RIBU\\N{{\\fs92}}{WT}METEOR / JAM!"),
+        ("puluhan", "banyak#1", "perkiraan 50.000–150.000+ per jam", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("banyak#1", "yakin", f"{WT}BANYAK YANG\\N{Y}BERLUTUT\\NBERDOA"),
+        ("yakin", "ternyata#2", f"{WT}YAKIN\\N{{\\fs130}}{Y}KIAMAT!"),
+        ("ternyata#2", "dilewati", f"{WT}TERNYATA...\\N{{\\fs130}}{Y}DEBU\\NKOMET"),
+        ("dilewati", "banyak#2", f"{WT}DILEWATI BUMI\\N{Y}TIAP\\NNOVEMBER"),
+        ("banyak#2", "tapi", f"{WT}BANYAK BUTIRNYA\\N{Y}SEBESAR\\NPASIR"),
+        ("tapi", "debu#2", f"{WT}MELESAT\\N{{\\fs130}}{Y}71 KM\\N{{\\fs92}}{WT}PER DETIK!"),
+        ("debu#2", "melintas", f"{WT}DEBU\\N{{\\fs130}}{Y}YANG SAMA..."),
+        ("melintas", "follow", f"{WT}MELINTAS LAGI\\N{{\\fs130}}{Y}MINGGU\\NINI"),
+        ("melintas", "follow", "hujan meteor Leonid · 6–30 Nov · kini ±3–15/jam", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2600,7 +2689,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "60": [("seratus tiga puluh satu", "131"), ("dua ribu", "2.000"), ("seribu delapan ratus sembilan puluh,", "1890,"),
                ("seratus delapan puluh ribu", "180.000")],
         "61": [],
-        "62": [("seratus", "100"), ("tiga ratus", "300")]}[EP]
+        "62": [("seratus", "100"), ("tiga ratus", "300")],
+        "63": [("dua puluh", "20")],
+        "64": [("tiga belas", "13"), ("dua ratus", "200"), ("tujuh puluh satu", "71")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
