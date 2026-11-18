@@ -212,3 +212,37 @@ Ekspektasi: unicorn putih bersinar 🦄 Realita: badak berbulu yang hobi mandi l
 - Mongabay (Sep 2022), "New estimate of less than 50 Sumatran rhinos shows perilous population drop": https://news.mongabay.com/2022/09/new-estimate-of-less-than-50-sumatran-rhinos-shows-perilous-population-drop/
 - Mongabay (Jan 2014), "Requiem or recovery? The Sumatran rhino 200 years after its description" (pendapat badak Jawa): https://news.mongabay.com/2014/01/requiem-or-recovery-the-sumatran-rhino-200-years-after-its-description
 - Media Indonesia, "Dua Badak Sumatra Hamil, Harapan Populasi Bertambah": https://mediaindonesia.com/humaniora/940466/dua-badak-sumatra-hamil-harapan-populasi-bertambah
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 18 Nov 2026)
+
+Take Akram v4 (1 take, ±524 kredit): 33,1 detik. Jeda dirapatkan di 11 titik (TIGHT, jeda dramatis setelah "ekor" dan "lihat" tetap dijaga) → 31,41 detik, lalu atempo 1,068 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,1 dBFS. 63 kata, tidak ada kata yang dipotong. Tanpa bisikan. Pengucapan "yunikorn" belum dicek dengan transkripsi berbayar: dengarkan sekali sebelum unggah.
+
+VO yang terdengar: "Unicorn ternyata pernah "ditemukan" di Sumatra... tapi wujud aslinya mengecewakan! Marco Polo menggambarkannya: hampir sebesar gajah, bulunya seperti kerbau, satu cula di dahi. Katanya jelek, suka berkubang lumpur, sama sekali tidak mirip dongeng! Jadi, apa yang ia lihat? Para ahli yakin: badak Sumatra, badak paling berbulu! Kini tinggal puluhan ekor... tapi tahun ini, dua induknya sedang hamil! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,3 | Unicorn ternyata pernah | `[curious]` | Patung unicorn batu memegang perisai, grade dingin, punch-in (tanpa label, gambar asli) | foto 1932128 | **UNICORN** TERNYATA... |
+| 0:01,3–0:03,1 | "ditemukan" di Sumatra... | `[curious]` | Sungai di hutan hujan Sumatra, video asli, grade hijau, dorong pelan (label "Sumatra") | video 366983 | "DITEMUKAN" DI **SUMATRA?!** |
+| 0:03,1–0:05,9 | tapi wujud aslinya mengecewakan! | `[dramatic]` | Kepala patung unicorn putih di langit biru, grade dingin, punch-in | foto 1370898 | WUJUD ASLINYA **MENGECEWAKAN!** |
+| 0:05,9–0:07,4 | Marco Polo menggambarkannya: | `[dramatic]` | Gondola Venesia senja, grade sepia (label "Venesia, kini") | foto 9294935 | CATATAN **MARCO POLO** |
+| 0:07,4–0:09,0 | hampir sebesar gajah, | `[dramatic]` | Gajah di hutan, zoom pelan | foto 1822636 | HAMPIR SEBESAR **GAJAH** |
+| 0:09,0–0:10,5 | bulunya seperti kerbau, | `[dramatic]` | Kerbau di sungai, zoom pelan | foto 1807517 | BULU SEPERTI **KERBAU** |
+| 0:10,5–0:12,0 | satu cula di dahi. | `[dramatic]` | Skema catatan: kartu kertas tua "CATATAN MARCO POLO · SUMATRA, ±1292" di atas Venesia sepia gelap; ✓ HAMPIR SEBESAR GAJAH, ✓ BULU SEPERTI KERBAU, lalu ✓ 1 CULA DI DAHI dicentang dan distabilo kuning (label "skema") | skema65 (catatan) di atas foto 9294935 | **1 CULA** DI DAHI |
+| 0:12,0–0:14,6 | Katanya jelek, suka berkubang lumpur, | `[mischievously]` | Badak berendam dari belakang, cuma kulit dan telinga basah (cula tidak terlihat), grade hijau (label "ilustrasi") | foto 3602696 | KATANYA **JELEK!** → SUKA **LUMPUR** |
+| 0:14,6–0:16,4 | sama sekali tidak mirip dongeng! | `[mischievously]` | Figur unicorn putih di atas alas merah | foto 1778961 | TIDAK MIRIP **DONGENG!** |
+| 0:16,4–0:19,8 | Jadi, apa yang ia lihat? Para ahli yakin: | `[curious]` → `[dramatic]` | Kepala badak yang digelapkan jadi siluet, zoom pelan (jawaban belum terlihat) | foto 4418777 (versi gelap) | JADI, APA YANG **IA LIHAT?** → PARA AHLI **YAKIN...** |
+| 0:19,8–0:20,9 | badak Sumatra, | `[dramatic]` | Foto penuh kepala badak bercula, punch-in (label "ilustrasi: badak India") | foto 4418777 | **BADAK SUMATRA!** |
+| 0:20,9–0:22,5 | badak paling berbulu! | `[dramatic]` | Skema cula: gambar garis kepala badak Sumatra, "cula depan" dan "cula belakang kecil" menyala kuning, lalu goresan bulu tumbuh dengan pill "bulu kasar menutupi tubuh" (label "skema") | skema65 (cula) di atas foto 3602696 yang diburamkan | BADAK PALING **BERBULU** |
+| 0:22,5–0:24,3 | Kini tinggal puluhan ekor... | `[dramatic]` | Anak badak bercula satu, grade pucat (label "ilustrasi: badak India"); label kecil "perkiraan IUCN: 34–47 ekor di alam" | foto 6885402 | KINI TINGGAL **PULUHAN EKOR** |
+| 0:24,3–0:27,0 | tapi tahun ini, dua induknya sedang hamil! | `[dramatic]` | Induk dan anak badak, grade hangat keemasan (label "ilustrasi: badak India"); dari "dua": label "Ratu & Delilah · Way Kambas · Okt 2026" | foto 3798786 | TAPI **TAHUN INI...** → **2 INDUK HAMIL!** |
+| 0:27,0–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Induk dan anak badak berjalan menjauh di jalan tanah, grade hangat, pull-out pelan (label "ilustrasi") | foto 9558888 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- Skema hitung tidak dibuat. Angka IUCN dan nama induk tampil sebagai label kecil di atas foto badak, jadi tidak ada ikon atau angka yang menutupi gambar.
+- Skema catatan cuma berisi 3 ciri (gajah dan kerbau sudah tercentang, cula dicentang saat "cula"). "Jelek" dan "lumpur" tampil di foto badak berendam, tanpa stempel merah.
+- "Jadi, apa yang ia lihat? Para ahli yakin:" semuanya di atas siluet gelap; foto badak terang baru muncul di "badak Sumatra" (19,8 detik), supaya jawabannya tidak bocor.
+- Foto 3597214 (badak membuka mulut) tidak dipakai; "badak paling berbulu" memakai skema cula.
+- Penutup memakai 9558888 saja (tanpa patung unicorn lagi). Badak di foto ini **badak Afrika**, bukan badak India, jadi labelnya cuma "ilustrasi".
+- Emoji di teks layar tidak dipakai (renderer tidak menampilkannya). Tahun ±1292 cuma ada di kartu skema, tidak di VO.

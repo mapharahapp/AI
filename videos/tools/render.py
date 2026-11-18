@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|64 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|66 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -2456,6 +2456,102 @@ elif EP == "64":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}
+elif EP == "65":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo65.mp3"
+    TIGHT = {"ekor": 0.42, "lihat": 0.4}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema65.py: skema_catatan (an old paper card "CATATAN MARCO POLO · SUMATRA, ±1292": HAMPIR SEBESAR GAJAH,
+    # BULU SEPERTI KERBAU and, on "cula", 1 CULA DI DAHI tick on), skema_cula (a Sumatran rhino head in profile, line drawing
+    # with hair strokes, a big front horn and a small back horn labelled, over a dark blurred rhino photo)
+    SHOTS = [
+        (0, "ditemukan", "img/1932128.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "cold"}),
+        ("ditemukan", "tapi#1", "clips/366983.mp4", 2, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "forest", "tag": "Sumatra"}),
+        ("tapi#1", "marco", "img/1370898.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.62, "grade": "cold"}),
+        ("marco", "hampir", "img/9294935.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.5, "grade": "sepia", "tag": "Venesia, kini"}),
+        ("hampir", "bulunya", "img/1822636.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base"}),
+        ("bulunya", "satu", "img/1807517.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base"}),
+        ("satu", "katanya", "clips/skema_catatan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("katanya", "sama", "img/3602696.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.42, "grade": "forest", "tag": "ilustrasi"}),
+        ("sama", "jadi", "img/1778961.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "base"}),
+        ("jadi", "badak#1", "img/4418777d.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.45, "grade": "base"}),
+        ("badak#1", "badak#2", "img/4418777.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "base", "tag": "ilustrasi: badak India"}),
+        ("badak#2", "kini", "clips/skema_cula.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kini", "tapi#2", "img/6885402.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "ash", "tag": "ilustrasi: badak India"}),
+        ("tapi#2", "follow", "img/3798786.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.6, "grade": "warm", "tag": "ilustrasi: badak India"}),
+        ("follow", "end", "img/9558888.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+    ]
+    TITLES = [
+        (0, "ditemukan", f"{{\\fs130}}{Y}UNICORN\\N{{\\fs92}}{WT}TERNYATA..."),
+        ("ditemukan", "tapi#1", f"{WT}\"DITEMUKAN\" DI\\N{{\\fs130}}{Y}SUMATRA?!"),
+        ("tapi#1", "marco", f"{WT}WUJUD ASLINYA\\N{{\\fs108}}{Y}MENGECEWAKAN!"),
+        ("marco", "hampir", f"{WT}CATATAN\\N{{\\fs120}}{Y}MARCO POLO"),
+        ("hampir", "bulunya", f"{WT}HAMPIR SEBESAR\\N{{\\fs130}}{Y}GAJAH"),
+        ("bulunya", "satu", f"{WT}BULU SEPERTI\\N{{\\fs130}}{Y}KERBAU"),
+        ("satu", "katanya", f"{{\\fs130}}{Y}1 CULA\\N{{\\fs92}}{WT}DI DAHI"),
+        ("katanya", "suka", f"{WT}KATANYA\\N{{\\fs150}}{Y}JELEK!"),
+        ("suka", "sama", f"{WT}SUKA\\N{{\\fs130}}{Y}LUMPUR"),
+        ("sama", "jadi", f"{WT}TIDAK MIRIP\\N{{\\fs130}}{Y}DONGENG!"),
+        ("jadi", "para", f"{WT}JADI, APA YANG\\N{{\\fs130}}{Y}IA LIHAT?"),
+        ("para", "badak#1", f"{WT}PARA AHLI\\N{{\\fs130}}{Y}YAKIN..."),
+        ("badak#1", "badak#2", f"{{\\fs130}}{Y}BADAK\\NSUMATRA!"),
+        ("badak#2", "kini", f"{WT}BADAK PALING\\N{{\\fs130}}{Y}BERBULU"),
+        ("kini", "tapi#2", f"{WT}KINI TINGGAL\\N{{\\fs130}}{Y}PULUHAN\\NEKOR"),
+        ("kini", "tapi#2", "perkiraan IUCN: 34–47 ekor di alam", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("tapi#2", "dua#1", f"{WT}TAPI\\N{{\\fs130}}{Y}TAHUN INI..."),
+        ("dua#1", "follow", f"{{\\fs130}}{Y}2 INDUK\\NHAMIL!"),
+        ("dua#1", "follow", "Ratu & Delilah · Way Kambas · Okt 2026", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Yunikorn": "Unicorn"}
+elif EP == "66":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo66cut.wav"  # prep66.py drops "dan", "prajurit", "pantai" and "itu" at quiet joints (the take ran 34,9 s)
+    TIGHT = {"turki": 0.42, "raksasa": 0.4, "ajaks#3": 0.4, "meter": 0.4}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema66.py: skema_desa (a hill cut by the sea in cross-section, over the dusk Dardanelles photo, little huts and
+    # "DESA PURBA? · 2011"), skema_penampang (the same section opened up: stone rows, a green clay cap, a carried-in black fill,
+    # a red stamp "TUMULUS"), skema_peta (a not-to-scale sketch: the strait, TROYA inland, the mound on the shore ±10 km away,
+    # Rhoiteion), skema_raksasa (a 1,7 m person beside a 5 m skeleton silhouette with a ruler, "11 HASTA ≈ 5 METER")
+    SHOTS = [
+        (0, "diduga", "img/6665057.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm"}),
+        ("diduga", "konon", "img/112286.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "Çanakkale, Turki"}),
+        ("konon", "ajaks#1", "clips/201766.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.55, "grade": "night", "tag": "ilustrasi"}),
+        ("ajaks#1", "setelah", "img/7781532.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.6, "grade": "warm", "tag": "ilustrasi"}),
+        ("setelah", "namanya", "img/1400696.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "warm", "tag": "patung Achilles, Corfu"}),
+        ("namanya", "bukit", "img/1866738.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("bukit", "ombak", "clips/skema_desa.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ombak", "ternyata", "clips/44973.mp4", 3, "v", False, {"zoom": 0.05, "pos": 0.35, "grade": "cold", "tag": "ilustrasi"}),
+        ("ternyata", "dekat", "clips/skema_penampang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dekat", "penulis", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema, tidak berskala"}),
+        ("penulis", "laut", "img/6062044.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "sepia", "tag": "lukisan Perang Troya, Achilleion"}),
+        ("laut", "kerangkanya", "clips/201766.mp4", 9, "v", False, {"zoom": 0.05, "pos": 0.4, "grade": "night", "tag": "ilustrasi"}),
+        ("kerangkanya", "ahli", "clips/skema_raksasa.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ahli", "fosil", "img/1213775.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.42, "grade": "base", "tag": "ilustrasi: kerangka mamut"}),
+        ("fosil", "follow", "img/241964.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "ilustrasi: kerangka mamut"}),
+        ("follow", "end", "img/607574.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm", "tag": "Çanakkale, Turki"}),
+    ]
+    TITLES = [
+        (0, "diduga", f"{WT}MAKAM PAHLAWAN\\N{{\\fs120}}{Y}PERANG\\NTROYA"),
+        ("diduga", "konon", f"{WT}DIDUGA DITEMUKAN\\N{{\\fs120}}{Y}DI PANTAI\\NTURKI"),
+        ("konon", "ajaks#1", f"{WT}KONON...\\N{{\\fs130}}{Y}RAKSASA?!"),
+        ("ajaks#1", "setelah", f"{{\\fs170}}{Y}AJAX"),
+        ("setelah", "namanya", f"{WT}TERKUAT SETELAH\\N{{\\fs120}}{Y}ACHILLES"),
+        ("namanya", "bukit", f"{WT}JADI NAMA KLUB\\N{{\\fs110}}{Y}AJAX\\NAMSTERDAM"),
+        ("bukit", "ombak", f"{WT}DULU DIKIRA\\N{{\\fs120}}{Y}DESA PURBA"),
+        ("ombak", "lalu", f"{WT}OMBAK\\N{{\\fs130}}{Y}MENGIKIS"),
+        ("lalu", "ternyata", f"{WT}DIGALI\\N{{\\fs130}}{Y}OKT 2024"),
+        ("ternyata", "dekat", f"{WT}TERNYATA\\N{{\\fs110}}{Y}GUNDUKAN\\NBUATAN MANUSIA!"),
+        ("dekat", "penulis", f"{WT}DEKAT LOKASI\\N{{\\fs110}}{Y}CATATAN\\NKUNO"),
+        ("penulis", "laut", f"{WT}PENULIS KUNO\\N{{\\fs120}}{Y}BERCERITA..."),
+        ("laut", "kerangkanya", f"{WT}LAUT MEMBONGKAR\\N{{\\fs110}}{Y}MAKAM AJAX"),
+        ("kerangkanya", "ahli", f"{WT}KERANGKANYA\\N{{\\fs150}}{Y}5 METER?!"),
+        ("ahli", "fosil", f"{WT}AHLI\\N{{\\fs130}}{Y}MENDUGA..."),
+        ("fosil", "follow", f"{WT}FOSIL\\N{{\\fs130}}{Y}GAJAH\\NPURBA!"),
+        ("fosil", "follow", "dugaan Adrienne Mayor, sejarawan sains", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Ajaks,": "Ajax,", "Ajaks": "Ajax", "Ajaks...": "Ajax...", "Akiles...": "Achilles..."}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2691,7 +2787,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "61": [],
         "62": [("seratus", "100"), ("tiga ratus", "300")],
         "63": [("dua puluh", "20")],
-        "64": [("tiga belas", "13"), ("dua ratus", "200"), ("tujuh puluh satu", "71")]}[EP]
+        "64": [("tiga belas", "13"), ("dua ratus", "200"), ("tujuh puluh satu", "71")],
+        "65": [("satu cula", "1 cula"), ("dua induknya", "2 induknya")],
+        "66": [("lima meter!", "5 meter!")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

@@ -217,3 +217,37 @@ Fans Ajax Amsterdam, sudah tahu nama klubnya diambil dari pahlawan Perang Troya?
 - Pausanias, *Description of Greece* 1.35.4–5 (Perseus/Perseids): https://cts.perseids.org/read/greekLit/tlg0525/tlg001/perseus-eng2/1.35.4-1.36.5
 - Footy Headlines, "Full AFC Ajax Logo History & Meaning": https://www.footyheadlines.com/2020/04/full-afc-ajax-logo-history-meaning-120.html
 - Mayor, A. (2000), *The First Fossil Hunters: Paleontology in Greek and Roman Times*, Princeton University Press (dirujuk La Brújula Verde)
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 18 Nov 2026)
+
+Take Akram v4 (1 take, ±544 kredit): 34,9 detik. Empat kata pendek dipotong di sambungan yang sunyi (prep66.py, crossfade 20 ms): **"dan"** (kalimat 1), **"prajurit"** (kalimat 2), **"pantai"** (kalimat 3), **"itu"** (kalimat 6) → 33,25 detik. Jeda dirapatkan di 11 titik (TIGHT, jeda dramatis setelah "Turki", "raksasa", "Ajax..." dan "meter" tetap dijaga) → 31,75 detik, lalu atempo 1,08 → **video 30,00 detik**, master -14,9 LUFS, true peak -2,1 dBFS. 61 kata terucap. Tanpa bisikan. Pengucapan "Ajaks" dan "Akiles" belum dicek dengan transkripsi berbayar: dengarkan sekali sebelum unggah.
+
+VO yang terdengar: "Makam pahlawan Perang Troya diduga ditemukan di pantai Turki... konon, ia raksasa! Ajax, terkuat setelah Achilles... namanya dipakai klub Ajax Amsterdam! Bukit itu dulu dikira desa purba. Ombak mengikisnya, lalu digali: ternyata gundukan buatan manusia, dekat lokasi catatan kuno! Penulis kuno bercerita: laut membongkar makam Ajax... kerangkanya setinggi 5 meter! Ahli menduga: fosil gajah purba! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,7 | Makam pahlawan Perang Troya | `[curious]` | Kepala Kuda Troya kayu di Çanakkale, grade hangat, punch-in (tanpa label, gambar asli) | foto 6665057 | MAKAM PAHLAWAN **PERANG TROYA** |
+| 0:01,7–0:04,0 | diduga ditemukan di pantai Turki... | `[curious]` | Selat Çanakkale dengan kapal, zoom pelan (label "Çanakkale, Turki") | foto 112286 | DIDUGA DITEMUKAN **DI PANTAI TURKI** |
+| 0:04,0–0:06,2 | konon, ia raksasa! | `[dramatic]` | Ombak badai menghantam, gerak lambat, grade malam (label "ilustrasi") | video 201766 (mulai detik 2) | KONON... **RAKSASA?!** |
+| 0:06,2–0:07,3 | Ajax, terkuat | `[dramatic]` | Patung prajurit Yunani dari bawah, langit gelap, punch-in (label "ilustrasi") | foto 7781532 | **AJAX** |
+| 0:07,3–0:08,3 | setelah Achilles... | `[dramatic]` | Patung Achilles berhelm, grade hangat (label "patung Achilles, Corfu") | foto 1400696 | TERKUAT SETELAH **ACHILLES** |
+| 0:08,3–0:10,6 | namanya dipakai klub Ajax Amsterdam! | `[dramatic]` | Stadion sepak bola penuh penonton, tanpa logo klub (label "ilustrasi") | foto 1866738 | JADI NAMA KLUB **AJAX AMSTERDAM** |
+| 0:10,6–0:13,2 | Bukit itu dulu dikira desa purba. | `[curious]` | Skema desa: penampang bukit di tepi laut saat senja, rumah kecil muncul dengan tanda tanya; pill "DESA PURBA? · dugaan sejak 2011" (label "skema") | skema66 (desa) di atas foto 10371331 | DULU DIKIRA **DESA PURBA** |
+| 0:13,2–0:15,5 | Ombak mengikisnya, lalu digali: | `[dramatic]` | Ombak mengikis tebing kapur, grade dingin (label "ilustrasi") | video 44973 (mulai detik 3) | OMBAK **MENGIKIS** → DIGALI **OKT 2024** |
+| 0:15,5–0:17,6 | ternyata gundukan buatan manusia, | `[dramatic]` | Skema penampang: bukit terbuka, deretan batu penahan, lapisan tanah liat hijau, timbunan hitam berisi pecahan tembikar dan tulang; stempel merah "TUMULUS"; pill "batu penahan + tanah liat hijau", "tanah diangkut dari permukiman lain", sumber "digali Okt 2024 · Polat, TRMuseum 2026" (label "skema") | skema66 (penampang) | TERNYATA **GUNDUKAN BUATAN MANUSIA!** |
+| 0:17,6–0:19,2 | dekat lokasi catatan kuno! | `[dramatic]` | Skema peta: Selat Dardanella, titik "gundukan Işıldaktepe Altı", garis putus-putus "±10 km" ke "TROYA", titik merah "Rhoiteion: makam Ajax menurut Strabo" (label "skema, tidak berskala") | skema66 (peta) | DEKAT LOKASI **CATATAN KUNO** |
+| 0:19,2–0:20,9 | Penulis kuno bercerita: | `[dramatic]` | Lukisan pertempuran Perang Troya, grade sepia, zoom pelan (label "lukisan Perang Troya, Achilleion") | foto 6062044 | PENULIS KUNO **BERCERITA...** |
+| 0:20,9–0:22,9 | laut membongkar makam Ajax... | `[dramatic]` | Ombak badai, potongan lain, grade malam (label "ilustrasi") | video 201766 (mulai detik 9) | LAUT MEMBONGKAR **MAKAM AJAX** |
+| 0:22,9–0:25,0 | kerangkanya setinggi 5 meter! | `[dramatic]` | Skema raksasa: penggaris 1–5 m, kerangka 5 m tumbuh dari bawah di samping orang "manusia ±1,7 m"; pill "11 hasta ≈ 5 METER" dan "kisah Philostratus, ±abad ke-3 M" (label "skema") | skema66 (raksasa) di atas foto 6062044 yang diburamkan | KERANGKANYA **5 METER?!** |
+| 0:25,0–0:25,9 | Ahli menduga: | `[curious]` | Kerangka mamut di museum, cahaya gelap, punch-in (label "ilustrasi: kerangka mamut") | foto 1213775 | AHLI **MENDUGA...** |
+| 0:25,9–0:27,2 | fosil gajah purba! | `[curious]` | Tengkorak dan gading mamut dari dekat, grade hangat (label "ilustrasi: kerangka mamut"); label kecil "dugaan Adrienne Mayor, sejarawan sains" | foto 241964 | **FOSIL GAJAH PURBA!** |
+| 0:27,2–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Kuda Troya utuh di tepi laut Çanakkale, pull-out pelan (label "Çanakkale, Turki") | foto 607574 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- VO lebih pendek 4 kata ("dan", "prajurit", "pantai", "itu") supaya atempo tidak lebih dari 8%. Arti kalimat tidak berubah; "Ajax, terkuat setelah Achilles" tetap jelas karena teks layar menulis TERKUAT SETELAH ACHILLES.
+- Skema penampang dipecah jadi dua skema: **skema_desa** (anggapan lama, 2011) dan **skema_penampang** (hasil galian, TUMULUS). Pita "±25 CM" tidak dipakai.
+- Adegan ombak mengikis (44973) memakai kata "digali" juga, dengan judul "DIGALI OKT 2024".
+- Kerangka baru muncul di 22,9 detik (skema raksasa), sesudah janji "raksasa" di detik 4, jadi jawabannya tidak bocor.
+- Emoji di teks layar tidak dipakai (renderer tidak menampilkannya).
