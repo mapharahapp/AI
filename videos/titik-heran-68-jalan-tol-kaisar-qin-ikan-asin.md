@@ -193,7 +193,7 @@ Lalu kisah ikan asinnya: tahun 210 SM, Qin Shi Huang wafat di Shaqiu saat berkel
 
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Peta dan denah adalah skema buatan sendiri; foto gurun dan ikan asin adalah ilustrasi.
+Peta, denah, dan rute adalah skema buatan sendiri; foto gurun, kepala terakota berlatar Tembok Besar, dan ikan asin adalah ilustrasi.
 Sumber: Global Times (11 Nov 2026); Huashang Daily via Sohu (11 Nov 2026); Arkeonews (17 Nov 2026); SCMP (Des 2025); Pemerintah Provinsi Shaanxi (Des 2025); CSSN (2025); Shiji, Qin Shi Huang Benji
 
 #titikheran #pasukanterakota #qinshihuang #sejarahdunia #faktaunik
@@ -215,3 +215,36 @@ Rest area zaman Kaisar Qin: nggak ada kopi, nggak ada toilet, tapi ada istana �
 - CSSN, Chinese Social Sciences Net (19 Jun 2025), tentang Jalan Lurus Qin dan kutipan Shiji: https://cssn.cn/dfpd/djbd/202506/t20250619_5880112.shtml
 - Wikipedia, "Qin Shi Huang" (wafat di Shaqiu, kereta ikan untuk menutupi bau): https://en.wikipedia.org/wiki/Qin_Shi_Huang
 - Sima Qian, *Shiji* (Catatan Sejarawan Agung), bab 6 *Qin Shi Huang Benji* dan bab 88 *Meng Tian Liezhuan*
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 19 Nov 2026)
+
+Take Akram v4 (1 take, ±555 kredit): 34,2 detik. Dua frasa opsional dipotong di sambungan yang sunyi (prep68.py): **"untuk pasukan."** (kalimat 3) dan **"Masalahnya,"** (kalimat 5) → 31,85 detik. Jeda dirapatkan di 7 titik (TIGHT, jeda dramatis setelah "kilometer...", "berkeliling...", "dirahasiakan." dan "bau..." tetap dijaga) → 30,76 detik, lalu atempo 1,046 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,2 dBFS. 59 kata terucap. Tanpa bisikan (kalimat rahasia pakai `[softly]`).
+
+VO yang terdengar: "Kaisar yang dijaga Pasukan Terakota ternyata punya "jalan tol" 700 kilometer... dan "rest area"-nya diduga baru ditemukan, terkubur pasir gurun! Jalan selebar puluhan meter ini dibangun 2.200 tahun lalu. Tapi kaisar wafat saat berkeliling... dan kematiannya dirahasiakan. Jenazahnya mulai bau... Jadi rombongannya membawa ikan asin, untuk menyamarkan baunya... lalu pulang lewat jalan ini! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,2 | Kaisar yang dijaga Pasukan Terakota | `[curious]` | Barisan Pasukan Terakota di lubang galian, foto vertikal asli, grade hangat, punch-in (label "Pasukan Terakota, Xi'an") | foto 1028104 | **PASUKAN TERAKOTA...** |
+| 0:02,2–0:03,0 | ternyata punya | `[curious]` | Wajah prajurit terakota close-up berlatar hitam, dorong pelan (label "Pasukan Terakota") | foto 3433932 | KAISARNYA **TERNYATA** PUNYA... |
+| 0:03,0–0:05,7 | "jalan tol" 700 kilometer... | `[curious]` | Skema peta China utara: Sungai Kuning, garis kuning lurus ditarik dari "Xianyang · ibu kota" ke "Jiuyuan (kini Baotou)", pill "700+ KM" dan "JALAN LURUS QIN · ±212 SM" (label "skema, rute perkiraan") | skema68 (peta) | **"JALAN TOL" 700+ KM!** |
+| 0:05,7–0:08,6 | dan "rest area"-nya diduga baru ditemukan, | `[dramatic]` | Bukit pasir berpola angin, grade keemasan, dorong pelan (label "ilustrasi: gurun di China") | foto 7963244 | **"REST AREA"-NYA** DIDUGA DITEMUKAN! |
+| 0:08,6–0:10,2 | terkubur pasir gurun! | `[dramatic]` | Skema denah: pasir beriak, denah istana muncul dari bawah pasir, pill "±10.000 M²" dan "diduga istana singgah kaisar" (label "skema") | skema68 (denah) | TERKUBUR **PASIR GURUN** |
+| 0:10,2–0:12,1 | Jalan selebar puluhan meter ini | `[dramatic]` | Skema lebar: pita jalan menjauh ke cakrawala, panah "20–60 M", barisan ikon prajurit kecil berjalan (label "skema") | skema68 (lebar) | LEBARNYA **20–60 M** |
+| 0:12,1–0:14,5 | dibangun 2.200 tahun lalu. | `[dramatic]` | Barisan prajurit terakota, grade hangat, zoom pelan (label "Pasukan Terakota, Xi'an") | foto 2542028 | DIBANGUN **±212 SM** · untuk pasukan · 2.200 tahun lalu |
+| 0:14,5–0:17,2 | Tapi kaisar wafat saat berkeliling... | `[dramatic]` | Kepala patung terakota berlatar pegunungan dan Tembok Besar (montase), grade senja (label "ilustrasi") | foto 3806840 | KAISAR **WAFAT...** · 210 SM · saat berkeliling negeri |
+| 0:17,2–0:19,4 | dan kematiannya dirahasiakan. | `[softly]` | Kuda dan prajurit terakota di lubang galian, grade malam (label "Pasukan Terakota, Xi'an") | foto 4855072 | KEMATIANNYA **DIRAHASIAKAN** |
+| 0:19,4–0:21,3 | Jenazahnya mulai bau... | `[curious]` | Barisan prajurit terakota dari dekat, grade redup (label "Pasukan Terakota, Xi'an") | foto 2090558 | JENAZAHNYA **MULAI BAU...** |
+| 0:21,3–0:23,7 | Jadi rombongannya membawa ikan asin, | `[dramatic]` | Tumpukan ikan asin di pasar, grade hangat, punch-in (label "ilustrasi") | foto 4035638 | **IKAN ASIN!** |
+| 0:23,7–0:25,2 | untuk menyamarkan baunya... | `[dramatic]` | Ikan kering bergantung, grade hangat (label "ilustrasi") | foto 2806953 | UNTUK **MENYAMARKAN BAUNYA** · menurut catatan sejarah Shiji |
+| 0:25,2–0:27,1 | lalu pulang lewat jalan ini! | `[dramatic]` | Skema rute: peta yang sama, rute putus-putus dari "Shaqiu: kaisar wafat" ke Jiuyuan, lalu ikon kereta turun lewat jalan kuning ke Xianyang, "kematian diumumkan", sumber "rute menurut Shiji, Sima Qian" (label "skema, rute perkiraan") | skema68 (rute) | PULANG LEWAT **JALAN INI!** |
+| 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Aula lubang 1 Pasukan Terakota, pull-out pelan (label "Pasukan Terakota, Xi'an") | foto 1180910 | **FOLLOW** · @titikheran |
+
+Beda dari storyboard (§6):
+- VO lebih pendek 2 frasa ("untuk pasukan." dan "Masalahnya,") supaya atempo di bawah 5%. Arti tidak berubah: "untuk pasukan" tetap tampil sebagai label di layar.
+- Adegan 3 dipecah: foto gurun untuk "rest area diduga ditemukan", lalu skema denah untuk "terkubur pasir gurun". Tiga pill denah (fondasi, saluran air, genteng kui) tidak dipakai supaya layar tidak penuh; detailnya ada di caption.
+- Adegan 5–6: foto 3806840 diberi label "ilustrasi" karena montase (kepala patung di latar Tembok Besar). Foto kuda 4855072 pindah ke "dirahasiakan", dan "mulai bau" memakai foto baru 2090558 (barisan terakota asli, sudah dicek di contact sheet).
+- Pill "210 SM · Shaqiu" jadi label "210 SM · saat berkeliling negeri"; Shaqiu tampil di skema rute.
+- Rute rombongan dibuat sebagai klip sendiri (skema_rute), bukan peta adegan 2 yang dipakai ulang.
+- Data peta: Natural Earth 1:50m (domain publik), titik Huangtuliang perkiraan.

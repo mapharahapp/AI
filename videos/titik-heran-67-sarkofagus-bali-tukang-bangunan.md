@@ -1,5 +1,7 @@
 # Titik Heran #67: Tukang Bangunan di Bali Gali Tanah, Malah Menemukan Peti Batu yang Diduga Sarkofagus
 
+> **Status: CADANGAN.** Arif mengganti #67 dengan topik Obama & IShowSpeed bahasa Indonesia (19 Nov 2026). Naskah ini siap dipakai untuk episode Indonesia berikutnya; cek ulang kesegaran beritanya dan ganti nomor episode sebelum dipakai.
+
 Seri: #66 luar negeri, **#67 Indonesia** (selang-seling), lalu #68 luar negeri.
 Tayang: **Jumat 20 November 2026, pagi 06.00–07.00 WIB** (saran 06.15).
 Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#66: VO **Akram di Eleven v4**, b-roll Pixabay, skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**.

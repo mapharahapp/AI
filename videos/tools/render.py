@@ -1,5 +1,5 @@
 """Render a Titik Heran short: Pixabay b-roll + Akram VO + word subtitles + big title cards.
-usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|66 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
+usage: python3 render.py 05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|...|68 [plan|subs]   (run in the episode work dir: clips/, img/, voNN.mp3, wNN.json)
 From episode 09 on (STYLE 2): long VO pauses are tightened, the VO is mastered louder (two-pass loudnorm),
 the spoken caption word turns yellow, title cards pop in, every shot gets a slow push-in and a colour grade,
 and shot/title times can be word anchors: "danau#2" = start of the 2nd "danau", "batu>" = its end, "+0.2" shifts.
@@ -2552,6 +2552,101 @@ elif EP == "66":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {"Ajaks,": "Ajax,", "Ajaks": "Ajax", "Ajaks...": "Ajax...", "Akiles...": "Achilles..."}
+elif EP == "67":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo67.mp3"  # one v4 take, 30,7 s: no cuts, only TIGHT
+    TIGHT = {"kabar": 0.42, "baikbaik": 0.36, "bisa": 0.36, "jakarta": 0.3, "amerika": 0.36, "lalu#2": 0.42}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema67.py: skema_call (a video-call mock-up: a dark "IShowSpeed · LIVE" tile with a plain avatar, an Obama
+    # tile from the official portrait, the bubble "Apa kabar?" and then "Baik-baik!" from Obama, pill "16 Nov 2026"),
+    # skema_pidato (a stage spotlight and a mic; two quote cards from the 12 Nov Streamer Awards speech, "Terima kasih banyak
+    # semuanya." and "Aku cinta kalian semuanya."), skema_unesco (the 10 official languages of the UNESCO General Conference
+    # listed one by one, Indonesian last as no. 10 in yellow, pill "disetujui bulat · 20 Nov 2023")
+    SHOTS = [
+        (0, "apa", "img/1199638.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.08, "grade": "warm", "tag": "Barack Obama · foto arsip"}),
+        ("apa", "dan#1", "img/1129156.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.5, "top": 0.45, "grade": "base", "tag": "Barack Obama · foto arsip"}),
+        ("dan#1", "kok", "clips/skema_call.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema, bukan tangkapan layar"}),
+        ("kok", "obama#3", "img/1166062.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "top": 0.45, "grade": "warm", "tag": "Barack Obama · foto arsip"}),
+        ("obama#3", "jajan", "clips/163786.mp4", 3, "v", False, {"zoom": 0.05, "pos": 0.55, "grade": "base", "tag": "Jakarta kini"}),
+        ("jajan", "dan#2", "img/2377229.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "warm", "tag": "ilustrasi"}),
+        ("dan#2", "spid#2", "img/10168637.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.62, "grade": "warm", "tag": "ilustrasi"}),
+        ("spid#2", "film", "clips/201676.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("film", "minggu", "img/2757815.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "base", "tag": "ilustrasi"}),
+        ("minggu", "juga", "img/8676528.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("juga", "dan#3", "clips/skema_pidato.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan#3", "bahasa#3", "clips/24671.mp4", 2, "v", False, {"zoom": 0.05, "pos": 0.5, "grade": "base"}),
+        ("bahasa#3", "follow", "clips/skema_unesco.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "clips/163786.mp4", 14, "v", False, {"zoom": "pull", "pos": 0.5, "grade": "morning", "tag": "Jakarta"}),
+    ]
+    TITLES = [
+        (0, "apa", f"{{\\fs120}}{Y}IShowSpeed\\N{{\\fs92}}{WT}NYAPA OBAMA..."),
+        ("apa", "dan#1", f"{{\\fs150}}{Y}\"APA\\NKABAR?\""),
+        ("dan#1", "bahasa#1", f"{WT}OBAMA\\N{{\\fs120}}{Y}TERNYATA\\NJAWAB..."),
+        ("bahasa#1", "kok", f"{WT}PAKAI\\N{{\\fs110}}{Y}BAHASA\\NINDONESIA!"),
+        ("kok", "obama#3", f"{{\\fs160}}{Y}KOK\\NBISA?"),
+        ("obama#3", "jajan", f"{WT}OBAMA KECIL\\N{{\\fs120}}{Y}4 TAHUN\\NDI JAKARTA"),
+        ("obama#3", "jajan", "1967–1971 · Menteng Dalam", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("jajan", "dan#2", f"{WT}JAJAN\\N{{\\fs150}}{Y}SATE..."),
+        ("dan#2", "spid#2", f"{{\\fs150}}{Y}& BAKSO!"),
+        ("dan#2", "spid#2", "kenangan Obama · pidato di UI, 2010", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("spid#2", "film", f"{WT}KALAU\\N{{\\fs120}}{Y}IShowSpeed?"),
+        ("film", "minggu", f"{WT}BELAJAR DARI\\N{{\\fs120}}{Y}FILM\\NINDONESIA"),
+        ("film", "minggu", "\"Aku suka nonton film Indonesia.\"", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("minggu", "juga", f"{WT}MINGGU LALU\\N{{\\fs110}}{Y}MENANG DI\\NAMERIKA"),
+        ("minggu", "juga", "Streamer of the Year · Los Angeles, 12 Nov", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("juga", "dan#3", f"{WT}PIDATONYA PAKAI\\N{{\\fs110}}{Y}BAHASA\\NINDONESIA!"),
+        ("dan#3", "bahasa#3", f"{WT}TEPAT HARI INI,\\N{{\\fs130}}{Y}3 TAHUN\\NLALU..."),
+        ("bahasa#3", "kesepuluh", f"{WT}BAHASA INDONESIA\\N{{\\fs120}}{Y}RESMI JADI..."),
+        ("kesepuluh", "follow", f"{{\\fs120}}{Y}BAHASA KE-10\\N{{\\fs80}}{WT}SIDANG UMUM UNESCO!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Spid": "Speed", "Unesko!": "UNESCO!"}
+elif EP == "68":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo68cut.wav"  # prep68.py drops the optional "untuk pasukan." and "Masalahnya," at quiet joints (the take ran 34,2 s)
+    TIGHT = {"kilometer": 0.42, "gurun": 0.4, "berkeliling": 0.45, "dirahasiakan": 0.45, "bau": 0.45, "baunya": 0.36, "ini#2": 0.4}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema68.py: skema_peta (northern China, the Yellow River loop, a straight yellow road drawn from Xianyang up to
+    # Jiuyuan, "700+ KM", the Mu Us sand patch and a red pulse "Huangtuliang, Yulin"), skema_denah (the palace footprint rising
+    # out of rippled sand, "±10.000 M²", pills on the rammed-earth base and the kui-pattern tiles), skema_lebar (a road band
+    # running into the distance with a "20–60 M" span arrow and little soldiers marching), skema_rute (the same map: the
+    # convoy's dashed route Shaqiu -> Jiuyuan, then a cart icon running down the straight road to Xianyang)
+    SHOTS = [
+        (0, "ternyata", "img/1028104.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": "Pasukan Terakota, Xi'an"}),
+        ("ternyata", "jalan#1", "img/3433932.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.45, "grade": "warm", "tag": "Pasukan Terakota"}),
+        ("jalan#1", "dan#1", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema, rute perkiraan"}),
+        ("dan#1", "terkubur", "img/7963244.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi: gurun di China"}),
+        ("terkubur", "jalan#2", "clips/skema_denah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("jalan#2", "dibangun", "clips/skema_lebar.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dibangun", "tapi", "img/2542028.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.55, "grade": "warm", "tag": "Pasukan Terakota, Xi'an"}),
+        ("tapi", "dan#2", "img/3806840.jpg", 0, "f", False, {"zoom": 0.07, "pos": 0.62, "grade": "dusk", "tag": "ilustrasi"}),
+        ("dan#2", "jenazahnya", "img/4855072.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.6, "grade": "night", "tag": "Pasukan Terakota, Xi'an"}),
+        ("jenazahnya", "jadi", "img/2090558.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.4, "grade": "dim", "tag": "Pasukan Terakota, Xi'an"}),
+        ("jadi", "untuk", "img/4035638.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "warm", "tag": "ilustrasi"}),
+        ("untuk", "lalu#2", "img/2806953.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("lalu#2", "follow", "clips/skema_rute.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema, rute perkiraan"}),
+        ("follow", "end", "img/1180910.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm", "tag": "Pasukan Terakota, Xi'an"}),
+    ]
+    TITLES = [
+        (0, "ternyata", f"{WT}PASUKAN\\N{{\\fs130}}{Y}TERAKOTA..."),
+        ("ternyata", "jalan#1", f"{WT}KAISARNYA\\N{{\\fs110}}{Y}TERNYATA\\NPUNYA..."),
+        ("jalan#1", "dan#1", f"{{\\fs120}}{Y}\"JALAN TOL\"\\N{WT}700+ KM!"),
+        ("dan#1", "terkubur", f"{{\\fs110}}{Y}\"REST AREA\"-NYA\\N{{\\fs92}}{WT}DIDUGA DITEMUKAN!"),
+        ("terkubur", "jalan#2", f"{WT}TERKUBUR\\N{{\\fs120}}{Y}PASIR GURUN"),
+        ("jalan#2", "dibangun", f"{WT}LEBARNYA\\N{{\\fs150}}{Y}20–60 M"),
+        ("dibangun", "tapi", f"{WT}DIBANGUN\\N{{\\fs130}}{Y}±212 SM"),
+        ("dibangun", "tapi", "untuk pasukan · 2.200 tahun lalu", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("tapi", "dan#2", f"{WT}KAISAR\\N{{\\fs140}}{Y}WAFAT..."),
+        ("tapi", "dan#2", "210 SM · saat berkeliling negeri", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("dan#2", "jenazahnya", f"{WT}KEMATIANNYA\\N{{\\fs110}}{Y}DIRAHASIAKAN"),
+        ("jenazahnya", "jadi", f"{WT}JENAZAHNYA\\N{{\\fs120}}{Y}MULAI BAU..."),
+        ("jadi", "untuk", f"{{\\fs150}}{Y}IKAN\\NASIN!"),
+        ("untuk", "lalu#2", f"{WT}UNTUK\\N{{\\fs110}}{Y}MENYAMARKAN\\NBAUNYA"),
+        ("untuk", "lalu#2", "menurut catatan sejarah Shiji", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("lalu#2", "follow", f"{WT}PULANG LEWAT\\N{{\\fs120}}{Y}JALAN INI!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"lalu,": "lalu.", "jenazahnya": "Jenazahnya"}
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2789,7 +2884,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "63": [("dua puluh", "20")],
         "64": [("tiga belas", "13"), ("dua ratus", "200"), ("tujuh puluh satu", "71")],
         "65": [("satu cula", "1 cula"), ("dua induknya", "2 induknya")],
-        "66": [("lima meter!", "5 meter!")]}[EP]
+        "66": [("lima meter!", "5 meter!")],
+        "67": [("ai show spid", "IShowSpeed"), ("empat tahun", "4 tahun"), ("tiga tahun", "3 tahun"), ("kesepuluh", "ke-10")],
+        "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):
