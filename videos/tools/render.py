@@ -2647,6 +2647,42 @@ elif EP == "68":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {"lalu,": "lalu.", "jenazahnya": "Jenazahnya"}
+elif EP == "70":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo70.mp3"  # one v4 take, 32,8 s (version A of the naskah): no cuts, plain pauses tightened, then a small speed-up
+    # the dramatic pauses after "Bumi...", "jantungnya...", "menyembuhkannya..." and "Anehnya..." are kept
+    TIGHT = {"bumi": 0.42, "jantungnya": 0.42, "menyembuhkannya": 0.36, "anehnya": 0.45}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema70.py: skema_sakit (Higgsfield H1 Voyager, red glitch bands and scanlines on "sakit"), skema_detak (H3 radio
+    # dish at night, a green heartbeat line runs across, a "DATA: —" box blinks red), skema_chip (H4 circuit board with the
+    # red chip, small code blocks hop one by one to a healthy chip, pill "2024: KODE DIPINDAH"), skema_kalender (H5 sky dimmed,
+    # two calendar sheets 14 NOV 2023 and 14 NOV 2026 drop in side by side, red rings on both 14s)
+    SHOTS = [
+        (0, "hari#1", "img/67757.jpg", 0, "b", False, {"zoom": "punch", "grade": "warm", "tag": "foto NASA: piringan emas Voyager"}),
+        ("hari#1", "tapi", "clips/27770.mp4", 6, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "cold"}),
+        ("tapi", "gedung", "clips/skema_sakit.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
+        ("gedung", "masalahnya", "img/H2v.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("masalahnya", "kabar", "clips/skema_detak.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("kabar", "anehnya", "clips/skema_chip.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema"}),
+        ("anehnya", "follow", "clips/skema_kalender.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/H5.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "cold", "tag": "ilustrasi"}),
+    ]
+    TITLES = [
+        (0, "tapi", f"{WT}VOYAGER 1\\N{{\\fs120}}{Y}1 HARI CAHAYA"),
+        ("resmi", "hari#1", "benda buatan manusia pertama", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("hari#1", "tapi", "18 Nov 2026 · ±25,9 miliar km dari Bumi", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("tapi", "gedung", f"{WT}TAPI DIA SEDANG\\N{{\\fs150}}{Y}\"SAKIT\"!"),
+        ("gedung", "masalahnya", f"{WT}EMPIRE STATE\\N{{\\fs110}}{Y}MENYALA EMAS"),
+        ("gedung", "masalahnya", "17 Nov · untuk Golden Record", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("masalahnya", "menangkap", f"{WT}SEJAK\\N{{\\fs150}}{Y}14 NOV..."),
+        ("menangkap", "kabar", f"{{\\fs84}}{WT}CUMA \"DETAK JANTUNG\"\\N{{\\fs120}}{Y}TANPA DATA"),
+        ("kabar", "memindahkan", f"{WT}NASA PERNAH\\N{{\\fs96}}{Y}MENYEMBUHKANNYA"),
+        ("memindahkan", "anehnya", f"{WT}KODENYA DIPINDAH\\N{{\\fs110}}{Y}DARI 24 MILIAR KM"),
+        ("anehnya", "sakit#2", f"{{\\fs150}}{Y}ANEHNYA..."),
+        ("sakit#2", "follow", f"{WT}SAKIT YANG DULU\\N{{\\fs110}}{Y}JUGA 14 NOV!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Nasa": "NASA"}  # the TTS input spells "Nasa" so v4 does not read it letter by letter; "Voyejer satu" is in NUMS
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2886,7 +2922,9 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "65": [("satu cula", "1 cula"), ("dua induknya", "2 induknya")],
         "66": [("lima meter!", "5 meter!")],
         "67": [("ai show spid", "IShowSpeed"), ("empat tahun", "4 tahun"), ("tiga tahun", "3 tahun"), ("kesepuluh", "ke-10")],
-        "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")]}[EP]
+        "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")],
+        "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
+               ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
 for phrase, digits in NUMS:
     p = phrase.split()
     for i in range(len(words) - len(p) + 1):

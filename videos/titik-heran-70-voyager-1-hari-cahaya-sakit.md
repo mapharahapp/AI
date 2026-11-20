@@ -228,3 +228,26 @@ Bayangkan kirim chat "cepat sembuh ya" ke Voyager 1, balasannya baru datang lusa
 - NASA SVS (12 Nov 2026), "How Far Away Is Voyager 1? One Light-Day, Explained": https://svs.gsfc.nasa.gov/15120
 - NASA JPL (22 Apr 2024), "NASA's Voyager 1 Resumes Sending Engineering Updates to Earth": https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth
 - NASA Voyager blog (13 Jun 2024), "Voyager 1 Returning Science Data From All Four Instruments" (daftar arsip): https://science.nasa.gov/blogs/voyager/page/2
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 20 Nov 2026)
+
+Take Akram v4 (1 take, ±548 kredit), **VO versi A** (status NASA per 19 Nov: masih tanpa data, sinyal pembawa masih diterima): 32,8 detik. Tanpa potongan kata. Jeda biasa dirapatkan di 8 titik (TIGHT; jeda dramatis setelah "Bumi...", "jantungnya...", "menyembuhkannya..." dan "Anehnya..." tetap dijaga) → 31,29 detik, lalu atempo 1,064 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,0 dBFS. 63 kata tertulis. Tanpa bisikan. Cek ucapan dengan transkripsi ulang (±180 kredit): "Voyager", "Empire State", dan "NASA" terbaca benar.
+
+VO yang terdengar: "Voyager 1 resmi sejauh satu hari cahaya dari Bumi... tapi dia justru sedang "sakit"! Gedung Empire State sampai menyala emas untuk merayakannya. Masalahnya, sejak 14 November, antena NASA cuma menangkap "detak jantungnya"... tanpa data. Kabar baiknya, NASA pernah menyembuhkannya... dengan memindahkan kodenya dari jarak 24 miliar kilometer! Anehnya... sakit yang dulu itu juga dimulai tanggal 14 November! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:02,1 | Voyager 1 resmi sejauh satu | `[curious]` | Foto asli NASA sampul piringan emas Voyager, utuh di atas salinan buramnya, punch-in, grade hangat (label "foto NASA: piringan emas Voyager") | foto 67757 | **VOYAGER 1 · 1 HARI CAHAYA** · label "benda buatan manusia pertama" (0,8 detik) |
+| 0:02,1–0:03,6 | hari cahaya dari Bumi... | `[curious]` | Langit bintang bergerak pelan, grade dingin | video 27770 | judul tetap · label "18 Nov 2026 · ±25,9 miliar km dari Bumi" |
+| 0:03,6–0:06,2 | tapi dia justru sedang "sakit"! | `[dramatic]` | Voyager di angkasa, dorong pelan; glitch kecil di "dia" dan "sedang", glitch merah besar (geser baris, RGB split, scanline) di "sakit" (label "ilustrasi") | Higgsfield **H1** + skema70 (sakit) | TAPI DIA SEDANG **"SAKIT"!** |
+| 0:06,2–0:09,3 | Gedung Empire State sampai menyala emas untuk merayakannya. | `[dramatic]` | Empire State Building menyala emas di malam hari, gambar diturunkan supaya mahkotanya di bawah judul, dorong pelan (label "ilustrasi") | Higgsfield **H2** (H2v.jpg) | **EMPIRE STATE MENYALA EMAS** · label "17 Nov · untuk Golden Record" |
+| 0:09,3–0:15,8 | Masalahnya, sejak 14 November, antena NASA cuma menangkap "detak jantungnya"... tanpa data. | `[curious]` | Antena radio raksasa di bawah Bima Sakti, gambar dinaikkan supaya antena di atas subtitle; garis detak jantung hijau tergambar di 11,9 detik, pill "SINYAL: ADA" (13,4), pill merah "DATA: —" berkedip (14,8) (label "ilustrasi + skema") | Higgsfield **H3** + skema70 (detak) | SEJAK **14 NOV...** → CUMA "DETAK JANTUNG" **TANPA DATA** (12,9) |
+| 0:15,8–0:22,9 | Kabar baiknya, NASA pernah menyembuhkannya... dengan memindahkan kodenya dari jarak 24 miliar kilometer! | `[dramatic]` | Papan sirkuit dengan chip merah berdenyut, dorong pelan; dari 19,0 detik delapan blok kode melompat satu per satu ke chip sehat, chip sehat diberi bingkai hijau, merahnya padam; pill "2024: KODE DIPINDAH" lalu "SEMBUH · JUNI 2024" (22,0) (label "ilustrasi + skema") | Higgsfield **H4** + skema70 (chip) | NASA PERNAH **MENYEMBUHKANNYA** → KODENYA DIPINDAH **DARI 24 MILIAR KM** (19,0) |
+| 0:22,9–0:27,3 | Anehnya... sakit yang dulu itu juga dimulai tanggal 14 November! | `[curious]` | Langit bintang diredupkan; kalender NOVEMBER 14 2023 muncul di kiri (24,0), NOVEMBER 14 2026 di kanan (25,0), lingkaran merah di kedua angka 14 (25,9 dan 26,1) (label "skema") | Higgsfield **H5** + skema70 (kalender) | **ANEHNYA...** → SAKIT YANG DULU **JUGA 14 NOV!** (24,0) |
+| 0:27,3–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Langit bintang dengan satu titik cahaya melintas, pull-out pelan (label "ilustrasi") | Higgsfield **H5** | **FOLLOW** @titikheran |
+
+Beda dari storyboard: semua adegan ilustrasi memakai gambar Higgsfield Arif (H1–H5), jadi video 20042, foto 1912582, foto 4229845, dan vektor 8652303 tidak dipakai; detik 2,1–3,6 memakai video bintang 27770 supaya foto piringan emas tidak diam lebih dari 3 detik.
+
+File: video /mnt/project-files/video/titik-heran-70-voyager-1-hari-cahaya-sakit.mp4 (+ .srt), caption /mnt/project-files/caption/titik-heran-70-voyager-1-hari-cahaya-sakit.md. Renderer: `render.py 70`, animasi: `skema70.py`.
