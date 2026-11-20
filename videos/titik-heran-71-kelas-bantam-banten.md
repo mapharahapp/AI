@@ -229,3 +229,31 @@ Kecil-kecil cabe rawit, versi Inggrisnya ternyata "bantam" 🐓 Tag teman yang b
 - Good News From Indonesia (11 Feb 2025), "Berkat Ayam, Nama Daerah di Indonesia Ini Masuk Kamus Bahasa Inggris": https://www.goodnewsfromindonesia.id/2025/02/11/berkat-ayam-nama-daerah-di-indonesia-ini-masuk-kamus-bahasa-inggris
 - UFC.com, "Bantamweight division 2026 preview": https://www.ufc.com/news/bantamweight-division-2026-preview
 - AOL, "Farmer Shows Size of Fully Grown Bantam Chicken in the Cutest Way Possible": https://www.aol.com/lifestyle/farmer-shows-size-fully-grown-220000490.html
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 20 Nov 2026)
+
+Take Akram v4 (1 take, ±504 kredit): 30,5 detik. Tanpa potongan kata. Jeda biasa dirapatkan di 5 titik (TIGHT; jeda dramatis setelah "UFC...", "di sana...", "bantam"..." dan "bernama..." tetap dijaga) → 29,81 detik, lalu atempo 1,014 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,3 dBFS, ekor hening 0,7 detik. 65 kata tertulis. Tanpa bisikan. Cek ucapan dengan transkripsi ulang (±168 kredit): "UFC", "Banten" (bukan "Bantem") dan "bantam" terbaca benar.
+
+VO yang terdengar: "Kelas "bantam" di tinju dan UFC... ternyata namanya dari sebuah daerah di Indonesia! Lebih dari 400 tahun lalu, kapal Eropa berlabuh di bandar lada Banten. Konon, pelaut membeli ayam di sana... kecil, tapi galaknya bukan main! Di Inggris, ayam kecil disebut "bantam"... lalu petinju bertubuh kecil juga! Bahkan saat Perang Dunia Pertama, Inggris punya pasukan prajurit pendek bernama... Bantam! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,7 | Kelas "bantam" di tinju dan | `[curious]` | Petinju berlatih pukulan di ruang gelap (rekaman asli), grade kontras | video 52101 (detik 0,3) | **KELAS BANTAM · TINJU & UFC** (dari detik 0) |
+| 0:01,7–0:03,4 | UFC... ternyata | `[curious]` | Petinju yang sama dari momen lain, zoom pelan (rekaman asli) | video 52101 (detik 4,2) | judul tetap |
+| 0:03,4–0:05,7 | namanya dari sebuah daerah di Indonesia! | `[curious]` | Peta Indonesia (negara lain diredupkan), pin kuning "?" jatuh di Jawa bagian barat dan berdenyut; Indonesia menyala terang di kata "Indonesia" (label "skema") | skema71 (peta) | TERNYATA DARI **INDONESIA?!** |
+| 0:05,7–0:09,6 | Lebih dari 400 tahun lalu, kapal Eropa berlabuh di | `[dramatic]` | Pelabuhan lada ±1600: kapal layar Eropa, perahu lokal, karung lada hitam di dermaga, dorong pelan, grade hangat (label "ilustrasi") | Higgsfield **H1** | **400+** TAHUN LALU · label "1596: kapal Belanda pertama tiba" (8,1) |
+| 0:09,6–0:10,8 | bandar lada Banten. | `[dramatic]` | Peta yang sama zoom ke Selat Sunda dan Jawa bagian barat (label SUMATRA, JAWA); pin berubah merah di kata "Banten" (Banten Lama) (label "skema") | skema71 (banten) | BANDAR LADA **BANTEN** (10,4) |
+| 0:10,8–0:13,5 | Konon, pelaut membeli ayam di sana... | `[curious]` | Tangan pelaut memegang ayam jantan kecil di dek kapal, wajah tidak terlihat, dorong pelan (label "ilustrasi") | Higgsfield **H2** | **KONON...** |
+| 0:13,5–0:14,5 | kecil, | `[curious]` | Ayam jantan kecil di samping ayam jantan besar di halaman desa, tenang (label "ilustrasi") | Higgsfield **H4** | **KECIL...** |
+| 0:14,5–0:16,0 | tapi galaknya bukan main! | `[curious]` | Ayam jantan kecil asli di dahan mengepakkan sayap (rekaman asli) | video 190144 (detik 7,4) | TAPI **GALAK!** |
+| 0:16,0–0:18,9 | Di Inggris, ayam kecil disebut "bantam"... | `[dramatic]` | Ayam bantam asli berkokok, gambar diturunkan supaya kepalanya di bawah judul, dorong pelan; kartu kamus tua naik dari bawah di "ayam kecil" (16,9): **bantam** (1749) · ayam kecil; dari Bantam, Jawa; baris **BANTAM = BANTEN** muncul di "bantam" (18,0) (label "skema") | foto 1312229 + skema71 (kamus) | DI INGGRIS **"BANTAM"** |
+| 0:18,9–0:21,4 | lalu petinju bertubuh kecil juga! | `[dramatic]` | Ring tinju kosong dengan lampu sorot (animasi 3D, label "ilustrasi") | video 54875 (detik 1,0) | 1884: KELAS BANTAM **DI TINJU** · label "kini juga di UFC" (19,3) |
+| 0:21,4–0:25,0 | Bahkan saat Perang Dunia Pertama, Inggris punya pasukan prajurit | `[excited]` | Barisan prajurit Inggris Perang Dunia I dari belakang, sepia, dorong pelan (label "ilustrasi") | Higgsfield **H3** | PERANG DUNIA I **1914** · label "Inggris membentuk pasukan khusus" (24,0) |
+| 0:25,0–0:27,1 | pendek bernama... Bantam! | `[excited]` | H3 diburamkan; papan tinggi badan 110–180 cm, garis merah putus-putus "batas normal: 160 cm", siluet "tentara biasa" dan siluet prajurit pendek bergaris kuning yang naik masuk, pita kuning **147–160 cm** (25,3) (label "skema") | Higgsfield **H3** + skema71 (tinggi) | judul tetap → BATALION **BANTAM!** (26,2) |
+| 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Matahari terbenam di Pantai Anyer, Banten (foto asli), pull-out pelan, grade hangat (label "foto: Pantai Anyer, Banten") | foto 3894795 | **FOLLOW** @titikheran |
+
+Beda dari storyboard: detik 0–3,4 memakai dua potongan video petinju 52101 (foto 62867 tidak dipakai karena nama petinju sungguhan terbaca di celananya); lada warna-warni 3061211 tidak dipakai karena H1 sudah menampilkan karung lada hitam; H4 (yang tadinya untuk sampul) dipakai 1 detik di kata "kecil" sebagai perbandingan ukuran, tanpa adegan adu; ring 54875 ternyata animasi 3D, jadi diberi label "ilustrasi"; skema tinggi menampilkan siluet di depan papan ukur, bukan batang ukur terpisah.
+
+File: video /mnt/project-files/video/titik-heran-71-kelas-bantam-banten.mp4 (+ .srt), caption /mnt/project-files/caption/titik-heran-71-kelas-bantam-banten.md. Renderer: `render.py 71`, animasi: `skema71.py`.

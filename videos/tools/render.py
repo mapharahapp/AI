@@ -2683,6 +2683,49 @@ elif EP == "70":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {"Nasa": "NASA"}  # the TTS input spells "Nasa" so v4 does not read it letter by letter; "Voyejer satu" is in NUMS
+elif EP == "71":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo71.mp3"  # one v4 take, 30,5 s: no cuts; plain pauses tightened by the defaults
+    # the dramatic pauses after "Si...", "sana...", "bantam"..." and "bernama..." are kept
+    TIGHT = {"si": 1.0, "sana": 1.0, "bantam#2": 1.0, "bernama": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema71.py: skema_peta (map of Indonesia, a "?" pin pulses on west Java), skema_banten (the same map zooms into
+    # west Java, the pin turns red on "Banten"), skema_kamus (Pixabay bantam photo, an old dictionary card slides up:
+    # bantam (1749), from Bantam, Java; Bantam = Banten), skema_tinggi (height chart 140-180 cm with a dashed 160 cm line,
+    # a tall and a short soldier silhouette, the 147-160 cm band)
+    SHOTS = [
+        (0, "yu", "clips/52101.mp4", 0.3, "v", False, {"zoom": 0.06, "pos": 0.4, "grade": "pop"}),
+        ("yu", "namanya", "clips/52101.mp4", 4.2, "v", False, {"zoom": 0.1, "pos": 0.42, "grade": "pop"}),
+        ("namanya", "lebih", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lebih", "bandar", "img/H1.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("bandar", "konon", "clips/skema_banten.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("konon", "kecil#1", "img/H2.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("kecil#1", "galaknya", "img/H4.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.5, "tag": "ilustrasi"}),
+        ("galaknya", "di#5", "clips/190144.mp4", 7.4, "v", False, {"zoom": 0.08, "pos": 0.5}),
+        ("di#5", "lalu#2", "clips/skema_kamus.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lalu#2", "bahkan", "clips/54875.mp4", 1.0, "v", False, {"zoom": 0.06, "pos": 0.5, "tag": "ilustrasi"}),
+        ("bahkan", "pendek", "img/H3.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "tag": "ilustrasi"}),
+        ("pendek", "follow", "clips/skema_tinggi.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/3894795.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm", "tag": "foto: Pantai Anyer, Banten"}),
+    ]
+    TITLES = [
+        (0, "namanya", f"{{\\fs128}}{WT}KELAS BANTAM\\N{{\\fs96}}{Y}TINJU & UFC"),
+        ("namanya", "lebih", f"{WT}TERNYATA DARI\\N{{\\fs130}}{Y}INDONESIA?!"),
+        ("lebih", "bandar", f"{{\\fs150}}{Y}400+\\N{{\\fs96}}{WT}TAHUN LALU"),
+        ("kapal", "bandar", "1596: kapal Belanda pertama tiba", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("banten", "konon", f"{WT}BANDAR LADA\\N{{\\fs150}}{Y}BANTEN"),
+        ("konon", "kecil#1", f"{{\\fs150}}{Y}KONON..."),
+        ("kecil#1", "galaknya", f"{{\\fs140}}{WT}KECIL..."),
+        ("galaknya", "di#5", f"{WT}TAPI\\N{{\\fs150}}{Y}GALAK!"),
+        ("di#5", "lalu#2", f"{WT}DI INGGRIS\\N{{\\fs130}}{Y}\"BANTAM\""),
+        ("lalu#2", "bahkan", f"{WT}1884: KELAS BANTAM\\N{{\\fs110}}{Y}DI TINJU"),
+        ("petinju", "bahkan", "kini juga di UFC", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("bahkan", "bantam#3", f"{WT}PERANG DUNIA I\\N{{\\fs120}}{Y}1914"),
+        ("pasukan", "pendek", "Inggris membentuk pasukan khusus", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("bantam#3", "follow", f"{WT}BATALION\\N{{\\fs150}}{Y}BANTAM!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2923,6 +2966,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "66": [("lima meter!", "5 meter!")],
         "67": [("ai show spid", "IShowSpeed"), ("empat tahun", "4 tahun"), ("tiga tahun", "3 tahun"), ("kesepuluh", "ke-10")],
         "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")],
+        "71": [("yu ef si...", "UFC..."), ("empat ratus", "400")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
 for phrase, digits in NUMS:
