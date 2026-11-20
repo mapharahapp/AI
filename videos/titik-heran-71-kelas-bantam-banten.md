@@ -1,7 +1,7 @@
 # Titik Heran #71: Kelas "Bantam" di UFC dan Tinju Ternyata Diambil dari Nama Banten
 
 Seri: #70 luar negeri, **#71 Indonesia** (selang-seling), lalu #72 luar negeri.
-Tayang: **pagi 06.00–07.00 WIB**. Sesuai permintaan Arif: Sabtu 21 November pagi. Karena #69 (sarkofagus Bali) sudah dijadwalkan di slot yang sama, saran Claude: #69 tetap Sabtu pagi (beritanya bisa basi), #71 tayang **Minggu 22 November pagi**. VO #71 tidak terikat tanggal, jadi aman tayang kapan saja.
+Tayang: **Minggu 22 November 2026, pagi 06.00–07.00 WIB** (Arif memilih 20 Nov: #69 tetap Sabtu pagi, #70 Sabtu malam, #71 Minggu pagi). VO #71 tidak terikat tanggal.
 Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#68: VO **Akram di Eleven v4**, b-roll Pixabay, skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Untuk adegan yang tidak ada di Pixabay, ada prompt gambar Higgsfield (Nano Banana Pro, 9:16) di bagian 6b; Arif yang generate.
 
 **Skor viral: 8/10** (alasan di bagian 3)
