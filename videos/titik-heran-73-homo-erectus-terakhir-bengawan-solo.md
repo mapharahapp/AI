@@ -1,7 +1,7 @@
 # Titik Heran #73: Homo erectus, Manusia Purba di Buku Sejarah, Ternyata Bertahan Paling Akhir di Indonesia
 
 Seri: #72 luar negeri, **#73 Indonesia** (selang-seling), lalu #74 luar negeri.
-Tayang: **Minggu 22 November 2026, siang ±12.00 WIB** (Arif memilih 21 Nov: tiga konten di hari Minggu, #71 pagi, #73 siang, #72 malam; slot siang baru pertama kali dites). VO memakai "studi baru" (tanpa "minggu ini"), jadi tetap cocok sampai ±awal Desember 2026.
+Tayang: **Minggu 22 November 2026, malam 18.00–19.00 WIB** (Arif mengoreksi 21 Nov malam: Minggu = #69 pagi, #72 siang, #73 malam; #71 tidak tayang Minggu). VO memakai "studi baru" (tanpa "minggu ini"), jadi tetap cocok sampai ±awal Desember 2026.
 Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#71: VO **Akram di Eleven v4**, b-roll Pixabay, skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Untuk adegan yang tidak ada di Pixabay, ada prompt gambar Higgsfield (Nano Banana Pro, 9:16) di bagian 6b; Arif yang generate.
 
 **Skor viral: 9/10** (alasan di bagian 3)

@@ -1,7 +1,7 @@
 # Titik Heran #72: Di Gurun Sahara, Ilmuwan Menemukan Tengkorak Babun Berlubang Bekas Cakar Elang
 
 Seri: #71 Indonesia, **#72 luar negeri** (selang-seling), lalu #73 Indonesia.
-Tayang: **Minggu 22 November 2026, malam 18.00–19.00 WIB** (Arif memilih 21 Nov: tiga konten di hari Minggu, #71 pagi, #73 siang ±12.00, #72 malam). VO #72 tidak terikat tanggal.
+Tayang: **Minggu 22 November 2026, siang ±12.00 WIB** (Arif mengoreksi 21 Nov malam: Minggu = #69 pagi, #72 siang, #73 malam; #71 tidak tayang Minggu; slot siang baru pertama kali dites). VO #72 tidak terikat tanggal.
 Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#71: VO **Akram di Eleven v4**, b-roll Pixabay, skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Untuk adegan yang tidak ada di Pixabay, ada prompt gambar Higgsfield (Nano Banana Pro, 9:16) di bagian 6b; Arif yang generate.
 
 **Skor viral: 9/10** (alasan di bagian 3)

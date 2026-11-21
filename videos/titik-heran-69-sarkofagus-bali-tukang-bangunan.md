@@ -3,7 +3,7 @@
 > **Diperbarui 19 Nov 2026 malam.** Naskah ini semula #67 untuk Jumat 20 Nov; Arif memindahkannya ke **Sabtu 21 Nov**. Hasil tinjauan Disbudpar Karangasem (Kamis 19 Nov) membawa dua perubahan: (1) ukiran di peti **mirip wajah manusia**, jadi itu sekarang reveal penutup; (2) Disbudpar memperkirakan peti ini dari **sekitar tahun 1500-an Masehi** (belum pasti), jadi klaim "umumnya 2.000 tahun... lebih tua dari Borobudur" dan kata "prasejarah" **dihapus dari VO**.
 
 Seri: #68 luar negeri, **#69 Indonesia** (selang-seling), lalu #70 luar negeri.
-Tayang: **Sabtu 21 November 2026, pagi 06.00–07.00 WIB** (saran 06.15).
+Tayang: **Minggu 22 November 2026, pagi 06.00–07.00 WIB** (saran 06.15; Arif mengoreksi 21 Nov malam: Minggu = #69 pagi, #72 siang, #73 malam; #71 tidak tayang Minggu). Semula Sabtu 21 Nov pagi, tapi videonya belum dibuat.
 Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#68: VO **Akram di Eleven v4**, b-roll Pixabay, skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**.
 
 **Skor viral: 8/10** (alasan di bagian 3)
