@@ -2745,10 +2745,10 @@ elif EP == "73":
         ("seratus", "ilmuwan", "clips/skema_fosil.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
         ("ilmuwan", "tapi", "img/4350845.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.55, "grade": "dim", "tag": "foto: hutan hujan Jawa (G. Salak)"}),
         ("tapi", "menemukan", "clips/skema_nature.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
-        ("menemukan", "justru", "clips/207393.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: karst Guilin, Guangxi"}),
+        ("menemukan", "justru", "clips/206371.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: karst Yangshuo, Guangxi"}),  # 207393 is hazy grey
         ("justru", "jadi", "img/4350845.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.78, "grade": "pop", "tag": "foto: hutan hujan Jawa (G. Salak)"}),
         ("jadi", "follow", "img/H3.jpg", 0, "f", False, {"zoom": 0.12, "pos": 0.5, "grade": "cold", "tag": "ilustrasi"}),
-        ("follow", "end", "img/2242425.jpg", 0, "b", False, {"zoom": "pull", "grade": "warm", "tag": "foto: replika tengkorak Homo erectus (museum)"}),
+        ("follow", "end", "img/2242425.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.47, "grade": "warm", "tag": "foto: replika tengkorak Homo erectus (museum)"}),
     ]
     TITLES = [
         (0, "manusia", f"{{\\fs150}}{Y}HOMO\\N{{\\fs150}}ERECTUS"),

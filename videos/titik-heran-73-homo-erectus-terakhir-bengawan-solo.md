@@ -220,6 +220,31 @@ Dulu di sekolah namanya Pithecanthropus erectus 😄 Tag teman sekelas yang dulu
 
 ---
 
+## 8. Shot list final (sesuai video yang dirender, 22 Nov 2026 dini hari)
+
+Take Akram v4 (1 take, ±498 kredit): 31,0 detik, tanpa potongan kata. Jeda biasa dirapatkan di 6 titik (jeda setelah "kita...", "Solo...", "Cina..." dan bisikan "Jadi..." tetap dijaga) → 30,05 detik, lalu atempo 1,022 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,2 dBFS. 66 kata terucap. Satu bisikan, hanya di "Jadi... apa yang sebenarnya terjadi?". Cek ucapan dengan transkripsi ulang (170 kredit): "Homo erectus", "Bengawan Solo", "Nature" (dieja "Neicer") dan "Cina" terbaca benar; subtitle menulis "China".
+
+VO yang terdengar: "Homo erectus, manusia purba di buku sejarah kita... ternyata bertahan paling akhir di Indonesia! Setelah hampir 2 juta tahun, yang terakhir hidup di tepi Bengawan Solo... sekitar 110 ribu tahun lalu. Ilmuwan menduga, hutan hujan yang memusnahkan mereka. Tapi studi baru di jurnal Nature menemukan Homo erectus di China... justru betah di hutan hujan! Jadi... apa yang sebenarnya terjadi? Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,4 | Homo erectus, | `[curious]` | Replika tengkorak Homo erectus (Dmanisi D2700) di museum (foto asli), punch-in cepat, grade hangat; label "foto: replika tengkorak Homo erectus (museum)" | foto 2242425 | **HOMO ERECTUS** (dari detik 0) |
+| 0:01,4–0:04,0 | manusia purba di buku sejarah kita... | `[curious]` | Tangan membalik halaman buku (video asli), grade sepia | video 76775 | MANUSIA PURBA **DI BUKU SEJARAH** |
+| 0:04,0–0:06,7 | ternyata bertahan paling akhir di Indonesia! | `[curious]` | Peta dunia gelap: titik kuning menyala berurutan di Afrika, Georgia, China dan Jawa dengan jalur putus-putus (4,0–4,8), lalu Afrika, Georgia dan China padam jadi abu-abu (4,9–5,3); Jawa membesar dan berdenyut, pill "JAWA ?" (5,7), kamera mendekat ke Jawa (label "skema") | skema73 (dunia) | TERAKHIR DI DUNIA: **INDONESIA?!** |
+| 0:06,7–0:10,6 | Setelah hampir 2 juta tahun, yang terakhir hidup di tepi | `[dramatic]` | Bengawan Solo purba: sungai cokelat berkelok, gunung berkabut, empat Homo erectus kecil di tepi sungai, dorong pelan (label "ilustrasi") | Higgsfield H1 | HAMPIR **2 JUTA TAHUN** → YANG TERAKHIR **HIDUP DI...** (9,3) |
+| 0:10,6–0:12,3 | Bengawan Solo... sekitar | `[dramatic]` | Peta Pulau Jawa (Natural Earth); garis biru Bengawan Solo digambar dari Wonogiri ke Gresik (alur disederhanakan), pin kuning berdenyut dan pill "NGANDONG, BLORA" (11,1), dorong ke Ngandong (label "skema") | skema73 (jawa) | TEPI **BENGAWAN SOLO** |
+| 0:12,3–0:14,3 | 110 ribu tahun lalu. | `[dramatic]` | Tempurung kepala fosil setengah terkubur di pasir, kuas dan sekop kecil, dorong pelan; kartu gelap: 12 ikon tempurung muncul satu per satu (12,6–13,2), "12 tempurung kepala, digali 1931–1933" (13,2), pill kuning "117–108 ribu tahun lalu · Nature, 2020" (13,4) (label "ilustrasi") | Higgsfield H2 + skema73 (fosil) | **±110 RIBU TAHUN LALU** |
+| 0:14,3–0:17,8 | Ilmuwan menduga, hutan hujan yang memusnahkan mereka. | `[dramatic]` | Hutan hujan berkabut dengan sinar matahari (foto asli), dorong pelan, grade redup; label "foto: hutan hujan Jawa (G. Salak)" | foto 4350845 | **ILMUWAN MENDUGA...** → DIMUSNAHKAN **HUTAN HUJAN?** (15,6) |
+| 0:17,8–0:20,0 | Tapi studi baru di jurnal Nature | `[excited]` | Kartu putih bergaya jurnal (tanpa logo) naik dari bawah: "jurnal Nature · 18 Nov 2026", "Homo erectus di gua Baxian & Naxian", "Guangxi, China", sorot kuning "324–184 ribu tahun lalu" (18,8) (label "skema") | skema73 (nature) | STUDI BARU **NATURE** |
+| 0:20,0–0:22,2 | menemukan Homo erectus di China... | `[excited]` | Sungai, sawah dan bukit karst Yangshuo dari udara (video asli), grade cerah; label "foto: karst Yangshuo, Guangxi" | video 206371 (detik 2; 207393 terlalu berkabut) | HOMO ERECTUS **DI CHINA** |
+| 0:22,2–0:24,3 | justru betah di hutan hujan! | `[excited]` | Hutan hujan yang sama, sudut kanan, pull-out, grade cerah; label "foto: hutan hujan Jawa (G. Salak)" | foto 4350845 | JUSTRU BETAH **DI HUTAN HUJAN!** |
+| 0:24,3–0:26,9 | Jadi... apa yang sebenarnya terjadi? | `[whispers]` | Sosok Homo erectus dari belakang berjalan masuk ke hutan berkabut, zoom pelan, grade kebiruan (label "ilustrasi") | Higgsfield H3 | **MISTERI...** |
+| 0:26,9–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Replika tengkorak yang sama, pull-out, grade hangat; label "foto: replika tengkorak Homo erectus (museum)" | foto 2242425 | **FOLLOW** @titikheran |
+
+Berkas: video `videos/titik-heran-73-homo-erectus-terakhir-bengawan-solo.mp4`, subtitle `.srt` di sebelahnya, caption `videos/captions/titik-heran-73-homo-erectus-terakhir-bengawan-solo.md`. Alat: `videos/tools/skema73.py` (empat skema; butuh Natural Earth `ne_50m_land` dan `ne_10m_land` di `../geo/`), blok EP 73 di `render.py`. Skema "waktu" dan "tengkorak12" dari rencana digabung: angka tahun ada di judul, 12 tempurung ada di skema fosil. Gambar H4 (sampul opsional) tidak dibuat.
+
+---
+
 ## Sumber
 - Macquarie University (19 Des 2019), "Ground-breaking new study finally establishes the timing of Homo erectus's last stand in Indonesia": https://lighthouse.mq.edu.au/media-releases/ground-breaking-new-study-finally-establishes-the-timing-of-homo-erectuss-last-stand-in-indonesia
 - ITB (27 Mar 2023), "Ngandong, the Resting Place of the Last Ancient Man": https://itb.ac.id/news/ngandong-the-resting-place-of-the-last-ancient-man/59319
