@@ -215,6 +215,34 @@ Dulu kita bukan cuma pemburu, tapi juga diburu 🦅 Menurut kamu, hewan apa yang
 
 ---
 
+## 8. Shot list final (sesuai video yang dirender, 22 Nov 2026 dini hari)
+
+Take Akram v4 (1 take): 30,1 detik, tanpa potongan kata. Jeda biasa dirapatkan di 6 titik (jeda dramatis setelah "babun...", "kilo..." pertama, "Masalahnya..." dan "tahun..." tetap dijaga) → 29,64 detik, lalu atempo 1,008 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,2 dBFS. 66 kata terucap. Tanpa bisikan. Cek ucapan dengan transkripsi ulang (165 kredit): "Sahara", "babun", "primata", "rongga" dan "Follow" terbaca benar.
+
+VO yang terdengar: "Di Gurun Sahara, ilmuwan menemukan tengkorak babun... berlubang bekas cakar elang! Babunnya seberat 26 kilo... elangnya cuma sekitar 4 kilo! Padahal, elang dikira tak sanggup memangsa primata di atas 13 kilo. Masalahnya... nenek moyang manusia dulu juga seukuran babun ini. Bahkan tengkorak anak manusia purba berumur hampir 3 juta tahun... punya bekas cakar elang di rongga matanya! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,4 | Di Gurun Sahara, | `[curious]` | Tebing batu pasir merah dan bukit pasir Sahara (foto asli), punch-in cepat, grade hangat; label "foto: Gurun Sahara (Aljazair)" | foto 5317409 | DI GURUN **SAHARA...** (dari detik 0) |
+| 0:01,4–0:03,0 | ilmuwan menemukan tengkorak babun... | `[curious]` | Babun jantan menatap kamera (video asli), dorong pelan; label "foto: babun (bukan dari studi)" | video 174260 | TENGKORAK **BABUN** |
+| 0:03,0–0:04,7 | berlubang bekas | `[curious]` | Garis putih tengkorak babun dari samping (moncong panjang, taring) digambar di latar gelap; dua titik merah berdenyut di rongga mata (4,0); pill "Dataran Tinggi Ennedi, CHAD · studi 18 Nov 2026" (label "skema") | skema72 (tbabun) | BEKAS **CAKAR ELANG?!** (4,0) |
+| 0:04,7–0:05,8 | cakar elang! | `[curious]` | Kepala elang dari dekat (video asli), punch-in, kontras tinggi; label "foto: elang stepa" | video 143823 | judul tetap |
+| 0:05,8–0:08,5 | Babunnya seberat 26 kilo... | `[dramatic]` | Babun zaitun berjalan di padang rumput (foto asli), dorong pelan; label "foto: babun zaitun" | foto 7235681 | BABUN **26 KG** |
+| 0:08,5–0:09,8 | elangnya cuma sekitar | `[dramatic]` | Elang hitam bertengger (video asli); label "foto: elang ekor-baji" | video 179583 | ELANG **±4 KG** |
+| 0:09,8–0:10,9 | 4 kilo! | `[dramatic]` | Jungkat-jungkit: siluet babun "26 KG" kiri, siluet elang "±4 KG" kanan, miring ke babun (label "skema") | skema72 (timbangan) | judul tetap |
+| 0:10,9–0:13,8 | Padahal, elang dikira tak sanggup memangsa | `[curious]` | Elang Verreaux bertengger di tebing batu pasir, babun kecil di bawah, dorong pelan (label "ilustrasi") | Higgsfield H1 | DULU DIKIRA **MAKS 13 KG** |
+| 0:13,8–0:15,7 | primata di atas 13 kilo. | `[curious]` | Garis putus-putus "batas lama: 13 kg" digambar (13,9–14,4); batang kuning menghitung naik ke 26 KG dan menembus garis (14,8–15,3), garis jadi merah dan labelnya dicoret (15,0); pill "babun Ennedi" (15,2) (label "skema") | skema72 (batas) | judul tetap |
+| 0:15,7–0:18,9 | Masalahnya... nenek moyang manusia dulu juga | `[dramatic]` | Kerangka manusia dan kera di lemari museum (foto asli), dorong pelan, grade redup; label "foto: museum" | foto 414543 | **MASALAHNYA...** → NENEK MOYANG **MANUSIA** (17,1) |
+| 0:18,9–0:20,3 | seukuran babun ini. | `[dramatic]` | Manusia purba kecil di sabana, bayangan elang besar di tanah (label "ilustrasi") | Higgsfield H2 | SEUKURAN **BABUN!** |
+| 0:20,3–0:24,6 | Bahkan tengkorak anak manusia purba berumur hampir 3 juta tahun... | `[excited]` | Garis tengkorak anak hominin dari depan (dahi bulat, rongga mata besar) digambar di latar gelap kebiruan; kartu "ANAK TAUNG · Afrika Selatan · ditemukan 1924" (21,3–22,4), pill kuning "±2,8 juta tahun" (23,5) (label "skema") | skema72 (taung) | TENGKORAK **ANAK TAUNG** |
+| 0:24,6–0:25,9 | punya bekas cakar elang di | `[excited]` | Elang mendarat dengan cakar terbuka, gerak lambat (video asli); label "foto: elang botak" | video 748 (detik 16,9) | BEKAS CAKAR **DI RONGGA MATA!** |
+| 0:25,9–0:27,1 | rongga matanya! | `[excited]` | Tengkorak yang sama dari dekat; busur merah berdenyut di dasar kedua rongga mata dengan goresan kecil; pill "bekas cakar di rongga mata · Berger, 2006" (label "skema") | skema72 (mata) | judul tetap |
+| 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Bukit pasir dan batu Tassili (foto asli), pull-out, grade hangat; label "foto: Tassili, Sahara (Aljazair)" | foto 2796916 | **FOLLOW** @titikheran |
+
+Berkas: video `videos/titik-heran-72-elang-sahara-mangsa-babun.mp4`, subtitle `.srt` di sebelahnya, caption `videos/captions/titik-heran-72-elang-sahara-mangsa-babun.md`. Alat: `videos/tools/skema72.py` (lima skema), blok EP 72 di `render.py`. Gambar Higgsfield H3 (sampul) tidak dipakai di video.
+
+---
+
 ## Sumber
 - EurekAlert (University of St Andrews, 18 Nov 2026), "Eagles preying on human-sized baboons upends existing evolutionary defense theory": https://www.eurekalert.org/news-releases/1151693
 - Live Science (18 Nov 2026), "Eagles hunt baboons weighing up to 60 pounds, raising questions about whether birds of prey hunted ancient humans": https://www.livescience.com/archaeology/human-evolution/eagles-hunt-baboons-weighing-up-to-60-pounds-raising-questions-about-whether-birds-of-prey-hunted-ancient-humans

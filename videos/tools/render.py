@@ -2726,6 +2726,89 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "73":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo73.mp3"  # one v4 take, 31,0 s: no cuts
+    # the dramatic pauses after "kita...", "Solo...", "Cina..." and the whispered "Jadi..." are kept
+    TIGHT = {"kita": 1.0, "solo": 1.0, "cina": 1.0, "jadi": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema73.py: skema_dunia (world map: Homo erectus sites light up from Africa to Georgia, China and Java, then
+    # go dark one by one until only Java glows), skema_jawa (Java from Natural Earth, the Bengawan Solo drawn from Wonogiri
+    # to Gresik, pin "NGANDONG, BLORA"), skema_fosil (Higgsfield H2 with 12 skull-cap icons and "digali 1931-1933"),
+    # skema_nature (journal-style card, no logo: Nature, 18 Nov 2026, Baxian & Naxian caves, Guangxi, 324-184 ribu tahun)
+    SHOTS = [
+        (0, "manusia", "img/2242425.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.47, "grade": "warm", "tag": "foto: replika tengkorak Homo erectus (museum)"}),
+        ("manusia", "ternyata", "clips/76775.mp4", 0.2, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "sepia"}),
+        ("ternyata", "setelah", "clips/skema_dunia.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("setelah", "bengawan", "img/H1.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("bengawan", "seratus", "clips/skema_jawa.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("seratus", "ilmuwan", "clips/skema_fosil.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
+        ("ilmuwan", "tapi", "img/4350845.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.55, "grade": "dim", "tag": "foto: hutan hujan Jawa (G. Salak)"}),
+        ("tapi", "menemukan", "clips/skema_nature.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("menemukan", "justru", "clips/207393.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: karst Guilin, Guangxi"}),
+        ("justru", "jadi", "img/4350845.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.78, "grade": "pop", "tag": "foto: hutan hujan Jawa (G. Salak)"}),
+        ("jadi", "follow", "img/H3.jpg", 0, "f", False, {"zoom": 0.12, "pos": 0.5, "grade": "cold", "tag": "ilustrasi"}),
+        ("follow", "end", "img/2242425.jpg", 0, "b", False, {"zoom": "pull", "grade": "warm", "tag": "foto: replika tengkorak Homo erectus (museum)"}),
+    ]
+    TITLES = [
+        (0, "manusia", f"{{\\fs150}}{Y}HOMO\\N{{\\fs150}}ERECTUS"),
+        ("manusia", "ternyata", f"{WT}MANUSIA PURBA\\N{{\\fs100}}{Y}DI BUKU SEJARAH"),
+        ("ternyata", "setelah", f"{WT}TERAKHIR DI DUNIA:\\N{{\\fs130}}{Y}INDONESIA?!"),
+        ("setelah", "yang", f"{WT}HAMPIR\\N{{\\fs150}}{Y}2 JUTA TAHUN"),
+        ("yang", "bengawan", f"{WT}YANG TERAKHIR\\N{{\\fs120}}{Y}HIDUP DI..."),
+        ("bengawan", "seratus", f"{WT}TEPI\\N{{\\fs120}}{Y}BENGAWAN SOLO"),
+        ("seratus", "ilmuwan", f"{WT}±110 RIBU\\N{{\\fs130}}{Y}TAHUN LALU"),
+        ("ilmuwan", "hutan", f"{{\\fs120}}{WT}ILMUWAN MENDUGA..."),
+        ("hutan", "tapi", f"{WT}DIMUSNAHKAN\\N{{\\fs130}}{Y}HUTAN HUJAN?"),
+        ("tapi", "menemukan", f"{WT}STUDI BARU\\N{{\\fs140}}{Y}NATURE"),
+        ("menemukan", "justru", f"{WT}HOMO ERECTUS\\N{{\\fs130}}{Y}DI CHINA"),
+        ("justru", "jadi", f"{WT}JUSTRU BETAH\\N{{\\fs110}}{Y}DI HUTAN HUJAN!"),
+        ("jadi", "follow", f"{{\\fs150}}{Y}MISTERI..."),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"erektus,": "erectus,", "erektus": "erectus", "Neicer": "Nature", "Cina...": "China..."}
+elif EP == "72":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo72.mp3"  # one v4 take, 30,1 s: no cuts
+    # the dramatic pauses after "babun...", the first "kilo...", "Masalahnya..." and "tahun..." are kept
+    TIGHT = {"babun": 1.0, "kilo": 1.0, "masalahnya": 1.0, "tahun": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema72.py: skema_tbabun (line drawing of a baboon skull, two red marks pulse at the holes), skema_timbangan
+    # (seesaw: baboon 26 KG vs eagle +-4 KG, tips to the baboon), skema_batas (bar chart: old limit 13 KG, the 26 KG bar
+    # rises past it and the limit is struck through), skema_taung (child hominin skull outline and info card), skema_mata
+    # (the same skull closer, red ring and scratch marks at the eye socket)
+    SHOTS = [
+        (0, "ilmuwan", "img/5317409.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": "foto: Gurun Sahara (Aljazair)"}),
+        ("ilmuwan", "babun+0.1", "clips/174260.mp4", 0.5, "v", False, {"zoom": 0.08, "pos": 0.38, "tag": "foto: babun (bukan dari studi)"}),
+        ("babun+0.1", "cakar", "clips/skema_tbabun.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("cakar", "babunnya", "clips/143823.mp4", 1.0, "v", False, {"zoom": "punch", "pos": 0.42, "grade": "pop", "tag": "foto: elang stepa"}),
+        ("babunnya", "elangnya", "img/7235681.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "foto: babun zaitun"}),
+        ("elangnya", "empat", "clips/179583.mp4", 0.5, "v", False, {"zoom": 0.08, "pos": 0.62, "grade": "pop", "tag": "foto: elang ekor-baji"}),
+        ("empat", "padahal", "clips/skema_timbangan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("padahal", "primata", "img/H1.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("primata", "masalahnya", "clips/skema_batas.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("masalahnya", "seukuran", "img/414543.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.42, "grade": "dim", "tag": "foto: museum"}),
+        ("seukuran", "bahkan", "img/H2.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("bahkan", "punya", "clips/skema_taung.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("punya", "rongga", "clips/748.mp4", 16.9, "v", False, {"zoom": "punch", "pos": 0.62, "grade": "pop", "tag": "foto: elang botak"}),
+        ("rongga", "follow", "clips/skema_mata.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/2796916.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.5, "grade": "warm", "tag": "foto: Tassili, Sahara (Aljazair)"}),
+    ]
+    TITLES = [
+        (0, "ilmuwan", f"{WT}DI GURUN\\N{{\\fs150}}{Y}SAHARA..."),
+        ("ilmuwan", "berlubang", f"{WT}TENGKORAK\\N{{\\fs140}}{Y}BABUN"),
+        ("berlubang", "babunnya", f"{WT}BEKAS\\N{{\\fs120}}{Y}CAKAR ELANG?!"),
+        ("babunnya", "elangnya", f"{WT}BABUN\\N{{\\fs170}}{Y}26 KG"),
+        ("elangnya", "padahal", f"{WT}ELANG\\N{{\\fs170}}{Y}±4 KG"),
+        ("padahal", "masalahnya", f"{WT}DULU DIKIRA\\N{{\\fs120}}{Y}MAKS 13 KG"),
+        ("masalahnya", "nenek", f"{{\\fs120}}{WT}MASALAHNYA..."),
+        ("nenek", "seukuran", f"{WT}NENEK MOYANG\\N{{\\fs120}}{Y}MANUSIA"),
+        ("seukuran", "bahkan", f"{WT}SEUKURAN\\N{{\\fs140}}{Y}BABUN!"),
+        ("bahkan", "punya", f"{WT}TENGKORAK\\N{{\\fs130}}{Y}ANAK TAUNG"),
+        ("punya", "follow", f"{WT}BEKAS CAKAR\\N{{\\fs110}}{Y}DI RONGGA MATA!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # the numbers are in NUMS
 elif EP == "69":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo69.wav"  # one v4 take, 34,7 s; prep69.py cuts the optional "sampai" and "Dan" (33,8 s)
@@ -3010,6 +3093,8 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")],
         "71": [("yu ef si...", "UFC..."), ("empat ratus", "400")],
         "69": [("seratus dua puluh lima", "125")],
+        "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
+        "72": [("dua puluh enam", "26"), ("empat", "4"), ("tiga belas", "13"), ("tiga juta", "3 juta")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
 for phrase, digits in NUMS:
