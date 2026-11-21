@@ -2726,6 +2726,48 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "69":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo69.wav"  # one v4 take, 34,7 s; prep69.py cuts the optional "sampai" and "Dan" (33,8 s)
+    # the dramatic pauses after "tembok...", "dilipat..." and "ukirannya..." are kept
+    TIGHT = {"tembok": 1.0, "dilipat": 1.0, "ukirannya": 1.0, "berukir": 0.3, "polisi": 0.3, "kuno": 0.3, "sentimeter": 0.3,
+             "muat": 0.3, "kandungan": 0.3, "manusia": 0.3, "jahat": 0.3}  # sentence pauses 0,30 s (default 0,36) to keep the tempo near 1,08
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema69.py: skema_peti (a carved brown stone chest rises from the soil and cracks in two), skema_sarko (the
+    # same chest, labels "diduga kuat sarkofagus" and +-125 x 90 x 60 cm), skema_ukuran (125 cm ruler next to a 165 cm adult
+    # silhouette that does not fit, "?"), skema_lipat (cross-section, a soft line figure folds into a foetal position),
+    # skema_wajah (dark, a torch beam sweeps the side and a mask-like face carving lights up)
+    SHOTS = [
+        (0, "gali", "img/8788501.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "Karangasem, Bali"}),
+        ("gali", "malah", "img/1459416.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.38, "grade": "pop", "tag": "Karangasem, Bali"}),
+        ("malah", "peti#1", "img/7875726.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.82, "grade": "warm", "tag": "ilustrasi"}),
+        ("peti#1", "lokasinya", "clips/skema_peti.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lokasinya", "diduga", "img/3953745.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.42, "grade": "cold", "tag": "ilustrasi"}),
+        ("diduga", "tapi", "clips/skema_sarko.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tapi", "di#2", "clips/skema_ukuran.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("di#2", "ukirannya", "clips/skema_lipat.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ukirannya", "konon", "clips/skema_wajah.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("konon", "follow", "img/4550161.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.36, "grade": "dim", "tag": "ilustrasi: arca batu Bali"}),
+        ("follow", "end", "img/211559.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.45, "grade": "morning", "tag": "foto: Gunung Agung, Karangasem"}),
+    ]
+    TITLES = [
+        (0, "gali", f"{WT}TUKANG BANGUNAN\\N{{\\fs140}}{Y}DI BALI..."),
+        ("gali", "malah", f"{WT}GALI TANAH\\N{{\\fs120}}{Y}UNTUK TEMBOK"),
+        ("malah", "lokasinya", f"{WT}MALAH MENEMUKAN\\N{{\\fs110}}{Y}PETI BATU\\NBERUKIR!"),
+        ("lokasinya", "diduga", f"{{\\fs130}}{Y}GARIS\\NPOLISI"),
+        ("diduga", "peti#2", f"{WT}DIDUGA\\N{{\\fs120}}{Y}SARKOFAGUS"),
+        ("peti#2", "tapi", f"{WT}PETI MATI\\N{{\\fs120}}{Y}BATU KUNO"),
+        ("tapi", "kok", f"{WT}PANJANG CUMA\\N{{\\fs150}}{Y}±125 CM"),
+        ("kok", "di#2", f"{{\\fs130}}{Y}KOK BISA\\NMUAT?"),
+        ("di#2", "seperti", f"{WT}JENAZAH\\N{{\\fs140}}{Y}DILIPAT..."),
+        ("seperti", "ukirannya", f"{WT}SEPERTI BAYI\\N{{\\fs100}}{Y}DALAM KANDUNGAN"),
+        ("ukirannya", "ternyata", f"{{\\fs120}}{WT}UKIRANNYA..."),
+        ("ternyata", "konon", f"{WT}MIRIP\\N{{\\fs120}}{Y}WAJAH MANUSIA!"),
+        ("konon", "follow", f"{WT}KONON\\N{{\\fs110}}{Y}MENJAGA ARWAH\\N{{\\fs80}}{WT}DARI ROH JAHAT"),
+        ("menjaga", "follow", "tafsiran peneliti untuk sarkofagus Bali", {"style": "Label", "pos": (5, 540, 1120)}),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # "seratus dua puluh lima" is in NUMS
 else:
     TEMPO = 1.10
     AUDIO = "vo06.mp3"
@@ -2967,6 +3009,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "67": [("ai show spid", "IShowSpeed"), ("empat tahun", "4 tahun"), ("tiga tahun", "3 tahun"), ("kesepuluh", "ke-10")],
         "68": [("tujuh ratus kilometer...", "700 kilometer..."), ("dua ribu dua ratus tahun", "2.200 tahun")],
         "71": [("yu ef si...", "UFC..."), ("empat ratus", "400")],
+        "69": [("seratus dua puluh lima", "125")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
 for phrase, digits in NUMS:

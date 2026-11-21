@@ -205,6 +205,30 @@ Kalau kamu yang nemu peti batu ini waktu gali fondasi, lanjut bangun tembok atau
 
 ---
 
+## 8. Shot list final (sesuai video yang dirender, 21 Nov 2026)
+
+Take Akram v4 (1 take, ±532 kredit): 34,6 detik. prep69.py memotong dua kata opsional, **"sampai"** (kalimat 2) dan **"Dan"** (kalimat 5) → 33,67 detik. Jeda biasa dirapatkan di 10 titik (jeda antarkalimat 0,30 detik; jeda dramatis setelah "tembok...", "dilipat..." dan "ukirannya..." tetap dijaga, jeda setelah "Diduga," dan "Konon," juga utuh) → 31,60 detik, lalu atempo 1,075 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,0 dBFS, ekor hening 0,7 detik. 63 kata terucap. Tanpa bisikan. Cek ucapan dengan transkripsi ulang (±191 kredit): "sarkofagus", "Konon", dan "Follow" terbaca benar. Berita dicek ulang 21 Nov malam: belum ada pernyataan baru dari Disbudpar, BRIN, atau BPK Wilayah XV setelah tinjauan 19 Nov, jadi kalimat 2 dan caption tidak berubah.
+
+VO yang terdengar: "Tukang bangunan di Bali gali tanah untuk tembok... malah menemukan peti batu berukir! Lokasinya dipasangi garis polisi. Diduga, ini sarkofagus: peti mati batu kuno. Tapi panjangnya cuma 125 sentimeter. Kok bisa muat? Di peti sekecil ini, jenazah biasanya dilipat... seperti bayi dalam kandungan. Ukirannya... ternyata mirip wajah manusia! Konon, wajah seperti ini menjaga arwah dari roh jahat. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,4 | Tukang bangunan di Bali | `[curious]` | Gerbang candi bentar Pura Lempuyang, Karangasem (foto asli, vertikal), punch-in cepat, grade cerah; label "Karangasem, Bali" | foto 8788501 | TUKANG BANGUNAN · **DI BALI...** (dari detik 0) |
+| 0:01,4–0:03,3 | gali tanah untuk tembok... | `[curious]` | Sawah terasering dengan Gunung Agung (foto asli), dorong pelan; label "Karangasem, Bali" | foto 1459416 | GALI TANAH · **UNTUK TEMBOK** |
+| 0:03,3–0:04,1 | malah menemukan | `[dramatic]` | Petani mencangkul tanah, punch-in, grade hangat (label "ilustrasi") | foto 7875726 | MALAH MENEMUKAN · **PETI BATU BERUKIR!** |
+| 0:04,1–0:05,8 | peti batu berukir! | `[dramatic]` | Peti batu cokelat naik dari tanah (pita spiral berukir, tonjolan di ujung), retak di kata "berukir" (4,9) lalu patah dua (label "skema") | skema69 (peti) | judul tetap |
+| 0:05,8–0:07,7 | Lokasinya dipasangi garis polisi. | `[dramatic]` | Pita "police line" di depan pagar, grade dingin (label "ilustrasi") | foto 3953745 | **GARIS POLISI** |
+| 0:07,7–0:11,3 | Diduga, ini sarkofagus: peti mati batu kuno. | `[dramatic]` | Peti yang patah dua, dorong pelan; pill kuning "DIDUGA KUAT SARKOFAGUS" dan "tinjauan Disbudpar Karangasem, 19 Nov 2026" (8,8); pill "±125 × 90 × 60 cm · patah dua" (9,8) (label "skema") | skema69 (sarko) | DIDUGA **SARKOFAGUS** → PETI MATI **BATU KUNO** (9,8) |
+| 0:11,3–0:15,5 | Tapi panjangnya cuma 125 sentimeter. Kok bisa muat? | `[curious]` | Tampak samping: penggaris kuning "125 cm" di atas peti; siluet orang dewasa berbaring "±165 cm", bagian yang tidak muat merah (13,6); "?" kuning besar (14,5) (label "skema") | skema69 (ukuran) | PANJANG CUMA **±125 CM** → **KOK BISA MUAT?** (14,6) |
+| 0:15,5–0:20,7 | Di peti sekecil ini, jenazah biasanya dilipat... seperti bayi dalam kandungan. | `[dramatic]` | Penampang peti; siluet garis lembut (tanpa tulang) berbaring lurus dan menembus kedua dinding (merah), lalu terlipat dan muat (18,1–18,9), cahaya keemasan; pill "sarkofagus kecil: jenazah terlipat" dan "Soejono; Arisanti & Sunarya 2020 (BRIN)" (19,0) (label "skema") | skema69 (lipat) | JENAZAH **DILIPAT...** → SEPERTI BAYI **DALAM KANDUNGAN** (19,0) |
+| 0:20,7–0:23,6 | Ukirannya... ternyata mirip wajah manusia! | `[dramatic]` | Ujung peti dalam gelap, sorot senter menyapu, ukiran wajah bergaya kedok di tonjolan menyala kuning (22,2); pill "ukiran mirip wajah manusia" dan "tinjauan Disbudpar Karangasem, 19 Nov · bentuk asli belum dipublikasikan" (22,6) (label "skema") | skema69 (wajah) | **UKIRANNYA...** → MIRIP **WAJAH MANUSIA!** (21,7) |
+| 0:23,6–0:27,3 | Konon, wajah seperti ini menjaga arwah dari roh jahat. | `[dramatic]` | Arca batu berukir gaya Bali dengan wajah penjaga di hutan, grade redup, dorong pelan (label "ilustrasi: arca batu Bali") | foto 4550161 | KONON **MENJAGA ARWAH** DARI ROH JAHAT · label "tafsiran peneliti untuk sarkofagus Bali" (25,4) |
+| 0:27,3–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Gunung Agung cerah di atas kebun (foto asli), pull-out, grade segar; label "foto: Gunung Agung, Karangasem" | foto 211559 | **FOLLOW** @titikheran |
+
+Berkas: video `videos/titik-heran-69-sarkofagus-bali-tukang-bangunan.mp4`, subtitle `.srt` di sebelahnya, caption `videos/captions/titik-heran-69-sarkofagus-bali-tukang-bangunan.md`. Alat: `videos/tools/prep69.py` (potongan VO), `skema69.py` (lima skema), blok EP 69 di `render.py`.
+
+---
+
 ## Sumber
 - CNN Indonesia (19 Nov 2026), "Warga Bali Temukan Batu yang Diduga Sarkofagus Saat Gali Tanah": https://www.cnnindonesia.com/nasional/20261118202923-20-1428729/warga-bali-temukan-batu-yang-diduga-sarkofagus-saat-gali-tanah
 - Radar Bali (19 Nov 2026), "Gali Tanah untuk Senderan, Warga Nongan, Karangasem, Temukan Sarkofagus Prasejarah": https://radarbali.jawapos.com/karangasem/2611190009/gali-tanah-untuk-senderan-warga-nongankarangasem-temukan-sarkofagus-prasejarah
