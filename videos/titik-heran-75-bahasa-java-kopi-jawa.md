@@ -102,7 +102,7 @@ Alternatif hook (cek tambahan rumus hook blitz-copy, 3 varian berlabel):
 
 ## 5. Naskah VO dengan arahan suara (siap dibacakan Akram v4)
 
-63 kata tertulis. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "HP Android", "bahasa Jawa", "Java", "bahasa pemrograman", "kopi", "Pulau Jawa", "Minecraft".
+62 kata tertulis. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "HP Android", "bahasa Jawa", "Java", "bahasa pemrograman", "kopi", "Pulau Jawa", "Minecraft".
 
 ```
 [mischievously] Aplikasi di HP Android kamu... ternyata banyak yang ditulis pakai "bahasa Jawa"!
