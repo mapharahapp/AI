@@ -215,6 +215,34 @@ Kalau sejarah Bumi itu buku, ada lebih dari 1 miliar tahun halaman yang disobek 
 
 ---
 
+## 8. Shot list final (sesuai video yang dirender, 22 Nov 2026 sore)
+
+Take Akram v4 (1 take, ±498 kredit): 31,7 detik, tanpa potongan kata. Jeda biasa dirapatkan di 7 titik (jeda setelah "tahun..." kedua, "lain..." dan "benua..." tetap dijaga) → 30,84 detik, lalu atempo 1,049 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,3 dBFS. 66 kata terucap, tanpa bisikan. Cek ucapan dengan transkripsi ulang (174 kredit): "Grand Canyon", "Nature" (dieja "Neicer"), "satu koma tujuh" dan "lima ratus" terbaca benar.
+
+VO yang terdengar: "Di dinding Grand Canyon, ada garis batu yang menelan lebih dari 1 miliar tahun sejarah Bumi! Di bawahnya, batu 1,7 miliar tahun... di atasnya, cuma 500 juta tahun. Siapa yang menghapusnya? Tersangka favoritnya: gletser, saat Bumi membeku. Tapi studi terbaru di jurnal Nature menunjuk dalang lain... perut Bumi! Panasnya mengangkat benua... lalu hujan dan angin mengikisnya habis. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,6 | Di dinding Grand Canyon, | `[curious]` | Tebing Grand Canyon vertikal (foto asli), punch-in cepat, grade hangat; label "foto: Grand Canyon" | foto 4397689 | **GRAND CANYON** (dari detik 0) |
+| 0:01,6–0:02,5 | ada garis batu | `[curious]` | Awan bergulung di tebing ngarai (video asli), grade hangat; label "foto: Grand Canyon" | video 380 (detik 1) | ADA GARIS BATU **YANG MENELAN...** |
+| 0:02,5–0:03,0 | yang menelan | `[curious]` | Ngarai dalam, sisi kanan foto: tebing pucat di atas batuan gelap, dorong pelan; label "foto: Grand Canyon" | foto 7924473 (bagian awal skema garis) | (sama) |
+| 0:03,0–0:05,9 | lebih dari 1 miliar tahun sejarah Bumi! | `[curious]` | Foto yang sama: garis kuning berpendar digambar di dasar tebing pucat, di atas batuan gelap ngarai dalam (3,1–3,8), pill "THE GREAT UNCONFORMITY" dengan garis penunjuk (4,05); posisi garis perkiraan (label "skema") | foto 7924473 + skema74 (garis) | LEBIH DARI **1 MILIAR TAHUN** HILANG?! |
+| 0:05,9–0:09,9 | Di bawahnya, batu 1,7 miliar tahun... | `[dramatic]` | Close-up dinding: batu pasir datar di atas, sekis gelap terpilin di bawah; garis kontak menyala kuning (6,0–6,7), kurung putih di batu gelap (7,0), pill "1,7 MILIAR TAHUN" (7,5) (label "ilustrasi") | Higgsfield H1 + skema74 (kontak) | BATU DI BAWAH **1,7 MILIAR TAHUN** |
+| 0:09,9–0:12,6 | di atasnya, cuma 500 juta tahun. | `[dramatic]` | Buku sejarah Bumi dari sisi halaman: halaman batu pasir di atas "±500 JUTA TAHUN" (10,1), halaman sekis di bawah "1,7 MILIAR TAHUN"; halaman krem di tengah tersobek dan terbang (10,7–11,4), lubang bergaris merah, pill kuning "±1,2 MILIAR TAHUN" (11,6) dan "HILANG!" (11,85) (label "skema") | skema74 (buku) | BATU DI ATAS **±500 JUTA TAHUN** |
+| 0:12,6–0:14,0 | Siapa yang menghapusnya? | `[curious]` | Ngarai berkabut (video asli); label "foto: Grand Canyon" | video 381 (detik 2) | SIAPA **PELAKUNYA?** |
+| 0:14,0–0:16,0 | Tersangka favoritnya: gletser, | `[curious]` | Gletser Aletsch dari punggung bukit (video asli), grade dingin; label "foto: gletser Aletsch (Swiss)" | video 364730 (detik 5) | TERSANGKA: **GLETSER** |
+| 0:16,0–0:17,5 | saat Bumi membeku. | `[curious]` | Bumi tertutup es dari luar angkasa, zoom pelan (label "ilustrasi") | Higgsfield H2 | BUMI **BOLA SALJU** |
+| 0:17,5–0:20,1 | Tapi studi terbaru di jurnal Nature menunjuk | `[excited]` | Kartu putih bergaya jurnal (tanpa logo) naik: "jurnal Nature · Nov 2026", "Univ. of Wollongong (Australia)", "Great Unconformity", sorot kuning "dalangnya: ???" (19,5) (label "skema") | skema74 (kartu) | STUDI TERBARU **JURNAL NATURE** |
+| 0:20,1–0:22,2 | dalang lain... perut Bumi! | `[excited]` | Aliran lava menyala dan kawah meletus (video asli), punch-in, grade pop; label "foto: lava (Islandia)" | video 219833 (detik 3) | **DALANGNYA...** → PERUT **BUMI!** (21,1) |
+| 0:22,2–0:24,2 | Panasnya mengangkat benua... | `[dramatic]` | Penampang Bumi: lapisan sedimen, kerak benua, mantel panas; panah naik di mantel (22,2), kerak melengkung jadi kubah (22,6–23,7), label "mantel panas" dan "kerak benua" (label "skema") | skema74 (mantel) | PANASNYA **MENGANGKAT BENUA** |
+| 0:24,2–0:25,5 | lalu hujan dan angin | `[dramatic]` | Dataran tinggi gundul diguyur hujan badai, sungai berlumpur, zoom pelan (label "ilustrasi") | Higgsfield H3 | LALU HUJAN **DAN ANGIN...** |
+| 0:25,5–0:27,0 | mengikisnya habis. | `[dramatic]` | Kubah yang sama diguyur hujan: lapisan atas terkikis butir demi butir sampai rata (25,5–26,5), kerak tua terlihat di tengah (label "skema") | skema74 (kikis) | TERKIKIS **HABIS!** |
+| 0:27,0–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Grand Canyon keemasan (foto asli), pull-out, grade hangat; label "foto: Grand Canyon" | foto 1083745 | **FOLLOW** @titikheran |
+
+Berkas: video `videos/titik-heran-74-grand-canyon-1-miliar-tahun-hilang.mp4`, subtitle `.srt` di sebelahnya, caption `videos/captions/titik-heran-74-grand-canyon-1-miliar-tahun-hilang.md`. Alat: `videos/tools/skema74.py` (enam skema), blok EP 74 di `render.py`. Perubahan dari storyboard: potongan Sungai Colorado di detik 2–3 diganti bagian awal skema garis (foto yang sama tanpa garis) supaya garis langsung muncul di foto itu; close-up H1 diberi garis kontak dan pill angka (skema "kontak"); penampang mantel dipecah jadi dua skema (mantel dan kikis) mengapit H3. Gambar H4 tidak dipakai di video, untuk sampul saja.
+
+---
+
 ## Sumber
 - ScienceDaily (rilis University of Wollongong, 18 Nov 2026), "More than a billion years of Earth's history vanished. Scientists may finally know why": https://www.sciencedaily.com/releases/2026/11/261116023403.htm
 - Live Science (11 Nov 2026), "The Grand Canyon is missing over a billion years of rocks. Now scientists know why.": https://www.livescience.com/planet-earth/geology/the-grand-canyon-is-missing-over-a-billion-years-of-rocks-now-scientists-know-why

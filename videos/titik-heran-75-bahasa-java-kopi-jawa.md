@@ -213,6 +213,34 @@ Jadi tiap buka aplikasi, HP kamu sebenarnya lagi "ngopi" kopi Jawa ☕ Kirim ke 
 
 ---
 
+## 8. Shot list final (sesuai video yang dirender, 22 Nov 2026 sore)
+
+Take Akram v4 (1 take, ±506 kredit): 31,2 detik, tanpa potongan kata. Jeda biasa dirapatkan di 9 titik (jeda setelah "kamu...", "dunia...", "Oak..." dan "kopi..." tetap dijaga) → 29,50 detik, atempo 1,004 → **video 30,0 detik**, master -14,9 LUFS, true peak -2,1 dBFS. 62 kata terucap, tanpa bisikan. Cek ucapan dengan transkripsi ulang (172 kredit): "Java" terbaca *ja-va* (bukan "jawa"), "Oak" (dieja "Ouk"), "Minecraft" (dieja "Mainkraf") dan "Android" terbaca benar.
+
+VO yang terdengar: "Aplikasi di HP Android kamu... ternyata banyak yang ditulis pakai "bahasa Jawa"! Namanya Java, bahasa pemrograman terkenal dunia... dan namanya bukan kebetulan. Nama awalnya "Oak"... tapi ditolak pengacara, karena sudah dipakai perusahaan lain. Sambil ngopi, timnya memilih "Java", sebutan orang Amerika untuk kopi... dari Pulau Jawa! Bahkan Minecraft, game terlaris sepanjang masa, lahir dari bahasa ini! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,6 | Aplikasi di HP Android | `[mischievously]` | Tangan memegang HP Android, daftar aplikasi bergulir (video asli), dorong pelan; tombol navigasi Android terlihat, tanpa logo merek | video 90 (detik 0,5) | APLIKASI DI **HP ANDROID** (dari detik 0) |
+| 0:01,6–0:04,5 | kamu... ternyata banyak yang ditulis pakai | `[mischievously]` | Kode program di layar gelap (video asli), grade dingin | video 4733 (detik 2) | TERNYATA **DITULIS PAKAI...** (2,6) |
+| 0:04,5–0:05,8 | "bahasa Jawa"! | `[mischievously]` | Gunung Batok dan lautan pasir Bromo (video asli), grade pop; label "foto: Gunung Batok, Bromo (Jawa Timur)" | video 37660 (detik 1) | "BAHASA **JAWA"?!** |
+| 0:05,8–0:07,1 | Namanya Java, | `[curious]` | Latar hijau gelap: "JAVA" (5,9) = "JAWA" (6,3), huruf V dan W menyala kuning (6,4), keterangan "bahasa Inggris" dan "bahasa Indonesia" (6,5), pill "nama Pulau Jawa dalam bahasa Inggris" (6,6) (label "skema") | skema75 (jawa) | **NAMANYA...** |
+| 0:07,1–0:09,4 | bahasa pemrograman terkenal dunia... | `[curious]` | Programmer menatap layar, kode memantul di kacamata (video asli, vertikal), grade dingin | video 348042 (detik 1) | BAHASA PEMROGRAMAN **TERKENAL DUNIA** |
+| 0:09,4–0:11,2 | dan namanya bukan kebetulan. | `[curious]` | Gelas kopi beruap (video asli, vertikal), grade hangat, petunjuk awal soal kopi | video 140897 (detik 2) | NAMANYA **BUKAN KEBETULAN** |
+| 0:11,2–0:12,2 | Nama awalnya | `[dramatic]` | Pohon ek raksasa (foto asli), grade pop; label "foto: pohon ek" | foto 2018822 (bagian awal skema oak) | NAMA AWALNYA **"OAK"** |
+| 0:12,2–0:16,4 | "Oak"... tapi ditolak pengacara, karena sudah dipakai perusahaan lain. | `[dramatic]` | Foto yang sama meredup, kartu nama "OAK" muncul (12,3), cap merah "DITOLAK" menghantam kartu dan tulisan kartu jadi abu-abu (13,5), pill merah "sudah jadi merek Oak Technologies" (15,1) (label "skema") | foto 2018822 + skema75 (oak) | **DITOLAK PENGACARA!** (13,0) → SUDAH DIPAKAI **PERUSAHAAN LAIN** (14,7) |
+| 0:16,4–0:18,5 | Sambil ngopi, timnya memilih | `[curious]` | Rapat tim programmer tahun 90-an, monitor tabung dan gelas kopi beruap, zoom pelan, grade hangat (label "ilustrasi") | Higgsfield H1 | SAMBIL **NGOPI...** → TIMNYA MEMILIH **"JAVA"** (17,7) |
+| 0:18,5–0:19,6 | "Java", sebutan orang | `[curious]` | Cangkir kopi beruap (video asli), grade hangat | video 3158 (detik 3) | SEBUTAN AMERIKA **UNTUK KOPI** (19,0) |
+| 0:19,6–0:21,2 | Amerika untuk kopi... | `[curious]` | Kartu kamus putih di latar cokelat kopi (tanpa logo): "kamus Merriam-Webster", "java", "kata benda · bahasa sehari-hari Amerika", sorot kuning "= KOPI" (20,3), "dari nama Pulau Jawa (Java), Indonesia" (20,6) (label "skema") | skema75 (kamus) | (sama) |
+| 0:21,2–0:22,3 | dari Pulau Jawa! | `[curious]` | Tangan menggenggam buah kopi merah (foto asli), punch-in, grade hangat; label "foto: kopi Indonesia" | foto 3408135 | DARI **PULAU JAWA!** |
+| 0:22,3–0:23,7 | Bahkan Minecraft, | `[excited]` | Anak bermain game di tablet (video asli, bukan rekaman Minecraft; label "ilustrasi") | video 44224 (detik 1) | BAHKAN **MINECRAFT** |
+| 0:23,7–0:27,2 | game terlaris sepanjang masa, lahir dari bahasa ini! | `[excited]` | Kartu putih di latar biru gelap: "MINECRAFT" (23,8), "game terlaris sepanjang masa" (24,0), "versi aslinya dibuat dengan" (25,5), sorot kuning "bahasa JAVA" (26,0); tanpa logo, tanpa gambar blok (label "skema") | skema75 (minecraft) | GAME TERLARIS **SEPANJANG MASA** → LAHIR DARI **JAVA!** (25,5) |
+| 0:27,2–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Biji kopi sangrai (video asli), grade hangat; label "foto: biji kopi" | video 80138 (detik 5) | **FOLLOW** @titikheran |
+
+Berkas: video `videos/titik-heran-75-bahasa-java-kopi-jawa.mp4`, subtitle `.srt` di sebelahnya, caption `videos/captions/titik-heran-75-bahasa-java-kopi-jawa.md`. Alat: `videos/tools/skema75.py` (empat skema), blok EP 75 di `render.py`. Perubahan dari storyboard: kapal VOC (foto 7917858) dan angka penjualan Minecraft dibuang karena waktunya tidak cukup, jadi teks layar tidak menyebut 1711 atau 400 juta; adegan "bukan kebetulan" diberi gelas kopi beruap (video 140897) sebagai petunjuk; pohon ek di skema adalah Angel Oak (Charleston), bukan pohon di luar kantor tim Java, jadi labelnya hanya "foto: pohon ek"; video 90 dipotong ke sisi HP tanpa punch-in supaya HP Android langsung terlihat di detik 0. Gambar H2 tidak dipakai di video, untuk sampul saja.
+
+---
+
 ## Sumber
 - InfoWorld (dimuat ulang dari JavaWorld 1996, 16 Jul 2022), "So why did they decide to call it Java?": https://www.infoworld.com/article/2077265/so-why-did-they-decide-to-call-it-java-.html
 - Wikipedia, "Java (programming language)": https://en.wikipedia.org/wiki/Java_(programming_language)

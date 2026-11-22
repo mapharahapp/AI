@@ -2726,6 +2726,102 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "75":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo75.mp3"  # one v4 take, 31,2 s: no cuts (TTS spelling "Ouk", "Mainkraf"; re-transcribed: Java, Oak, Minecraft)
+    # the dramatic pauses after "kamu...", "dunia...", "Ouk..." and "kopi..." are kept
+    TIGHT = {"kamu": 1.0, "dunia": 1.0, "ouk": 1.0, "kopi": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema75.py: skema_jawa (JAVA = JAWA: the V and W light up, pill "Java = nama Inggris Pulau Jawa"), skema_oak
+    # (Pixabay 2018822 oak tree with a slow push; on "Ouk" a name card "OAK" pops up, on "ditolak" a red stamp DITOLAK
+    # slams onto it; the first part with no card runs as the photo), skema_kamus (dictionary-style card, no logo:
+    # Merriam-Webster, java = kopi, from Java, Indonesia), skema_minecraft (text card, no logo and no blocks: MINECRAFT,
+    # game terlaris sepanjang masa, versi asli dibuat dengan bahasa JAVA)
+    SHOTS = [
+        (0, "kamu", "clips/90.mp4", 0.5, "v", False, {"zoom": 0.05, "pos": 0.18}),
+        ("kamu", "bahasa", "clips/4733.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.25, "grade": "cold"}),
+        ("bahasa", "namanya", "clips/37660.mp4", 1.0, "v", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: Gunung Batok, Bromo (Jawa Timur)"}),
+        ("namanya", "bahasa#2", "clips/skema_jawa.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("bahasa#2", "dan", "clips/348042.mp4", 1.0, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "cold"}),
+        ("dan", "nama", "clips/140897.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm"}),
+        ("nama", "ouk", "clips/skema_oak.mp4", 0, "v", False, {"zoom": 0.0, "grade": "pop", "tag": "foto: pohon ek"}),
+        ("ouk", "sambil", "clips/skema_oak.mp4", 1.033, "v", False, {"zoom": 0.0, "grade": "pop", "tag": "skema"}),
+        ("sambil", "java#2", "img/H1.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "ilustrasi"}),
+        ("java#2", "amerika", "clips/3158.mp4", 3.0, "v", False, {"zoom": 0.08, "pos": 0.58, "grade": "warm"}),
+        ("amerika", "dari", "clips/skema_kamus.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dari", "bahkan", "img/3408135.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.62, "grade": "warm", "tag": "foto: kopi Indonesia"}),
+        ("bahkan", "game", "clips/44224.mp4", 1.0, "v", False, {"zoom": 0.08, "pos": 0.4, "tag": "ilustrasi"}),
+        ("game", "follow", "clips/skema_minecraft.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "clips/80138.mp4", 5.0, "v", False, {"zoom": 0.06, "pos": 0.5, "grade": "warm", "tag": "foto: biji kopi"}),
+    ]
+    TITLES = [
+        (0, "ternyata", f"{WT}APLIKASI DI\\N{{\\fs140}}{Y}HP ANDROID"),
+        ("ternyata", "bahasa", f"{WT}TERNYATA\\N{{\\fs110}}{Y}DITULIS PAKAI..."),
+        ("bahasa", "namanya", f"{WT}\"BAHASA\\N{{\\fs150}}{Y}JAWA\"?!"),
+        ("namanya", "bahasa#2", f"{{\\fs120}}{WT}NAMANYA..."),
+        ("bahasa#2", "dan", f"{WT}BAHASA PEMROGRAMAN\\N{{\\fs110}}{Y}TERKENAL DUNIA"),
+        ("dan", "nama", f"{WT}NAMANYA\\N{{\\fs110}}{Y}BUKAN KEBETULAN"),
+        ("nama", "tapi", f"{WT}NAMA AWALNYA\\N{{\\fs150}}{Y}\"OAK\""),
+        ("tapi", "karena", f"{WT}DITOLAK\\N{{\\fs130}}{Y}PENGACARA!"),
+        ("karena", "sambil", f"{WT}SUDAH DIPAKAI\\N{{\\fs110}}{Y}PERUSAHAAN LAIN"),
+        ("sambil", "timnya", f"{WT}SAMBIL\\N{{\\fs150}}{Y}NGOPI..."),
+        ("timnya", "sebutan", f"{WT}TIMNYA MEMILIH\\N{{\\fs160}}{Y}\"JAVA\""),
+        ("sebutan", "dari", f"{WT}SEBUTAN AMERIKA\\N{{\\fs120}}{Y}UNTUK KOPI"),
+        ("dari", "bahkan", f"{WT}DARI\\N{{\\fs140}}{Y}PULAU JAWA!"),
+        ("bahkan", "game", f"{WT}BAHKAN\\N{{\\fs140}}{Y}MINECRAFT"),
+        ("game", "lahir", f"{WT}GAME TERLARIS\\N{{\\fs110}}{Y}SEPANJANG MASA"),
+        ("lahir", "follow", f"{WT}LAHIR DARI\\N{{\\fs150}}{Y}JAVA!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"\"Ouk\"...": "\"Oak\"...", "Mainkraf,": "Minecraft,"}
+elif EP == "74":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo74.mp3"  # one v4 take, 31,7 s: no cuts ("Nature" spelled Neicer for TTS)
+    # the dramatic pauses after the second "tahun...", "lain..." and "benua..." are kept
+    TIGHT = {"tahun#2": 1.0, "lain": 1.0, "benua": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # made by skema74.py: skema_garis (Pixabay 7924473, right side: a glowing yellow line is drawn along the base of the
+    # Tapeats cliff over the dark inner-gorge rock, pill "THE GREAT UNCONFORMITY"; position approximate; the first part
+    # with no line runs as the photo), skema_kontak (Higgsfield H1 close-up, the contact glows, pill "1,7 MILIAR TAHUN" on
+    # the dark rock), skema_buku (a book of Earth's history: bottom block 1,7 MILIAR, top block 500 JUTA, the pages
+    # between are torn out and fly away, "±1,2 MILIAR TAHUN HILANG"), skema_kartu (journal-style card, no logo: Nature,
+    # Nov 2026, Univ. of Wollongong), skema_mantel (cross-section: red mantle arrows push the crust up into a dome),
+    # skema_kikis (the dome's upper layers wash away grain by grain until it is flat)
+    SHOTS = [
+        (0, "ada", "img/4397689.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": "foto: Grand Canyon"}),
+        ("ada", "yang", "clips/380.mp4", 1.0, "v", False, {"zoom": 0.06, "pos": 0.3, "grade": "warm", "tag": "foto: Grand Canyon"}),
+        ("yang", "lebih", "clips/skema_garis.mp4", 0, "v", False, {"zoom": 0.0, "grade": "warm", "tag": "foto: Grand Canyon"}),
+        ("lebih", "di#2", "clips/skema_garis.mp4", 0.533, "v", False, {"zoom": 0.0, "grade": "warm", "tag": "skema"}),
+        ("di#2", "di#3", "clips/skema_kontak.mp4", 0, "v", False, {"zoom": 0.0, "grade": "warm", "tag": "ilustrasi"}),
+        ("di#3", "siapa", "clips/skema_buku.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("siapa", "tersangka", "clips/381.mp4", 2.0, "v", False, {"zoom": 0.08, "pos": 0.55, "tag": "foto: Grand Canyon"}),
+        ("tersangka", "saat", "clips/364730.mp4", 5.0, "v", False, {"zoom": 0.06, "pos": 0.42, "grade": "cold", "tag": "foto: gletser Aletsch (Swiss)"}),
+        ("saat", "tapi", "img/H2.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "tag": "ilustrasi"}),
+        ("tapi", "dalang", "clips/skema_kartu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dalang", "panasnya", "clips/219833.mp4", 3.0, "v", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "foto: lava (Islandia)"}),
+        ("panasnya", "lalu", "clips/skema_mantel.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lalu", "mengikisnya", "img/H3.jpg", 0, "f", False, {"zoom": 0.12, "pos": 0.5, "tag": "ilustrasi"}),
+        ("mengikisnya", "follow", "clips/skema_kikis.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/1083745.jpg", 0, "f", False, {"zoom": "pull", "pos": 0.55, "grade": "warm", "tag": "foto: Grand Canyon"}),
+    ]
+    TITLES = [
+        (0, "ada", f"{{\\fs150}}{Y}GRAND\\N{{\\fs150}}CANYON"),
+        ("ada", "lebih", f"{WT}ADA GARIS BATU\\N{{\\fs110}}{Y}YANG MENELAN..."),
+        ("lebih", "di#2", f"{WT}LEBIH DARI\\N{{\\fs120}}{Y}1 MILIAR TAHUN\\N{{\\fs120}}HILANG?!"),
+        ("di#2", "di#3", f"{WT}BATU DI BAWAH\\N{{\\fs110}}{Y}1,7 MILIAR TAHUN"),
+        ("di#3", "siapa", f"{WT}BATU DI ATAS\\N{{\\fs110}}{Y}±500 JUTA TAHUN"),
+        ("siapa", "tersangka", f"{WT}SIAPA\\N{{\\fs140}}{Y}PELAKUNYA?"),
+        ("tersangka", "saat", f"{WT}TERSANGKA:\\N{{\\fs150}}{Y}GLETSER"),
+        ("saat", "tapi", f"{WT}BUMI\\N{{\\fs130}}{Y}BOLA SALJU"),
+        ("tapi", "dalang", f"{WT}STUDI TERBARU\\N{{\\fs110}}{Y}JURNAL NATURE"),
+        ("dalang", "perut", f"{{\\fs120}}{WT}DALANGNYA..."),
+        ("perut", "panasnya", f"{WT}PERUT\\N{{\\fs160}}{Y}BUMI!"),
+        ("panasnya", "lalu", f"{WT}PANASNYA\\N{{\\fs100}}{Y}MENGANGKAT BENUA"),
+        ("lalu", "mengikisnya", f"{WT}LALU HUJAN\\N{{\\fs120}}{Y}DAN ANGIN..."),
+        ("mengikisnya", "follow", f"{WT}TERKIKIS\\N{{\\fs150}}{Y}HABIS!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Neicer": "Nature"}
 elif EP == "73":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo73.mp3"  # one v4 take, 31,0 s: no cuts
@@ -3094,6 +3190,8 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "71": [("yu ef si...", "UFC..."), ("empat ratus", "400")],
         "69": [("seratus dua puluh lima", "125")],
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
+        "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
+        "75": [],
         "72": [("dua puluh enam", "26"), ("empat", "4"), ("tiga belas", "13"), ("tiga juta", "3 juta")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
