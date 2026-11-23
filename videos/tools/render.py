@@ -2782,6 +2782,56 @@ elif EP == "77":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "sepuluh senti" is in NUMS
+elif EP == "76":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo76.wav"  # one v4 take, 33,9 s; prep76.py cuts "orang kaya zaman Romawi." and "lagi" (-> 31,7 s)
+    # the dramatic pauses after "Romawi...", "hilang..." and "biara..." are kept; "Amandinus." now ends a sentence;
+    # "belas" keeps its pause whole: its "s" hisses at 7 kHz down to -45 dB (19,60-19,80 s in the raw take)
+    TIGHT = {"romawi": 1.0, "hilang": 1.0, "biara": 1.0, "amandinus": 0.4, "belas": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    WA = "foto: Westminster Abbey, London"
+    LAIN = "foto: sarkofagus Romawi lain (bukan peti Westminster)"
+    # made by skema76.py: skema_numpang (outline of a stone coffin, the name VALERIUS AMANDINUS struck through, "???"
+    # pops in, yellow stamp NUMPANG), skema_prasasti (cream stone card: the translated inscription, orang kaya Romawi,
+    # abad ke-4 M), skema_karbon (year counter rolls up to 987-1052 M, "uji karbon (radiokarbon)"; then a timeline
+    # +-300-400 M peti dibuat -> 987-1052 M dikubur, bracket "+-600-700 TAHUN"), skema_tulang (line-drawn body, no
+    # bones or skull: an orange dot pulses at the big toe "asam urat? (kemungkinan)", small dots "radang sendi")
+    SHOTS = [
+        (0, "gereja", "img/3273830.jpg", 0, "f", False, {"zoom": 0.08, "grade": "pop", "tag": WA}),
+        ("gereja", "ternyata", "img/21646.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.62, "grade": "pop", "tag": WA}),
+        ("ternyata", "tapi", "img/3610252.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": LAIN}),
+        ("tapi", "tulisannya", "clips/skema_numpang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tulisannya", "valérius", "img/2835957.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.3, "grade": "warm", "tag": LAIN}),
+        ("valérius", "kerangkanya", "clips/skema_prasasti.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kerangkanya", "sampai", "img/1123795.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "cold", "tag": WA}),
+        ("sampai", "uji", "img/H1.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("uji", "setelah", "clips/skema_karbon.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("setelah", "diduga", "img/H3.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("diduga", "yang#2", "img/H2.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("yang#2", "follow", "clips/skema_tulang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("follow", "end", "img/2666.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.5, "grade": "pop", "tag": WA}),
+    ]
+    TITLES = [
+        (0, "gereja", f"{WT}WESTMINSTER\\N{{\\fs140}}{Y}ABBEY"),
+        ("gereja", "ternyata", f"{WT}GEREJA PENOBATAN\\N{{\\fs130}}{Y}RAJA INGGRIS"),
+        ("ternyata", "peti", f"{WT}TERNYATA\\N{{\\fs130}}{Y}MENYIMPAN..."),
+        ("peti", "tapi", f"{WT}PETI MATI\\N{{\\fs150}}{Y}ROMAWI"),
+        ("tapi", "tulisannya", f"{WT}ISINYA ORANG LAIN\\N{{\\fs130}}{Y}\"NUMPANG\"?!"),
+        ("tulisannya", "kerangkanya", f"{WT}TULISANNYA\\N{{\\fs130}}{Y}UNTUK..."),
+        ("kerangkanya", "sampai", f"{WT}KERANGKANYA\\N{{\\fs120}}{Y}DIKIRA HILANG"),
+        ("sampai", "dua", f"{WT}SAMPAI TUTUPNYA\\N{{\\fs140}}{Y}DIBUKA..."),
+        ("dua", "uji", f"{WT}TAHUN 2016:\\N{{\\fs140}}{Y}MASIH ADA!"),
+        ("uji", "dia", f"{WT}UJI KARBON\\N{{\\fs120}}{Y}MEMBUKTIKAN..."),
+        ("dia", "ratusan", f"{WT}WAFAT SEKITAR\\N{{\\fs130}}{Y}TAHUN 1000"),
+        ("ratusan", "setelah", f"{WT}RATUSAN\\N{{\\fs150}}{Y}TAHUN..."),
+        ("setelah", "diduga", f"{WT}SETELAH PETINYA\\N{{\\fs150}}{Y}DIBUAT!"),
+        ("diduga", "kepala", f"{{\\fs150}}{Y}DIDUGA..."),
+        ("kepala", "yang#2", f"{WT}KEPALA\\N{{\\fs150}}{Y}BIARA..."),
+        ("yang#2", "asam", f"{WT}YANG\\N{{\\fs120}}{Y}KEMUNGKINAN..."),
+        ("asam", "follow", f"{WT}KENA\\N{{\\fs140}}{Y}ASAM URAT!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Ebi,": "Abbey,", "Valérius": "Valerius"}  # TTS spellings; the numbers are in NUMS
 elif EP == "75":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo75.mp3"  # one v4 take, 31,2 s: no cuts (TTS spelling "Ouk", "Mainkraf"; re-transcribed: Java, Oak, Minecraft)
@@ -3249,6 +3299,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
         "77": [("sepuluh senti,", "10 senti,")],
+        "76": [("dua ribu enam belas.", "2016."), ("seribu,", "1000,")],
         "72": [("dua puluh enam", "26"), ("empat", "4"), ("tiga belas", "13"), ("tiga juta", "3 juta")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]

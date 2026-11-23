@@ -211,7 +211,7 @@ Studi terbaru (Warwick Rodwell, 2026) menduga dia kepala biara Westminster: Ælf
 Kirim ke teman yang suka barang bekas 😄
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Foto peti di video adalah sarkofagus Romawi lain (bukan peti Westminster). Konservator, biarawan, dan tutup bersalib adalah ilustrasi; kartu nama, uji karbon, garis waktu, dan kerangka adalah skema.
+Foto peti di video adalah sarkofagus Romawi lain (bukan peti Westminster). Konservator, biarawan, dan tutup bersalib adalah ilustrasi; peti bertulisan nama, kartu prasasti, uji karbon dan garis waktu, serta gambar tubuh adalah skema.
 Sumber: Rodwell, Journal of the British Archaeological Association (Okt 2026, doi 10.1080/00681288.2026.2675788); ScienceDaily/Taylor & Francis (21 Nov 2026); Medievalists.net; Live Science; Archaeology Magazine; Popular Science
 
 #titikheran #westminsterabbey #sejarahdunia #arkeologi #faktaunik
@@ -221,6 +221,32 @@ Sumber: Rodwell, Journal of the British Archaeological Association (Okt 2026, do
 ```
 Valerius bayar peti mahal-mahal, eh 600 tahun kemudian dipakai orang lain 😅 Menurut kamu, jasad aslinya ke mana?
 ```
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 23 Nov 2026 malam)
+
+Take Akram v4 (1 take, 547 kredit): 33,9 detik (hook saja 9,7 detik). Dua bagian dipotong (prep76.py): kata opsional **"lagi"** (kalimat 3) dan **"orang kaya zaman Romawi."** (kalimat 2; kalau hanya "zaman Romawi" yang dibuang, atempo masih ±1,09, terlalu cepat). Info "orang kaya Romawi, abad ke-4 M" tetap tampil di kartu prasasti. → 31,7 detik. Jeda biasa dirapatkan di 7 titik (jeda setelah "Romawi...", "hilang...", "biara..." dan "2016." tetap dijaga; huruf "s" di "belas" mendesis pelan sampai -45 dB, jadi jedanya tidak dipotong) → 30,71 detik, atempo 1,045 → **video 30,0 detik**. 59 kata terucap, tanpa bisikan. Ejaan TTS "Westminster Ebi", "Valérius", "dua ribu enam belas", "seribu" tampil "Westminster Abbey", "Valerius", "2016", "1000" di subtitle.
+
+VO yang terdengar: "Westminster Abbey, gereja penobatan Raja Inggris, ternyata menyimpan peti mati Romawi... tapi isinya malah orang lain yang "numpang"! Tulisannya untuk Valerius Amandinus. Kerangkanya sempat dikira hilang... sampai tutupnya dibuka tahun 2016. Uji karbon membuktikan: dia wafat sekitar tahun 1000, ratusan tahun setelah petinya dibuat! Diduga, dia kepala biara... yang kemungkinan kena asam urat! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,7 | Westminster Abbey, | `[mischievously]` | Fasad Westminster Abbey (vertikal), dorong pelan (label "foto: Westminster Abbey, London") | foto 3273830 | WESTMINSTER **ABBEY** |
+| 0:01,7–0:03,7 | gereja penobatan Raja Inggris, | `[mischievously]` | Fasad transept utara dan menara barat, dorong pelan | foto 21646 | GEREJA PENOBATAN **RAJA INGGRIS** |
+| 0:03,7–0:06,3 | ternyata menyimpan peti mati Romawi... | `[mischievously]` | Peti batu Romawi di rumput, punch-in (label "foto: sarkofagus Romawi lain (bukan peti Westminster)") | foto 3610252 | TERNYATA **MENYIMPAN...** → PETI MATI **ROMAWI** |
+| 0:06,3–0:09,2 | tapi isinya malah orang lain yang "numpang"! | `[mischievously]` | Skema peti: nama VALERIUS AMANDINUS dicoret merah, "???" muncul, stempel kuning **NUMPANG** (label "skema") | skema76 numpang | ISINYA ORANG LAIN **"NUMPANG"?!** |
+| 0:09,2–0:10,4 | Tulisannya untuk | `[curious]` | Relief sarkofagus Romawi, dorong pelan (label "foto: sarkofagus Romawi lain") | foto 2835957 | TULISANNYA **UNTUK...** |
+| 0:10,4–0:12,1 | Valerius Amandinus. | `[curious]` | Kartu batu krem: terjemahan tulisan "Untuk mengenang Valerius Amandinus", "dibuat kedua putranya untuk ayah mereka", pill "orang kaya Romawi · abad ke-4 M" (label "skema") | skema76 prasasti | TULISANNYA **UNTUK...** |
+| 0:12,1–0:14,4 | Kerangkanya sempat dikira hilang... | `[dramatic]` | Langit-langit kipas Kapel Henry VII, zoom pelan, grade dingin | foto 1123795 | KERANGKANYA **DIKIRA HILANG** |
+| 0:14,4–0:17,0 | sampai tutupnya dibuka tahun 2016. | `[dramatic]` | Dua konservator mengangkat tutup peti batu di studio (label "ilustrasi") | Higgsfield H1 | SAMPAI TUTUPNYA **DIBUKA...** → TAHUN 2016: **MASIH ADA!** |
+| 0:17,0–0:21,4 | Uji karbon membuktikan: dia wafat sekitar tahun 1000, ratusan tahun | `[curious]` | Skema: pill "uji karbon (radiokarbon)", angka tahun berputar naik dan berhenti di **987–1052 M**, "wafat ±tahun 1000"; lalu garis waktu "±300–400 M peti dibuat" → "987–1052 M dikubur di peti ini", pill **±600–700 TAHUN** (label "skema") | skema76 karbon | UJI KARBON **MEMBUKTIKAN...** → WAFAT SEKITAR **TAHUN 1000** → RATUSAN **TAHUN...** |
+| 0:21,4–0:22,4 | setelah petinya dibuat! | `[curious]` | Tutup peti dengan ukiran salib abad pertengahan, punch-in (label "ilustrasi") | Higgsfield H3 | SETELAH PETINYA **DIBUAT!** |
+| 0:22,4–0:24,9 | Diduga, dia kepala biara... | `[mischievously]` | Biarawan berjubah menurunkan peti batu ke liang di gereja kecil, cahaya lilin (label "ilustrasi") | Higgsfield H2 | **DIDUGA...** → KEPALA **BIARA...** |
+| 0:24,9–0:27,1 | yang kemungkinan kena asam urat! | `[mischievously]` | Skema tubuh garis (tanpa tulang/tengkorak): titik biru "radang sendi", lalu titik oranye berdenyut di jempol kaki "asam urat? (kemungkinan)" (label "skema") | skema76 tulang | YANG **KEMUNGKINAN...** → KENA **ASAM URAT!** |
+| 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Fasad transept utara Westminster Abbey, langit biru, dorong pelan | foto 2666 | **FOLLOW** @titikheran |
+
+Catatan: H4 (gereja dan peti di rumput) hanya untuk sampul, tidak dipakai di video, karena gedungnya buatan AI yang mirip Westminster Abbey. Video lab 197485 dan skema "tersangka" (Ælfwig/Wulnoth) tidak dipakai; nama kandidat ada di caption. File: videos/titik-heran-76-peti-bekas-westminster-abbey.mp4 + .srt; skema di videos/tools/skema76.py, potongan VO di videos/tools/prep76.py.
 
 ---
 
