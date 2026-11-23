@@ -207,7 +207,7 @@ Sayangnya, bekantan berstatus Genting (Endangered) dan populasinya turun lebih d
 Kirim ke teman yang hidungnya paling mancung 😆
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Kartu julukan, penggaris hidung, grafik, dan gelombang suara adalah skema.
+Perahu penjelajah zaman kolonial dan potret bekantan saat senja adalah ilustrasi; penggaris hidung, grafik, dan gelombang suara adalah skema. Kapal di video adalah replika kapal VOC di Amsterdam.
 Sumber: Koda dkk., Science Advances (2018), "Nasalization by Nasalis larvatus"; rilis Universitas Kyoto/EurekAlert (21 Feb 2018); National Geographic (21 Feb 2018); Mongabay Indonesia (17 Jul 2026); Katadata (19 Jun 2026); Antara (19 Nov 2026); Radar Malang (20 Nov 2026); Wikipedia "Proboscis monkey"
 
 #titikheran #bekantan #monyetbelanda #kalimantan #faktaunik
@@ -217,6 +217,37 @@ Sumber: Koda dkk., Science Advances (2018), "Nasalization by Nasalis larvatus"; 
 ```
 Jadi kalau di dunia bekantan, yang hidungnya paling mancung jadi idola 😎 Tag teman kamu yang hidungnya "laku"!
 ```
+
+---
+
+## 8. Shot list final (sesuai video yang dirender, 23 Nov 2026 malam)
+
+Take Akram v4 (1 take, 551 kredit): 33,5 detik. Karena lebih dari 33 detik, frasa opsional **"Peneliti menemukan:"** dipotong (prep77.py; "zaman penjajahan" tetap, karena membawa intonasi "!" di akhir hook) → 32,0 detik. Jeda biasa dirapatkan di 5 titik (jeda setelah "monyet Belanda...", "itu?", "badannya..." dan "mancung..." tetap dijaga) → 31,59 detik, atempo 1,074 → **video 30,0 detik**, master -15,0 LUFS, true peak -2,2 dBFS. 62 kata terucap, tanpa bisikan. Ejaan TTS "sepuluh senti" tampil "10 senti" di subtitle.
+
+VO yang terdengar: "Bekantan, maskot Dufan, ternyata dijuluki "monyet Belanda"... gara-gara hidung besarnya mirip orang Belanda zaman penjajahan! Hidung jantannya bisa lebih dari 10 senti, menggantung melewati mulut. Buat apa hidung sebesar itu? Makin besar hidungnya, makin besar badannya... dan makin banyak betina di kelompoknya! Hidungnya bikin suara lebih berat saat merayu. Jadi buat bekantan, makin mancung... makin laku! Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,3 | Bekantan, | `[mischievously]` | Bekantan jantan menatap kamera, punch-in (label "foto: bekantan, Kalimantan") | foto 4738507 | **BEKANTAN** |
+| 0:01,3–0:03,2 | maskot Dufan, ternyata | `[mischievously]` | Jantan duduk di akar bakau, dorong pelan | foto 3712521 | MASKOT **DUFAN** |
+| 0:03,2–0:05,3 | dijuluki "monyet Belanda"... | `[mischievously]` | Penjelajah zaman kolonial di perahu menunjuk bekantan di dahan (label "ilustrasi"), judul di bawah kepala bekantan | Higgsfield H1 (bingkai dipotong) | DIJULUKI **"MONYET BELANDA"** |
+| 0:05,3–0:06,5 | gara-gara hidung besarnya | `[mischievously]` | Jantan dari samping, hidung menjuntai, punch-in | foto 6814823 | GARA-GARA **HIDUNGNYA** |
+| 0:06,5–0:08,7 | mirip orang Belanda zaman penjajahan! | `[mischievously]` | Replika kapal VOC "Amsterdam", dorong pelan (label "foto: replika kapal VOC (Amsterdam)") | foto 7917858 | MIRIP **ORANG BELANDA** → ZAMAN **PENJAJAHAN!** |
+| 0:08,7–0:11,4 | Hidung jantannya bisa lebih dari 10 senti, | `[curious]` | Jantan makan daun, hidung menutupi mulut, punch-in | foto 10547222 | HIDUNG **JANTANNYA** → LEBIH DARI **10 CM** |
+| 0:11,4–0:13,0 | menggantung melewati mulut. | `[curious]` | Skema penggaris: jantan dari samping, penggaris kuning tumbuh di samping hidung, "10+ cm", garis putus-putus "mulut", panah sampai ujung hidung (label "skema") | skema77 penggaris (di atas foto 212825) | MENGGANTUNG **MELEWATI MULUT** · pill "melewati mulut" |
+| 0:13,0–0:15,1 | Buat apa hidung sebesar itu? | `[dramatic]` | Jantan berwajah tenang di antara daun, dorong pelan | foto 6814825 | **BUAT APA?!** |
+| 0:15,1–0:16,5 | Makin besar hidungnya, | `[curious]` | Jantan berperut buncit di pagar, punch-in | foto 2422094 | MAKIN BESAR **HIDUNGNYA** |
+| 0:16,5–0:18,1 | makin besar badannya... | `[curious]` | Skema batang: HIDUNG penuh, BADAN naik, "jantan ±20 kg · betina ±separuhnya" (label "skema") | skema77 makin | MAKIN BESAR **BADANNYA** |
+| 0:18,1–0:19,2 | dan makin banyak | `[curious]` | Kelompok bekantan (jantan dengan betina), dorong pelan | foto 10376925 | MAKIN BANYAK **BETINA** |
+| 0:19,2–0:20,5 | betina di kelompoknya! | `[curious]` | Skema batang: BETINA naik, ikon betina 1→4, pill "Science Advances, 2018" (label "skema") | skema77 makin | MAKIN BANYAK **BETINA** |
+| 0:20,5–0:21,3 | Hidungnya bikin | `[excited]` | Jantan membuka mulut lebar, punch-in | foto 10547221 | HIDUNGNYA **BIKIN...** |
+| 0:21,3–0:23,4 | suara lebih berat saat merayu. | `[excited]` | Skema suara di atas foto yang diredupkan: gelombang "hidung kecil" rapat, "hidung besar" lebar dan rendah, pill "suara lebih berat" (label "skema") | skema77 suara (foto 10547221) | SUARA **LEBIH BERAT** → SAAT **MERAYU** |
+| 0:23,4–0:25,0 | Jadi buat bekantan, | `[mischievously]` | Jantan bergelantungan di dahan, dorong pelan | foto 6814822 | JADI BUAT **BEKANTAN...** |
+| 0:25,0–0:26,1 | makin mancung... | `[mischievously]` | Close-up hidung besar, punch-in | foto 2422095 | MAKIN **"MANCUNG"...** |
+| 0:26,1–0:27,3 | makin laku! | `[mischievously]` | Potret jantan di dahan saat senja, punch-in, judul di dada (label "ilustrasi") | Higgsfield H2 (bagian atas yang rusak dipotong) | MAKIN **LAKU!** |
+| 0:27,3–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Jantan di dahan tepi sungai, dorong pelan, grade pagi | foto 10495663 | **FOLLOW** @titikheran |
+
+Catatan: tidak ada logo/maskot Dufan, tidak ada gambar perburuan. H2 juga cocok jadi sampul (pakai versi yang bagian atasnya dipotong). File: videos/titik-heran-77-hidung-bekantan-monyet-belanda.mp4 + .srt; skema di videos/tools/skema77.py, potongan VO di videos/tools/prep77.py.
 
 ---
 

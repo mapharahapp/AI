@@ -2726,6 +2726,62 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "77":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo77.wav"  # one v4 take, 33,5 s; prep77.py cuts the optional "Peneliti menemukan:" (-> 32,0 s)
+    # the dramatic pauses after "monyet Belanda...", "itu?", "badannya..." and "mancung..." are kept
+    TIGHT = {"belanda": 1.0, "itu": 1.0, "badannya": 1.0, "mancung": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    LOW = {"pos": (8, 540, 660)}  # under the monkey's head (H1, H2): the title sits on the river / the chest
+    BK = "foto: bekantan, Kalimantan"
+    # made by skema77.py: skema_penggaris (Pixabay 212825 side view; a yellow ruler grows beside the nose, "10+ cm",
+    # a dashed line at the mouth and an arrow "melewati mulut"), skema_makin (three bars rise in turn: HIDUNG, BADAN with
+    # "jantan +-20 kg, betina +-separuhnya", BETINA with female icons 1 -> 4; pill "Science Advances, 2018"; shown in two
+    # parts around the group photo 10376925), skema_suara (10547221 dimmed; two sound waves: "hidung kecil" thin and
+    # high, "hidung besar" wide and low, label "lebih berat")
+    SHOTS = [
+        (0, "maskot", "img/4738507.jpg", 0, "f", False, {"zoom": "punch", "grade": "pop", "tag": BK}),
+        ("maskot", "dijuluki", "img/3712521.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": BK}),
+        ("dijuluki", "garagara", "img/H1c.jpg", 0, "f", False, {"zoom": 0.05, "grade": "warm", "tag": "ilustrasi"}),
+        ("garagara", "mirip", "img/6814823.jpg", 0, "f", False, {"zoom": "punch", "grade": "pop", "tag": BK}),
+        ("mirip", "hidung#2", "img/7917858.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "foto: replika kapal VOC (Amsterdam)"}),
+        ("hidung#2", "menggantung", "img/10547222.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.62, "grade": "pop", "tag": BK}),
+        ("menggantung", "buat", "clips/skema_penggaris.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("buat", "makin", "img/6814825.jpg", 0, "f", False, {"zoom": 0.1, "grade": "pop", "tag": BK}),
+        ("makin", "makin#2", "img/2422094.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "pop", "tag": BK}),
+        ("makin#2", "dan", "clips/skema_makin.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("dan", "betina", "img/10376925.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.3, "grade": "pop", "tag": BK}),
+        ("betina", "hidungnya#2", "clips/skema_makin.mp4", 2.667, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("hidungnya#2", "suara", "img/10547221.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.6, "grade": "pop", "tag": BK}),
+        ("suara", "jadi", "clips/skema_suara.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("jadi", "makin#4", "img/6814822.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": BK}),
+        ("makin#4", "makin#5", "img/2422095.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.42, "grade": "pop", "tag": BK}),
+        ("makin#5", "follow", "img/H2c.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("follow", "end", "img/10495663.jpg", 0, "f", False, {"zoom": 0.06, "pos": 0.45, "grade": "morning", "tag": BK}),
+    ]
+    TITLES = [
+        (0, "maskot", f"{{\\fs150}}{Y}BEKANTAN"),
+        ("maskot", "dijuluki", f"{WT}MASKOT\\N{{\\fs150}}{Y}DUFAN"),
+        ("dijuluki", "garagara", f"{WT}DIJULUKI\\N{{\\fs100}}{Y}\"MONYET BELANDA\"", LOW),
+        ("garagara", "mirip", f"{WT}GARA-GARA\\N{{\\fs140}}{Y}HIDUNGNYA"),
+        ("mirip", "zaman", f"{WT}MIRIP\\N{{\\fs120}}{Y}ORANG BELANDA"),
+        ("zaman", "hidung#2", f"{WT}ZAMAN\\N{{\\fs120}}{Y}PENJAJAHAN!"),
+        ("hidung#2", "sepuluh", f"{WT}HIDUNG\\N{{\\fs130}}{Y}JANTANNYA"),
+        ("sepuluh", "menggantung", f"{WT}LEBIH DARI\\N{{\\fs170}}{Y}10 CM"),
+        ("menggantung", "buat", f"{WT}MENGGANTUNG\\N{{\\fs110}}{Y}MELEWATI MULUT"),
+        ("buat", "makin", f"{{\\fs150}}{Y}BUAT APA?!"),
+        ("makin", "makin#2", f"{WT}MAKIN BESAR\\N{{\\fs140}}{Y}HIDUNGNYA"),
+        ("makin#2", "dan", f"{WT}MAKIN BESAR\\N{{\\fs140}}{Y}BADANNYA"),
+        ("dan", "hidungnya#2", f"{WT}MAKIN BANYAK\\N{{\\fs150}}{Y}BETINA"),
+        ("hidungnya#2", "suara", f"{WT}HIDUNGNYA\\N{{\\fs140}}{Y}BIKIN..."),
+        ("suara", "saat", f"{WT}SUARA\\N{{\\fs130}}{Y}LEBIH BERAT"),
+        ("saat", "jadi", f"{WT}SAAT\\N{{\\fs150}}{Y}MERAYU"),
+        ("jadi", "makin#4", f"{WT}JADI BUAT\\N{{\\fs140}}{Y}BEKANTAN..."),
+        ("makin#4", "makin#5", f"{WT}MAKIN\\N{{\\fs140}}{Y}\"MANCUNG\"..."),
+        ("makin#5", "follow", f"{WT}MAKIN\\N{{\\fs180}}{Y}LAKU!", LOW),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # "sepuluh senti" is in NUMS
 elif EP == "75":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo75.mp3"  # one v4 take, 31,2 s: no cuts (TTS spelling "Ouk", "Mainkraf"; re-transcribed: Java, Oak, Minecraft)
@@ -3192,6 +3248,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "77": [("sepuluh senti,", "10 senti,")],
         "72": [("dua puluh enam", "26"), ("empat", "4"), ("tiga belas", "13"), ("tiga juta", "3 juta")],
         "70": [("voyejer satu", "Voyager 1"), ("satu hari", "1 hari"), ("empat belas november,", "14 November,"),
                ("dua puluh empat miliar", "24 miliar"), ("empat belas november!", "14 November!")]}[EP]
