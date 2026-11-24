@@ -107,7 +107,7 @@ Alternatif hook (3 varian):
 
 ## 5. Naskah VO dengan arahan suara (siap dibacakan Akram v4)
 
-64 kata tertulis. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "putri duyung", "Maluku", "VOC", "Ambon", "Amsterdam", "dugong", "duyung".
+63 kata tertulis. **Tanpa `[whispers]`.** Kata kunci SEO yang diucapkan: "putri duyung", "Maluku", "VOC", "Ambon", "Amsterdam", "dugong", "duyung".
 
 ```
 [mischievously] Putri duyung ternyata pernah "ditangkap" di Maluku zaman VOC... dan konon, suaranya mencicit seperti tikus!
