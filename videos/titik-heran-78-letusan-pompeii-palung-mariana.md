@@ -206,7 +206,7 @@ Fun fact: robotnya sudah hampir di batas kemampuan; menurut National Geographic,
 Kirim ke teman yang takut laut dalam 😬
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Robot di dinding palung dan dasar palung yang bercahaya adalah ilustrasi; penggaris kedalaman, tekanan, dan grafik rekor adalah skema. Kaca vulkanik di video adalah contoh dari darat.
+Robot penyelam, Pompeii yang menyatu dengan laut, laut biru yang menggelap, dan dinding palung yang bercahaya adalah ilustrasi; penampang palung, angka tekanan, gelembung gas, dan grafik rekor adalah skema. Kapal di video adalah kapal riset lain, dan semburan lava adalah letusan di darat (Islandia).
 Sumber: Stern dkk., "ROVing in the deep: tectonic and magmatic complexities of the Challenger Deep forearc segment, Southern Mariana convergent margin", Frontiers in Earth Science 14:1929806 (2026), doi:10.3389/feart.2026.1929806; Frontiers News (23 Nov 2026); National Geographic (23 Nov 2026); Live Science (23 Nov 2026)
 
 #titikheran #palungmariana #gunungapi #misterilaut #faktaunik
@@ -219,9 +219,31 @@ Bayangkan: letusan terjadi di bawah air setebal 6 km, dan sampai sekarang sumber
 
 ---
 
-## 8. Shot list final
+## 8. Shot list final (sesuai video yang dirender, 24 Nov 2026 malam)
 
-Diisi saat video dirender (waktu akhir ikut take Akram).
+Take Akram v4 (1 take, 482 kredit): 28,3 detik, 59 kata, tanpa bisikan. Karena di bawah 29,5 detik, tidak ada potongan dan kecepatan tetap alami (atempo 1,0). Dua jeda dramatis yang terlalu pendek dipanjangkan dengan room tone take itu sendiri (prep78.py): +0,15 detik setelah "panasnya..." dan +0,35 detik setelah "letusannya..." (jadi ±0,6 detik sebelum "sampai sekarang belum ketemu") → audio 28,8 detik, ekor CTA 1 detik → **video 29,8 detik**, master -14,9 LUFS, true peak -2,1 dBFS. Ejaan TTS "Pompei", "enam kilometer", "enam ratus", "dua kilometer" tampil "Pompeii", "6", "600", "2" di subtitle. Cek ucapan (transkripsi ulang berbayar, 156 kredit): semua kata terbaca benar, termasuk "Pompeii" dan "Palung Mariana".
+
+VO yang terdengar: "Jejak letusan ala Pompeii ternyata ditemukan 6 kilometer di bawah laut, di Palung Mariana... padahal harusnya mustahil! Tekanan airnya 600 kali lipat. Gas di magma tak bisa mengembang... jadi tak mungkin meledak. Tapi robot penyelam menemukan bekas aliran panasnya... 2 kilometer lebih dalam dari rekor lama! Dan sumber letusannya... sampai sekarang belum ketemu. Follow, besok ada yang lebih aneh."
+
+| Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|
+| 0:00,0–0:01,8 | Jejak letusan ala Pompeii | `[curious]` | Gapura dan jalan batu Pompeii, Vesuvius di belakang, punch-in, grade hangat (label "foto: Pompeii & Vesuvius, Italia") | foto 2458500 | LETUSAN **ALA POMPEII** |
+| 0:01,8–0:03,0 | ternyata ditemukan | `[curious]` | Vesuvius di atas reruntuhan Pompeii, dorong pelan (foto di tengah, latar buram) | foto 4635882 | TERNYATA **DITEMUKAN...** |
+| 0:03,0–0:04,9 | 6 kilometer di bawah laut, | `[curious]` | Laut biru bercahaya makin gelap, pill "kedalaman: 0 → 6.148 m" (label "ilustrasi") | video 26830 (animasi) + skema78 turun | **6 KM** DI BAWAH LAUT |
+| 0:04,9–0:06,5 | di Palung Mariana... | `[curious]` | Kamera turun dari Pompeii, ke laut, sampai robot menyorot batu menyala di dinding palung (label "ilustrasi") | Higgsfield H3 (skema78 h3turun) | PALUNG **MARIANA** |
+| 0:06,5–0:09,2 | padahal harusnya mustahil! | `[dramatic]` | Penampang palung sesuai skala: titik oranye "±6 km: jejak letusan" di dinding, Challenger Deep ±10.935 m, Everest 8.849 m muncul dari dasar dan puncaknya masih di bawah air (label "skema") | skema78 dalam | PADAHAL **MUSTAHIL?!** |
+| 0:09,2–0:11,7 | Tekanan airnya 600 kali lipat. | `[dramatic]` | Gelembung di latar hitam kebiruan, angka 1× → **600×**, pill "dibanding tekanan di permukaan" (label "skema") | video 31611 (animasi) + skema78 tekanan | TEKANAN **AIRNYA** · 600× |
+| 0:11,7–0:13,0 | Gas di magma tak bisa | `[curious]` | Lava menyembur di gunung api darat, punch-in (label "foto: letusan gunung api di darat (Islandia)") | video 152174 | GAS **DI MAGMA...** |
+| 0:13,0–0:15,9 | mengembang... jadi tak mungkin meledak. | `[curious]` | Gelembung "gas" di magma mencoba membesar, didorong balik 8 panah, pill "tekanan air ±600×"; pada "meledak" ikon DUAR! muncul lalu dicoret X merah (label "skema") | skema78 gas | TAK BISA **MENGEMBANG** → JADI TAK MUNGKIN **MELEDAK** |
+| 0:15,9–0:17,1 | Tapi robot penyelam | `[excited]` | Kapal riset di laut, dorong pelan (label "foto: kapal riset lain (ilustrasi)") | foto 5537040 | **TAPI...** → ROBOT **PENYELAM** |
+| 0:17,1–0:19,5 | menemukan bekas aliran panasnya... | `[excited]` | Robot berlampu sorot di dinding palung, lempengan batu tipis retak-retak, dorong pelan (label "ilustrasi") | Higgsfield H1 (H1t: ditambah air gelap di atas agar robot di bawah judul) | MENEMUKAN **BEKAS ALIRAN PANASNYA** |
+| 0:19,5–0:22,2 | 2 kilometer lebih dalam dari rekor lama! | `[excited]` | Dua batang kedalaman: "rekor lama ±4.000 m · Arktik, 2008" dan batang kuning "temuan baru ±6.100 m", kurung "+2 km" (label "skema · Frontiers in Earth Science, 23 Nov 2026") | skema78 rekor | **+2 KM** DARI REKOR LAMA! |
+| 0:22,2–0:24,3 | Dan sumber letusannya... | `[dramatic]` | Dinding palung gelap tanpa dasar, cahaya oranye samar jauh di bawah, dorong pelan (label "ilustrasi") | Higgsfield H2 | SUMBER **LETUSANNYA...** |
+| 0:24,3–0:26,3 | sampai sekarang belum ketemu. | `[dramatic]` | Lempengan batu di dinding palung, lampu memudar dan gelap menutup dari tepi (label "ilustrasi") | Higgsfield H1 bagian kiri bawah (skema78 h1gelap) | SAMPAI SEKARANG **BELUM KETEMU** |
+| 0:26,3–0:27,5 | Follow, besok | `[curious]` | Forum Pompeii dengan Vesuvius, dorong pelan (label "foto: Pompeii & Vesuvius, Italia") | foto 2823908 | **FOLLOW** @titikheran |
+| 0:27,5–0:29,8 | ada yang lebih aneh. | `[curious]` | Jalan batu Pompeii, Vesuvius di ujung, dorong pelan | foto 4053847 | **FOLLOW** @titikheran |
+
+Perubahan dari storyboard: foto kaca vulkanik 505332 tidak dipakai (detik 15–19 cukup dengan skema rekor); video 319587 (render robot di dekat bangkai kapal) diganti Higgsfield H1 versi gelap; video CTA 113808 diganti dua foto Pompeii karena Vesuvius tidak terlihat di klip itu; video 26830 ternyata animasi, jadi diberi label "ilustrasi" dan baru muncul di detik 3,0. Tidak ada gips korban Pompeii di frame mana pun. File: videos/titik-heran-78-letusan-pompeii-palung-mariana.mp4 + .srt; skema di videos/tools/skema78.py, jeda VO di videos/tools/prep78.py.
 
 ---
 

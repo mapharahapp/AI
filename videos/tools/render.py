@@ -2726,6 +2726,56 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "78":
+    STYLE, LUFS, PAD, TEMPO = 2, -15, 1.0, 1.0  # the v4 take is 28,3 s; prep78.py grows two pauses to 28,8 s; natural speed, CTA held 1 s
+    AUDIO = "vo78pad.wav"
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    PV = "foto: Pompeii & Vesuvius, Italia"
+    # made by skema78.py: skema_turun (Pixabay 26830, an animated sunlit sea, darkens to black while a depth pill counts
+    # 0 -> 6.148 m), h3turun (Arif's Higgsfield H3: the camera slides from Pompeii down to the robot on the trench wall),
+    # skema_dalam (cross-section of the trench: the eruption marker at +-6 km on the wall, Challenger Deep 10.935 m,
+    # Everest 8.849 m to scale), skema_tekanan (Pixabay 31611 bubbles on black; counter 1x -> 600x, "dibanding di
+    # permukaan"), skema_gas (a gas bubble in magma tries to grow, arrows of water pressure push it back; a burst icon
+    # is struck out on "meledak"), skema_rekor (two depth bars: rekor lama +-4.000 m Arktik 2008, temuan baru +-6.100 m;
+    # bracket "+2 KM"; pill "Frontiers in Earth Science, 23 Nov 2026"), h1gelap (Higgsfield H1, lower wall, the lights
+    # fade and a vignette closes in). H1t.jpg = H1 with 25% more dark water on top (skema78.py pad_h1), so the robot
+    # sits under the title. The CTA returns to Pompeii.
+    SHOTS = [
+        (0, "ternyata", "img/2458500.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": PV}),
+        ("ternyata", "enam+0.15", "img/4635882.jpg", 0, "b", False, {"zoom": 0.08, "grade": "warm", "tag": PV}),
+        ("enam+0.15", "di#2", "clips/skema_turun.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
+        ("di#2", "padahal", "clips/h3turun.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
+        ("padahal", "tekanan", "clips/skema_dalam.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tekanan", "gas", "clips/skema_tekanan.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("gas", "mengembang", "clips/152174.mp4", 3.0, "v", False, {"zoom": "punch", "pos": 0.55, "grade": "pop", "tag": "foto: letusan gunung api di darat (Islandia)"}),
+        ("mengembang", "tapi", "clips/skema_gas.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tapi", "menemukan", "img/5537040.jpg", 0, "b", False, {"zoom": 0.08, "grade": "cold", "tag": "foto: kapal riset lain (ilustrasi)"}),
+        ("menemukan", "dua", "img/H1t.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("dua", "dan", "clips/skema_rekor.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · Frontiers in Earth Science, 23 Nov 2026"}),
+        ("dan", "sampai", "img/H2.jpg", 0, "f", False, {"zoom": 0.1, "grade": "base", "tag": "ilustrasi"}),
+        ("sampai", "follow", "clips/h1gelap.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi"}),
+        ("follow", "ada", "img/2823908.jpg", 0, "b", False, {"zoom": 0.06, "grade": "warm", "tag": PV}),
+        ("ada", "end", "img/4053847.jpg", 0, "b", False, {"zoom": 0.08, "grade": "warm", "tag": PV}),
+    ]
+    TITLES = [
+        (0, "ternyata", f"{WT}LETUSAN\\N{{\\fs130}}{Y}ALA POMPEII"),
+        ("ternyata", "enam", f"{WT}TERNYATA\\N{{\\fs120}}{Y}DITEMUKAN..."),
+        ("enam", "di#2", f"{{\\fs170}}{Y}6 KM\\N{{\\fs92}}{WT}DI BAWAH LAUT"),
+        ("di#2", "padahal", f"{WT}PALUNG\\N{{\\fs150}}{Y}MARIANA"),
+        ("padahal", "tekanan", f"{WT}PADAHAL\\N{{\\fs150}}{Y}MUSTAHIL?!"),
+        ("tekanan", "gas", f"{WT}TEKANAN\\N{{\\fs130}}{Y}AIRNYA"),
+        ("gas", "mengembang", f"{WT}GAS\\N{{\\fs140}}{Y}DI MAGMA..."),
+        ("mengembang", "jadi", f"{WT}TAK BISA\\N{{\\fs120}}{Y}MENGEMBANG"),
+        ("jadi", "tapi", f"{WT}JADI TAK MUNGKIN\\N{{\\fs140}}{Y}MELEDAK"),
+        ("tapi", "robot", f"{{\\fs150}}{Y}TAPI..."),
+        ("robot", "menemukan", f"{WT}ROBOT\\N{{\\fs140}}{Y}PENYELAM"),
+        ("menemukan", "dua", f"{WT}MENEMUKAN\\N{{\\fs110}}{Y}BEKAS ALIRAN\\NPANASNYA"),
+        ("dua", "dan", f"{{\\fs150}}{Y}+2 KM\\N{{\\fs80}}{WT}DARI REKOR LAMA!"),
+        ("dan", "sampai", f"{WT}SUMBER\\N{{\\fs130}}{Y}LETUSANNYA..."),
+        ("sampai", "follow", f"{WT}SAMPAI SEKARANG\\N{{\\fs140}}{Y}BELUM KETEMU"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Pompei": "Pompeii"}  # TTS spelling; the numbers are in NUMS
 elif EP == "77":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo77.wav"  # one v4 take, 33,5 s; prep77.py cuts the optional "Peneliti menemukan:" (-> 32,0 s)
@@ -3298,6 +3348,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "78": [("enam kilometer", "6 kilometer"), ("enam ratus", "600"), ("dua kilometer", "2 kilometer")],
         "77": [("sepuluh senti,", "10 senti,")],
         "76": [("dua ribu enam belas.", "2016."), ("seribu,", "1000,")],
         "72": [("dua puluh enam", "26"), ("empat", "4"), ("tiga belas", "13"), ("tiga juta", "3 juta")],
