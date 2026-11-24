@@ -211,7 +211,7 @@ Dugong hidup di perairan Indonesia, termasuk Maluku, dan berstatus satwa dilindu
 Kirim ke teman yang masih percaya putri duyung 😆
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Rumah VOC dengan bak air dan para naturalis yang berdebat adalah ilustrasi; jam, buku, dan kartu kamus adalah skema. Patung di awal video adalah Little Mermaid di Kopenhagen; foto dugong diambil di Laut Merah.
+Rumah VOC dengan bak air, meja pelukis, para naturalis yang berdebat (buku di gambar itu bukan buku aslinya), dan dugong di akhir video adalah ilustrasi; jam pasir, kartu buku, dan kartu kamus adalah skema. Patung di awal video adalah Little Mermaid di Kopenhagen, kapalnya replika kapal VOC di Amsterdam, dan foto dugong bukan dari Maluku (salah satunya di Laut Merah).
 Sumber: Biodiversity Heritage Library, "Renard's Book of Fantastical Fish" (2016); Koleksi Khusus Universitas Utrecht, "Natuurlyke historie by Renard"; V. Scribner, "Mermaids and Tritons in the Age of Reason" (The Public Domain Review); Royal Collection Trust; Smithsonian Ocean, "From Mermaids to Manatees"; Snopes (2021); KBBI "duyung"
 
 #titikheran #putriduyung #dugong #maluku #faktaunik
@@ -226,7 +226,27 @@ Jadi selama ini "putri duyung" itu artinya putri dugong 😆 Kamu baru tahu atau
 
 ## 8. Shot list final
 
-Diisi saat video dirender (waktu akhir ikut take Akram).
+Take Akram v4 (satu take) 32,56 detik; 8 jeda dirapatkan jadi 31,25 detik, tempo 1,063, video 30,0 detik, 1080x1920, -14,9 LUFS, true peak -2,2 dBFS, watermark @titikheran di tengah. Cek pelafalan dengan Scribe: semua kata terbaca benar (VOC, dugong, duyung, Amsterdam, Ambon).
+
+| Waktu | VO | Arahan suara | Visual | Sumber / ID | Teks layar |
+|---|---|---|---|---|---|
+| 0,00–1,33 | Putri duyung ternyata | iseng (mischievously) | Patung Little Mermaid, Kopenhagen, zoom masuk | Pixabay 4821693 | PUTRI DUYUNG |
+| 1,33–3,17 | pernah "ditangkap" di Maluku | iseng, jeda kecil sebelum "ditangkap" | Pelabuhan Ambon kini (foto di atas latar blur) | Pixabay 3424221 | "DITANGKAP" DI MALUKU?! |
+| 3,17–5,67 | zaman VOC... dan konon, | iseng, jeda | Replika kapal VOC di Amsterdam | Pixabay 7917858 | ZAMAN VOC... → DAN KONON... |
+| 5,67–8,10 | suaranya mencicit seperti tikus! | iseng | Tikus panen di bulir gandum | Pixabay 9971558 | SUARANYA MENCICIT → SEPERTI TIKUS! |
+| 8,10–9,00 | Pelukis VOC | penasaran (curious) | Meja tulis dan pena bulu, label "ilustrasi" | Pixabay 1869579 | PELUKIS VOC |
+| 9,00–11,07 | memeliharanya di bak air di Ambon. | penasaran | Rumah VOC, ekor di bak kayu, label "ilustrasi" | Higgsfield H1 | DIPELIHARA DI BAK AIR → DI AMBON |
+| 11,07–15,30 | 4 hari 7 jam... ia menolak makan, lalu mati. | dramatis, jeda setelah "jam" | Skema di atas H1: jam pasir, 4 matahari, pil "+7 jam", ikan/kerang/rumput dicoret, layar meredup | skema79 (jam) | 4 HARI 7 JAM... → MENOLAK MAKAN → LALU MATI |
+| 15,30–16,93 | Lukisannya terbit di Amsterdam, | penasaran | Kanal Amsterdam kini | Pixabay 9936659 | TERBIT DI AMSTERDAM ±1719 |
+| 16,93–18,40 | bikin Eropa berdebat. | penasaran | Naturalis Eropa memeriksa buku, label "ilustrasi" (dipotong agar mobil modern di jendela tidak terlihat; teks buku diburamkan) | Higgsfield H2 | EROPA BERDEBAT |
+| 18,40–21,63 | Kini, peneliti menduga kisah itu dikarang. | dramatis | Skema: kartu judul "Poissons, écrevisses et crabes" (bukan faksimile), pil "menurut peneliti (Pietsch)", stempel merah "DIKARANG?" | skema79 (buku) | KINI, PENELITI MENDUGA... → DIKARANG?! |
+| 21,63–23,40 | Mitos putri duyung diduga lahir | penasaran | Dugong merumput di padang lamun | Pixabay 10212406 | MITOS PUTRI DUYUNG → DIDUGA DARI DUGONG... |
+| 23,40–24,47 | dari dugong... | penasaran | Dugong dengan ikan remora, Laut Merah (foto di atas latar blur) | Pixabay 1305773 | DIDUGA DARI DUGONG... |
+| 24,47–26,17 | yang di sini disebut... | iseng, jeda sebelum "duyung" | Skema: kartu KBBI "du·yung n, binatang laut yang menyusui" lalu pil "= DUGONG", latar H3 diburamkan | skema79 (kbbi) | YANG DI SINI DISEBUT... |
+| 26,17–27,03 | duyung! | iseng | Dugong di bawah air, label "ilustrasi" | Higgsfield H3 | DUYUNG! |
+| 27,03–30,00 | Follow, besok ada yang lebih aneh. | penasaran | Ternate, Maluku Utara kini | Pixabay 5779375 | FOLLOW @titikheran |
+
+Perubahan dari storyboard: foto dugong 1305774 (warnanya kemerahan) diganti 1305773 dari seri yang sama; tidak ada skema atau ilustrasi sebelum detik 3; tidak ada foto diam lebih dari 3 detik (shot 11,07–15,30 adalah animasi).
 
 ---
 

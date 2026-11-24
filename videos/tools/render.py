@@ -2726,6 +2726,59 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "79":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo79.mp3"  # one v4 take, 32,6 s: no cuts (TTS spelling "Fe O Se" for VOC, "empat hari tujuh jam")
+    # the dramatic pauses after "VOC...", "jam...", "Kini,", "dugong..." and "disebut..." are kept
+    TIGHT = {"se": 1.0, "jam": 1.0, "kini": 1.0, "dugong": 1.0, "disebut": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    DG = "foto: dugong (Laut Merah)"
+    # made by skema79.py: skema_jam (Higgsfield H1 dimmed; counter "4 HARI 7 JAM" with an hourglass, fish and shell
+    # icons struck out on "menolak makan", the window light fades on "mati"), skema_buku (old paper title card
+    # "Poissons, Ecrevisses et Crabes", Amsterdam +-1719, Louis Renard / lukisan Samuel Fallours; a red stamp
+    # "DIKARANG?" drops on "dikarang", pill "menurut peneliti (Pietsch)"), skema_kbbi (white dictionary card:
+    # du.yung (n), binatang laut yang menyusui, = DUGONG, KBBI)
+    SHOTS = [
+        (0, "pernah", "img/4821693.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "foto: patung Little Mermaid, Kopenhagen"}),
+        ("pernah", "zaman", "img/3424221.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": "foto: pelabuhan Ambon, kini"}),
+        ("zaman", "suaranya", "img/7917858.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "foto: replika kapal VOC (Amsterdam)"}),
+        ("suaranya", "pelukis", "img/9971558.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.6, "grade": "pop", "tag": "foto: tikus panen"}),
+        ("pelukis", "memeliharanya", "img/1869579.jpg", 0, "b", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("memeliharanya", "empat", "img/H1.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("empat", "lukisannya", "clips/skema_jam.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("lukisannya", "bikin", "img/9936659.jpg", 0, "b", False, {"zoom": 0.08, "grade": "warm", "tag": "foto: Amsterdam, kini"}),
+        ("bikin", "kini", "img/H2c.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("kini", "mitos", "clips/skema_buku.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("mitos", "dari", "img/10212406.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": "foto: dugong"}),
+        ("dari", "yang", "img/1305773.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": DG}),
+        ("yang", "duyung#3", "clips/skema_kbbi.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("duyung#3", "follow", "img/H3.jpg", 0, "f", False, {"zoom": "punch", "grade": "pop", "tag": "ilustrasi"}),
+        ("follow", "end", "img/5779375.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": "foto: Ternate, Maluku Utara (kini)"}),
+    ]
+    TITLES = [
+        (0, "ditangkap", f"{WT}PUTRI\\N{{\\fs150}}{Y}DUYUNG"),
+        ("ditangkap", "zaman", f"{{\\fs120}}{Y}\"DITANGKAP\"\\N{{\\fs92}}{WT}DI MALUKU?!"),
+        ("zaman", "dan", f"{WT}ZAMAN\\N{{\\fs170}}{Y}VOC..."),
+        ("dan", "suaranya", f"{WT}DAN\\N{{\\fs150}}{Y}KONON..."),
+        ("suaranya", "seperti", f"{WT}SUARANYA\\N{{\\fs140}}{Y}MENCICIT"),
+        ("seperti", "pelukis", f"{WT}SEPERTI\\N{{\\fs170}}{Y}TIKUS!"),
+        ("pelukis", "memeliharanya", f"{WT}PELUKIS\\N{{\\fs170}}{Y}VOC"),
+        ("memeliharanya", "ambon", f"{WT}DIPELIHARA DI\\N{{\\fs140}}{Y}BAK AIR"),
+        ("ambon", "empat", f"{WT}DI\\N{{\\fs160}}{Y}AMBON"),
+        ("empat", "ia", f"{{\\fs150}}{Y}4 HARI\\N7 JAM..."),
+        ("ia", "lalu", f"{WT}MENOLAK\\N{{\\fs150}}{Y}MAKAN"),
+        ("lalu", "lukisannya", f"{WT}LALU\\N{{\\fs160}}{Y}MATI"),
+        ("lukisannya", "bikin", f"{WT}TERBIT DI\\N{{\\fs130}}{Y}AMSTERDAM\\N{{\\fs70}}{WT}±1719"),
+        ("bikin", "kini", f"{WT}EROPA\\N{{\\fs140}}{Y}BERDEBAT"),
+        ("kini", "dikarang", f"{WT}KINI, PENELITI\\N{{\\fs140}}{Y}MENDUGA..."),
+        ("dikarang", "mitos", f"{{\\fs140}}{Y}DIKARANG?!"),
+        ("mitos", "diduga", f"{WT}MITOS\\N{{\\fs130}}{Y}PUTRI DUYUNG"),
+        ("diduga", "yang", f"{WT}DIDUGA DARI\\N{{\\fs150}}{Y}DUGONG..."),
+        ("yang", "duyung#3", f"{WT}YANG DI SINI\\N{{\\fs140}}{Y}DISEBUT..."),
+        ("duyung#3", "follow", f"{{\\fs170}}{Y}DUYUNG!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # VOC and "4 hari 7 jam" are in NUMS
 elif EP == "78":
     STYLE, LUFS, PAD, TEMPO = 2, -15, 1.0, 1.0  # the v4 take is 28,3 s; prep78.py grows two pauses to 28,8 s; natural speed, CTA held 1 s
     AUDIO = "vo78pad.wav"
@@ -3348,6 +3401,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "79": [("fe o se...", "VOC..."), ("fe o se", "VOC"), ("empat hari tujuh jam...", "4 hari 7 jam...")],
         "78": [("enam kilometer", "6 kilometer"), ("enam ratus", "600"), ("dua kilometer", "2 kilometer")],
         "77": [("sepuluh senti,", "10 senti,")],
         "76": [("dua ribu enam belas.", "2016."), ("seribu,", "1000,")],
