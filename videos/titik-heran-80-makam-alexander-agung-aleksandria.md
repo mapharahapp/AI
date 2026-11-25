@@ -214,7 +214,7 @@ Alexander wafat di Babilonia tahun 323 SM, umur 32. Sekitar tahun 400 M makamnya
 Kirim ke teman yang suka sejarah 👀
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Ruang makam, kaisar bertoga, galian di taman, terowongan, dan kepala patung yang gompal adalah ilustrasi; lini masa, penampang galian, dan peta adalah skema. Patung berkuda adalah patung Alexander modern di Thessaloniki, Yunani.
+Kepala patung yang gompal, ruang makam dan kaisar bertoga, galian di taman, mahkota di atas fondasi, dan terowongan adalah ilustrasi; lini masa, penampang galian, dan peta adalah skema. Patung berkuda adalah patung Alexander modern di Thessaloniki, Yunani; patung kaisar adalah patung Augustus di Roma.
 Sumber: Kementerian Pariwisata dan Purbakala Mesir (24 Nov 2026) lewat Egyptian Gazette (24 Nov 2026), HeritageDaily (24 Nov 2026), La Brújula Verde (24 Nov 2026), Greek City Times (25 Nov 2026); Cassius Dio, Sejarah Romawi 51.16; Suetonius, Augustus 18; Strabo, Geographica 17.1.8
 
 #titikheran #alexanderagung #sejarahdunia #arkeologi #faktaunik
@@ -229,7 +229,27 @@ Kalau ini benar makam raja-raja Ptolemaios, menurut kamu jasad Alexander Agung m
 
 ## 8. Shot list final
 
-Diisi saat video dibuat (waktu akhir mengikuti take Akram).
+Video: `titik-heran-80-makam-alexander-agung-aleksandria.mp4` (30,0 detik, 1080x1920, -14,9 LUFS, true peak -2,1 dBFS). Take Akram v4: 31,9 detik, 7 jeda biasa dirapatkan (TIGHT) menjadi 31,08 detik, atempo 1,057. Jeda dramatis setelah "Mesir", "konon", "menyentuhnya", "lenyap", "kota", dan "jasadnya" dijaga utuh. Kata opsional tidak ada yang dibuang. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:01,5 | Makam Alexander Agung yang | `[curious]` | Patung Alexander berkuda dari bawah, langit biru (foto asli), punch-in + pop | foto 2932349 | MAKAM **ALEXANDER AGUNG** · pojok: "foto: patung Alexander Agung, Thessaloniki" |
+| 2 | 0:01,5–0:03,2 | hilang 1.600 tahun | `[curious]` | Patung yang sama dari sudut lain, dorong pelan (foto asli) | foto 2710649 | HILANG **±1.600 TAHUN** |
+| 3 | 0:03,2–0:05,2 | diduga ditemukan di Mesir... | `[curious]` | Benteng Qaitbay dan perahu di pelabuhan Aleksandria (foto asli) | foto 1446962 | DIDUGA DITEMUKAN **DI MESIR** · pojok: "foto: Aleksandria, Mesir (kini)" |
+| 4 | 0:05,2–0:07,4 | dan konon, kaisar Romawi | `[mischievously]` | Patung Augustus bertoga (foto asli), punch-in, grade hangat | foto 955274 | DAN **KONON...** → KAISAR **ROMAWI** · pojok: "foto: patung Kaisar Augustus, Roma" |
+| 5 | 0:07,4–0:09,1 | mematahkan hidung jasadnya! | `[mischievously]` | Kepala marmer dari samping, ujung hidung gompal (label "ilustrasi"), punch-in | Higgsfield H5 (bayangan kiri dihapus) | MEMATAHKAN **HIDUNGNYA?!** |
+| 6 | 0:09,1–0:11,0 | Kaisar Augustus menyentuhnya... | `[dramatic]` | Ruang makam berlampu minyak: sosok bertoga dan mahkota daun emas menyentuh peti kaca, jasad tertutup kain (label "ilustrasi"), dorong pelan | Higgsfield H2 (versi baru) | KAISAR **AUGUSTUS** · 30 SM |
+| 7 | 0:11,0–0:12,9 | krek, sepotong hidungnya patah! | `[dramatic]` | Potongan dekat tangan dan peti dari H2, punch-in + kilat putih pada "krek" | Higgsfield H2 (crop) | **KREK!** → SEPOTONG HIDUNGNYA **PATAH!** (di bawah, tangan tetap terlihat) · pojok: "ilustrasi · kisah menurut Cassius Dio" |
+| 8 | 0:12,9–0:14,6 | Lalu makamnya lenyap... | `[curious]` | Menara benteng Qaitbay (foto asli), grade tua memudar | foto 1289488 | MAKAMNYA **LENYAP...** · pojok: "foto: Aleksandria, Mesir (kini)" |
+| 9 | 0:14,6–0:16,9 | berabad-abad dicari, tak ketemu. | `[curious]` | Lini masa: 323 SM Alexander wafat → 30 SM dikunjungi Augustus → ±400 M terakhir disebut → 2026 ?, tanda X merah bertambah, penghitung "PENCARIAN" berubah jadi "140+ PENCARIAN GAGAL" (label "skema") | skema80 (lini) | BERABAD-ABAD **DICARI** → **TAK KETEMU** |
+| 10 | 0:16,9–0:18,9 | Kini, arkeolog Yunani menemukan | `[excited]` | Lubang galian di taman kota berpohon palem, fondasi batu kapur dan terowongan (label "ilustrasi"), dorong pelan | Higgsfield H1 | KINI, ARKEOLOG **YUNANI** |
+| 11 | 0:18,9–0:21,1 | fondasi raksasa di bawah taman kota... | `[excited]` | Penampang: taman berpalem di atas, fondasi batu kapur ±10 m di bawah tanah, ≥36 m, pil "TAMAN SHALLALAT", terowongan "ke utara" (label "skema") | skema80 (penampang) | **FONDASI RAKSASA** → DI BAWAH **TAMAN KOTA** · pojok: "skema · Kementerian Pariwisata & Purbakala Mesir, 24 Nov 2026" |
+| 12 | 0:21,1–0:22,5 | diduga makam raja, | `[excited]` | Peta Aleksandria: Laut Tengah, Benteng Qaitbay (bekas Mercusuar), kawasan istana kuno, titik Taman Shallalat berdenyut, pil merah "makam raja-raja Ptolemaios (Sema)?" | skema80 (peta) | DIDUGA **MAKAM RAJA** · pojok: "skema (perkiraan)" |
+| 13 | 0:22,5–0:24,9 | tempat jasad Alexander dulu disemayamkan! | `[excited]` | Mahkota daun emas di atas batu kapur di dasar galian, sinar matahari (label "ilustrasi") | Higgsfield H4 (versi baru) | TEMPAT JASAD **ALEXANDER** · kecil: "dulu disemayamkan (menurut Strabo)" |
+| 14 | 0:24,9–0:27,4 | Tapi jasadnya... masih di sana? | `[dramatic]` | Terowongan batu gelap (obor dipotong dari frame), zoom pelan ke kegelapan (label "ilustrasi") | Higgsfield H3 (crop) | TAPI **JASADNYA...** → MASIH **DI SANA?** |
+| 15 | 0:27,4–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Patung Alexander berkuda dengan langit (foto asli), latar blur | foto 5343320 | **FOLLOW** @titikheran · pojok: "foto: patung Alexander Agung, Thessaloniki" |
+
+Catatan: detik 0–5 hanya foto asli; ilustrasi pertama di detik 7,4, skema pertama di detik 14,6. Tidak ada frame diam lebih dari 2,6 detik. Foto 2710626, 3948105, dan 5524961 dari rencana tidak dipakai (diganti 2710649 dan gambar Higgsfield H4). Sampul: `titik-heran-80-makam-alexander-agung-aleksandria-sampul.jpg` (H4 + judul).
 
 ---
 

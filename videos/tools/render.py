@@ -2726,6 +2726,64 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "80":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo80.mp3"  # one v4 take, 31,9 s: no cuts (TTS spelling "seribu enam ratus", "Agustus")
+    # the dramatic pauses after "Mesir...", "konon,", "menyentuhnya...", "lenyap...", "kota..." and "jasadnya..." are kept
+    TIGHT = {"mesir": 1.0, "konon": 1.0, "menyentuhnya": 1.0, "lenyap": 1.0, "kota": 1.0, "jasadnya#2": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    AL = "foto: patung Alexander Agung, Thessaloniki"
+    LOW = {"pos": (8, 540, 860)}  # over H2k the titles sit on the glass, under the hand on the wrapped head
+    FLASH = "{\\an7\\pos(0,0)\\bord0\\shad0\\1c&HFFFFFF&\\1a&H50&\\fad(0,240)\\p1}m 0 0 l 1080 0 1080 1920 0 1920{\\p0}"
+    AX = "foto: Aleksandria, Mesir (kini)"
+    # Arif's Higgsfield images: H1 (dig in a city park), H2 (the emperor lays a gold wreath and touches the wrapped
+    # head), H3 (tunnel), H4 (gold wreath in the pit; its grey band sits under the title), H5 (marble head, chipped nose).
+    # skema80.py: H5c (H5 with the wall shadow at the lower left painted out), H2k (H2 cropped on the hand and the
+    # wrapped head, no face), H3c (H3 cropped past the torch); skema_lini (timeline 323 SM -> 30 SM -> +-400 M ->
+    # 140+ pencarian gagal -> 2026?), skema_penampang (park above, limestone foundations +-10 m down, >=36 m, walls,
+    # tunnel to the north), skema_peta (Alexandria coast, Qaitbay, ancient royal quarter, Taman Shallalat dot,
+    # "makam raja-raja Ptolemaios (Sema)?", "perkiraan")
+    SHOTS = [
+        (0, "hilang", "img/2932349.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "pop", "tag": AL}),
+        ("hilang", "diduga", "img/2710649.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": AL}),
+        ("diduga", "dan", "img/1446962.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": AX}),
+        ("dan", "mematahkan", "img/955274.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": "foto: patung Kaisar Augustus, Roma"}),
+        ("mematahkan", "kaisar#2", "img/H5c.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("kaisar#2", "krek", "img/H2.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("krek", "lalu", "img/H2k.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi · kisah menurut Cassius Dio"}),
+        ("lalu", "berabadabad", "img/1289488.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "aged", "tag": AX}),
+        ("berabadabad", "kini", "clips/skema_lini.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("kini", "fondasi", "img/H1.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("fondasi", "diduga#2", "clips/skema_penampang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · Kementerian Pariwisata & Purbakala Mesir, 24 Nov 2026"}),
+        ("diduga#2", "tempat", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema (perkiraan)"}),
+        ("tempat", "tapi", "img/H4.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("tapi", "follow", "img/H3c.jpg", 0, "f", False, {"zoom": 0.12, "grade": "base", "tag": "ilustrasi"}),
+        ("follow", "end", "img/5343320.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": AL}),
+    ]
+    TITLES = [
+        (0, "hilang", f"{WT}MAKAM\\N{{\\fs130}}{Y}ALEXANDER\\NAGUNG"),
+        ("hilang", "diduga", f"{WT}HILANG\\N{{\\fs150}}{Y}±1.600\\NTAHUN"),
+        ("diduga", "dan", f"{WT}DIDUGA DITEMUKAN\\N{{\\fs150}}{Y}DI MESIR"),
+        ("dan", "kaisar", f"{WT}DAN\\N{{\\fs150}}{Y}KONON..."),
+        ("kaisar", "mematahkan", f"{WT}KAISAR\\N{{\\fs150}}{Y}ROMAWI"),
+        ("mematahkan", "kaisar#2", f"{WT}MEMATAHKAN\\N{{\\fs130}}{Y}HIDUNGNYA?!"),
+        ("kaisar#2", "krek", f"{WT}KAISAR\\N{{\\fs140}}{Y}AUGUSTUS\\N{{\\fs70}}{WT}30 SM"),
+        ("krek", "krek+0.3", FLASH, {"raw": True}),
+        ("krek", "sepotong", f"{{\\fs190}}{Y}KREK!", LOW),
+        ("sepotong", "lalu", f"{WT}{{\\fs80}}SEPOTONG HIDUNGNYA\\N{{\\fs150}}{Y}PATAH!", LOW),
+        ("lalu", "berabadabad", f"{WT}MAKAMNYA\\N{{\\fs150}}{Y}LENYAP..."),
+        ("berabadabad", "tak", f"{WT}BERABAD-ABAD\\N{{\\fs140}}{Y}DICARI"),
+        ("tak", "kini", f"{{\\fs150}}{Y}TAK KETEMU"),
+        ("kini", "fondasi", f"{WT}KINI, ARKEOLOG\\N{{\\fs140}}{Y}YUNANI"),
+        ("fondasi", "di#2", f"{WT}FONDASI\\N{{\\fs150}}{Y}RAKSASA"),
+        ("di#2", "diduga#2", f"{WT}DI BAWAH\\N{{\\fs140}}{Y}TAMAN KOTA"),
+        ("diduga#2", "tempat", f"{WT}DIDUGA\\N{{\\fs130}}{Y}MAKAM RAJA"),
+        ("tempat", "tapi", f"{WT}TEMPAT JASAD\\N{{\\fs130}}{Y}ALEXANDER\\N{{\\fs60}}{WT}dulu disemayamkan (menurut Strabo)"),
+        ("tapi", "masih", f"{WT}TAPI\\N{{\\fs150}}{Y}JASADNYA..."),
+        ("masih", "follow", f"{WT}MASIH\\N{{\\fs150}}{Y}DI SANA?"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Agustus": "Augustus"}  # TTS spelling; the number is in NUMS
 elif EP == "79":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo79.mp3"  # one v4 take, 32,6 s: no cuts (TTS spelling "Fe O Se" for VOC, "empat hari tujuh jam")
@@ -3401,6 +3459,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "80": [("seribu enam ratus", "1.600")],
         "79": [("fe o se...", "VOC..."), ("fe o se", "VOC"), ("empat hari tujuh jam...", "4 hari 7 jam...")],
         "78": [("enam kilometer", "6 kilometer"), ("enam ratus", "600"), ("dua kilometer", "2 kilometer")],
         "77": [("sepuluh senti,", "10 senti,")],
