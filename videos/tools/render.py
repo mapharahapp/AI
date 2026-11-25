@@ -2726,6 +2726,57 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "81":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo81.mp3"  # one v4 take, 31,6 s: no cuts (TTS spelling "seribu sembilan ratus", "empat ribu kilometer")
+    # the dramatic pauses after "bau mulut...", "racun!", "mati...", "racun itu..." and "Maluku..." are kept
+    TIGHT = {"mulut": 1.0, "racun": 1.0, "mati": 1.0, "itu#2": 1.0, "maluku#2": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    CK = "foto: cengkeh"
+    KT = "foto: istana kaisar Tiongkok, Beijing (era kemudian)"
+    # Arif's Higgsfield images: H1 (old official covers his mouth, two colleagues grimace), H2 (he stares at a clove in
+    # his palm), H3 (he bows farewell to his weeping family), H4 (colleagues laugh with cloves, he looks relieved),
+    # H5 (clove branch, Gamalama and the sea), H6 (red lacquer box of cloves, cover).
+    # skema81.py: skema_pulau (North Maluku close-up: Ternate, Tidore, Moti, Makian, Bacan pop in, Halmahera), skema_peta
+    # (East Asia: dashed straight line from North Maluku to Luoyang, the Eastern Han capital, "jarak garis lurus")
+    SHOTS = [
+        (0, "cengkeh", "img/4428912.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "grade": "warm", "tag": KT}),
+        ("cengkeh", "ke", "img/1049598.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": CK}),
+        ("ke", "tapi", "img/892365.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: patung pejabat, makam Dinasti Ming"}),
+        ("tapi", "mengira", "img/H1.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("mengira", "lidahnya", "img/H2.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("lidahnya", "dia#2", "img/6475374.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.45, "grade": "warm", "tag": CK}),
+        ("dia#2", "lalu", "img/7504392.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.75, "grade": "dusk", "tag": KT}),
+        ("lalu", "rekanrekannya", "img/H3.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("rekanrekannya", "ternyata", "img/H4.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi · kisah dari catatan istana Dinasti Han"}),
+        ("ternyata", "pengharum", "img/H6.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("pengharum", "padahal", "img/2485102.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": CK}),
+        ("padahal", "tahun", "img/5779375.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.4, "grade": "pop", "tag": "foto: pulau-pulau Maluku Utara"}),
+        ("tahun", "cengkeh#3", "img/2547757.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "pop", "tag": "foto: Ternate, Maluku Utara"}),
+        ("cengkeh#3", "pulaupulau", "img/H5.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("pulaupulau", "empat", "clips/skema_pulau.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("empat", "follow", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · jarak garis lurus"}),
+        ("follow", "end", "img/2547776.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": "foto: Tidore, Maluku Utara"}),
+    ]
+    TITLES = [
+        (0, "memberi", f"{WT}KAISAR\\N{{\\fs150}}{Y}TIONGKOK"),
+        ("memberi", "ke", f"{WT}MEMBERI\\N{{\\fs150}}{Y}CENGKEH\\N{{\\fs90}}{WT}DARI MALUKU"),
+        ("ke", "tapi", f"{WT}KE PEJABAT TUA\\N{{\\fs140}}{Y}BAU MULUT"),
+        ("tapi", "mengira", f"{{\\fs150}}{WT}TAPI..."),
+        ("mengira", "lidahnya", f"{WT}DIKIRA\\N{{\\fs170}}{Y}RACUN?!"),
+        ("lidahnya", "dia#2", f"{WT}LIDAHNYA\\N{{\\fs140}}{Y}PEDAS\\NMENYENGAT"),
+        ("dia#2", "lalu", f"{WT}TAKUT\\N{{\\fs140}}{Y}DIHUKUM\\NMATI..."),
+        ("lalu", "rekanrekannya", f"{WT}PAMIT KE\\N{{\\fs130}}{Y}KELUARGANYA"),
+        ("rekanrekannya", "ternyata", f"{WT}REKAN-REKANNYA\\NMENCICIPI\\N{{\\fs150}}{Y}\"RACUN\"..."),
+        ("ternyata", "pengharum", f"{WT}TERNYATA CUMA\\N{{\\fs170}}{Y}CENGKEH!"),
+        ("pengharum", "padahal", f"{WT}PENGHARUM\\N{{\\fs160}}{Y}NAPAS"),
+        ("padahal", "cengkeh#3", f"{WT}HAMPIR\\N{{\\fs160}}{Y}1.900\\N{{\\fs110}}TAHUN LALU"),
+        ("cengkeh#3", "pulaupulau", f"{WT}CENGKEH SEDUNIA\\N{{\\fs120}}{Y}CUMA TUMBUH\\NDI MALUKU"),
+        ("pulaupulau", "empat", f"{WT}PULAU-PULAU KECIL\\N{{\\fs150}}{Y}MALUKU"),
+        ("empat", "follow", f"{WT}DARI MALUKU KE ISTANA\\N{{\\fs160}}{Y}±4.000 KM"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}
 elif EP == "80":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo80.mp3"  # one v4 take, 31,9 s: no cuts (TTS spelling "seribu enam ratus", "Agustus")
@@ -3459,6 +3510,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "81": [("seribu sembilan ratus", "1.900"), ("empat ribu", "4.000")],
         "80": [("seribu enam ratus", "1.600")],
         "79": [("fe o se...", "VOC..."), ("fe o se", "VOC"), ("empat hari tujuh jam...", "4 hari 7 jam...")],
         "78": [("enam kilometer", "6 kilometer"), ("enam ratus", "600"), ("dua kilometer", "2 kilometer")],

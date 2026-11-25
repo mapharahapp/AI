@@ -210,7 +210,7 @@ Kenapa "dari Maluku"? Catatan Han tidak menyebut asalnya, tapi sampai era koloni
 Kirim ke teman yang napasnya perlu cengkeh 😂
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Adegan pejabat, keluarga, rekan pejabat, dan pohon cengkeh adalah ilustrasi; peta jarak adalah skema. Foto istana adalah Kota Terlarang di Beijing (dibangun jauh kemudian), dan patung batu adalah patung pejabat dari makam Dinasti Ming.
+Adegan pejabat, keluarga, rekan pejabat, kotak cengkeh merah, dan pohon cengkeh adalah ilustrasi; peta pulau dan peta jarak adalah skema. Foto istana adalah Kota Terlarang di Beijing (dibangun jauh kemudian), dan patung batu adalah patung pejabat dari makam Dinasti Ming.
 Sumber: Han Guan Yi (汉官仪), dikutip The Paper (29 Apr 2024); Shen Kuo, Mengxi Bitan; Wikipedia "Clove", "Emperor Huan of Han", "Magellan expedition"; Wikipedia Indonesia "Cengkih"
 
 #titikheran #cengkeh #maluku #jalurrempah #faktaunik
@@ -225,7 +225,29 @@ Kalau kamu jadi pejabat itu dan tiba-tiba dikasih benda pedas oleh kaisar, kamu 
 
 ## 8. Shot list final
 
-Diisi saat video dibuat (waktu akhir mengikuti take Akram).
+Video: `titik-heran-81-cengkeh-maluku-dikira-racun.mp4` (30,0 detik, 1080x1920). Take Akram v4: 31,5 detik, 3 jeda biasa dirapatkan (TIGHT) menjadi 31,03 detik, atempo 1,055. Jeda dramatis setelah "bau mulut", "racun!", "mati", "racun itu", dan "Maluku" dijaga utuh. Kata opsional tidak ada yang dibuang. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:01,5 | Kaisar Tiongkok pernah | `[curious]` | Aula Kota Terlarang dari serambi bertiang merah (foto asli), punch-in | foto 4428912 | KAISAR **TIONGKOK** · pojok: "foto: istana kaisar Tiongkok, Beijing (era kemudian)" |
+| 2 | 0:01,5–0:02,7 | memberi cengkeh dari Maluku | `[curious]` | Cengkeh kering makro (foto asli), dorong pelan | foto 1049598 | MEMBERI **CENGKEH** DARI MALUKU · pojok: "foto: cengkeh" |
+| 3 | 0:02,7–0:04,8 | ke pejabat tua yang bau mulut... | `[curious]` | Patung batu pejabat Tiongkok (foto asli), dorong pelan | foto 892365 | KE PEJABAT TUA **BAU MULUT** · pojok: "foto: patung pejabat, makam Dinasti Ming" |
+| 4 | 0:04,8–0:06,0 | tapi dia malah | `[mischievously]` | Pejabat tua berlutut menutup mulut dengan lengan baju, dua pejabat lain mengernyit (label "ilustrasi") | Higgsfield H1 | **TAPI...** |
+| 5 | 0:06,0–0:07,8 | mengira itu racun! | `[mischievously]` | Pejabat menatap ngeri sebutir cengkeh di telapak tangannya, punch-in (label "ilustrasi") | Higgsfield H2 | DIKIRA **RACUN?!** |
+| 6 | 0:07,8–0:09,6 | Lidahnya pedas menyengat. | `[dramatic]` | Segenggam cengkeh kering di atas cengkeh yang dijemur, punch-in (foto asli) | foto 6475374 | LIDAHNYA **PEDAS MENYENGAT** · pojok: "foto: cengkeh" |
+| 7 | 0:09,6–0:11,2 | Dia takut dihukum mati... | `[dramatic]` | Atap istana Tiongkok, grade senja (foto asli) | foto 7504392 | TAKUT **DIHUKUM MATI...** |
+| 8 | 0:11,2–0:12,9 | lalu pamit ke keluarganya. | `[dramatic]` | Pejabat membungkuk pamit kepada keluarganya yang berlutut menangis, lampu minyak (label "ilustrasi") | Higgsfield H3 | PAMIT KE **KELUARGANYA** |
+| 9 | 0:12,9–0:15,3 | Rekan-rekannya mencicipi racun itu... | `[curious]` | Dua rekan pejabat tertawa sambil mencium dan mengulum cengkeh, pejabat tua tersenyum lega (label "ilustrasi") | Higgsfield H4 | REKAN-REKANNYA MENCICIPI **"RACUN"...** · pojok: "ilustrasi · kisah dari catatan istana Dinasti Han" |
+| 10 | 0:15,3–0:17,1 | ternyata cuma cengkeh, | `[mischievously]` | Kotak pernis merah berisi cengkeh dan lampu minyak di istana, punch-in (label "ilustrasi") | Higgsfield H6 | TERNYATA CUMA **CENGKEH!** |
+| 11 | 0:17,1–0:18,4 | pengharum napas! | `[mischievously]` | Tumpukan cengkeh (foto asli), dorong pelan | foto 2485102 | PENGHARUM **NAPAS** |
+| 12 | 0:18,4–0:20,5 | Padahal hampir 1.900 | `[excited]` | Pulau-pulau Maluku Utara dari laut (foto asli) | foto 5779375 | HAMPIR **1.900 TAHUN LALU** · pojok: "foto: pulau-pulau Maluku Utara" |
+| 13 | 0:20,5–0:21,5 | tahun lalu, | `[excited]` | Ternate saat senja (foto asli) | foto 2547757 | (lanjutan) · pojok: "foto: Ternate, Maluku Utara" |
+| 14 | 0:21,5–0:23,3 | cengkeh sedunia cuma tumbuh di | `[excited]` | Dahan cengkeh berkuncup merah muda, Gunung Gamalama dan laut di belakang (label "ilustrasi") | Higgsfield H5 | CENGKEH SEDUNIA **CUMA TUMBUH DI MALUKU** |
+| 15 | 0:23,3–0:25,1 | pulau-pulau kecil Maluku... | `[excited]` | Peta Maluku Utara: Ternate, Tidore, Moti, Makian, Bacan menyala satu per satu, Halmahera, pil "tempat asal cengkeh" (label "skema") | skema81 (pulau) | PULAU-PULAU KECIL **MALUKU** |
+| 16 | 0:25,1–0:27,0 | 4.000 kilometer jauhnya! | `[excited]` | Peta Asia Timur: garis putus-putus dari Maluku Utara ke Luoyang, ibu kota Han (label "skema · jarak garis lurus") | skema81 (peta) | DARI MALUKU KE ISTANA **±4.000 KM** |
+| 17 | 0:27,0–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Tidore dan Gunung Kie Matubu dari laut (foto asli), latar blur | foto 2547776 | **FOLLOW** @titikheran · pojok: "foto: Tidore, Maluku Utara" |
+
+Catatan: detik 0–4,8 hanya foto asli; ilustrasi pertama di detik 4,8, skema di detik 23,3. Tidak ada frame diam lebih dari 3 detik. Foto 1070167 (latar putih, gelap setelah grade merah) diganti foto 6475374; foto 1028256, 1326474, 5422154, 2547762, dan 2547774 tidak dipakai. Jarak Ternate–Luoyang garis lurus ±4.070 km (dihitung dari koordinat). Peta: Natural Earth (domain publik); Moti tidak ada di data 10m, jadi digambar sebagai oval kecil. Sampul: `titik-heran-81-cengkeh-maluku-dikira-racun-sampul.jpg` (H6 + judul).
 
 ---
 
