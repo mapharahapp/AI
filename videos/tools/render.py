@@ -2726,6 +2726,58 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "83":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo83c.wav"  # one v4 take (vo83.mp3, 33,5 s) with "tua" (2nd line) and "pun" cut by `skema83.py vocut`, as the naskah allows
+    # ("Paser" read right; quotes around "orang buntut" left out of the TTS text); the dramatic pauses stay, a bit shorter
+    TIGHT = {"berekor": 0.5, "paser": 0.5, "hasilnya": 0.45}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    # Arif's Higgsfield images: H1 (the envoy with a letter in yellow cloth in a long boat on a misty river), H2 (empty
+    # carved throne under yellow drapes), H3 (plank floor with one round hole, mat pulled aside), H4 (rolled letter tied
+    # with yellow cord beside a rattan cane and an oil lamp), H5 (sultan in yellow under a yellow umbrella, attendants in
+    # a file beside and behind him). skema83.py prep: H4k (H4 cropped on the cane and the letter, used on "dicambuk"),
+    # H2k (H2 cropped on the throne). skema83.py: skema_peta (East Kalimantan, Tenggarong and Paser), skema_kartu (source
+    # card: Carl Bock's book reviewed by Wallace in Nature), skema_balik (letter Kutai -> Paser, "DIUSIR", back empty-
+    # handed), skema_reveal (H5 with labels: "sultan" and the file of attendants = "orang buntut")
+    MH = "foto: Sungai Mahakam, Samarinda (wilayah Kesultanan Kutai)"
+    SHOTS = [
+        (0, "mengutus", "img/614418.jpg", 0, "b", False, {"zoom": "punch", "grade": "aged", "tag": MH}),
+        ("mengutus", "dan", "img/3400179.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.35, "grade": "warm", "tag": "foto: Sungai Kapuas, Kalimantan Barat"}),
+        ("dan", "dicambuk", "img/H4.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("dicambuk", "abdi", "img/H4k.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("abdi", "mereka", "img/H2.jpg", 0, "f", False, {"zoom": 0.08, "grade": "warm", "tag": "ilustrasi"}),
+        ("mereka", "katanya", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("katanya", "lantai", "img/H3.jpg", 0, "f", False, {"zoom": 0.06, "grade": "warm", "tag": "ilustrasi"}),
+        ("lantai", "penjelajah", "img/H3.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi · katanya ekornya 5–10 cm"}),
+        ("penjelajah", "tapi", "clips/skema_kartu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("tapi", "abdi#2", "img/H2k.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("abdi#2", "hasilnya", "img/H1.jpg", 0, "f", False, {"zoom": 0.1, "grade": "warm", "tag": "ilustrasi"}),
+        ("hasilnya", "ternyata#2", "clips/skema_balik.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ternyata#2", "orang", "img/H5.jpg", 0, "f", False, {"zoom": 0.08, "top": 0.1, "grade": "warm", "tag": "ilustrasi"}),
+        ("orang", "follow", "clips/skema_reveal.mp4", 0, "v", False, {"zoom": 0.0, "tag": "ilustrasi + skema · jawaban Sultan Paser (ulasan Wallace, Nature 1881)"}),
+        ("follow", "end", "img/614418.jpg", 0, "b", False, {"zoom": 0.08, "grade": "aged", "tag": MH}),
+    ]
+    TITLES = [
+        (0, "mengutus", f"{WT}KESULTANAN\\N{{\\fs170}}{Y}KUTAI"),
+        ("mengutus", "dan", f"{WT}MENJEMPUT\\N{{\\fs130}}{Y}2 MANUSIA\\NBEREKOR?!"),
+        ("dan", "dicambuk", f"{WT}UTUSANNYA\\N{{\\fs150}}{Y}DIANCAM..."),
+        ("dicambuk", "abdi", f"{{\\fs150}}{Y}DICAMBUK!"),
+        ("abdi", "di", f"{WT}ABDI TUA ITU\\N{{\\fs120}}{Y}MENGAKU\\NPERNAH LIHAT"),
+        ("di", "katanya", f"{WT}DI NEGERI\\N{{\\fs170}}{Y}PASER"),
+        ("katanya", "lantai", f"{{\\fs150}}{WT}KATANYA..."),
+        ("lantai", "penjelajah", f"{WT}LANTAI\\N{{\\fs150}}{Y}DILUBANGI\\N{{\\fs70}}{WT}BIAR BISA DUDUK"),
+        ("penjelajah", "tapi", f"{{\\fs86}}{WT}PENJELAJAH EROPA\\N{{\\fs125}}{Y}TAK PERCAYA"),
+        ("tapi", "abdi#2", f"{WT}TAPI SULTAN\\N{{\\fs150}}{Y}TERKESAN"),
+        ("abdi#2", "hasilnya", f"{WT}DIUTUS\\N{{\\fs120}}{Y}MEMBAWA\\NSURAT"),
+        ("hasilnya", "diusir", f"{{\\fs150}}{WT}HASILNYA?"),
+        ("diusir", "pulang", f"{{\\fs170}}{Y}DIUSIR!"),
+        ("pulang", "ternyata#2", f"{WT}PULANG\\N{{\\fs130}}{Y}TANGAN\\NKOSONG"),
+        ("ternyata#2", "orang", f"{WT}TERNYATA\\N{{\\fs150}}{Y}DI PASER..."),
+        ("orang", "pengiring", f"{{\\fs96}}{Y}\"ORANG BUNTUT\"\\N{{\\fs92}}{WT}CUMA SEBUTAN..."),
+        ("pengiring", "follow", f"{WT}UNTUK\\N{{\\fs100}}{Y}PENGIRING\\NPRIBADI SULTAN!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"orang": "\"orang", "buntut": "buntut\""}  # quotes as in the naskah; TTS text had none
 elif EP == "82":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo82.mp3"  # one v4 take, 32,3 s: no cuts (TTS spelling "Apofis", "empat puluh", "seribu", "dua ribu dua puluh sembilan")
@@ -3566,6 +3618,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "83": [("dua", "2")],
         "82": [("empat puluh", "40"), ("seribu", "1.000"), ("dua ribu dua puluh sembilan,", "2029,")],
         "81": [("seribu sembilan ratus", "1.900"), ("empat ribu", "4.000")],
         "80": [("seribu enam ratus", "1.600")],

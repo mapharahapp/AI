@@ -230,6 +230,32 @@ Kalau kamu jadi Sultan Paser dan tiba-tiba dapat surat minta dikirimi "dua orang
 
 ---
 
+## 8. Shot list final
+
+Video: `titik-heran-83-manusia-berekor-kutai.mp4` (30,0 detik, 1080x1920). Take Akram v4: 33,5 detik. Sesuai catatan naskah, kata opsional "tua" (kalimat 2) dan "pun" (kalimat 4) dibuang (`skema83.py vocut`, sambungan 10 ms) jadi 33,0 detik, lalu 5 jeda biasa dirapatkan (TIGHT) jadi 32,43 detik, atempo 1,103. Jeda dramatis setelah "berekor...", "Paser..." dan "Hasilnya?" dijaga. Loudness -14,9 LUFS, true peak -2,2 dBFS. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:01,8 | Kesultanan Kutai ternyata pernah | `[curious]` | Perahu kayu di Sungai Mahakam (foto hitam-putih asli), latar blur, grade tua, punch-in | foto 614418 | **KESULTANAN KUTAI** · pojok: "foto: Sungai Mahakam, Samarinda (wilayah Kesultanan Kutai)" |
+| 2 | 0:01,8–0:04,8 | mengutus abdinya menjemput 2 manusia berekor... | `[curious]` | Senja di Sungai Kapuas (foto asli), dorong pelan | foto 3400179 | MENJEMPUT **2 MANUSIA BEREKOR?!** · pojok: "foto: Sungai Kapuas, Kalimantan Barat" |
+| 3 | 0:04,8–0:06,5 | dan utusannya malah diancam | `[mischievously]` | Surat berpita kuning dan rotan di meja ukir, lampu minyak, dorong pelan | Higgsfield H4 | UTUSANNYA **DIANCAM...** · pojok: "ilustrasi" |
+| 4 | 0:06,5–0:07,4 | dicambuk! | `[mischievously]` | H4 dipotong dekat pada rotan dan surat (H4k), punch-in | Higgsfield H4 (potongan) | **DICAMBUK!** · pojok: "ilustrasi" |
+| 5 | 0:07,4–0:09,0 | Abdi itu mengaku pernah melihat | `[curious]` | Aula istana Melayu, singgasana kosong di bawah tirai kuning, payung kuning | Higgsfield H2 | ABDI TUA ITU **MENGAKU PERNAH LIHAT** · pojok: "ilustrasi" |
+| 6 | 0:09,0–0:10,2 | mereka di Paser... | `[curious]` | Peta Kalimantan Timur (Natural Earth): Kutai/Tenggarong di Sungai Mahakam, Selat Makassar; titik Paser berdenyut dan label PASER muncul (9,4) | skema83 (peta) | DI NEGERI **PASER** · pojok: "skema" |
+| 7 | 0:10,2–0:12,0 | katanya, mereka melubangi | `[mischievously]` | Lantai papan kayu berlubang bulat dengan tikar anyaman, cahaya dari celah dinding, dorong pelan | Higgsfield H3 | **KATANYA...** · pojok: "ilustrasi" |
+| 8 | 0:12,0–0:13,7 | lantai supaya bisa duduk! | `[mischievously]` | H3 punch-in | Higgsfield H3 | LANTAI **DILUBANGI** · BIAR BISA DUDUK · pojok: "ilustrasi · katanya ekornya 5–10 cm" |
+| 9 | 0:13,7–0:15,7 | Penjelajah Eropa tak percaya, | `[dramatic]` | Kartu kertas tua: "Kisah dari buku The Head-Hunters of Borneo · Carl Bock · London, 1881 · diulas Alfred Russel Wallace di jurnal Nature, 3 Nov 1881"; cap merah "TAK PERCAYA" (14,8) | skema83 (kartu) | PENJELAJAH EROPA **TAK PERCAYA** · pojok: "skema" |
+| 10 | 0:15,7–0:17,8 | tapi sultan terkesan. | `[dramatic]` | Singgasana kosong dipotong dekat (H2k), punch-in | Higgsfield H2 (potongan) | TAPI SULTAN **TERKESAN** · pojok: "ilustrasi" |
+| 11 | 0:17,8–0:19,7 | Abdi itu diutus membawa surat. | `[dramatic]` | Utusan di perahu panjang di sungai berkabut saat fajar, memegang surat berbungkus kain kuning, pendayung di depan; dorong pelan | Higgsfield H1 | DIUTUS **MEMBAWA SURAT** · pojok: "ilustrasi" |
+| 12 | 0:19,7–0:22,7 | Hasilnya? Diusir, pulang tangan kosong. | `[dramatic]` | Peta: amplop berjalan dari Kutai ke Paser lewat pesisir; tanda X merah dan pil "diusir, diancam dicambuk" (20,6); garis putus-putus putih kembali ke Kutai (21,4); pil "0 manusia berekor" (22,0) | skema83 (peta pulang) | **HASILNYA?** → **DIUSIR!** (20,6) → PULANG **TANGAN KOSONG** (21,4) · pojok: "skema" |
+| 13 | 0:22,7–0:24,0 | Ternyata di Paser, | `[excited]` | Sultan berbaju kuning di bawah payung kuning berjalan di serambi istana, diikuti barisan pengiring berbaju hitam (dari belakang), dorong pelan | Higgsfield H5 | TERNYATA **DI PASER...** · pojok: "ilustrasi" |
+| 14 | 0:24,0–0:27,1 | orang buntut cuma sebutan untuk pengiring pribadi sultan! | `[excited]` | H5 punch-in pelan; kurung kuning di atas barisan pengiring dan pil "ORANG BUNTUT" (24,4), "= pengiring pribadi" (25,6), label "SULTAN" (26,3) | Higgsfield H5 + skema83 (reveal) | **"ORANG BUNTUT"** CUMA SEBUTAN... → UNTUK **PENGIRING PRIBADI SULTAN!** (25,6) · pojok: "ilustrasi + skema · jawaban Sultan Paser (ulasan Wallace, Nature 1881)" |
+| 15 | 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Perahu di Sungai Mahakam (foto 614418 lagi), latar blur, dorong pelan | foto 614418 | **FOLLOW** @titikheran · pojok: "foto: Sungai Mahakam, Samarinda (wilayah Kesultanan Kutai)" |
+
+Catatan: detik 0–4,8 hanya foto asli (Sungai Mahakam dan Kapuas); Higgsfield pertama di detik 4,8. Tidak ada ekor, orang Dayak, atau monyet di layar, dan nama Tjiropon, Bock, serta Wallace hanya muncul di layar dan caption. Teks layar adegan 5 tetap "ABDI TUA ITU" walau kata "tua" dibuang dari VO. H1 menampilkan wajah utusan dengan jelas (gambar AI, berlabel "ilustrasi"). Atempo 1,103 sedikit di atas batas ideal ±1,08 karena take 66 kata cukup panjang; untuk naskah ID berikutnya targetkan 60–62 kata. Peta dari Natural Earth 10m (daratan, Sungai Mahakam dan Barito); Tenggarong 116,99 BT 0,42 LS, titik Paser di sekitar Tanah Grogot (116,17 BT 1,87 LS).
+
+---
+
 ## Sumber
 - Alfred Russel Wallace, ulasan *The Head-Hunters of Borneo* (Carl Bock), *Nature*, 3 November 1881, arsip Charles H. Smith (Western Kentucky University): https://people.wku.edu/charles.smith/wallace/S342.htm
 - The Spectator, ulasan *The Head-Hunters of Borneo* (26 Nov 1881, hlm. 19): https://archive.spectator.co.uk/article/26th-november-1881/19/the-head-hunters-of-borneo-it-is-to-be-regretted-t
