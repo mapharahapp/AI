@@ -2726,6 +2726,62 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "82":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
+    AUDIO = "vo82.mp3"  # one v4 take, 32,3 s: no cuts (TTS spelling "Apofis", "empat puluh", "seribu", "dua ribu dua puluh sembilan")
+    # the dramatic pauses after "kuil..." and "Apofis..." are kept
+    TIGHT = {"kuil": 1.0, "apofis": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    KR = "foto: kuil Karnak, Luxor"
+    NASA = "ilustrasi · NASA: tidak ada risiko tabrakan"
+    # Arif's Higgsfield images: H1 (red-ink serpent on papyrus pierced by a bronze knife), H2 (charred papyrus fragments
+    # on black velvet), H3 (giant serpent blocking the sun boat), H4 (dig on the rubbish mound by a ruined temple),
+    # H5 (asteroid passing a satellite above Earth). skema82.py prep: H1k (H1 cropped on the knife and the papyrus),
+    # H2c (H2 without the bottom rows, where one fragment carries Latin-looking marks), clips/191150f.mp4 (the fire clip
+    # cropped on the flames, its modern wall and cardboard box in shadow). skema82.py: skema_garis_waktu
+    # (40 fragments +-3.400 years ago -> the one known manual +-1.000 years later), skema_jarak (Earth, the ring of
+    # geosynchronous satellites at +-36.000 km, Apophis passing at +-32.000 km on 13 April 2029, NASA: no impact risk)
+    SHOTS = [
+        (0, "sampah", "img/4381946.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "top": 0.3, "grade": "warm", "tag": KR}),
+        ("sampah", "tapi", "img/3804402.jpg", 0, "b", False, {"zoom": 0.08, "grade": "pop", "tag": "foto: tepi barat Luxor (Thebes)"}),
+        ("tapi", "ular", "clips/143409.mp4", 2, "v", False, {"zoom": 0.06, "pos": 0.53, "grade": "dusk", "tag": "ilustrasi"}),
+        ("ular", "ular#2", "clips/143409.mp4", 14, "v", False, {"zoom": "punch", "pos": 0.6, "grade": "dusk", "tag": "ilustrasi"}),
+        ("ular#2", "dewa", "img/H3.jpg", 0, "f", False, {"zoom": 0.08, "top": 0.2, "grade": "base", "tag": "ilustrasi · mitologi Mesir kuno"}),
+        ("dewa", "gambarnya", "img/21157.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.5, "top": 0.2, "grade": "warm", "tag": "foto: Sungai Nil"}),
+        ("gambarnya", "diinjak", "img/H1.jpg", 0, "f", False, {"zoom": 0.1, "grade": "warm", "tag": "ilustrasi"}),
+        ("diinjak", "dibakar", "img/H1k.jpg", 0, "f", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("dibakar", "kini", "clips/191150f.mp4", 1.5, "v", False, {"zoom": "punch", "grade": "warm", "tag": "ilustrasi"}),
+        ("kini", "empat", "img/H4.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("empat", "seribu", "img/H2c.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi · studi: Univ. Kopenhagen, jurnal ZÄS (Nov 2026)"}),
+        ("seribu", "nama", "clips/skema_garis_waktu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("nama", "dan", "img/7883891.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "dim", "tag": "ilustrasi"}),
+        ("dan", "lewat", "img/H5.jpg", 0, "f", False, {"zoom": 0.12, "top": 0.1, "grade": "base", "tag": NASA}),
+        ("lewat", "follow", "clips/skema_jarak.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · NASA"}),
+        ("follow", "end", "img/420749.jpg", 0, "b", False, {"zoom": 0.08, "grade": "base", "tag": KR}),
+    ]
+    TITLES = [
+        (0, "di", f"{WT}KUTUKAN\\N{{\\fs140}}{Y}MESIR KUNO"),
+        ("di", "tapi", f"{WT}DI TEMPAT SAMPAH\\N{{\\fs170}}{Y}KUIL"),
+        ("tapi", "ular", f"{WT}SASARANNYA\\N{{\\fs100}}{Y}BUKAN MANUSIA"),
+        ("ular", "ular#2", f"{WT}ULAR\\N{{\\fs170}}{Y}RAKSASA!"),
+        ("ular#2", "menghadang", f"{WT}DIPERCAYA\\N{{\\fs140}}{Y}TIAP MALAM"),
+        ("menghadang", "gambarnya", f"{WT}MENGHADANG\\N{{\\fs105}}{Y}DEWA MATAHARI"),
+        ("gambarnya", "ditusuk", f"{{\\fs120}}{WT}GAMBARNYA..."),
+        ("ditusuk", "diinjak", f"{{\\fs170}}{Y}DITUSUK"),
+        ("diinjak", "diludahi", f"{{\\fs170}}{Y}DIINJAK"),
+        ("diludahi", "lalu", f"{{\\fs170}}{Y}DILUDAHI"),
+        ("lalu", "kini", f"{WT}LALU\\N{{\\fs170}}{Y}DIBAKAR!"),
+        ("kini", "empat", f"{{\\fs120}}{WT}KINI MUNCUL..."),
+        ("empat", "seribu", f"{{\\fs200}}{Y}40\\N{{\\fs110}}SERPIHAN\\N{{\\fs64}}{WT}±3.400 TAHUN LALU"),
+        ("seribu", "nama", f"{{\\fs135}}{Y}1.000 TAHUN\\N{WT}LEBIH TUA"),
+        ("nama", "apofis", f"{WT}NAMA ULAR ITU..."),
+        ("apofis", "dan", f"{{\\fs190}}{Y}APOPHIS"),
+        ("dan", "asteroid", f"{WT}TAHUN\\N{{\\fs200}}{Y}2029"),
+        ("asteroid", "lebih#2", f"{WT}ASTEROID\\N{{\\fs160}}{Y}APOPHIS\\N{{\\fs64}}{WT}13 APRIL 2029"),
+        ("lebih#2", "follow", f"{WT}LEBIH DEKAT DARI\\N{{\\fs100}}{Y}BANYAK SATELIT!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Apofis...": "Apophis...", "Apofis": "Apophis"}  # TTS spelling; the numbers are in NUMS
 elif EP == "81":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo81.mp3"  # one v4 take, 31,6 s: no cuts (TTS spelling "seribu sembilan ratus", "empat ribu kilometer")
@@ -3510,6 +3566,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "82": [("empat puluh", "40"), ("seribu", "1.000"), ("dua ribu dua puluh sembilan,", "2029,")],
         "81": [("seribu sembilan ratus", "1.900"), ("empat ribu", "4.000")],
         "80": [("seribu enam ratus", "1.600")],
         "79": [("fe o se...", "VOC..."), ("fe o se", "VOC"), ("empat hari tujuh jam...", "4 hari 7 jam...")],

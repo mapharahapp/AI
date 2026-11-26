@@ -212,7 +212,7 @@ Asteroid 99942 Apophis dinamai dari ular ini (Apep dalam bahasa Mesir). Pada 13 
 Kalau kamu pendeta Mesir kuno, ular ini mau dikutuk atau diajak damai? 🐍
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Adegan ritual, ular raksasa, serpihan papirus, lokasi galian, dan asteroid adalah ilustrasi; garis waktu dan jarak asteroid adalah skema. Foto patung dan kolom adalah kuil Karnak, Luxor.
+Ular, papirus berpisau, api, serpihan papirus, lokasi galian, dinding hieroglif, dan asteroid adalah ilustrasi; garis waktu dan jarak asteroid adalah skema. Foto patung dan kolom adalah kuil Karnak, Luxor; foto sungai adalah Sungai Nil.
 Sumber: Hagen, Kühne-Wespi & Seco Álvarez, "Cursing Apophis", Zeitschrift für Ägyptische Sprache und Altertumskunde 153(2), 2026; siaran pers Universitas Kopenhagen (23 Nov 2026); Archaeology Magazine (24 Nov 2026); NASA, "Apophis Facts"
 
 #titikheran #mesirkuno #apophis #sejarahdunia #faktaunik
@@ -222,6 +222,33 @@ Sumber: Hagen, Kühne-Wespi & Seco Álvarez, "Cursing Apophis", Zeitschrift für
 ```
 Nama ular yang rutin dikutuk di kuil Mesir kuno sekarang dipakai buat asteroid yang lewat dekat Bumi... menurutmu pas atau malah serem? 😅
 ```
+
+---
+
+## 8. Shot list final
+
+Video: `titik-heran-82-ritual-kutukan-ular-apophis.mp4` (30,0 detik, 1080x1920). Take Akram v4: 32,2 detik, 7 jeda biasa dirapatkan (TIGHT) menjadi 31,23 detik, atempo 1,062. Jeda dramatis setelah "kuil..." dan "Apophis..." dijaga utuh. Kata opsional tidak ada yang dibuang. Loudness -14,9 LUFS, true peak -2,3 dBFS. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:02,0 | Kutukan Mesir kuno ditemukan di tempat | `[curious]` | Patung raksasa bersedekap di kuil Karnak (foto asli), langit diperpanjang ke atas supaya judul tidak menutup wajah, punch-in | foto 4381946 | **KUTUKAN MESIR KUNO** → DI TEMPAT SAMPAH **KUIL** (1,7) · pojok: "foto: kuil Karnak, Luxor" |
+| 2 | 0:02,0–0:03,3 | sampah kuil... | `[curious]` | Sungai Nil dan bukit Thebes (foto asli), latar blur, dorong pelan | foto 3804402 | DI TEMPAT SAMPAH **KUIL** · pojok: "foto: tepi barat Luxor (Thebes)" |
+| 3 | 0:03,3–0:06,2 | tapi sasarannya bukan manusia, melainkan | `[dramatic]` | Kepala ular di atas lumut (video asli 4K, detik 2), dorong pelan, grade senja | video 143409 | SASARANNYA **BUKAN MANUSIA** · pojok: "ilustrasi" |
+| 4 | 0:06,2–0:07,4 | ular raksasa! | `[dramatic]` | Kepala ular lebih dekat (video 143409 detik 14), punch-in | video 143409 | ULAR **RAKSASA!** · pojok: "ilustrasi" |
+| 5 | 0:07,4–0:10,0 | Ular ini dipercaya tiap malam menghadang | `[curious]` | Ular raksasa menghadang perahu emas pembawa matahari di sungai dunia bawah, dorong pelan | Higgsfield H3 | DIPERCAYA **TIAP MALAM** → MENGHADANG **DEWA MATAHARI** (9,4) · pojok: "ilustrasi · mitologi Mesir kuno" |
+| 6 | 0:10,0–0:10,9 | dewa matahari. | `[curious]` | Matahari terbenam di atas Sungai Nil (foto asli), punch-in | foto 21157 | MENGHADANG **DEWA MATAHARI** · pojok: "foto: Sungai Nil" |
+| 7 | 0:10,9–0:12,2 | Gambarnya ditusuk, | `[dramatic]` | Papirus bergambar ular tinta merah tertusuk pisau perunggu di altar | Higgsfield H1 | GAMBARNYA... → **DITUSUK** (11,5) · pojok: "ilustrasi" |
+| 8 | 0:12,2–0:14,1 | diinjak, diludahi, lalu | `[dramatic]` | H1 dipotong dekat pada pisau dan ular (H1k), punch-in | Higgsfield H1 (potongan) | **DIINJAK** → **DILUDAHI** (13,0) → LALU **DIBAKAR!** (13,8) · pojok: "ilustrasi" |
+| 9 | 0:14,1–0:15,1 | dibakar. | `[dramatic]` | Api besar (video asli vertikal, dipotong pada nyala api, dinding digelapkan), punch-in | video 191150 | LALU **DIBAKAR!** · pojok: "ilustrasi" |
+| 10 | 0:15,1–0:15,8 | Kini muncul | `[excited]` | Galian tumpukan sampah kuno di samping reruntuhan kuil bata lumpur, ayakan dan ember | Higgsfield H4 | KINI MUNCUL... · pojok: "ilustrasi" |
+| 11 | 0:15,8–0:17,1 | 40 serpihannya, | `[excited]` | Serpihan papirus hangus berlubang di atas beludru hitam (H2 tanpa baris bawah), punch-in | Higgsfield H2 (potongan) | **40 SERPIHAN** · ±3.400 TAHUN LALU · pojok: "ilustrasi · studi: Univ. Kopenhagen, jurnal ZÄS (Nov 2026)" |
+| 12 | 0:17,1–0:19,7 | 1.000 tahun lebih tua dari catatan yang dikenal! | `[excited]` | Garis waktu: titik "±3.400 TAHUN LALU · 40 serpihan kutukan · kuil Thutmose III" → garis kuning dan pil "± 1.000 TAHUN" → titik "1.000 TAHUN KEMUDIAN · satu-satunya buku panduan yang dikenal" | skema82 (garis waktu) | **1.000 TAHUN LEBIH TUA** · pojok: "skema" |
+| 13 | 0:19,7–0:22,0 | Nama ular itu, Apophis... | `[dramatic]` | Dinding hieroglif berwarna (foto asli), grade gelap, dorong pelan | foto 7883891 | NAMA ULAR ITU... → **APOPHIS** (21,1) · pojok: "ilustrasi" |
+| 14 | 0:22,0–0:24,8 | dan tahun 2029, asteroid Apophis | `[excited]` | Asteroid lonjong melintas di atas satelit komunikasi, Bumi di bawah, dorong pelan | Higgsfield H5 | TAHUN **2029** → ASTEROID **APOPHIS** · 13 APRIL 2029 (23,8) · pojok: "ilustrasi · NASA: tidak ada risiko tabrakan" |
+| 15 | 0:24,8–0:27,1 | lewat lebih dekat dari banyak satelit! | `[excited]` | Skema berskala: Bumi, cincin satelit geosinkron ±36.000 km, lintasan Apophis ±32.000 km dari permukaan (di dalam cincin), pil "13 APRIL 2029" dan "NASA: tidak ada risiko tabrakan (setidaknya 100 tahun)" | skema82 (jarak) | LEBIH DEKAT DARI **BANYAK SATELIT!** (25,2) · pojok: "skema · NASA" |
+| 16 | 0:27,1–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Kolom kuil Karnak di malam hari dengan bulan (foto asli), latar blur | foto 420749 | **FOLLOW** @titikheran · pojok: "foto: kuil Karnak, Luxor" |
+
+Catatan: detik 0–3,3 hanya foto asli; ilustrasi pertama (ular Pixabay) di detik 3,3, Higgsfield pertama di detik 7,4. Tidak ada frame diam lebih dari 3 detik. Video 60700 (render asteroid) tidak dipakai: isinya letterbox sinematik dan hanya ±740 px tinggi, jadi terlalu buram untuk crop vertikal; adegan asteroid memakai H5 lalu skema jarak. Video 191150 dipotong pada nyala api dan dindingnya digelapkan karena dinding bernoda dan kardus di bawahnya terlihat modern. H2 dipotong tanpa dua baris bawah karena satu serpihan di sana punya coretan yang mirip huruf Latin. Skala skema jarak: 150 px per jari-jari Bumi (6.371 km); orbit geosinkron 35.786 km, Apophis ±32.000 km (NASA: "within 20,000 miles").
 
 ---
 
