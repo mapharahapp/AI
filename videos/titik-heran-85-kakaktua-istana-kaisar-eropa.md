@@ -217,7 +217,7 @@ Sebagai perbandingan, orang Eropa pertama yang tercatat singgah di Nusantara ada
 Kirim ke teman yang masih hafal lagu "Burung Kakak Tua" 🦜
 Follow @titikheran, besok ada yang lebih aneh 👀
 
-Kitab, pelabuhan Jawa, kafilah Jalur Sutra, dan penyerahan hadiah adalah ilustrasi; garis waktu, peta, dan kartu rekor adalah skema. Kakaktua jambul kuning kini terancam punah: jangan ditangkap atau diperjualbelikan.
+Kitab, pelabuhan Jawa, kafilah Jalur Sutra, dan penyerahan hadiah adalah ilustrasi; garis waktu, peta, dan kartu hadiah adalah skema. Kakaktua jambul kuning kini terancam punah: jangan ditangkap atau diperjualbelikan.
 Sumber: H. Dalton, J. Salo, P. Niemelä, S. Örmä, Parergon 35/1 (2018); University of Melbourne (Pursuit, Jun 2018); Australian Geographic (27 Jun 2018); AFP dan Reuters (Jun 2018)
 
 #titikheran #kakaktua #kakaktuajambulkuning #sejarahindonesia #faktaunik
@@ -232,7 +232,25 @@ Jauh sebelum "hinggap di jendela", ternyata kakaktua sudah hinggap di istana kai
 
 ## 8. Shot list final
 
-Diisi saat video dibuat (setelah Arif review naskah dan mengirim gambar 85-H1 sampai 85-H4).
+Video: `titik-heran-85-kakaktua-istana-kaisar-eropa.mp4` (30,0 detik, 1080x1920). Take Akram v4: 29,3 detik (62 kata terucap), satu take, tanpa kata yang dibuang dan tanpa jeda yang dipendekkan; atempo 1,00 dan sisa 0,7 detik di akhir. Pelafalan dicek dengan transkripsi ulang hasil take: Scribe mendengar "kakak tua", "delapan ratus", "Tiongkok", "Jalur Sutra" dan "Sultan Mesir" dengan benar. Loudness -14,9 LUFS, true peak -2,1 dBFS. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:02,4 | Burung kakaktua ternyata pernah hinggap di | `[curious]` | Wajah kakaktua jambul kuning dari samping, mata dan paruh jelas (foto asli), punch-in | foto 6604629 | **KAKAKTUA** → HINGGAP DI **ISTANA KAISAR EROPA?!** (1,9) · pojok: "foto: kakaktua jambul kuning" |
+| 2 | 0:02,4–0:04,1 | istana kaisar Eropa, | `[curious]` | Halaman dalam Castel del Monte, dinding batu dan langit biru (foto asli vertikal), dorong pelan | foto 4624874 | HINGGAP DI **ISTANA KAISAR EROPA?!** · pojok: "foto: Castel del Monte, kastil Kaisar Frederick II, Italia" |
+| 3 | 0:04,1–0:09,7 | sekitar 800 tahun lalu... jauh sebelum orang Eropa sampai ke Nusantara! | `[curious]` → `[excited]` | Garis waktu tegak: "±1230 · kakaktua di istana kaisar" dan lencana foto kakaktua (4,8); garis kuning turun di "jauh sebelum" (6,4); "1292 · Marco Polo singgah di Sumatra, orang Eropa pertama yang tercatat" (7,4); "1512 · Portugis tiba di Maluku" (8,0); titik 1230 berdenyut (8,5) | skema85 (garis), lencana dari foto 6604629 | **±800** TAHUN LALU → SEBELUM ORANG EROPA **SAMPAI KE NUSANTARA!** (6,4) · pojok: "skema" |
+| 4 | 0:09,7–0:11,9 | Ia digambar di kitab sang kaisar... | `[curious]` | Kitab kuno terbuka, burung-burung buruan di pinggir halaman dan kakaktua putih berjambul kuning, lilin; punch-in | Higgsfield H1 | DIGAMBAR DI **KITAB SANG KAISAR** · pojok: "ilustrasi · kitab aslinya kini di Vatikan" |
+| 5 | 0:11,9–0:14,7 | dan katanya, bisa bicara! | `[mischievously]` | Kakaktua jambul kuning menoleh ke kamera, gerak lambat (video asli, mulai detik 6 klip), punch-in | video 190511 | **KATANYA...** → KATANYA... **BISA BICARA!** (13,3) · pojok: "foto: kakaktua jambul kuning" |
+| 6 | 0:14,7–0:17,1 | Tapi, bagaimana bisa sampai? | `[dramatic]` | Mata dan paruh kakaktua jambul kuning dari dekat (foto asli), dorong pelan | foto 7928413 | BAGAIMANA BISA **SAMPAI?** · pojok: "foto: kakaktua jambul kuning" |
+| 7 | 0:17,1–0:19,5 | Ilmuwan menduga, ia dibawa perahu | `[curious]` | Pelabuhan Jawa abad ke-13: pedagang bersarung dari belakang dengan kakaktua di lengan, kapal layar anyaman, gunung berkabut; dorong pelan | Higgsfield H2 | ILMUWAN **MENDUGA...** → DIBAWA **PERAHU** (18,8) · pojok: "ilustrasi" |
+| 8 | 0:19,5–0:21,7 | ke Jawa, lalu Tiongkok, | `[curious]` | Peta Natural Earth: zona asal kemungkinan berarsir kuning (Indonesia timur, Papua, Australia utara), garis perahu ke Jawa, pil "JAWA" (19,7); garis naik ke Kanton (20,5–20,9), label "KANTON · Tiongkok" (20,8); lalu sisa rute dugaan muncul tipis putus-putus: Jalur Sutra → "KAIRO, MESIR" → "ITALIA" (21,0–21,7) | skema85 (peta) | KE **JAWA** (19,7) → LALU **TIONGKOK** (20,5) · kecil: "asal kemungkinan: Indonesia timur, Papua, atau Australia utara" · pojok: "skema · rute dugaan Dalton dkk. (2018)" |
+| 9 | 0:21,7–0:22,7 | lewat Jalur Sutra | `[curious]` | Kafilah unta di bukit pasir, sangkar kuningan berisi kakaktua tergantung di pelana, dilihat dari belakang; punch-in | Higgsfield H3 | LEWAT **JALUR SUTRA** · pojok: "ilustrasi" |
+| 10 | 0:22,7–0:23,6 | ke Mesir... | `[curious]` | Kafilah kedua, lebih dekat ke sangkar di pelana; punch-in | Higgsfield H4 (versi tambahan dari Arif) | KE **MESIR...** · pojok: "ilustrasi" |
+| 11 | 0:23,6–0:25,2 | lalu dihadiahkan Sultan Mesir | `[excited]` | Utusan bersorban dari belakang menyodorkan sangkar emas berisi kakaktua di aula berlengkung dan bermosaik emas; dorong pelan | Higgsfield H5 dipotong (H5k) | DIHADIAHKAN **SULTAN MESIR** · pojok: "ilustrasi" |
+| 12 | 0:25,2–0:26,8 | sebagai tanda damai! | `[excited]` | Kartu: "HADIAH" (25,2), "'SULTAN BABILONIA'" (25,4), "(Sultan Mesir al-Kamil)" (25,5), "UNTUK KAISAR FREDERICK II" (25,7), "4 gambar kakaktua di kitabnya, kini di Vatikan" dan "250 tahun lebih tua dari lukisan Mantegna (1496)" (25,9–26,1) | skema85 (kartu) | SEBAGAI **TANDA DAMAI!** · pojok: "skema · Dalton dkk., Parergon 2018" |
+| 13 | 0:26,8–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Kakaktua jambul kuning bertengger di dahan, latar hijau (foto asli vertikal), dorong pelan | foto 10480051 | **FOLLOW** @titikheran · pojok: "foto: kakaktua jambul kuning" |
+
+Catatan: detik 0–4,1 hanya foto asli (kakaktua lalu Castel del Monte); skema pertama di detik 4,1, gambar Higgsfield pertama di detik 9,7. Kata kunci KAKAKTUA di layar sejak detik 0 dan ISTANA KAISAR EROPA sejak detik 1,9. Gambar H5 (penyerahan hadiah) memperlihatkan wajah sang kaisar di sisi kanan, jadi dipotong ke utusan dan sangkarnya saja (`skema85.py prep`, x 0–1101 dari 1440); tokoh di latar belakang buram. Arif mengirim dua versi kafilah; keduanya dipakai berurutan di "lewat Jalur Sutra" dan "ke Mesir...". Garis waktu sengaja tidak berskala supaya label muat dan pita watermark tetap kosong. Peta: rute Kanton → Jalur Sutra → Kairo → Italia selatan digambar tipis putus-putus sebagai pratinjau sebelum masuk gambar kafilah; daratan dari Natural Earth, titik kota (Kanton, Xi'an, Dunhuang, Kashgar, Samarkand, Merv, Bagdad, Damaskus, Kairo, Sisilia) memakai koordinat perkiraan, dan garis rutenya disederhanakan. Sampul: foto 6604629 (asli) dengan judul "KAKAKTUA / DI ISTANA KAISAR EROPA / 800 TAHUN LALU".
 
 ---
 

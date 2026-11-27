@@ -2726,6 +2726,54 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "85":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.69, 30.0
+    AUDIO = "vo85.mp3"  # one v4 take, 29,3 s, read right (Scribe check: "kakak tua", "delapan ratus", "Tiongkok");
+    # no cuts and no tightening: the pauses are natural, PAD lands it on 30,0 s at tempo 1,00
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    KK = "foto: kakaktua jambul kuning"
+    # Arif's Higgsfield images: H1 (open falconry manuscript, a painted white cockatoo with a yellow crest in the
+    # margin, candle), H2 (Java harbour, a merchant from behind with the cockatoo on his forearm, trading ship, volcano),
+    # H3 (camel caravan from behind, a brass cage with the cockatoo hanging from the nearest saddle), H4 (a second
+    # caravan, closer on the cage), H5 (the envoy hands the golden cage to the seated emperor; the emperor's face shows,
+    # so skema85.py prep crops it to H5k: the envoy and the cage only). skema85.py: skema_garis (timeline +-1230 /
+    # 1292 Marco Polo / 1512 Portugis di Maluku), skema_peta (home range -> Jawa -> Kanton, then the faint rest of the
+    # route: Jalur Sutra -> Kairo -> Italia selatan), skema_kartu (hadiah "Sultan Babilonia" untuk Kaisar Frederick II)
+    SHOTS = [
+        (0, "istana", "img/6604629.jpg", 0, "f", False, {"zoom": "punch", "pos": 0.44, "top": 0.25, "grade": "pop", "tag": KK}),
+        ("istana", "sekitar", "img/4624874.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "foto: Castel del Monte, kastil Kaisar Frederick II, Italia"}),
+        ("sekitar", "ia", "clips/skema_garis.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("ia", "dan", "img/H1.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi · kitab aslinya kini di Vatikan"}),
+        ("dan", "tapi", "clips/190511.mp4", 6.0, "v", False, {"zoom": "punch", "pos": 0.38, "tag": KK}),
+        ("tapi", "ilmuwan", "img/7928413.jpg", 0, "f", False, {"zoom": 0.12, "pos": 0.1, "top": 0.3, "tag": KK}),
+        ("ilmuwan", "ke#2", "img/H2.jpg", 0, "f", False, {"zoom": 0.1, "grade": "base", "tag": "ilustrasi"}),
+        ("ke#2", "lewat", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · rute dugaan Dalton dkk. (2018)"}),
+        ("lewat", "ke#3", "img/H3.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("ke#3", "lalu#3", "img/H4.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("lalu#3", "sebagai", "img/H5k.jpg", 0, "f", False, {"zoom": 0.1, "grade": "base", "tag": "ilustrasi"}),
+        ("sebagai", "follow", "clips/skema_kartu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · Dalton dkk., Parergon 2018"}),
+        ("follow", "end", "img/10480051.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.85, "tag": KK}),
+    ]
+    TITLES = [
+        (0, "hinggap", f"{{\\fs170}}{Y}KAKAKTUA"),
+        ("hinggap", "sekitar", f"{WT}HINGGAP DI\\N{{\\fs110}}{Y}ISTANA KAISAR\\NEROPA?!"),
+        ("sekitar", "jauh", f"{{\\fs170}}{Y}±800\\N{{\\fs100}}{WT}TAHUN LALU"),
+        ("jauh", "ia", f"{{\\fs72}}{WT}SEBELUM ORANG EROPA\\N{{\\fs86}}{Y}SAMPAI KE NUSANTARA!"),  # 2 lines: the timeline starts at y ~640
+        ("ia", "dan", f"{WT}DIGAMBAR DI\\N{{\\fs116}}{Y}KITAB SANG\\NKAISAR"),
+        ("dan", "bisa", f"{{\\fs150}}{WT}KATANYA..."),
+        ("bisa", "tapi", f"{WT}KATANYA...\\N{{\\fs150}}{Y}BISA BICARA!"),
+        ("tapi", "ilmuwan", f"{WT}BAGAIMANA BISA\\N{{\\fs170}}{Y}SAMPAI?"),
+        ("ilmuwan", "dibawa", f"{WT}ILMUWAN\\N{{\\fs140}}{Y}MENDUGA..."),
+        ("dibawa", "jawa", f"{WT}DIBAWA\\N{{\\fs150}}{Y}PERAHU"),
+        ("jawa", "lalu#2", f"{WT}KE\\N{{\\fs170}}{Y}JAWA"),
+        ("lalu#2", "lewat", f"{WT}LALU\\N{{\\fs150}}{Y}TIONGKOK"),
+        ("lewat", "ke#3", f"{WT}LEWAT\\N{{\\fs140}}{Y}JALUR SUTRA"),
+        ("ke#3", "lalu#3", f"{WT}KE\\N{{\\fs170}}{Y}MESIR..."),
+        ("lalu#3", "sebagai", f"{WT}DIHADIAHKAN\\N{{\\fs130}}{Y}SULTAN MESIR"),
+        ("sebagai", "follow", f"{WT}SEBAGAI\\N{{\\fs140}}{Y}TANDA DAMAI!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {}  # "delapan ratus" is in NUMS
 elif EP == "84":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.66, 30.0
     AUDIO = "vo84pad.wav"  # one v4 take (vo84.mp3, 28,9 s) with the pauses after "kaisar?" (+0,2 s) and "Ternyata..."
@@ -3670,6 +3718,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "85": [("delapan ratus", "800")],
         "84": [("tiga ribu", "3.000")],
         "83": [("dua", "2")],
         "82": [("empat puluh", "40"), ("seribu", "1.000"), ("dua ribu dua puluh sembilan,", "2029,")],
