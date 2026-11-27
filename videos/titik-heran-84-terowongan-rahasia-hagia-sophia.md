@@ -234,7 +234,27 @@ Ratusan tahun dirumorkan jadi jalur kabur kaisar... ternyata got 😂 Menurut ka
 
 ## 8. Shot list final
 
-Diisi saat video dibuat (setelah Arif review naskah dan mengirim gambar 84-H1 sampai 84-H5).
+Video: `titik-heran-84-terowongan-rahasia-hagia-sophia.mp4` (30,0 detik, 1080x1920). Take Akram v4: 28,9 detik (62 kata terucap). Pelafalan dicek dengan transkripsi ulang hasil take: Scribe mendengar "Hagia Sophia" dan "tiga ribu ton" dengan benar. Karena take pendek, tidak ada kata yang dibuang; jeda setelah "kaisar?" diperpanjang 0,2 detik dan setelah "Ternyata..." 0,3 detik (`prep84.py`, diisi nada ruang dari jeda itu sendiri), jadi 29,4 detik, atempo 1,00. Loudness -14,9 LUFS, true peak -2,3 dBFS. Waktu di bawah ini adalah waktu video.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:02,4 | Terowongan rahasia di bawah Hagia Sophia | `[curious]` | Hagia Sophia dari pelataran, orang berjalan (video asli 4K), punch-in | video 77138 | TEROWONGAN RAHASIA **HAGIA SOPHIA** · pojok: "foto: Hagia Sophia, Istanbul" |
+| 2 | 0:02,4–0:04,5 | yang dirumorkan berabad-abad... | `[curious]` | Hagia Sophia di bawah langit biru, pohon palem (foto asli), dorong pelan | foto 1932558 | DIRUMORKAN **BERABAD-ABAD...** (2,6) · pojok: "foto: Hagia Sophia, Istanbul" |
+| 3 | 0:04,5–0:06,0 | akhirnya digali! | `[curious]` | Dua pekerja berhelm kuning menyekop lumpur di lorong bata, lampu kerja, dilihat dari belakang; punch-in | Higgsfield H1 | AKHIRNYA **DIGALI!** · pojok: "ilustrasi" |
+| 4 | 0:06,0–0:08,5 | Dan salah satunya mengarah ke istana bawah tanah | `[excited]` | Basilica Cistern, deretan tiang berlampu jingga (foto asli vertikal), dorong pelan | foto 70657 | SALAH SATUNYA **MENGARAH KE...** → ISTANA **BAWAH TANAH** (7,6) · pojok: "foto: Basilica Cistern (Yerebatan), ±150 m dari Hagia Sophia" |
+| 5 | 0:08,5–0:10,0 | berkepala Medusa! | `[excited]` | Kepala Medusa batu di dasar tiang, setengah terendam; punch-in | Higgsfield H2 | BERKEPALA **MEDUSA!** · pojok: "ilustrasi" |
+| 6 | 0:10,0–0:11,4 | Konon, lorongnya | `[curious]` | Ruang berubin berjendela kaca patri di Istana Topkapı (foto asli), dorong pelan | foto 4564023 | **KONON...** · pojok: "foto: Istana Topkapı, Istanbul" |
+| 7 | 0:11,4–0:13,1 | tembus ke istana sultan, | `[curious]` | Peta Sultanahmet: Hagia Sophia, garis jingga ke Basilica Cistern ("istana Medusa"); garis putus-putus ke Istana Topkapı digambar, pil "KONON" (11,6), label "ISTANA TOPKAPI · istana sultan" (12,0) | skema84 (peta) | TEMBUS KE **ISTANA SULTAN** · pojok: "skema (disederhanakan)" |
+| 8 | 0:13,1–0:15,1 | bahkan ke pulau di tengah laut. | `[curious]` | Büyükada dari laut, dermaga feri (foto asli), dorong pelan | foto 1337421 | BAHKAN KE PULAU **DI TENGAH LAUT** · pojok: "foto: Büyükada, Kepulauan Pangeran" |
+| 9 | 0:15,1–0:17,5 | Pekerja mengangkut hampir 3.000 ton | `[dramatic]` | Persimpangan lorong berkubah bata, tumpukan lumpur, gerobak dorong, tiang baja, kabel oranye, lampu kerja; dorong pelan | Higgsfield H3 | PEKERJA **MENGANGKUT...** → HAMPIR **±3.000 TON LUMPUR** (16,7) · pojok: "ilustrasi" |
+| 10 | 0:17,5–0:19,3 | lumpur untuk membukanya. | `[dramatic]` | Kartu angka: "420 m terowongan dibersihkan" (17,6), "9 lorong" (18,0), "6 ruang bawah tanah" (18,3), sumber "Kementerian Kebudayaan & Pariwisata Turki, 20 November 2026" | skema84 (kartu) | LUMPUR & TANAH **DIANGKUT** · pojok: "skema" |
+| 11 | 0:19,3–0:21,3 | Jalur kabur para kaisar? | `[dramatic]` | Kaisar Bizantium berjubah ungu-emas berlari di lorong berobor, dilihat dari belakang; dorong pelan | Higgsfield H4 | JALUR KABUR **PARA KAISAR?** · pojok: "ilustrasi · legenda" |
+| 12 | 0:21,3–0:24,2 | Ternyata... cuma got kuno! | `[mischievously]` | Penampang: Hagia Sophia muncul (21,3), terowongan berkubah bata di bawahnya tergali dari kiri ke kanan (21,7–22,6), hujan turun dan air mengalir lewat dua saluran ke terowongan (23,0), pil "saluran air · got air hujan · ventilasi" (23,4) | skema84 (penampang) | **TERNYATA...** → CUMA **GOT KUNO!** (22,9) · pojok: "skema · Menteri Kebudayaan Turki" |
+| 13 | 0:24,2–0:25,8 | Tapi airnya masih mengalir | `[excited]` | Air jernih mengalir di kanal batu di lorong bata, pipa tanah liat, satu lampu kerja; dorong pelan | Higgsfield H5 | TAPI AIRNYA **MASIH MENGALIR** · pojok: "ilustrasi" |
+| 14 | 0:25,8–0:26,9 | sampai sekarang! | `[excited]` | H5 dipotong dekat pada air yang jatuh dari pipa (H5k), punch-in | Higgsfield H5 (potongan) | **SAMPAI SEKARANG!** · pojok: "ilustrasi · sumber airnya masih diteliti" |
+| 15 | 0:26,9–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Hagia Sophia, langit berawan dan burung camar (foto asli), latar blur, dorong pelan | foto 6786611 | **FOLLOW** @titikheran · pojok: "foto: Hagia Sophia, Istanbul" |
+
+Catatan: detik 0–4,5 hanya video dan foto asli Hagia Sophia; gambar Higgsfield pertama di detik 4,5. Storyboard awal memakai peta kedua (garis Hagia Sophia → Basilica Cistern menyala) di "sampai sekarang"; diganti potongan H5 karena sumber airnya belum diketahui, jadi peta itu bisa terkesan airnya mengalir ke waduk. Di peta, titik Hagia Sophia (41,0083 LU, 28,9800 BT), Basilica Cistern (41,0081 LU, 28,9778 BT) dan Istana Topkapı (41,0128 LU, 28,9839 BT) memakai koordinat, tetapi garis pantainya digambar tangan (label "disederhanakan"). Siluet Hagia Sophia di penampang memakai 4 menara (tambahan era Utsmani) supaya mudah dikenali. Cek berita 27 Nov malam: belum ada pernyataan baru yang membantah lorong ke arah Basilica Cistern.
 
 ---
 

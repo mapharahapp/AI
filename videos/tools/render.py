@@ -2726,6 +2726,58 @@ elif EP == "71":
         ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
     ]
     FIX = {}  # "Yu Ef Si" (TTS spelling of UFC) and "empat ratus" are in NUMS
+elif EP == "84":
+    STYLE, LUFS, PAD, TARGET = 2, -15, 0.66, 30.0
+    AUDIO = "vo84pad.wav"  # one v4 take (vo84.mp3, 28,9 s) with the pauses after "kaisar?" (+0,2 s) and "Ternyata..."
+    # (+0,3 s) grown in their own room tone by prep84.py; no cuts (TTS spelling "Hagia Sofia", "tiga ribu")
+    TIGHT = {"berabadabad": 1.0, "kaisar": 1.0, "ternyata": 1.0}
+    Y, WT = "{\\c&H00E1FF&}", "{\\c&HFFFFFF&}"
+    HS = "foto: Hagia Sophia, Istanbul"
+    # Arif's Higgsfield images: H1 (two workers in hard hats shovel mud in a brick tunnel, work lamps), H2 (Medusa head
+    # under a column in the cistern), H3 (vaulted junction with mud piles, a wheelbarrow and a steel prop), H4 (Byzantine
+    # emperor in purple seen from behind, running down a torch-lit tunnel), H5 (clear water in a stone channel, terracotta
+    # pipes, one work lamp). skema84.py prep: H5k (H5 cropped on the falling water). skema84.py: skema_peta (Sultanahmet:
+    # Hagia Sophia, the tunnel toward the Basilica Cistern, a dashed "KONON" line to Topkapi), skema_kartu (420 m,
+    # 9 lorong, 6 ruang; ministry 20 Nov 2026), skema_penampang (cross-section: rain runs off the roof into the
+    # tunnels below; saluran air, got air hujan, ventilasi; diperkirakan +-1.600 tahun)
+    SHOTS = [
+        (0, "yang", "clips/77138.mp4", 0, "v", False, {"zoom": "punch", "pos": 0.4, "grade": "warm", "tag": HS}),
+        ("yang", "akhirnya", "img/1932558.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.47, "grade": "warm", "tag": HS}),
+        ("akhirnya", "dan", "img/H1.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("dan", "berkepala", "img/70657.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.5, "grade": "warm", "tag": "foto: Basilica Cistern (Yerebatan), ±150 m dari Hagia Sophia"}),
+        ("berkepala", "konon", "img/H2.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi"}),
+        ("konon", "tembus", "img/4564023.jpg", 0, "f", False, {"zoom": 0.08, "pos": 0.5, "grade": "warm", "tag": "foto: Istana Topkapı, Istanbul"}),
+        ("tembus", "bahkan", "clips/skema_peta.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema (disederhanakan)"}),
+        ("bahkan", "pekerja", "img/1337421.jpg", 0, "f", False, {"zoom": 0.1, "pos": 0.42, "grade": "pop", "tag": "foto: Büyükada, Kepulauan Pangeran"}),
+        ("pekerja", "lumpur", "img/H3.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("lumpur", "jalur", "clips/skema_kartu.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema"}),
+        ("jalur", "ternyata", "img/H4.jpg", 0, "f", False, {"zoom": 0.1, "grade": "base", "tag": "ilustrasi · legenda"}),
+        ("ternyata", "tapi", "clips/skema_penampang.mp4", 0, "v", False, {"zoom": 0.0, "tag": "skema · Menteri Kebudayaan Turki"}),
+        ("tapi", "sampai", "img/H5.jpg", 0, "f", False, {"zoom": 0.08, "grade": "base", "tag": "ilustrasi"}),
+        ("sampai", "follow", "img/H5k.jpg", 0, "f", False, {"zoom": "punch", "grade": "base", "tag": "ilustrasi · sumber airnya masih diteliti"}),
+        ("follow", "end", "img/6786611.jpg", 0, "b", False, {"zoom": 0.08, "grade": "warm", "tag": HS}),
+    ]
+    TITLES = [
+        (0, "dirumorkan", f"{{\\fs86}}{WT}TEROWONGAN RAHASIA\\N{{\\fs130}}{Y}HAGIA SOPHIA"),
+        ("dirumorkan", "akhirnya", f"{WT}DIRUMORKAN\\N{{\\fs120}}{Y}BERABAD-ABAD..."),
+        ("akhirnya", "dan", f"{WT}AKHIRNYA\\N{{\\fs170}}{Y}DIGALI!"),
+        ("dan", "istana", f"{WT}SALAH SATUNYA\\N{{\\fs120}}{Y}MENGARAH KE..."),
+        ("istana", "berkepala", f"{WT}ISTANA\\N{{\\fs130}}{Y}BAWAH TANAH"),
+        ("berkepala", "konon", f"{WT}BERKEPALA\\N{{\\fs170}}{Y}MEDUSA!"),
+        ("konon", "tembus", f"{{\\fs150}}{WT}KONON..."),
+        ("tembus", "bahkan", f"{WT}TEMBUS KE\\N{{\\fs120}}{Y}ISTANA SULTAN"),
+        ("bahkan", "pekerja", f"{WT}BAHKAN KE PULAU\\N{{\\fs120}}{Y}DI TENGAH\\NLAUT"),
+        ("pekerja", "tiga", f"{WT}PEKERJA\\N{{\\fs120}}{Y}MENGANGKUT..."),
+        ("tiga", "lumpur", f"{WT}HAMPIR\\N{{\\fs190}}{Y}±3.000\\N{{\\fs110}}TON LUMPUR"),
+        ("lumpur", "jalur", f"{WT}LUMPUR & TANAH\\N{{\\fs120}}{Y}DIANGKUT"),
+        ("jalur", "ternyata", f"{WT}JALUR KABUR\\N{{\\fs130}}{Y}PARA KAISAR?"),
+        ("ternyata", "cuma", f"{{\\fs150}}{WT}TERNYATA..."),
+        ("cuma", "tapi", f"{WT}CUMA\\N{{\\fs150}}{Y}GOT KUNO!"),
+        ("tapi", "sampai", f"{WT}TAPI AIRNYA\\N{{\\fs130}}{Y}MASIH\\NMENGALIR"),
+        ("sampai", "follow", f"{{\\fs150}}{Y}SAMPAI\\NSEKARANG!"),
+        ("follow", "end", f"{{\\fs130}}{Y}FOLLOW\\N{{\\fs58}}{WT}@titikheran"),
+    ]
+    FIX = {"Sofia": "Sophia"}  # TTS spelling; "tiga ribu" is in NUMS
 elif EP == "83":
     STYLE, LUFS, PAD, TARGET = 2, -15, 0.6, 30.0
     AUDIO = "vo83c.wav"  # one v4 take (vo83.mp3, 33,5 s) with "tua" (2nd line) and "pun" cut by `skema83.py vocut`, as the naskah allows
@@ -3618,6 +3670,7 @@ NUMS = {"05": [("enam puluh enam juta", "66 juta"), ("sembilan belas sembilan pu
         "73": [("dua juta", "2 juta"), ("seratus sepuluh", "110")],
         "74": [("satu miliar", "1 miliar"), ("satu koma tujuh", "1,7"), ("lima ratus", "500")],
         "75": [],
+        "84": [("tiga ribu", "3.000")],
         "83": [("dua", "2")],
         "82": [("empat puluh", "40"), ("seribu", "1.000"), ("dua ribu dua puluh sembilan,", "2029,")],
         "81": [("seribu sembilan ratus", "1.900"), ("empat ribu", "4.000")],
