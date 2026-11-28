@@ -2,7 +2,7 @@
 
 Seri: #86 luar negeri, **#87 Indonesia** (selang-seling), lalu #88 luar negeri.
 Tayang: **Minggu 29 November 2026, malam 18.00–19.00 WIB**. #86 Patung Liberty dan Colossus Rhodes (LN) paginya, 06.00–07.00 WIB. VO tidak terikat tanggal (evergreen), jadi aman ditukar kalau perlu.
-Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#86: VO **Akram di Eleven v4**, b-roll Pixabay (foto dan video asli manggis, patung Ratu Victoria, London, rumah kaca era Victoria, pohon manggis), skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Prompt Higgsfield (dengan character sheet tukang kebun dan buah manggis) di bagian 6b; Arif yang generate.
+Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#86: VO **Akram di Eleven v4**, b-roll Pixabay (foto dan video asli manggis, patung Ratu Victoria, London, rumah kaca era Victoria, pohon manggis), skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Prompt Higgsfield (dengan character sheet tukang kebun dan buah manggis) di bagian 6b; gambar akhirnya digenerate Claude atas persetujuan Arif (lihat bagian 8).
 
 **Skor viral: 9/10** (alasan di bagian 3)
 
@@ -241,3 +241,30 @@ Sumber: Wikipedia, "Mangosteen" (legenda ditelusuri ke D. Fairchild, Exploring f
 ```
 Di Inggris sebutir manggis sampai dapat medali emas 🥇 Di tempat kamu sekarang manggis sekilo berapa?
 ```
+
+---
+
+## 8. Shot list final
+
+Video: `titik-heran-87-manggis-ratu-inggris-100-pound.mp4` (30,0 detik, 1080x1920). Take Akram v4: 28,1 detik (63 kata terucap), satu take. Karena take pendek, 6 jeda dipanjangkan total 1,15 detik dengan room tone dari take itu sendiri (`videos/tools/prep87.py`: setelah "pound...", "jalan!", "London.", "ditemukan...", "wafat!", "kaca..."), jadi 29,2 detik; atempo 1,00 dan sisa 0,8 detik di akhir. Pelafalan dicek dengan transkripsi ulang hasil take: Scribe mendengar "seratus pound", "sayembara", "dua puluh sembilan", "diganjar" dan "medali emas" dengan benar, 63 kata sama persis dengan naskah. Loudness -14,9 LUFS, true peak -2,2 dBFS. Waktu di bawah ini adalah waktu video.
+
+Gambar Higgsfield: atas persetujuan Arif (28 Nov), **Claude yang generate** lewat Higgsfield (Seedream 4.5, 1 kredit per gambar) dari prompt bagian 6b, dengan character sheet 87-CS sebagai referensi: CS dan H1–H4. Catatan: character sheet keluar dengan **tukang kebun berewok dan berkumis** (prompt 6b menulis tanpa jenggot), jadi H2 dan H3 mengikuti wajah berewok itu supaya tokohnya tetap sama. H4 (manggis di bantal beludru dengan mahkota) hanya dipakai untuk sampul.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:01,8 | Buah manggis konon bikin | `[curious]` | Manggis terbuka, daging putih di kulit merah (foto asli), punch-in | foto 2126750 | **BUAH MANGGIS** · pojok: "foto: buah manggis" |
+| 2 | 0:01,8–0:04,6 | Ratu Inggris rela bayar 100 pound... | `[curious]` | Patung Ratu Victoria duduk di Victoria Memorial, London (foto asli), dorong pelan | foto 2568487 | RATU INGGRIS RELA BAYAR **£100?!** · kecil: "konon · Ratu Victoria, bertakhta 1837–1901" · pojok: "foto: Victoria Memorial, London" |
+| 3 | 0:04,6–0:06,1 | padahal di sini, | `[mischievously]` | Tumpukan manggis bertangkai (foto asli), hangat | foto 2637541 | PADAHAL **DI SINI...** · pojok: "foto: buah manggis" |
+| 4 | 0:06,1–0:08,5 | dijual kiloan di pinggir jalan! | `[mischievously]` | Manggis terbelah, daging putih (foto asli), punch-in | foto 811154 | DIJUAL **KILOAN!** · pojok: "foto: buah manggis" |
+| 5 | 0:08,5–0:11,3 | Katanya, manggis selalu busuk sebelum sampai | `[curious]` | Peti kayu berisi manggis membusuk di lambung kapal, lentera, laut bergelombang | Higgsfield H1 | KATANYA SELALU **BUSUK** · kecil: "legenda" · pojok: "ilustrasi" |
+| 6 | 0:11,3–0:12,4 | London. | `[curious]` | Menara jam Big Ben, London (video asli, mulai detik 1), dingin | video 18792 | SEBELUM SAMPAI **LONDON** · pojok: "video: London" |
+| 7 | 0:12,4–0:16,2 | Tapi, bukti sayembara itu tak pernah ditemukan... | `[dramatic]` | Patung Ratu Victoria di taman (foto asli), dingin, dorong pelan | foto 3855089 | BUKTINYA **TAK PERNAH ADA** · kecil: "tak tercatat di dokumen sejarah mana pun yang diketahui" · pojok: "foto: patung Ratu Victoria" |
+| 8 | 0:16,2–0:19,9 | kisahnya baru muncul 29 tahun setelah ratu wafat! | `[curious]` | Skema garis waktu 1837–1935: pita ungu "Ratu Victoria bertakhta 1837–1901" (16,3), titik putih "1901 ratu wafat" (16,6), titik merah "1930 kisah sayembara baru muncul" (17,0), lengkung kuning "29 TAHUN" (17,4–17,9) | skema87 (garis) | KISAHNYA BARU **MUNCUL 1930** · kecil: "jejak tertua yang diketahui: buku David Fairchild, "Exploring for Plants" (1930)" (17,7) · pojok: "skema" |
+| 9 | 0:19,9–0:21,1 | Yang tercatat: | `[curious]` | Palm House di Kew Gardens, rumah kaca era Victoria (foto asli) | foto 2818709 | YANG TERCATAT **1855** · pojok: "foto: Palm House, Kew Gardens (rumah kaca era Victoria)" |
+| 10 | 0:21,1–0:23,2 | tukang kebun Inggris membuahkan manggis di | `[curious]` | Tukang kebun era Victoria (berewok, rompi, celemek) memegang manggis dari pohon dalam pot di rumah kaca | Higgsfield H2 | MANGGIS PERTAMA **BERBUAH DI INGGRIS** · kecil: "rumah kaca Syon House, milik Duke of Northumberland" · pojok: "ilustrasi" |
+| 11 | 0:23,2–0:24,4 | rumah kaca... | `[curious]` | Manggis di pohon (foto asli), punch-in | foto 4717778 | (judul dan label sama dengan #10) · pojok: "foto: buah manggis di pohon" |
+| 12 | 0:24,4–0:25,6 | dan buahnya diganjar | `[excited]` | Tukang kebun yang sama di aula pameran, piring manggis dan kotak medali emas berpita biru | Higgsfield H3 | DIGANJAR **MEDALI EMAS!** · pojok: "ilustrasi" |
+| 13 | 0:25,6–0:26,8 | medali emas! | `[excited]` | Skema: garis waktu yang sama, titik emas "1855 manggis pertama berbuah di Inggris" (25,6); medali emas berpita biru muncul dan garis waktu meredup (25,9) | skema87 (medali) | DIGANJAR **MEDALI EMAS!** · kecil: "MEDALI EMAS BANKSIAN · Horticultural Society, London · 1855 · saat Ratu Victoria masih bertakhta" · pojok: "skema · The Horticulturist (1855)" |
+| 14 | 0:26,8–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Manggis ungu dari dekat (foto asli) | foto 1534511 | **FOLLOW** @titikheran · kecil: "di Inggris dapat medali, di sini sekilo berapa?" · pojok: "foto: buah manggis" |
+
+Catatan: tanpa `[whispers]`. Sampul: H4 + judul "MANGGIS BIKIN / RATU INGGRIS / RELA BAYAR £100?" (`titik-heran-87-manggis-ratu-inggris-100-pound-sampul.jpg`). Kode: `videos/tools/skema87.py` (garis, medali, sampul), `videos/tools/prep87.py` dan blok `EP == "87"` di `videos/tools/render.py`.

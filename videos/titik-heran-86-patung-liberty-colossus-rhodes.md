@@ -2,7 +2,7 @@
 
 Seri: #85 Indonesia, **#86 luar negeri** (selang-seling), lalu #87 Indonesia.
 Tayang: **Minggu 29 November 2026, pagi 06.00–07.00 WIB**. #87 manggis dan Ratu Inggris (ID) malamnya, 18.00–19.00 WIB. VO tidak terikat tanggal (evergreen), jadi aman ditukar kalau perlu.
-Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#85: VO **Akram di Eleven v4**, b-roll Pixabay (foto dan video asli Patung Liberty, pintu pelabuhan Mandraki di Rhodes, unta), skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Prompt Higgsfield (dengan character sheet patung) di bagian 6b; Arif yang generate.
+Durasi target: 30 detik, vertikal 9:16. Produksi seperti #16–#85: VO **Akram di Eleven v4**, b-roll Pixabay (foto dan video asli Patung Liberty, pintu pelabuhan Mandraki di Rhodes, unta), skema buatan sendiri, subtitle karaoke, watermark "@titikheran" tipis di tengah layar, tanpa avatar, musik, atau efek suara. Master **-15 LUFS**. Prompt Higgsfield (dengan character sheet patung) di bagian 6b; gambar akhirnya digenerate Claude atas persetujuan Arif (lihat bagian 8).
 
 **Skor viral: 9/10** (alasan di bagian 3)
 
@@ -241,3 +241,29 @@ Sumber: Encyclopaedia Britannica, "Colossus of Rhodes"; Plinius, Naturalis Histo
 ```
 Bayangin kalau beneran mengangkang: kapal lewat di bawah, pelaut pada nengok ke atas 😂 Menurut kamu, keajaiban dunia kuno mana yang paling ingin kamu lihat aslinya?
 ```
+
+---
+
+## 8. Shot list final
+
+Video: `titik-heran-86-patung-liberty-colossus-rhodes.mp4` (30,0 detik, 1080x1920). Take Akram v4: 31,2 detik (63 kata terucap), satu take; 6 jeda dirapatkan (31,1 → 30,0 detik, jeda setelah "meter...", "mustahil." dan "lebih..." tetap terasa), lalu atempo 1,022. Pelafalan dicek dengan transkripsi ulang hasil take: Scribe mendengar "Colossus" (teks TTS "Kolosus"), "Liberty", "rongsokan", "delapan ratus" dan "sembilan ratus" dengan benar, 63 kata sama persis dengan naskah. Loudness -14,9 LUFS, true peak -1,6 dBFS. Waktu di bawah ini adalah waktu video.
+
+Gambar Higgsfield: atas persetujuan Arif (28 Nov), **Claude yang generate** lewat Higgsfield (Seedream 4.5, 1 kredit per gambar) dari prompt bagian 6b, dengan character sheet 86-CS sebagai referensi: CS, H1–H6, dan H5 versi kedua (versi pertama masih menampilkan patung berdiri). H6 (kepala dan obor Colossus saat senja) tidak dipakai di video. H1b adalah potongan dekat dari H1.
+
+| # | Waktu | VO | Arahan suara | Visual | Pixabay ID / sumber | Teks layar |
+|---|---|---|---|---|---|---|
+| 1 | 0:00,0–0:01,0 | Patung Liberty | `[curious]` | Wajah Patung Liberty dari bawah (foto asli), punch-in | foto 198887 | **PATUNG LIBERTY** · pojok: "foto: Patung Liberty, New York" |
+| 2 | 0:01,0–0:03,3 | ternyata dijuluki "Colossus Baru"... | `[curious]` | Patung Liberty utuh dengan langit biru (foto asli), dorong pelan | foto 202218 | DIJULUKI **"COLOSSUS BARU"?** · kecil: "judul puisi Emma Lazarus (1883) di alas patung" · pojok: "foto: Patung Liberty, New York" |
+| 3 | 0:03,3–0:04,5 | karena Colossus lama | `[excited]` | Tiang rusa di pintu pelabuhan Mandraki, Rhodes (foto asli), dorong pelan | foto 3759260 | **COLOSSUS LAMA** (Rhodes, Yunani) · pojok: "foto: pintu pelabuhan Mandraki, Rhodes, Yunani" |
+| 4 | 0:04,5–0:07,2 | konon berdiri mengangkang di pintu pelabuhan! | `[excited]` | Colossus mengangkang di atas dua dermaga batu, kapal layar lewat di bawahnya, cahaya senja | Higgsfield H1 | KONON BERDIRI **MENGANGKANG?!** · pojok: "ilustrasi: versi legenda" |
+| 5 | 0:07,2–0:10,3 | Patung dewa matahari setinggi 33 meter... | `[curious]` | Skema penggaris meter: siluet Colossus "±33 m · 70 hasta" (7,3), manusia "1,7 m" (8,1), Patung Liberty "46 m · tanpa alas" garis putus (8,8) | skema86 (tinggi) | DEWA MATAHARI **±33 M** · kecil: "salah satu 7 keajaiban dunia kuno" · pojok: "skema" |
+| 6 | 0:10,3–0:12,7 | kapal-kapal katanya lewat di bawah kakinya! | `[curious]` | Potongan dekat H1: kapal di antara kaki patung, punch-in | Higgsfield H1 (dipotong, H1b) | KAPAL LEWAT **DI BAWAH KAKINYA** · pojok: "ilustrasi: versi legenda" |
+| 7 | 0:12,7–0:14,8 | Tapi, itu mustahil. | `[dramatic]` | Skema denah pelabuhan dari atas: dua pemecah ombak, "PINTU PELABUHAN · ratusan meter", dua titik "kaki patung: ±8 m", tanda X merah (13,8) | skema86 (mustahil) | **MUSTAHIL!** · kecil: "perkiraan: McDaniel (2019)" · pojok: "skema" |
+| 8 | 0:14,8–0:17,5 | Ia kemungkinan berdiri di tepi pelabuhan... | `[curious]` | Colossus tegak di atas alas marmer di tepi pelabuhan, perahu dan orang kecil di bawahnya | Higgsfield H2 | KEMUNGKINAN BERDIRI **DI TEPI PELABUHAN** · pojok: "ilustrasi" |
+| 9 | 0:17,5–0:19,2 | lalu roboh karena gempa. | `[curious]` | Patung patah di lutut dan jatuh dari alasnya, debu gempa, punch-in | Higgsfield H3 | **ROBOH** KARENA GEMPA · kecil: "±226 SM, hanya ±54 tahun setelah selesai" · pojok: "ilustrasi" |
+| 10 | 0:19,2–0:22,3 | Reruntuhannya tergeletak 800 tahun lebih... | `[curious]` | Kepala dan tangan perunggu raksasa tergeletak di rumput tepi laut, orang kecil memegang jarinya | Higgsfield H4 | TERGELETAK **800+** TAHUN · kecil: "Plinius: jempolnya saja tak bisa dipeluk orang dewasa" · pojok: "ilustrasi" |
+| 11 | 0:22,3–0:24,7 | sampai konon dijual sebagai rongsokan, | `[excited]` | Kafilah unta di pantai membawa potongan perunggu (tangan dan mahkota sinar), tanpa patung berdiri | Higgsfield H5 (versi kedua) | KONON DIJUAL **RONGSOKAN** · pojok: "ilustrasi" |
+| 12 | 0:24,7–0:26,9 | diangkut 900 unta! | `[excited]` | Video unta di gurun (asli) digelapkan, panel gelap berisi 900 ikon unta yang terisi baris demi baris (24,9–26,1) | video 112040 + skema86 (unta) | DIANGKUT **900 UNTA!** · kecil: "konon · kronik Theophanes · Britannica: "supposedly"" · pojok: "video: kafilah unta · skema" |
+| 13 | 0:26,9–0:30,0 | Follow, besok ada yang lebih aneh. | `[curious]` | Patung Liberty dengan langit senja (video asli, mulai detik 1) | video 1366 | **FOLLOW** @titikheran · kecil: "puisi di alas Liberty: "astride from land to land"" · pojok: "video: Patung Liberty, New York" |
+
+Catatan: tanpa `[whispers]`. Sampul: H1 + judul "KAKAK PATUNG LIBERTY / KONON BERDIRI / MENGANGKANG" (`titik-heran-86-patung-liberty-colossus-rhodes-sampul.jpg`). Kode: `videos/tools/skema86.py` (tinggi, mustahil, unta, sampul) dan blok `EP == "86"` di `videos/tools/render.py`.
